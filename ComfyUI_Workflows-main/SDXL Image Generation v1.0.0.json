@@ -1,0 +1,1526 @@
+{
+  "last_node_id": 74,
+  "last_link_id": 72,
+  "nodes": [
+    {
+      "id": 53,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        310
+      ],
+      "size": {
+        "0": 300,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.ckpt"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 52,
+      "type": "PrimitiveNode",
+      "pos": [
+        300,
+        140
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            45
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Noise Seed",
+      "properties": {},
+      "widgets_values": [
+        2,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 50,
+      "type": "PrimitiveNode",
+      "pos": [
+        300,
+        30
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            47
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Width",
+      "properties": {},
+      "widgets_values": [
+        1024,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 51,
+      "type": "PrimitiveNode",
+      "pos": [
+        610,
+        30
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            46
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Height",
+      "properties": {},
+      "widgets_values": [
+        1024,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 12,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        0,
+        180
+      ],
+      "size": {
+        "0": 300,
+        "1": 100
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            58
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            67,
+            68
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            71,
+            72
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Load Checkpoint - REFINER",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_refiner_1.0.safetensors"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        0,
+        30
+      ],
+      "size": {
+        "0": 300,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            10
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            63,
+            64
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "title": "Load Checkpoint - BASE",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_base_1.0.safetensors"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 54,
+      "type": "VAEEncode",
+      "pos": [
+        0,
+        720
+      ],
+      "size": {
+        "0": 300,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 48
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            61
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 49,
+      "type": "JDC_Plasma",
+      "pos": [
+        0,
+        400
+      ],
+      "size": {
+        "0": 300,
+        "1": 290
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 47,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 46,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 45,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            48
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        360517374238241,
+        "randomize"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 60,
+      "type": "Note",
+      "pos": [
+        600,
+        -470
+      ],
+      "size": {
+        "0": 600,
+        "1": 470
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "title": "About",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "# Interfacial Workflow / Made by Project Soulstealer #\n\nInterface: SDXL Image Generation Workflow\nVersion: v1.0.0\n\nThis is the pretty basic Workflow, but with advanced prompter and more capable Plasma Noise Generator. Plasma allows your images to have deeper darks and brighter lights. Also allows you to get more out of your CLIP than usual. \n\nThis workflow also allows you to generate different things at different points of time.\n\nColor Coding:\nCyan = Input nodes. You set information about what you want to those.\nYellow = Processing nodes. Don't touch those.\nGreen = Output nodes. This is where you get your result.\nBlack = Debug/Processing nodes. This is where you can see intermediate results.\n\nThis node sets the image's resolution in Width and Height.\n\nNOTE: For SDXL, it is recommended to use trained values listed below:\n - 1024 x 1024\n - 1152 x 896\n - 896  x 1152\n - 1216 x 832\n - 832  x 1216\n - 1344 x 768\n - 768  x 1344\n - 1536 x 640\n - 640  x 1536"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 59,
+      "type": "Note",
+      "pos": [
+        0,
+        -270
+      ],
+      "size": {
+        "0": 600,
+        "1": 270
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "title": "Requirements",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "## Requires ##\n* https://github.com/Jordach/comfy-plasma - Plasma Noise for ComfyUI\n  - Plasma Noise Generator\n* https://github.com/BlenderNeko/ComfyUI_ADV_CLIP_emb - Advanced CLIP Text Encode\n  - Clip Prompts (Advanced)\n* Probably, 8+ GB VRAM"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 47,
+      "type": "PrimitiveNode",
+      "pos": [
+        1170,
+        30
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            43,
+            44
+          ],
+          "widget": {
+            "name": "end_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 10000,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "title": "Where to start refining",
+      "properties": {},
+      "widgets_values": [
+        40,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 45,
+      "type": "PrimitiveNode",
+      "pos": [
+        930,
+        30
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            38,
+            41
+          ],
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Amount of steps",
+      "properties": {},
+      "widgets_values": [
+        48,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 10,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        930,
+        140
+      ],
+      "size": {
+        "0": 270,
+        "1": 300
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 10
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 65
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 66
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 61
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 41,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          },
+          "slot_index": 4
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "link": 43,
+          "widget": {
+            "name": "end_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 10000,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          },
+          "slot_index": 5
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 54,
+          "widget": {
+            "name": "noise_seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            13
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "KSampler (Advanced) - BASE",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "disable",
+        628805287775460,
+        "randomize",
+        48,
+        8,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0,
+        40,
+        "enable"
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 11,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        2040,
+        140
+      ],
+      "size": {
+        "0": 260,
+        "1": 300
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 58,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 69
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 70
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 13
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 38,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          },
+          "slot_index": 4
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "link": 44,
+          "widget": {
+            "name": "start_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 55,
+          "widget": {
+            "name": "noise_seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            25
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "KSampler (Advanced) - REFINER",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "disable",
+        2,
+        "fixed",
+        48,
+        8,
+        "dpmpp_2s_ancestral",
+        "karras",
+        40,
+        10000,
+        "disable"
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 17,
+      "type": "VAEDecode",
+      "pos": [
+        2040,
+        470
+      ],
+      "size": {
+        "0": 260,
+        "1": 50
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 25
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 72
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 63,
+      "type": "PrimitiveNode",
+      "pos": [
+        1410,
+        30
+      ],
+      "size": {
+        "0": 890,
+        "1": 80
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "connect to widget input",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "-",
+      "properties": {},
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 64,
+      "type": "PrimitiveNode",
+      "pos": [
+        930,
+        470
+      ],
+      "size": {
+        "0": 270,
+        "1": 310
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "connect to widget input",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "-",
+      "properties": {},
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 67,
+      "type": "PrimitiveNode",
+      "pos": [
+        1200,
+        140
+      ],
+      "size": {
+        "0": 210,
+        "1": 640
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "connect to widget input",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "-",
+      "properties": {},
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 66,
+      "type": "PrimitiveNode",
+      "pos": [
+        1410,
+        700
+      ],
+      "size": {
+        "0": 630,
+        "1": 80
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "connect to widget input",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "-",
+      "properties": {},
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 65,
+      "type": "PrimitiveNode",
+      "pos": [
+        2040,
+        550
+      ],
+      "size": {
+        "0": 260,
+        "1": 230
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "connect to widget input",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "-",
+      "properties": {},
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 19,
+      "type": "SaveImage",
+      "pos": [
+        2300,
+        30
+      ],
+      "size": {
+        "0": 600,
+        "1": 750
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "SDXL"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 71,
+      "type": "BNK_CLIPTextEncodeAdvanced",
+      "pos": [
+        300,
+        250
+      ],
+      "size": {
+        "0": 630,
+        "1": 250
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            65
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "SDXL Encoder: Positive Base Prompt",
+      "properties": {
+        "Node name for S&R": "BNK_CLIPTextEncodeAdvanced"
+      },
+      "widgets_values": [
+        "daytime sky nature dark blue galaxy bottle",
+        "none",
+        "A1111"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 72,
+      "type": "BNK_CLIPTextEncodeAdvanced",
+      "pos": [
+        300,
+        530
+      ],
+      "size": {
+        "0": 630,
+        "1": 250
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            66
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "SDXL Encoder: Negative Base Prompt",
+      "properties": {
+        "Node name for S&R": "BNK_CLIPTextEncodeAdvanced"
+      },
+      "widgets_values": [
+        "text, watermark",
+        "none",
+        "A1111"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 73,
+      "type": "BNK_CLIPTextEncodeAdvanced",
+      "pos": [
+        1410,
+        140
+      ],
+      "size": {
+        "0": 630,
+        "1": 250
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            69
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "SDXL Encoder: Positive Refiner Prompt",
+      "properties": {
+        "Node name for S&R": "BNK_CLIPTextEncodeAdvanced"
+      },
+      "widgets_values": [
+        "daytime sky nature dark blue galaxy bottle",
+        "none",
+        "A1111"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 74,
+      "type": "BNK_CLIPTextEncodeAdvanced",
+      "pos": [
+        1410,
+        420
+      ],
+      "size": {
+        "0": 630,
+        "1": 250
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            70
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "SDXL Encoder: Negative Refiner Prompt",
+      "properties": {
+        "Node name for S&R": "BNK_CLIPTextEncodeAdvanced"
+      },
+      "widgets_values": [
+        "text, watermark",
+        "none",
+        "A1111"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 58,
+      "type": "PrimitiveNode",
+      "pos": [
+        720,
+        140
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            55
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "noise_seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Refiner Image Seed",
+      "properties": {},
+      "widgets_values": [
+        2,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 57,
+      "type": "PrimitiveNode",
+      "pos": [
+        510,
+        140
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            54
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "noise_seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Base Image Seed",
+      "properties": {},
+      "widgets_values": [
+        3,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      10,
+      4,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      13,
+      10,
+      0,
+      11,
+      3,
+      "LATENT"
+    ],
+    [
+      25,
+      11,
+      0,
+      17,
+      0,
+      "LATENT"
+    ],
+    [
+      28,
+      17,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      45,
+      0,
+      11,
+      4,
+      "INT"
+    ],
+    [
+      41,
+      45,
+      0,
+      10,
+      4,
+      "INT"
+    ],
+    [
+      43,
+      47,
+      0,
+      10,
+      5,
+      "INT"
+    ],
+    [
+      44,
+      47,
+      0,
+      11,
+      5,
+      "INT"
+    ],
+    [
+      45,
+      52,
+      0,
+      49,
+      2,
+      "INT"
+    ],
+    [
+      46,
+      51,
+      0,
+      49,
+      1,
+      "INT"
+    ],
+    [
+      47,
+      50,
+      0,
+      49,
+      0,
+      "INT"
+    ],
+    [
+      48,
+      49,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      54,
+      57,
+      0,
+      10,
+      6,
+      "INT"
+    ],
+    [
+      55,
+      58,
+      0,
+      11,
+      6,
+      "INT"
+    ],
+    [
+      58,
+      12,
+      0,
+      11,
+      0,
+      "MODEL"
+    ],
+    [
+      61,
+      54,
+      0,
+      10,
+      3,
+      "LATENT"
+    ],
+    [
+      63,
+      4,
+      1,
+      71,
+      0,
+      "CLIP"
+    ],
+    [
+      64,
+      4,
+      1,
+      72,
+      0,
+      "CLIP"
+    ],
+    [
+      65,
+      71,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      66,
+      72,
+      0,
+      10,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      67,
+      12,
+      1,
+      73,
+      0,
+      "CLIP"
+    ],
+    [
+      68,
+      12,
+      1,
+      74,
+      0,
+      "CLIP"
+    ],
+    [
+      69,
+      73,
+      0,
+      11,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      70,
+      74,
+      0,
+      11,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      71,
+      12,
+      2,
+      54,
+      1,
+      "VAE"
+    ],
+    [
+      72,
+      12,
+      2,
+      17,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

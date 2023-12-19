@@ -1,0 +1,4403 @@
+{
+  "last_node_id": 57,
+  "last_link_id": 133,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Note",
+      "pos": [
+        0,
+        -270
+      ],
+      "size": {
+        "0": 600,
+        "1": 270
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "title": "Requirements",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "## Requires ##\n* https://github.com/Jordach/comfy-plasma - Plasma Noise for ComfyUI\n  - Plasma Noise Generator\n* https://github.com/DeInfernal/StupidSimpleNodes - Stupid Simple Nodes\n  - Seed Nodes\n  - Addition nodes\n  - INT nodes\n  - FLOAT nodes\n  - Sampler/Scheduler nodes\n* https://github.com/BlenderNeko/ComfyUI_ADV_CLIP_emb - Advanced CLIP Text Encode\n  - Clip Prompts (Advanced)\n* https://github.com/comfyanonymous/ComfyUI_experiments/blob/master/sampler_rescalecfg.py - Rescale CFG\n* Probably, 8 GB VRAM"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 2,
+      "type": "Note",
+      "pos": [
+        600,
+        -470
+      ],
+      "size": {
+        "0": 600,
+        "1": 470
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "title": "About",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "# Interfacial Workflow / Made by Project Soulstealer #\n\nInterface: Variational/Seed Generation\nVersion: v1.0.0 (based on Simple Generation v1.3.2)\n\nThis is the Advanced Workflow, with advanced prompter and more capable Plasma Noise Generator. Plasma allows your images to have deeper darks and brighter lights. Also allows you to get more out of your CLIP than usual. Also allows loading V-Prediction models. Also allows you to set your CLIP SKIP manually. Also have seed separately from the modules.\n\nThis workflow will generate 7 images at once, allowing you to quickly browse seeds\n0-0: Original image with specified seed.\n0-1 .. 0-3: Seed of generation unchanged, seed of plasma noise changed by +1, +2 or +3\n1-0 .. 3-0: Seed of generation changed by +1, +2 or +3, seed of plasma noise unchanged\n\nColor Coding:\nCyan = Input nodes. You set information about what you want to those.\nYellow = Processing nodes. Don't touch those.\nGreen = Output nodes. This is where you get your result.\nBlack = Debug/Processing nodes. This is where you can see intermediate results."
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 15,
+      "type": "CheckpointLoader",
+      "pos": [
+        0,
+        30
+      ],
+      "size": {
+        "0": 300,
+        "1": 122
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoader"
+      },
+      "widgets_values": [
+        "v1-inference_vparam_fp16.yaml",
+        "fluffyrock-576-704-832-960-1088-lion-low-lr-e87-terminal-snr-vpred-e60.safetensors"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 16,
+      "type": "RescaleClassifierFreeGuidanceTest",
+      "pos": [
+        0,
+        180
+      ],
+      "size": {
+        "0": 300,
+        "1": 70
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            20,
+            55,
+            69,
+            79,
+            95,
+            106,
+            117
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Rescale CFG",
+      "properties": {
+        "Node name for S&R": "RescaleClassifierFreeGuidanceTest"
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 17,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        0,
+        280
+      ],
+      "size": {
+        "0": 300,
+        "1": 70
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            22,
+            23
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Set CLIP SKIP",
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -1
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        380
+      ],
+      "size": {
+        "0": 300,
+        "1": 70
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8,
+            15,
+            44,
+            45,
+            46,
+            64,
+            77,
+            87,
+            104,
+            115,
+            126
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.ckpt"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 32,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        0,
+        480
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            47,
+            59,
+            72,
+            82,
+            99,
+            110,
+            121
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Steps",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        48
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 33,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        0,
+        580
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            48,
+            66,
+            91,
+            94,
+            131,
+            132,
+            133
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler CFG",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        7
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 34,
+      "type": "Stupid Simple Sampler",
+      "pos": [
+        0,
+        680
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": [
+            "euler",
+            "euler_ancestral",
+            "heun",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          "type": [
+            "euler",
+            "euler_ancestral",
+            "heun",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          "links": [
+            49,
+            60,
+            73,
+            83,
+            100,
+            111,
+            122
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Name",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Sampler"
+      },
+      "widgets_values": [
+        "dpmpp_2s_ancestral"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 35,
+      "type": "Stupid Simple Scheduler",
+      "pos": [
+        0,
+        780
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": [
+            "normal",
+            "karras",
+            "exponential",
+            "simple",
+            "ddim_uniform"
+          ],
+          "type": [
+            "normal",
+            "karras",
+            "exponential",
+            "simple",
+            "ddim_uniform"
+          ],
+          "links": [
+            50,
+            61,
+            74,
+            84,
+            101,
+            112,
+            123
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Scheduler",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Scheduler"
+      },
+      "widgets_values": [
+        "karras"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 36,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        0,
+        880
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            51,
+            62,
+            75,
+            85,
+            102,
+            113,
+            124
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Denoise",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        0.9
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 19,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        300,
+        630
+      ],
+      "size": [
+        300,
+        80
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            25,
+            30,
+            37,
+            42
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Plasma Noise (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 18,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        600,
+        630
+      ],
+      "size": [
+        300,
+        80
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            24,
+            52,
+            53,
+            54,
+            98,
+            109,
+            120
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Generation (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 13,
+      "type": "JDC_Plasma",
+      "pos": [
+        300,
+        740
+      ],
+      "size": [
+        300,
+        310
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 25,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 26,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 27,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Plasma Noise (Variation 0)",
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        768,
+        768,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 22,
+      "type": "JDC_Plasma",
+      "pos": [
+        600,
+        740
+      ],
+      "size": [
+        300,
+        310
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 31,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 32,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 33,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            29
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Plasma Noise (Variation 1)",
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        768,
+        768,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 26,
+      "type": "JDC_Plasma",
+      "pos": [
+        300,
+        1080
+      ],
+      "size": [
+        300,
+        320
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 34,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 38,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 35,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            36
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Plasma Noise (Variation 2)",
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        768,
+        768,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 25,
+      "type": "Stupid Simple Addition (INT)",
+      "pos": [
+        0,
+        980
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "var1",
+          "type": "INT",
+          "link": 30,
+          "widget": {
+            "name": "var1",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Plasma Noise (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Addition (INT)"
+      },
+      "widgets_values": [
+        0,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 28,
+      "type": "Stupid Simple Addition (INT)",
+      "pos": [
+        0,
+        1080
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "var1",
+          "type": "INT",
+          "link": 37,
+          "widget": {
+            "name": "var1",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            34
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Plasma Noise (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Addition (INT)"
+      },
+      "widgets_values": [
+        0,
+        2
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 31,
+      "type": "Stupid Simple Addition (INT)",
+      "pos": [
+        0,
+        1180
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "var1",
+          "type": "INT",
+          "link": 42,
+          "widget": {
+            "name": "var1",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            39
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Plasma Noise (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Addition (INT)"
+      },
+      "widgets_values": [
+        0,
+        3
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 14,
+      "type": "VAEEncode",
+      "pos": [
+        900,
+        630
+      ],
+      "size": [
+        150,
+        80
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            16,
+            67,
+            89,
+            93
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Encode PN-V0",
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 23,
+      "type": "VAEEncode",
+      "pos": [
+        1050,
+        630
+      ],
+      "size": [
+        150,
+        80
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 29
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            128
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Encode PN-V1",
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 27,
+      "type": "VAEEncode",
+      "pos": [
+        900,
+        740
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 36
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            129
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Encode PN-V2",
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 30,
+      "type": "VAEEncode",
+      "pos": [
+        1050,
+        740
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 41
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            130
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Encode PN-V3",
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 37,
+      "type": "Stupid Simple Addition (INT)",
+      "pos": [
+        900,
+        830
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "var1",
+          "type": "INT",
+          "link": 52,
+          "widget": {
+            "name": "var1",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            68
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Generation (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Addition (INT)"
+      },
+      "widgets_values": [
+        0,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 38,
+      "type": "Stupid Simple Addition (INT)",
+      "pos": [
+        900,
+        930
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "var1",
+          "type": "INT",
+          "link": 53,
+          "widget": {
+            "name": "var1",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            90
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Generation (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Addition (INT)"
+      },
+      "widgets_values": [
+        0,
+        2
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 29,
+      "type": "JDC_Plasma",
+      "pos": [
+        600,
+        1080
+      ],
+      "size": [
+        300,
+        320
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 39,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 43,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 40,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            41
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Plasma Noise (Variation 3)",
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        768,
+        768,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 39,
+      "type": "Stupid Simple Addition (INT)",
+      "pos": [
+        900,
+        1030
+      ],
+      "size": [
+        300,
+        70
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "var1",
+          "type": "INT",
+          "link": 54,
+          "widget": {
+            "name": "var1",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            92
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Generation (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Addition (INT)"
+      },
+      "widgets_values": [
+        0,
+        3
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 9,
+      "type": "VAEDecode",
+      "pos": [
+        900,
+        1130
+      ],
+      "size": [
+        200,
+        70
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V0-0)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 50,
+      "type": "VAEDecode",
+      "pos": [
+        1100,
+        1130
+      ],
+      "size": [
+        200,
+        70
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 103
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 104
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            105
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V0-1)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 41,
+      "type": "VAEDecode",
+      "pos": [
+        900,
+        1230
+      ],
+      "size": [
+        200,
+        70
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 63
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            65
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V1-0)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 53,
+      "type": "VAEDecode",
+      "pos": [
+        1100,
+        1230
+      ],
+      "size": [
+        200,
+        70
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 114
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 115
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            116
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V0-2)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 47,
+      "type": "VAEDecode",
+      "pos": [
+        900,
+        1330
+      ],
+      "size": [
+        200,
+        70
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 86
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 87
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            88
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V3-0)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 44,
+      "type": "VAEDecode",
+      "pos": [
+        1100,
+        1330
+      ],
+      "size": [
+        200,
+        70
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 76
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            78
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V2-0)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 56,
+      "type": "VAEDecode",
+      "pos": [
+        900,
+        1430
+      ],
+      "size": [
+        200,
+        70
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 125
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 126
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            127
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V0-3)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 8,
+      "type": "KSampler",
+      "pos": [
+        800,
+        30
+      ],
+      "size": [
+        250,
+        570
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 20
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 12
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 13
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 16
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 24,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 47,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 48,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 49,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 50,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 51,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 0-0)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 49,
+      "type": "KSampler",
+      "pos": [
+        1050,
+        330
+      ],
+      "size": [
+        250,
+        270
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 95
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 96
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 97
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 128
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 98,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 99,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 131,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 100,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 101,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 102,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 0-1)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 52,
+      "type": "KSampler",
+      "pos": [
+        1300,
+        330
+      ],
+      "size": [
+        250,
+        270
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 106
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 107
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 108
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 129
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 109,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 110,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 132,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 111,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 112,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 113,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            114
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 0-2)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 55,
+      "type": "KSampler",
+      "pos": [
+        1550,
+        330
+      ],
+      "size": [
+        250,
+        270
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 117
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 118
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 119
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 130
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 120,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 121,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 133,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 122,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 123,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 124,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            125
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 0-3)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 46,
+      "type": "KSampler",
+      "pos": [
+        1550,
+        30
+      ],
+      "size": [
+        250,
+        270
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 79
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 80
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 81
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 93
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 92,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 82,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 94,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 83,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 84,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 85,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            86
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 3-0)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 43,
+      "type": "KSampler",
+      "pos": [
+        1300,
+        30
+      ],
+      "size": [
+        250,
+        270
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 69
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 70
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 71
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 89
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 90,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 72,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 91,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 73,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 74,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 75,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            76
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 2-0)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 40,
+      "type": "KSampler",
+      "pos": [
+        1050,
+        30
+      ],
+      "size": [
+        250,
+        270
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 55
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 56
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 57
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 67
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 68,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 59,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 66,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 60,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 61,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 62,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            63
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 1-0)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 11,
+      "type": "BNK_CLIPTextEncodeAdvanced",
+      "pos": [
+        300,
+        130
+      ],
+      "size": [
+        500,
+        220
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            12,
+            56,
+            70,
+            80,
+            96,
+            107,
+            118
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {
+        "Node name for S&R": "BNK_CLIPTextEncodeAdvanced"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        "A1111"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 12,
+      "type": "BNK_CLIPTextEncodeAdvanced",
+      "pos": [
+        300,
+        380
+      ],
+      "size": [
+        500,
+        220
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            13,
+            57,
+            71,
+            81,
+            97,
+            108,
+            119
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt",
+      "properties": {
+        "Node name for S&R": "BNK_CLIPTextEncodeAdvanced"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        "A1111"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 20,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        300,
+        30
+      ],
+      "size": [
+        250,
+        70
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            26,
+            32,
+            38,
+            43
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Image Width",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        768
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 21,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        550,
+        30
+      ],
+      "size": [
+        250,
+        70
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            27,
+            33,
+            35,
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Image Height",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        768
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 10,
+      "type": "SaveImage",
+      "pos": [
+        1200,
+        630
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "title": "Save Image Variant 0-0",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation00"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 42,
+      "type": "SaveImage",
+      "pos": [
+        1600,
+        630
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 65
+        }
+      ],
+      "title": "Save Image Variant 1-0",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation10"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 45,
+      "type": "SaveImage",
+      "pos": [
+        2000,
+        630
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 78
+        }
+      ],
+      "title": "Save Image Variant 2-0",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation20"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 48,
+      "type": "SaveImage",
+      "pos": [
+        2400,
+        630
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 88
+        }
+      ],
+      "title": "Save Image Variant 3-0",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation30"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 51,
+      "type": "SaveImage",
+      "pos": [
+        1600,
+        1130
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 105
+        }
+      ],
+      "title": "Save Image Variant 0-1",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation01"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 54,
+      "type": "SaveImage",
+      "pos": [
+        2000,
+        1130
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 116
+        }
+      ],
+      "title": "Save Image Variant 0-2",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation02"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 57,
+      "type": "SaveImage",
+      "pos": [
+        2400,
+        1130
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 127
+        }
+      ],
+      "title": "Save Image Variant 0-3",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation03"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      7,
+      8,
+      0,
+      9,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      4,
+      0,
+      9,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      9,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      11,
+      0,
+      8,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      12,
+      0,
+      8,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      13,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      4,
+      0,
+      14,
+      1,
+      "VAE"
+    ],
+    [
+      16,
+      14,
+      0,
+      8,
+      3,
+      "LATENT"
+    ],
+    [
+      19,
+      15,
+      0,
+      16,
+      0,
+      "MODEL"
+    ],
+    [
+      20,
+      16,
+      0,
+      8,
+      0,
+      "MODEL"
+    ],
+    [
+      21,
+      15,
+      1,
+      17,
+      0,
+      "CLIP"
+    ],
+    [
+      22,
+      17,
+      0,
+      11,
+      0,
+      "CLIP"
+    ],
+    [
+      23,
+      17,
+      0,
+      12,
+      0,
+      "CLIP"
+    ],
+    [
+      24,
+      18,
+      0,
+      8,
+      4,
+      "INT"
+    ],
+    [
+      25,
+      19,
+      0,
+      13,
+      0,
+      "INT"
+    ],
+    [
+      26,
+      20,
+      0,
+      13,
+      1,
+      "INT"
+    ],
+    [
+      27,
+      21,
+      0,
+      13,
+      2,
+      "INT"
+    ],
+    [
+      29,
+      22,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      19,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      31,
+      25,
+      0,
+      22,
+      0,
+      "INT"
+    ],
+    [
+      32,
+      20,
+      0,
+      22,
+      1,
+      "INT"
+    ],
+    [
+      33,
+      21,
+      0,
+      22,
+      2,
+      "INT"
+    ],
+    [
+      34,
+      28,
+      0,
+      26,
+      0,
+      "INT"
+    ],
+    [
+      35,
+      21,
+      0,
+      26,
+      2,
+      "INT"
+    ],
+    [
+      36,
+      26,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      19,
+      0,
+      28,
+      0,
+      "INT"
+    ],
+    [
+      38,
+      20,
+      0,
+      26,
+      1,
+      "INT"
+    ],
+    [
+      39,
+      31,
+      0,
+      29,
+      0,
+      "INT"
+    ],
+    [
+      40,
+      21,
+      0,
+      29,
+      2,
+      "INT"
+    ],
+    [
+      41,
+      29,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      19,
+      0,
+      31,
+      0,
+      "INT"
+    ],
+    [
+      43,
+      20,
+      0,
+      29,
+      1,
+      "INT"
+    ],
+    [
+      44,
+      4,
+      0,
+      23,
+      1,
+      "VAE"
+    ],
+    [
+      45,
+      4,
+      0,
+      27,
+      1,
+      "VAE"
+    ],
+    [
+      46,
+      4,
+      0,
+      30,
+      1,
+      "VAE"
+    ],
+    [
+      47,
+      32,
+      0,
+      8,
+      5,
+      "INT"
+    ],
+    [
+      48,
+      33,
+      0,
+      8,
+      6,
+      "FLOAT"
+    ],
+    [
+      49,
+      34,
+      0,
+      8,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      50,
+      35,
+      0,
+      8,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      51,
+      36,
+      0,
+      8,
+      9,
+      "FLOAT"
+    ],
+    [
+      52,
+      18,
+      0,
+      37,
+      0,
+      "INT"
+    ],
+    [
+      53,
+      18,
+      0,
+      38,
+      0,
+      "INT"
+    ],
+    [
+      54,
+      18,
+      0,
+      39,
+      0,
+      "INT"
+    ],
+    [
+      55,
+      16,
+      0,
+      40,
+      0,
+      "MODEL"
+    ],
+    [
+      56,
+      11,
+      0,
+      40,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      57,
+      12,
+      0,
+      40,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      59,
+      32,
+      0,
+      40,
+      5,
+      "INT"
+    ],
+    [
+      60,
+      34,
+      0,
+      40,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      61,
+      35,
+      0,
+      40,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      62,
+      36,
+      0,
+      40,
+      9,
+      "FLOAT"
+    ],
+    [
+      63,
+      40,
+      0,
+      41,
+      0,
+      "LATENT"
+    ],
+    [
+      64,
+      4,
+      0,
+      41,
+      1,
+      "VAE"
+    ],
+    [
+      65,
+      41,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      66,
+      33,
+      0,
+      40,
+      6,
+      "FLOAT"
+    ],
+    [
+      67,
+      14,
+      0,
+      40,
+      3,
+      "LATENT"
+    ],
+    [
+      68,
+      37,
+      0,
+      40,
+      4,
+      "INT"
+    ],
+    [
+      69,
+      16,
+      0,
+      43,
+      0,
+      "MODEL"
+    ],
+    [
+      70,
+      11,
+      0,
+      43,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      71,
+      12,
+      0,
+      43,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      72,
+      32,
+      0,
+      43,
+      5,
+      "INT"
+    ],
+    [
+      73,
+      34,
+      0,
+      43,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      74,
+      35,
+      0,
+      43,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      75,
+      36,
+      0,
+      43,
+      9,
+      "FLOAT"
+    ],
+    [
+      76,
+      43,
+      0,
+      44,
+      0,
+      "LATENT"
+    ],
+    [
+      77,
+      4,
+      0,
+      44,
+      1,
+      "VAE"
+    ],
+    [
+      78,
+      44,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      79,
+      16,
+      0,
+      46,
+      0,
+      "MODEL"
+    ],
+    [
+      80,
+      11,
+      0,
+      46,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      81,
+      12,
+      0,
+      46,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      82,
+      32,
+      0,
+      46,
+      5,
+      "INT"
+    ],
+    [
+      83,
+      34,
+      0,
+      46,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      84,
+      35,
+      0,
+      46,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      85,
+      36,
+      0,
+      46,
+      9,
+      "FLOAT"
+    ],
+    [
+      86,
+      46,
+      0,
+      47,
+      0,
+      "LATENT"
+    ],
+    [
+      87,
+      4,
+      0,
+      47,
+      1,
+      "VAE"
+    ],
+    [
+      88,
+      47,
+      0,
+      48,
+      0,
+      "IMAGE"
+    ],
+    [
+      89,
+      14,
+      0,
+      43,
+      3,
+      "LATENT"
+    ],
+    [
+      90,
+      38,
+      0,
+      43,
+      4,
+      "INT"
+    ],
+    [
+      91,
+      33,
+      0,
+      43,
+      6,
+      "FLOAT"
+    ],
+    [
+      92,
+      39,
+      0,
+      46,
+      4,
+      "INT"
+    ],
+    [
+      93,
+      14,
+      0,
+      46,
+      3,
+      "LATENT"
+    ],
+    [
+      94,
+      33,
+      0,
+      46,
+      6,
+      "FLOAT"
+    ],
+    [
+      95,
+      16,
+      0,
+      49,
+      0,
+      "MODEL"
+    ],
+    [
+      96,
+      11,
+      0,
+      49,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      97,
+      12,
+      0,
+      49,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      98,
+      18,
+      0,
+      49,
+      4,
+      "INT"
+    ],
+    [
+      99,
+      32,
+      0,
+      49,
+      5,
+      "INT"
+    ],
+    [
+      100,
+      34,
+      0,
+      49,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      101,
+      35,
+      0,
+      49,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      102,
+      36,
+      0,
+      49,
+      9,
+      "FLOAT"
+    ],
+    [
+      103,
+      49,
+      0,
+      50,
+      0,
+      "LATENT"
+    ],
+    [
+      104,
+      4,
+      0,
+      50,
+      1,
+      "VAE"
+    ],
+    [
+      105,
+      50,
+      0,
+      51,
+      0,
+      "IMAGE"
+    ],
+    [
+      106,
+      16,
+      0,
+      52,
+      0,
+      "MODEL"
+    ],
+    [
+      107,
+      11,
+      0,
+      52,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      108,
+      12,
+      0,
+      52,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      109,
+      18,
+      0,
+      52,
+      4,
+      "INT"
+    ],
+    [
+      110,
+      32,
+      0,
+      52,
+      5,
+      "INT"
+    ],
+    [
+      111,
+      34,
+      0,
+      52,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      112,
+      35,
+      0,
+      52,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      113,
+      36,
+      0,
+      52,
+      9,
+      "FLOAT"
+    ],
+    [
+      114,
+      52,
+      0,
+      53,
+      0,
+      "LATENT"
+    ],
+    [
+      115,
+      4,
+      0,
+      53,
+      1,
+      "VAE"
+    ],
+    [
+      116,
+      53,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      117,
+      16,
+      0,
+      55,
+      0,
+      "MODEL"
+    ],
+    [
+      118,
+      11,
+      0,
+      55,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      119,
+      12,
+      0,
+      55,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      120,
+      18,
+      0,
+      55,
+      4,
+      "INT"
+    ],
+    [
+      121,
+      32,
+      0,
+      55,
+      5,
+      "INT"
+    ],
+    [
+      122,
+      34,
+      0,
+      55,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      123,
+      35,
+      0,
+      55,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      124,
+      36,
+      0,
+      55,
+      9,
+      "FLOAT"
+    ],
+    [
+      125,
+      55,
+      0,
+      56,
+      0,
+      "LATENT"
+    ],
+    [
+      126,
+      4,
+      0,
+      56,
+      1,
+      "VAE"
+    ],
+    [
+      127,
+      56,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      128,
+      23,
+      0,
+      49,
+      3,
+      "LATENT"
+    ],
+    [
+      129,
+      27,
+      0,
+      52,
+      3,
+      "LATENT"
+    ],
+    [
+      130,
+      30,
+      0,
+      55,
+      3,
+      "LATENT"
+    ],
+    [
+      131,
+      33,
+      0,
+      49,
+      6,
+      "FLOAT"
+    ],
+    [
+      132,
+      33,
+      0,
+      52,
+      6,
+      "FLOAT"
+    ],
+    [
+      133,
+      33,
+      0,
+      55,
+      6,
+      "FLOAT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

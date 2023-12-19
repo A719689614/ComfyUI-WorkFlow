@@ -1,0 +1,5394 @@
+{
+  "last_node_id": 76,
+  "last_link_id": 134,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "Note",
+      "pos": [
+        600,
+        -470
+      ],
+      "size": {
+        "0": 600,
+        "1": 470
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "title": "About",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "# Interfacial Workflow / Made by Project Soulstealer #\n\nInterface: Prompt-Variational Generation\nVersion: v1.0.0\n\nThis is the Advanced Workflow, with advanced prompter and more capable Plasma Noise Generator. Plasma allows your images to have deeper darks and brighter lights. Also allows you to get more out of your CLIP than usual. Also allows loading V-Prediction models. Also allows you to set your CLIP SKIP manually. Also have seed separately from the modules.\n\nThis workflow will generate 4 images at once, allowing you to quickly browse prompt variations or other variations such as CFG or other stuff.\n\nColor Coding:\nCyan = Input nodes. You set information about what you want to those.\nYellow = Processing nodes. Don't touch those.\nGreen = Output nodes. This is where you get your result.\nBlack = Debug/Processing nodes. This is where you can see intermediate results."
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 1,
+      "type": "Note",
+      "pos": [
+        0,
+        -270
+      ],
+      "size": {
+        "0": 600,
+        "1": 270
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "title": "Requirements",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "## Requires ##\n* https://github.com/Jordach/comfy-plasma - Plasma Noise for ComfyUI\n  - Plasma Noise Generator\n* https://github.com/DeInfernal/StupidSimpleNodes - Stupid Simple Nodes\n  - Seed Nodes\n  - Addition nodes\n  - INT nodes\n  - FLOAT nodes\n  - Sampler/Scheduler nodes\n* https://github.com/BlenderNeko/ComfyUI_ADV_CLIP_emb - Advanced CLIP Text Encode\n  - Clip Prompts (Advanced) -> merged with Prompt Control\n* https://github.com/comfyanonymous/ComfyUI_experiments/blob/master/sampler_rescalecfg.py - Rescale CFG\n* https://github.com/asagi4/comfyui-prompt-control - Prompt Control\n  - Prompt to Schedule\n  - Schedule to Conditioning\n  - Schedule to Model\n* Probably, 8 GB VRAM"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 22,
+      "type": "KSampler",
+      "pos": [
+        0,
+        720
+      ],
+      "size": {
+        "0": 250,
+        "1": 270
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 13
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 14
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 15
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 18
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 19,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 20,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 21,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 22,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 23,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 24,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            6
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 0)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 5,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        510,
+        30
+      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            11,
+            12,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Set CLIP SKIP",
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -1
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 6,
+      "type": "VAELoader",
+      "pos": [
+        720,
+        30
+      ],
+      "size": {
+        "0": 360,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            17,
+            25,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.ckpt"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 7,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        1080,
+        30
+      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            26,
+            99,
+            100,
+            101
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Image Width",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        768
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 8,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        1290,
+        30
+      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            27,
+            102,
+            103,
+            104
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Image Height",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        768
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 18,
+      "type": "ScheduleToCond",
+      "pos": [
+        910,
+        180
+      ],
+      "size": {
+        "0": 240,
+        "1": 90
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 11
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToCond"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 21,
+      "type": "ScheduleToCond",
+      "pos": [
+        910,
+        450
+      ],
+      "size": {
+        "0": 240,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 12
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToCond"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 19,
+      "type": "ScheduleToModel",
+      "pos": [
+        910,
+        300
+      ],
+      "size": {
+        "0": 240,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 9
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            13
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToModel"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "RescaleClassifierFreeGuidanceTest",
+      "pos": [
+        300,
+        30
+      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            9,
+            111,
+            112,
+            113
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Rescale CFG",
+      "properties": {
+        "Node name for S&R": "RescaleClassifierFreeGuidanceTest"
+      },
+      "widgets_values": [
+        0
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 3,
+      "type": "CheckpointLoader",
+      "pos": [
+        0,
+        30
+      ],
+      "size": {
+        "0": 300,
+        "1": 122
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            8
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            10
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoader"
+      },
+      "widgets_values": [
+        "v1-inference_fp16.yaml",
+        "baseline/fluffyrock_3m_offsetnoise_e68.safetensors"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 11,
+      "type": "JDC_Plasma",
+      "pos": [
+        0,
+        400
+      ],
+      "size": {
+        "0": 290,
+        "1": 290
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 7,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 26,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 27,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Plasma Noise (Variation 0)",
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        768,
+        768,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 17,
+      "type": "PromptToSchedule",
+      "pos": [
+        550,
+        180
+      ],
+      "size": {
+        "0": 360,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "PROMPT_SCHEDULE",
+          "type": "PROMPT_SCHEDULE",
+          "links": [
+            3,
+            4
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt (Variation 0)",
+      "properties": {
+        "Node name for S&R": "PromptToSchedule"
+      },
+      "widgets_values": [
+        "STYLE:A1111:none"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 20,
+      "type": "PromptToSchedule",
+      "pos": [
+        550,
+        450
+      ],
+      "size": {
+        "0": 360,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "PROMPT_SCHEDULE",
+          "type": "PROMPT_SCHEDULE",
+          "links": [
+            5
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt (Variation 0)",
+      "properties": {
+        "Node name for S&R": "PromptToSchedule"
+      },
+      "widgets_values": [
+        "STYLE:A1111:none"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 23,
+      "type": "VAEDecode",
+      "pos": [
+        0,
+        1020
+      ],
+      "size": {
+        "0": 250,
+        "1": 70
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 6
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V0)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 27,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        1150,
+        290
+      ],
+      "size": {
+        "0": 294,
+        "1": 80
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 96,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            48
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Plasma Noise (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 29,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        1440,
+        180
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "integer",
+          "type": "INT",
+          "link": 114,
+          "widget": {
+            "name": "integer",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            53
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Steps (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        48
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 30,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        1440,
+        270
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "floatnum",
+          "type": "FLOAT",
+          "link": 115,
+          "widget": {
+            "name": "floatnum",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            52
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler CFG (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        7
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 31,
+      "type": "Stupid Simple Sampler",
+      "pos": [
+        1440,
+        360
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sampler",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 116,
+          "widget": {
+            "name": "sampler",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "dpmpp_3m_sde",
+                "dpmpp_3m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": [
+            "euler",
+            "euler_ancestral",
+            "heun",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          "links": [
+            51
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Name (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Sampler"
+      },
+      "widgets_values": [
+        "dpmpp_2s_ancestral"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 32,
+      "type": "Stupid Simple Scheduler",
+      "pos": [
+        1440,
+        450
+      ],
+      "size": {
+        "0": 260.3999938964844,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
+          "link": 117,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "sgm_uniform",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": [
+            "normal",
+            "karras",
+            "exponential",
+            "simple",
+            "ddim_uniform"
+          ],
+          "links": [
+            50
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Scheduler (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Scheduler"
+      },
+      "widgets_values": [
+        "karras"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 33,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        1440,
+        540
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "floatnum",
+          "type": "FLOAT",
+          "link": 118,
+          "widget": {
+            "name": "floatnum",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            49
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Denoise (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        0.9
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 34,
+      "type": "PromptToSchedule",
+      "pos": [
+        1700,
+        180
+      ],
+      "size": {
+        "0": 360,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "PROMPT_SCHEDULE",
+          "type": "PROMPT_SCHEDULE",
+          "links": [
+            32,
+            33
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt (Variation 1)",
+      "properties": {
+        "Node name for S&R": "PromptToSchedule"
+      },
+      "widgets_values": [
+        "STYLE:A1111:none"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 35,
+      "type": "ScheduleToCond",
+      "pos": [
+        2060,
+        180
+      ],
+      "size": {
+        "0": 240,
+        "1": 90
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 105
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            57
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToCond"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 37,
+      "type": "PromptToSchedule",
+      "pos": [
+        1700,
+        450
+      ],
+      "size": {
+        "0": 360,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "PROMPT_SCHEDULE",
+          "type": "PROMPT_SCHEDULE",
+          "links": [
+            34
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt (Variation 1)",
+      "properties": {
+        "Node name for S&R": "PromptToSchedule"
+      },
+      "widgets_values": [
+        "STYLE:A1111:none"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 38,
+      "type": "ScheduleToCond",
+      "pos": [
+        2060,
+        450
+      ],
+      "size": {
+        "0": 240,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 106
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            56
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToCond"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 40,
+      "type": "VAEDecode",
+      "pos": [
+        1150,
+        1020
+      ],
+      "size": {
+        "0": 250,
+        "1": 70
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 45
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 129
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            46
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V1)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 42,
+      "type": "VAEEncode",
+      "pos": [
+        1440,
+        630
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 47
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 132
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            55
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Encode PN-V1",
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 28,
+      "type": "JDC_Plasma",
+      "pos": [
+        1150,
+        400
+      ],
+      "size": {
+        "0": 290,
+        "1": 290
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 48,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 99,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 102,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            47
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Plasma Noise (Variation 1)",
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        768,
+        768,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 39,
+      "type": "KSampler",
+      "pos": [
+        1150,
+        720
+      ],
+      "size": {
+        "0": 250,
+        "1": 270
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 58
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 57
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 56
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 55
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 54,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 53,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 52,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 51,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 50,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 49,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            45
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 1)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 36,
+      "type": "ScheduleToModel",
+      "pos": [
+        2060,
+        300
+      ],
+      "size": {
+        "0": 240,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 111,
+          "slot_index": 0
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            58
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToModel"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 44,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        2300,
+        290
+      ],
+      "size": {
+        "0": 294,
+        "1": 80
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 97,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            59
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Plasma Noise (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 45,
+      "type": "JDC_Plasma",
+      "pos": [
+        2300,
+        400
+      ],
+      "size": {
+        "0": 290,
+        "1": 290
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 59,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 100,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 103,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            75
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Plasma Noise (Variation 2)",
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        768,
+        768,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 46,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        2590,
+        180
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "integer",
+          "type": "INT",
+          "link": 119,
+          "widget": {
+            "name": "integer",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            68
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Steps (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        48
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 47,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        2590,
+        270
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "floatnum",
+          "type": "FLOAT",
+          "link": 120,
+          "widget": {
+            "name": "floatnum",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            69
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler CFG (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        7
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 48,
+      "type": "Stupid Simple Sampler",
+      "pos": [
+        2590,
+        360
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sampler",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 121,
+          "widget": {
+            "name": "sampler",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "dpmpp_3m_sde",
+                "dpmpp_3m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": [
+            "euler",
+            "euler_ancestral",
+            "heun",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          "links": [
+            70
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Name (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Sampler"
+      },
+      "widgets_values": [
+        "dpmpp_2s_ancestral"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 49,
+      "type": "Stupid Simple Scheduler",
+      "pos": [
+        2590,
+        450
+      ],
+      "size": {
+        "0": 260.3999938964844,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
+          "link": 122,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "sgm_uniform",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": [
+            "normal",
+            "karras",
+            "exponential",
+            "simple",
+            "ddim_uniform"
+          ],
+          "links": [
+            71
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Scheduler (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Scheduler"
+      },
+      "widgets_values": [
+        "karras"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 50,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        2590,
+        540
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "floatnum",
+          "type": "FLOAT",
+          "link": 123,
+          "widget": {
+            "name": "floatnum",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            72
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Denoise (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        0.9
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 51,
+      "type": "PromptToSchedule",
+      "pos": [
+        2850,
+        180
+      ],
+      "size": {
+        "0": 360,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "PROMPT_SCHEDULE",
+          "type": "PROMPT_SCHEDULE",
+          "links": [
+            60,
+            61
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt (Variation 2)",
+      "properties": {
+        "Node name for S&R": "PromptToSchedule"
+      },
+      "widgets_values": [
+        "STYLE:A1111:none"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 52,
+      "type": "ScheduleToCond",
+      "pos": [
+        3210,
+        180
+      ],
+      "size": {
+        "0": 240,
+        "1": 90
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 107
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 60
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            64
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToCond"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 53,
+      "type": "ScheduleToModel",
+      "pos": [
+        3210,
+        300
+      ],
+      "size": {
+        "0": 240,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 112,
+          "slot_index": 0
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            63
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToModel"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 54,
+      "type": "PromptToSchedule",
+      "pos": [
+        2850,
+        450
+      ],
+      "size": {
+        "0": 360,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "PROMPT_SCHEDULE",
+          "type": "PROMPT_SCHEDULE",
+          "links": [
+            62
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt (Variation 2)",
+      "properties": {
+        "Node name for S&R": "PromptToSchedule"
+      },
+      "widgets_values": [
+        "STYLE:A1111:none"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 55,
+      "type": "ScheduleToCond",
+      "pos": [
+        3210,
+        450
+      ],
+      "size": {
+        "0": 240,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 108
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            65
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToCond"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 56,
+      "type": "KSampler",
+      "pos": [
+        2300,
+        720
+      ],
+      "size": {
+        "0": 250,
+        "1": 270
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 63
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 64
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 65
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 66
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 67,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 68,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 69,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 70,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 71,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 72,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            73
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 2)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 57,
+      "type": "VAEDecode",
+      "pos": [
+        2300,
+        1020
+      ],
+      "size": {
+        "0": 250,
+        "1": 70
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 73
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 130
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            74
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V2)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 59,
+      "type": "VAEEncode",
+      "pos": [
+        2590,
+        630
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 75
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 133
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            66
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Encode PN-V2",
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 61,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        3450,
+        290
+      ],
+      "size": {
+        "0": 294,
+        "1": 80
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 98,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            76
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Plasma Noise (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 62,
+      "type": "JDC_Plasma",
+      "pos": [
+        3450,
+        400
+      ],
+      "size": {
+        "0": 290,
+        "1": 290
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 76,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 101,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 104,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 128,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            92
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Plasma Noise (Variation 3)",
+      "properties": {
+        "Node name for S&R": "JDC_Plasma"
+      },
+      "widgets_values": [
+        768,
+        768,
+        2.75,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        "randomize"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 63,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        3740,
+        180
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "integer",
+          "type": "INT",
+          "link": 124,
+          "widget": {
+            "name": "integer",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            85
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Steps (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        48
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 64,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        3740,
+        270
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "floatnum",
+          "type": "FLOAT",
+          "link": 125,
+          "widget": {
+            "name": "floatnum",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            86
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler CFG (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        7
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 65,
+      "type": "Stupid Simple Sampler",
+      "pos": [
+        3740,
+        360
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sampler",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 126,
+          "widget": {
+            "name": "sampler",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "dpmpp_3m_sde",
+                "dpmpp_3m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": [
+            "euler",
+            "euler_ancestral",
+            "heun",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          "links": [
+            87
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Name (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Sampler"
+      },
+      "widgets_values": [
+        "dpmpp_2s_ancestral"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 66,
+      "type": "Stupid Simple Scheduler",
+      "pos": [
+        3740,
+        450
+      ],
+      "size": {
+        "0": 260.3999938964844,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
+          "link": 127,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "sgm_uniform",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": [
+            "normal",
+            "karras",
+            "exponential",
+            "simple",
+            "ddim_uniform"
+          ],
+          "links": [
+            88
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Scheduler (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Scheduler"
+      },
+      "widgets_values": [
+        "karras"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 67,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        3740,
+        540
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "floatnum",
+          "type": "FLOAT",
+          "link": 128,
+          "widget": {
+            "name": "floatnum",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            89
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Denoise (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        0.9
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 68,
+      "type": "PromptToSchedule",
+      "pos": [
+        4000,
+        180
+      ],
+      "size": {
+        "0": 360,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "PROMPT_SCHEDULE",
+          "type": "PROMPT_SCHEDULE",
+          "links": [
+            77,
+            78
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt (Variation 3)",
+      "properties": {
+        "Node name for S&R": "PromptToSchedule"
+      },
+      "widgets_values": [
+        "STYLE:A1111:none"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 69,
+      "type": "ScheduleToCond",
+      "pos": [
+        4360,
+        180
+      ],
+      "size": {
+        "0": 240,
+        "1": 90
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 109
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            81
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToCond"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 70,
+      "type": "ScheduleToModel",
+      "pos": [
+        4360,
+        300
+      ],
+      "size": {
+        "0": 240,
+        "1": 120
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 113,
+          "slot_index": 0
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 78
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            80
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToModel"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 71,
+      "type": "PromptToSchedule",
+      "pos": [
+        4000,
+        450
+      ],
+      "size": {
+        "0": 360,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "PROMPT_SCHEDULE",
+          "type": "PROMPT_SCHEDULE",
+          "links": [
+            79
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt (Variation 3)",
+      "properties": {
+        "Node name for S&R": "PromptToSchedule"
+      },
+      "widgets_values": [
+        "STYLE:A1111:none"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 72,
+      "type": "ScheduleToCond",
+      "pos": [
+        4360,
+        450
+      ],
+      "size": {
+        "0": 240,
+        "1": 240
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 110
+        },
+        {
+          "name": "prompt_schedule",
+          "type": "PROMPT_SCHEDULE",
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            82
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduleToCond"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 73,
+      "type": "KSampler",
+      "pos": [
+        3450,
+        720
+      ],
+      "size": {
+        "0": 250,
+        "1": 270
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 80
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 81
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 82
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 83
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 84,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 85,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 86,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 87,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 88,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 89,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            90
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler (Variation 3)",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        48,
+        7,
+        "dpmpp_2s_ancestral",
+        "karras",
+        0.9
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 74,
+      "type": "VAEDecode",
+      "pos": [
+        3450,
+        1020
+      ],
+      "size": {
+        "0": 250,
+        "1": 70
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 72,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 90
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            91
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Decode (Image V3)",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 76,
+      "type": "VAEEncode",
+      "pos": [
+        3740,
+        630
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 92
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            83
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Encode PN-V3",
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 9,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        0,
+        180
+      ],
+      "size": {
+        "0": 290,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            19,
+            93,
+            94,
+            95
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Generation (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 10,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        0,
+        290
+      ],
+      "size": {
+        "0": 294,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 15,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            7,
+            96,
+            97,
+            98
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Plasma Noise (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 24,
+      "type": "SaveImage",
+      "pos": [
+        250,
+        720
+      ],
+      "size": {
+        "0": 900,
+        "1": 370
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "title": "Save Image Variant 0",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation0"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 41,
+      "type": "SaveImage",
+      "pos": [
+        1400,
+        720
+      ],
+      "size": {
+        "0": 900,
+        "1": 370
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 73,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 46
+        }
+      ],
+      "title": "Save Image Variant 1",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation1"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 58,
+      "type": "SaveImage",
+      "pos": [
+        2550,
+        720
+      ],
+      "size": {
+        "0": 900,
+        "1": 370
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 74,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 74
+        }
+      ],
+      "title": "Save Image Variant 2",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 75,
+      "type": "SaveImage",
+      "pos": [
+        3700,
+        720
+      ],
+      "size": {
+        "0": 900,
+        "1": 370
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 75,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 91
+        }
+      ],
+      "title": "Save Image Variant 3",
+      "properties": {},
+      "widgets_values": [
+        "ImageVariation3"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 26,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        1150,
+        180
+      ],
+      "size": {
+        "0": 290,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 93,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            54
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Generation (Variation 1)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 12,
+      "type": "Stupid Simple Number (INT)",
+      "pos": [
+        290,
+        180
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 16,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            20,
+            114,
+            119,
+            124
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Steps (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (INT)"
+      },
+      "widgets_values": [
+        48
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 14,
+      "type": "Stupid Simple Sampler",
+      "pos": [
+        290,
+        360
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 17,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": [
+            "euler",
+            "euler_ancestral",
+            "heun",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          "links": [
+            22,
+            116,
+            121,
+            126
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Name (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Sampler"
+      },
+      "widgets_values": [
+        "dpmpp_2s_ancestral"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 15,
+      "type": "Stupid Simple Scheduler",
+      "pos": [
+        290,
+        450
+      ],
+      "size": {
+        "0": 260.3999938964844,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 18,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": [
+            "normal",
+            "karras",
+            "exponential",
+            "simple",
+            "ddim_uniform"
+          ],
+          "links": [
+            23,
+            117,
+            122,
+            127
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Scheduler (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Scheduler"
+      },
+      "widgets_values": [
+        "karras"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 16,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        290,
+        540
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 19,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            24,
+            118,
+            123,
+            128
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler Denoise (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        0.9
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 43,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        2300,
+        180
+      ],
+      "size": {
+        "0": 290,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 94,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            67
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Generation (Variation 2)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 60,
+      "type": "Stupid Simple Seed (INT)",
+      "pos": [
+        3450,
+        180
+      ],
+      "size": {
+        "0": 290,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 95,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            84
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed For Generation (Variation 3)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Seed (INT)"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 25,
+      "type": "VAEEncode",
+      "pos": [
+        290,
+        630
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 16
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            18
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE Encode PN-V0",
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 13,
+      "type": "Stupid Simple Number (FLOAT)",
+      "pos": [
+        290,
+        270
+      ],
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 20,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            21,
+            115,
+            120,
+            125
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Sampler CFG (Variation 0)",
+      "properties": {
+        "Node name for S&R": "Stupid Simple Number (FLOAT)"
+      },
+      "widgets_values": [
+        7
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      3,
+      17,
+      0,
+      18,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      4,
+      17,
+      0,
+      19,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      5,
+      20,
+      0,
+      21,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      6,
+      22,
+      0,
+      23,
+      0,
+      "LATENT"
+    ],
+    [
+      7,
+      10,
+      0,
+      11,
+      0,
+      "INT"
+    ],
+    [
+      8,
+      3,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      9,
+      4,
+      0,
+      19,
+      0,
+      "MODEL"
+    ],
+    [
+      10,
+      3,
+      1,
+      5,
+      0,
+      "CLIP"
+    ],
+    [
+      11,
+      5,
+      0,
+      18,
+      0,
+      "CLIP"
+    ],
+    [
+      12,
+      5,
+      0,
+      21,
+      0,
+      "CLIP"
+    ],
+    [
+      13,
+      19,
+      0,
+      22,
+      0,
+      "MODEL"
+    ],
+    [
+      14,
+      18,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      21,
+      0,
+      22,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      11,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      6,
+      0,
+      25,
+      1,
+      "VAE"
+    ],
+    [
+      18,
+      25,
+      0,
+      22,
+      3,
+      "LATENT"
+    ],
+    [
+      19,
+      9,
+      0,
+      22,
+      4,
+      "INT"
+    ],
+    [
+      20,
+      12,
+      0,
+      22,
+      5,
+      "INT"
+    ],
+    [
+      21,
+      13,
+      0,
+      22,
+      6,
+      "FLOAT"
+    ],
+    [
+      22,
+      14,
+      0,
+      22,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      23,
+      15,
+      0,
+      22,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      24,
+      16,
+      0,
+      22,
+      9,
+      "FLOAT"
+    ],
+    [
+      25,
+      6,
+      0,
+      23,
+      1,
+      "VAE"
+    ],
+    [
+      26,
+      7,
+      0,
+      11,
+      1,
+      "INT"
+    ],
+    [
+      27,
+      8,
+      0,
+      11,
+      2,
+      "INT"
+    ],
+    [
+      28,
+      23,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      34,
+      0,
+      35,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      33,
+      34,
+      0,
+      36,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      34,
+      37,
+      0,
+      38,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      45,
+      39,
+      0,
+      40,
+      0,
+      "LATENT"
+    ],
+    [
+      46,
+      40,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      47,
+      28,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      48,
+      27,
+      0,
+      28,
+      0,
+      "INT"
+    ],
+    [
+      49,
+      33,
+      0,
+      39,
+      9,
+      "FLOAT"
+    ],
+    [
+      50,
+      32,
+      0,
+      39,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      51,
+      31,
+      0,
+      39,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      52,
+      30,
+      0,
+      39,
+      6,
+      "FLOAT"
+    ],
+    [
+      53,
+      29,
+      0,
+      39,
+      5,
+      "INT"
+    ],
+    [
+      54,
+      26,
+      0,
+      39,
+      4,
+      "INT"
+    ],
+    [
+      55,
+      42,
+      0,
+      39,
+      3,
+      "LATENT"
+    ],
+    [
+      56,
+      38,
+      0,
+      39,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      57,
+      35,
+      0,
+      39,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      58,
+      36,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      59,
+      44,
+      0,
+      45,
+      0,
+      "INT"
+    ],
+    [
+      60,
+      51,
+      0,
+      52,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      61,
+      51,
+      0,
+      53,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      62,
+      54,
+      0,
+      55,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      63,
+      53,
+      0,
+      56,
+      0,
+      "MODEL"
+    ],
+    [
+      64,
+      52,
+      0,
+      56,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      65,
+      55,
+      0,
+      56,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      66,
+      59,
+      0,
+      56,
+      3,
+      "LATENT"
+    ],
+    [
+      67,
+      43,
+      0,
+      56,
+      4,
+      "INT"
+    ],
+    [
+      68,
+      46,
+      0,
+      56,
+      5,
+      "INT"
+    ],
+    [
+      69,
+      47,
+      0,
+      56,
+      6,
+      "FLOAT"
+    ],
+    [
+      70,
+      48,
+      0,
+      56,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      71,
+      49,
+      0,
+      56,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      72,
+      50,
+      0,
+      56,
+      9,
+      "FLOAT"
+    ],
+    [
+      73,
+      56,
+      0,
+      57,
+      0,
+      "LATENT"
+    ],
+    [
+      74,
+      57,
+      0,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      75,
+      45,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      76,
+      61,
+      0,
+      62,
+      0,
+      "INT"
+    ],
+    [
+      77,
+      68,
+      0,
+      69,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      78,
+      68,
+      0,
+      70,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      79,
+      71,
+      0,
+      72,
+      1,
+      "PROMPT_SCHEDULE"
+    ],
+    [
+      80,
+      70,
+      0,
+      73,
+      0,
+      "MODEL"
+    ],
+    [
+      81,
+      69,
+      0,
+      73,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      82,
+      72,
+      0,
+      73,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      83,
+      76,
+      0,
+      73,
+      3,
+      "LATENT"
+    ],
+    [
+      84,
+      60,
+      0,
+      73,
+      4,
+      "INT"
+    ],
+    [
+      85,
+      63,
+      0,
+      73,
+      5,
+      "INT"
+    ],
+    [
+      86,
+      64,
+      0,
+      73,
+      6,
+      "FLOAT"
+    ],
+    [
+      87,
+      65,
+      0,
+      73,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      88,
+      66,
+      0,
+      73,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      89,
+      67,
+      0,
+      73,
+      9,
+      "FLOAT"
+    ],
+    [
+      90,
+      73,
+      0,
+      74,
+      0,
+      "LATENT"
+    ],
+    [
+      91,
+      74,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      92,
+      62,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
+      93,
+      9,
+      0,
+      26,
+      0,
+      "INT"
+    ],
+    [
+      94,
+      9,
+      0,
+      43,
+      0,
+      "INT"
+    ],
+    [
+      95,
+      9,
+      0,
+      60,
+      0,
+      "INT"
+    ],
+    [
+      96,
+      10,
+      0,
+      27,
+      0,
+      "INT"
+    ],
+    [
+      97,
+      10,
+      0,
+      44,
+      0,
+      "INT"
+    ],
+    [
+      98,
+      10,
+      0,
+      61,
+      0,
+      "INT"
+    ],
+    [
+      99,
+      7,
+      0,
+      28,
+      1,
+      "INT"
+    ],
+    [
+      100,
+      7,
+      0,
+      45,
+      1,
+      "INT"
+    ],
+    [
+      101,
+      7,
+      0,
+      62,
+      1,
+      "INT"
+    ],
+    [
+      102,
+      8,
+      0,
+      28,
+      2,
+      "INT"
+    ],
+    [
+      103,
+      8,
+      0,
+      45,
+      2,
+      "INT"
+    ],
+    [
+      104,
+      8,
+      0,
+      62,
+      2,
+      "INT"
+    ],
+    [
+      105,
+      5,
+      0,
+      35,
+      0,
+      "CLIP"
+    ],
+    [
+      106,
+      5,
+      0,
+      38,
+      0,
+      "CLIP"
+    ],
+    [
+      107,
+      5,
+      0,
+      52,
+      0,
+      "CLIP"
+    ],
+    [
+      108,
+      5,
+      0,
+      55,
+      0,
+      "CLIP"
+    ],
+    [
+      109,
+      5,
+      0,
+      69,
+      0,
+      "CLIP"
+    ],
+    [
+      110,
+      5,
+      0,
+      72,
+      0,
+      "CLIP"
+    ],
+    [
+      111,
+      4,
+      0,
+      36,
+      0,
+      "MODEL"
+    ],
+    [
+      112,
+      4,
+      0,
+      53,
+      0,
+      "MODEL"
+    ],
+    [
+      113,
+      4,
+      0,
+      70,
+      0,
+      "MODEL"
+    ],
+    [
+      114,
+      12,
+      0,
+      29,
+      0,
+      "INT"
+    ],
+    [
+      115,
+      13,
+      0,
+      30,
+      0,
+      "FLOAT"
+    ],
+    [
+      116,
+      14,
+      0,
+      31,
+      0,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      117,
+      15,
+      0,
+      32,
+      0,
+      "normal,karras,exponential,sgm_uniform,simple,ddim_uniform"
+    ],
+    [
+      118,
+      16,
+      0,
+      33,
+      0,
+      "FLOAT"
+    ],
+    [
+      119,
+      12,
+      0,
+      46,
+      0,
+      "INT"
+    ],
+    [
+      120,
+      13,
+      0,
+      47,
+      0,
+      "FLOAT"
+    ],
+    [
+      121,
+      14,
+      0,
+      48,
+      0,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      122,
+      15,
+      0,
+      49,
+      0,
+      "normal,karras,exponential,sgm_uniform,simple,ddim_uniform"
+    ],
+    [
+      123,
+      16,
+      0,
+      50,
+      0,
+      "FLOAT"
+    ],
+    [
+      124,
+      12,
+      0,
+      63,
+      0,
+      "INT"
+    ],
+    [
+      125,
+      13,
+      0,
+      64,
+      0,
+      "FLOAT"
+    ],
+    [
+      126,
+      14,
+      0,
+      65,
+      0,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      127,
+      15,
+      0,
+      66,
+      0,
+      "normal,karras,exponential,sgm_uniform,simple,ddim_uniform"
+    ],
+    [
+      128,
+      16,
+      0,
+      67,
+      0,
+      "FLOAT"
+    ],
+    [
+      129,
+      6,
+      0,
+      40,
+      1,
+      "VAE"
+    ],
+    [
+      130,
+      6,
+      0,
+      57,
+      1,
+      "VAE"
+    ],
+    [
+      131,
+      6,
+      0,
+      74,
+      1,
+      "VAE"
+    ],
+    [
+      132,
+      6,
+      0,
+      42,
+      1,
+      "VAE"
+    ],
+    [
+      133,
+      6,
+      0,
+      59,
+      1,
+      "VAE"
+    ],
+    [
+      134,
+      6,
+      0,
+      76,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

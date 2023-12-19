@@ -1,0 +1,760 @@
+{
+  "last_node_id": 17,
+  "last_link_id": 31,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "EmptyLatentImage",
+      "pos": [
+        419,
+        841
+      ],
+      "size": [
+        397.1142074203492,
+        130.69078083038346
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            16
+          ],
+          "slot_index": 0,
+          "label": "LATENT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        4
+      ],
+      "locked": true
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        -30,
+        758
+      ],
+      "size": [
+        315,
+        314.00000762939453
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "INDOOR 720P.png",
+        "image"
+      ],
+      "locked": true
+    },
+    {
+      "id": 13,
+      "type": "ControlNetLoader",
+      "pos": [
+        -25,
+        596
+      ],
+      "size": [
+        323.1979703036219,
+        80.8321234963156
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            26
+          ],
+          "shape": 3,
+          "label": "CONTROL_NET",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "control_v11p_sd15_softedge.pth"
+      ],
+      "locked": true
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -33,
+        191
+      ],
+      "size": [
+        349.338049804687,
+        138.9427620849607
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            28
+          ],
+          "slot_index": 0,
+          "label": "MODEL"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            5,
+            30
+          ],
+          "slot_index": 1,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            15
+          ],
+          "slot_index": 2,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "realisticV20\\realisticVisionV20_v20NoVAE.safetensors"
+      ],
+      "locked": true
+    },
+    {
+      "id": 16,
+      "type": "Note",
+      "pos": [
+        1,
+        -113
+      ],
+      "size": [
+        510.74951171875,
+        120.66322326660156
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Rendering floor plan of the apartment layout,top view,(masterpiece),(best quality),(Solid background:1.3),Details,Solid background,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 17,
+      "type": "Note",
+      "pos": [
+        538,
+        -113
+      ],
+      "size": {
+        "0": 510.74951171875,
+        "1": 120.66322326660156
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        " cluttered,paintings,  (worst quality:2), (low quality:2), (normal quality:2), lowres,signature, blurry, drawing, sketch, poor quality, ugly, text, pixelated, low resolution, chaotic spaces,outdated design, cluttered,paintings,  (worst quality:2), (low quality:2), (normal quality:2), lowres,signature, blurry, drawing, sketch, poor quality, ugly, text, pixelated, low resolution, chaotic spaces,outdated design, cluttered,paintings,  (worst quality:2), (low quality:2), (normal quality:2), lowres,signature, blurry, drawing, sketch, poor quality, ugly, text, pixelated, low resolution, chaotic spaces,outdated design"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        413,
+        389
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            18
+          ],
+          "slot_index": 0,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "locked": true
+    },
+    {
+      "id": 15,
+      "type": "LoraLoader",
+      "pos": [
+        -31,
+        377
+      ],
+      "size": [
+        341.97833900312594,
+        154.6693845016366
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 28,
+          "label": "model"
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 30,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            29
+          ],
+          "shape": 3,
+          "label": "MODEL",
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "label": "CLIP",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "Indoor\\Cc啊程-户型平面填色_V0.5.safetensors",
+        1,
+        1
+      ],
+      "locked": true
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        415,
+        186
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 31,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            17
+          ],
+          "slot_index": 0,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Rendering floor plan of the apartment layout,top view,(masterpiece),(best quality)"
+      ],
+      "locked": true
+    },
+    {
+      "id": 11,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        419,
+        624
+      ],
+      "size": [
+        409.3798481334337,
+        167.74123174493945
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 17,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 18,
+          "label": "negative"
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 26,
+          "label": "control_net"
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 25,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            22
+          ],
+          "shape": 3,
+          "label": "positive",
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            23
+          ],
+          "shape": 3,
+          "label": "negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        1,
+        0,
+        1
+      ],
+      "locked": true
+    },
+    {
+      "id": 10,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        910,
+        183
+      ],
+      "size": [
+        317.5142074203493,
+        793.5307808303834
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 29,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 22,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 23,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 16,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": 15,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            10
+          ],
+          "shape": 3,
+          "label": "LATENT",
+          "slot_index": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            11
+          ],
+          "shape": 3,
+          "label": "VAE",
+          "slot_index": 4
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        "Sample",
+        -1,
+        null,
+        30,
+        8,
+        "euler",
+        "normal",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#353535",
+      "bgcolor": "#212121",
+      "shape": 2,
+      "locked": true
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1264,
+        189
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 10,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 11,
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            27
+          ],
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "locked": true
+    },
+    {
+      "id": 14,
+      "type": "PreviewImage",
+      "pos": [
+        1498,
+        187
+      ],
+      "size": [
+        423.6456085205066,
+        442.3873962402338
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 27,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "locked": true
+    }
+  ],
+  "links": [
+    [
+      5,
+      4,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      10,
+      10,
+      3,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      11,
+      10,
+      4,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      15,
+      4,
+      2,
+      10,
+      4,
+      "VAE"
+    ],
+    [
+      16,
+      5,
+      0,
+      10,
+      3,
+      "LATENT"
+    ],
+    [
+      17,
+      6,
+      0,
+      11,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      7,
+      0,
+      11,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      22,
+      11,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      23,
+      11,
+      1,
+      10,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      25,
+      12,
+      0,
+      11,
+      3,
+      "IMAGE"
+    ],
+    [
+      26,
+      13,
+      0,
+      11,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      27,
+      8,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      4,
+      0,
+      15,
+      0,
+      "MODEL"
+    ],
+    [
+      29,
+      15,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      30,
+      4,
+      1,
+      15,
+      1,
+      "CLIP"
+    ],
+    [
+      31,
+      15,
+      1,
+      6,
+      0,
+      "CLIP"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

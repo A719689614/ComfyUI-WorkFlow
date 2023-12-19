@@ -1,0 +1,2009 @@
+{
+  "last_node_id": 492,
+  "last_link_id": 681,
+  "nodes": [
+    {
+      "id": 176,
+      "type": "Note",
+      "pos": [
+        -1617.0990839239776,
+        -1514.5511934943995
+      ],
+      "size": {
+        "0": 538.8547973632812,
+        "1": 204.64321899414062
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "masterpiece,best quality,a building,business,in the city,close to river,(From the front:1.3),sky,(morning),high quality, high detail,HDR,realistic,photography,8k,64k, <lora:gaorender:0.6>"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 177,
+      "type": "Note",
+      "pos": [
+        -1619.0990839239776,
+        -1252.5511934943997
+      ],
+      "size": {
+        "0": 520.7527465820312,
+        "1": 179.40090942382812
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "16-token-negative-deliberate-neg, realisticvision-negative-embedding,low quality,worst quality"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 179,
+      "type": "Note",
+      "pos": [
+        -971.4595154764377,
+        -1231.2699069237472
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "sketch,low quality,worst quality,bad quality,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 178,
+      "type": "Note",
+      "pos": [
+        -966.4595154764377,
+        -1505.2699069237472
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "realistic,product level photography,photograph,Bedroom, bed in the middle of the picture, wardrobe on the left of the bed, with pillows, nightstand, lamp, bed near the window, window on the right of the picture, glass, reflection, landscape outside the window,global illumination,high resolution,masterpiece,best quality,high level detail,(photographic grade:1.2)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 181,
+      "type": "Note",
+      "pos": [
+        -314.0765147642782,
+        -1212.0004276014197
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "error,worst quality,low quality,normal quality,blurry,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 184,
+      "type": "Note",
+      "pos": [
+        -1694,
+        -3084
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "masterpiece,best quality,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 186,
+      "type": "Note",
+      "pos": [
+        -1672,
+        -2336
+      ],
+      "size": {
+        "0": 565.7542724609375,
+        "1": 226.29164123535156
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,(((simple background))),monochrome,lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,lowres,bad anatomy,bad hands,text,error,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,ugly,pregnant,vore,duplicate,morbid,mut ilated,tran nsexual,hermaphrodite,long neck,mutated hands,poorly drawn hands,poorly drawn face,mutation,deformed,blurry,bad anatomy,bad proportions,malformed limbs,extra limbs,cloned face,disfigured,gross proportions,(((missing arms))),(((missing legs))),(((extra arms))),(((extra legs))),pubic hair,plump,bad legs,error legs,username,blurry,bad feet,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 185,
+      "type": "Note",
+      "pos": [
+        -1671,
+        -2586
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "masterpiece,best quality,best quality,masterpiece,highres,1girl,blush,(seductive smile:0.8),star-shaped pupils,china hanfu,hair ornament,necklace,jewelry,Beautiful face,upon_body,tyndall effect,photorealistic,dark studio,rim lighting,two tone lighting,(high detailed skin:1.2),8k uhd,dslr,soft lighting,high quality,volumetric lighting,candid,Photograph,high resolution,4k,8k,Bokeh,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 188,
+      "type": "Note",
+      "pos": [
+        -966.9802343750004,
+        -2300.480234375
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "(worst quality, low quality:2),monochrome,zombie,overexposure,watermark,text,bad anatomy,bad hand,extra hands,extra fingers,too many fingers,fused fingers,bad arm,distorted arm,extra arms,fused arms,extra legs,missing leg,disembodied leg,extra nipples,detached arm,liquid hand,inverted hand,disembodied limb,small breasts,loli,oversized head,extra body,completely nude,extra navel,EasyNegative,(hair between eyes),sketch,duplicate,ugly,huge eyes,text,logo,worst face,(bad and mutated hands:1.3),(blurry:2),horror,geometry,bad_prompt,(bad hands),(missing fingers),multiple limbs,bad anatomy,(interlocked fingers:1.2),Ugly Fingers,(extra digit and hands and fingers and legs and arms:1.4),((2girl)),(deformed fingers:1.2),(long fingers:1.2),(bad-artist-anime),bad-artist,bad hand,extra legs,(ng_deepnegative_v1_75t),"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 190,
+      "type": "Note",
+      "pos": [
+        366,
+        -1203
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "2 heads,cropped image,draft,deformed hands,twisted fingers,long neck,malformed hands,multiple heads,extra limb,poorly drawn hands,missing limb,disfigured,blurry,bad anatomy,mutation,floating limbs,disconnected limbs,disgusting,mutilated,surreal,extra fingers,morbid,gross proportions,missing arms,mutated hands,mutilated hands,malformed,tiling,poorly drawn hands,out of frame,extra limbs,disfigured,deformed,body out of frame,bad art,beginner,amateur,distorted face,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 189,
+      "type": "Note",
+      "pos": [
+        362,
+        -1500
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "((Best quality)),((masterpiece)),((realistic)),portray a towering highrise office building in a futuristic cityscape. Capture the bustling atmosphere and vibrant neon lighting. The modern and sleek architectural style should be emphasized,showcasing the building's grandeur. Use a digital rendering medium to create a photorealistic concept art. Employ cool tones like blue and silver to evoke a futuristic ambiance. Utilize CGI and ray tracing techniques for high-definition details,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 228,
+      "type": "Note",
+      "pos": [
+        1113,
+        -1493
+      ],
+      "size": {
+        "0": 542.80126953125,
+        "1": 157.51815795898438
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "mountain,The mango tree,Orange tree,(There is fruit on the tree:1.2),(orange fruit),Roads,telephone poles,(green lawn),grass,(no humans),photography,realistic,<lora:景观植物组团_v1.0:0.5>,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 231,
+      "type": "Note",
+      "pos": [
+        1115,
+        -1194
+      ],
+      "size": {
+        "0": 542.80126953125,
+        "1": 157.51815795898438
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "buildings,worst quality,low quality,normal quality,blurry,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 233,
+      "type": "Note",
+      "pos": [
+        1817.5696281539927,
+        -1200.9728864755539
+      ],
+      "size": {
+        "0": 542.80126953125,
+        "1": 157.51815795898438
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "lowres,bad anatomy,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 232,
+      "type": "Note",
+      "pos": [
+        1821.5696281539927,
+        -1482.9728864755539
+      ],
+      "size": {
+        "0": 542.80126953125,
+        "1": 157.51815795898438
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "park,river,cloud sky,photography,realistic,masterpiece,HDR,4k,best quality,<lora:landscape:0.75>,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 235,
+      "type": "Note",
+      "pos": [
+        2506.850724411335,
+        -1217.5044730716834
+      ],
+      "size": {
+        "0": 542.80126953125,
+        "1": 157.51815795898438
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "2 heads,cropped image,draft,deformed hands,twisted fingers,long neck,malformed hands,multiple heads,extra limb,poorly drawn hands,missing limb,disfigured,blurry,bad anatomy,mutation,floating limbs,disconnected limbs,disgusting,mutilated,surreal,extra fingers,morbid,gross proportions,missing arms,mutated hands,mutilated hands,malformed,tiling,poorly drawn hands,out of frame,extra limbs,disfigured,deformed,body out of frame,bad art,beginner,amateur,distorted face,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 234,
+      "type": "Note",
+      "pos": [
+        2512.850724411335,
+        -1497.5044730716834
+      ],
+      "size": {
+        "0": 542.80126953125,
+        "1": 157.51815795898438
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "((Best quality)),((masterpiece)),((realistic)),portray a towering highrise office building in a futuristic cityscape. Capture the bustling atmosphere and vibrant neon lighting. The modern and sleek architectural style should be emphasized,showcasing the building's grandeur. Use a digital rendering medium to create a photorealistic concept art. Employ cool tones like blue and silver to evoke a futuristic ambiance. Utilize CGI and ray tracing techniques for high-definition details,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 187,
+      "type": "Note",
+      "pos": [
+        -967,
+        -2566
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "(masterpiece, top quality, best quality, official art, beautiful and aesthetic:1.2),(1girl),extreme detailed,(fractal art:1.3),colorful,highest detailed,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 183,
+      "type": "Note",
+      "pos": [
+        -1688,
+        -3344
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 237,
+      "type": "Note",
+      "pos": [
+        -922,
+        -3070
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "EasyNegative,bad anatomy,badhandsv5-neg,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 236,
+      "type": "Note",
+      "pos": [
+        -928,
+        -3339
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Draw a young programmer,sitting on a research platform floating in the middle of an asteroid belt. He is studying with a notebook,surrounded by several asteroids glowing with fiery auras. Dramatic lighting from distant stars and planets illuminates the scene,casting deep shadows on the suit. The young man looks confident and determined,looking at the vast and mysterious universe with wonder and respect,facial hair,cowboy shot,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 239,
+      "type": "Note",
+      "pos": [
+        -139,
+        -3069
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 238,
+      "type": "Note",
+      "pos": [
+        -141,
+        -3338
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "A long-haired bear with a white background and firm eyes,a very sunny and cheerful pet,masterpiece,best quality,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 241,
+      "type": "Note",
+      "pos": [
+        3197.0860492785264,
+        -1205.9139507214736
+      ],
+      "size": {
+        "0": 492.2033996582031,
+        "1": 166.2368621826172
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "text,watermark,paintings,sketches,low res,(normal quality),(worst quality),(low quality),cropped,error,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 243,
+      "type": "Note",
+      "pos": [
+        1836.360712574708,
+        -2246.223264971691
+      ],
+      "size": {
+        "0": 515.4654541015625,
+        "1": 179.4281005859375
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 242,
+      "type": "Note",
+      "pos": [
+        1833.360712574708,
+        -2566.223264971691
+      ],
+      "size": {
+        "0": 525.1402587890625,
+        "1": 250.67831420898438
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "A community landscape plan,architecture,landscape,beautiful road network,clean routes,beautiful floor plan,masterpiece,best quality,<lora:landscape plane:0.8>,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 245,
+      "type": "Note",
+      "pos": [
+        2563.830503194728,
+        -2235.958343387169
+      ],
+      "size": {
+        "0": 525.1402587890625,
+        "1": 250.67831420898438
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 244,
+      "type": "Note",
+      "pos": [
+        2565.830503194728,
+        -2543.958343387169
+      ],
+      "size": {
+        "0": 525.1402587890625,
+        "1": 250.67831420898438
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "flowers,A small garden,(small area:1.5),yellow flowers,purple flowers,beautiful plants,clean environment,masterpiece,best quality,<lora:afforest:0.85>,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 247,
+      "type": "Note",
+      "pos": [
+        -236,
+        -2302
+      ],
+      "size": {
+        "0": 525.1402587890625,
+        "1": 250.67831420898438
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "EasyNegative,bad-hands-5,bad_prompt_version2,ng_deepnegative_v1_75t,paintings,sketches,(worst quality:2),(low quality:2),(normal quality:2),lowres,((monochrome)),((grayscale)),paintings,sketches,skin spots,acnes,bad anatomy,lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,blurry,bad feet,cropped,poorly drawn hands,poorly drawn face,mutation,deformed,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,extra fingers,fewer digits,(extra limbs,extra arms,extra legs),malformed limbs,fused fingers,too many fingers,long neck,cross-eyed,mutated hands,polar lowres,bad body,bad proportions,gross,makeup,sauna,(piercing, navel piercing, ear ring, pubic hair:2),(gym, treadmill, weights, training machine, cardio, wokrout:2),man,signature,watermark,artist name,username,hat,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 246,
+      "type": "Note",
+      "pos": [
+        -234,
+        -2615
+      ],
+      "size": {
+        "0": 525.1402587890625,
+        "1": 250.67831420898438
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "RAW photo,best quality,high res,\nfull body of adult women (1girls solo:1.5)and large breast and big ass and light embarrassed smile wearing (randoseru backpack) and business suit jacket and matching business skirt,glasses,skin pore,skindentation,with bokeh background of business street of Marunouchi Tokyo with lots of skyrise buildings,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 248,
+      "type": "Note",
+      "pos": [
+        574,
+        -2602
+      ],
+      "size": {
+        "0": 525.1402587890625,
+        "1": 250.67831420898438
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "masterpiece,best quality,1girl,face,((close-up, Close portrait:1)),make up,studio light,studio,white background,black hair,Long curly hair,face front,((windbreaker with puff sleeves bigger pockets and long belt, gathering at the waist, colorful, asymmetric structure, Deconstruction, oversized silhouettes)) cotton fabric,emotional,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 249,
+      "type": "Note",
+      "pos": [
+        567,
+        -2286
+      ],
+      "size": {
+        "0": 525.1402587890625,
+        "1": 250.67831420898438
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "ng_deepnegative_v1_75t,(badhandv4:1.2),(worst quality:2),(low quality:2),(normal quality:2),lowres,bad anatomy,bad hands,((monochrome)),((grayscale)) watermark,moles,large breast,big breast,sunshine,bright,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 240,
+      "type": "Note",
+      "pos": [
+        3204,
+        -1494
+      ],
+      "size": {
+        "0": 493.4680480957031,
+        "1": 155.5262908935547
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "aargsitemap,aargdetailmap,day,From the top,trees in the park,trees along the road,cars on road,a plan of a city with lots of trees and buildings on it,and a large park in the middle,masterpiece,best quality,HD,8k,64k,<lora:AARG_plan_V1.0:1>,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 269,
+      "type": "Note",
+      "pos": [
+        3946,
+        -1507
+      ],
+      "size": {
+        "0": 493.4680480957031,
+        "1": 155.5262908935547
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Modern city aeia tey picture,buildings, gosy las facaves t l ldlgs. cean lst oa obiryelsvf ce n a e achtcureas cow ces sy otsuliyntbest a l y acitctue Pocaeo y phtcresli ultra-detailed, aerial perspective, V-ray(masterpiece:1.3),(best quality:1.3),(high resolution:1.2),(high detail:1.2)\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 270,
+      "type": "Note",
+      "pos": [
+        3951,
+        -1219
+      ],
+      "size": {
+        "0": 493.4680480957031,
+        "1": 155.5262908935547
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 180,
+      "type": "Note",
+      "pos": [
+        -312,
+        -1500
+      ],
+      "size": {
+        "0": 558.6791381835938,
+        "1": 176.84967041015625
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "A Complex curve-shaped scientific and technological buildings,close to river,curve-based buildings,epic sci-fi scenes,ultra detail,octane render,atmospheric,volumetric lights,Cinematic,delicate,unreal engine 5,by Zaha Hadid,atmospheric,long exposure,masterpiece,best quality,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 460,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1622,
+        -26
+      ],
+      "size": [
+        343.00006103515625,
+        253.50201416015625
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            626
+          ],
+          "shape": 3,
+          "label": "LATENT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1920,
+        1080,
+        1
+      ],
+      "locked": true
+    },
+    {
+      "id": 466,
+      "type": "ControlNetLoader",
+      "pos": [
+        150,
+        160
+      ],
+      "size": [
+        381.8321533203125,
+        71.64164733886719
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            633
+          ],
+          "shape": 3,
+          "label": "CONTROL_NET"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "control_v11p_sd15_softedge.pth"
+      ],
+      "locked": true
+    },
+    {
+      "id": 468,
+      "type": "LoadImage",
+      "pos": [
+        140,
+        290
+      ],
+      "size": [
+        382.98846435546875,
+        321.9242858886719
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            639
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "arhi1080P-XG.jpg",
+        "image"
+      ],
+      "locked": true
+    },
+    {
+      "id": 471,
+      "type": "LoadImage",
+      "pos": [
+        137,
+        771
+      ],
+      "size": [
+        382.2296142578125,
+        314
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 39,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            642
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "arhi1080P.png",
+        "image"
+      ],
+      "locked": true
+    },
+    {
+      "id": 474,
+      "type": "ControlNetLoader",
+      "pos": [
+        144,
+        659
+      ],
+      "size": [
+        381.8321533203125,
+        71.64164733886719
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            643
+          ],
+          "shape": 3,
+          "label": "CONTROL_NET",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "control_v11p_sd15_seg.pth"
+      ],
+      "locked": true
+    },
+    {
+      "id": 491,
+      "type": "Note",
+      "pos": [
+        611,
+        -384
+      ],
+      "size": {
+        "0": 426.018798828125,
+        "1": 132.954345703125
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "aargsitemap,aargdetailmap,day,From the top,,trees in the park,trees along the road,a plan of a city with lots of trees and buildings on it,and a large park in the middle,masterpiece,best quality"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 492,
+      "type": "Note",
+      "pos": [
+        1090,
+        -386
+      ],
+      "size": {
+        "0": 542.018798828125,
+        "1": 147.954345703125
+      },
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "text,watermark,paintings,sketches,low res,(normal quality),(worst quality),(low quality),cropped,error,"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 463,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        140,
+        -50
+      ],
+      "size": [
+        400.76654052734375,
+        129.52597045898438
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            652
+          ],
+          "shape": 3,
+          "label": "MODEL",
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            679
+          ],
+          "shape": 3,
+          "label": "CLIP",
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            630
+          ],
+          "shape": 3,
+          "label": "VAE",
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "realisticV20\\realisticVisionV20_v20NoVAE.safetensors"
+      ],
+      "locked": true
+    },
+    {
+      "id": 480,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        631,
+        -149
+      ],
+      "size": [
+        379.0684509277344,
+        58
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 679,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            675,
+            680
+          ],
+          "shape": 3,
+          "label": "CLIP",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -1
+      ],
+      "locked": true
+    },
+    {
+      "id": 490,
+      "type": "BNK_CLIPTextEncodeAdvanced",
+      "pos": [
+        613,
+        209
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 675,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            677
+          ],
+          "shape": 3,
+          "label": "CONDITIONING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CLIPTextEncodeAdvanced"
+      },
+      "widgets_values": [
+        "text,watermark,paintings,sketches,low res,(normal quality),(worst quality),(low quality),cropped,error,",
+        "none",
+        "A1111"
+      ],
+      "locked": true
+    },
+    {
+      "id": 477,
+      "type": "LoraLoader",
+      "pos": [
+        609,
+        962
+      ],
+      "size": [
+        413.129150390625,
+        126
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 652,
+          "label": "model"
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 680,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            654
+          ],
+          "shape": 3,
+          "label": "MODEL",
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            681
+          ],
+          "shape": 3,
+          "label": "CLIP",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "Plane\\AARG_plan_V1.0.safetensors",
+        1,
+        1
+      ],
+      "locked": true
+    },
+    {
+      "id": 489,
+      "type": "BNK_CLIPTextEncodeAdvanced",
+      "pos": [
+        618,
+        -39
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 681,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            676
+          ],
+          "shape": 3,
+          "label": "CONDITIONING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CLIPTextEncodeAdvanced"
+      },
+      "widgets_values": [
+        "aargsitemap,aargdetailmap,day,From the top,grass,trees,trees along the road,a plan of a city with lots of trees and buildings on it,masterpiece,best quality",
+        "none",
+        "A1111"
+      ],
+      "locked": true
+    },
+    {
+      "id": 465,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        623,
+        461
+      ],
+      "size": [
+        396.5736999511719,
+        200.9381866455078
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 676,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 677,
+          "label": "negative"
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 633,
+          "label": "control_net",
+          "slot_index": 2
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 639,
+          "label": "image",
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            667
+          ],
+          "shape": 3,
+          "label": "positive",
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            668
+          ],
+          "shape": 3,
+          "label": "negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        1,
+        0,
+        1
+      ],
+      "locked": true
+    },
+    {
+      "id": 473,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        622,
+        709
+      ],
+      "size": [
+        396.5736999511719,
+        200.9381866455078
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 667,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 668,
+          "label": "negative"
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 643,
+          "label": "control_net",
+          "slot_index": 2
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 642,
+          "label": "image",
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            669
+          ],
+          "shape": 3,
+          "label": "positive",
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            670
+          ],
+          "shape": 3,
+          "label": "negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        1,
+        0,
+        1
+      ],
+      "locked": true
+    },
+    {
+      "id": 457,
+      "type": "KSampler",
+      "pos": [
+        1055,
+        -27
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 654,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 669,
+          "label": "positive",
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 670,
+          "label": "negative",
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 626,
+          "label": "latent_image",
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            627
+          ],
+          "shape": 3,
+          "label": "LATENT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        368561800190691,
+        "randomize",
+        30,
+        8,
+        "euler",
+        "normal",
+        1
+      ],
+      "locked": true
+    },
+    {
+      "id": 461,
+      "type": "VAEDecode",
+      "pos": [
+        1401,
+        -30
+      ],
+      "size": [
+        198.1775360107422,
+        242.91810607910156
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 627,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 630,
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            628
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "locked": true
+    },
+    {
+      "id": 462,
+      "type": "PreviewImage",
+      "pos": [
+        1059,
+        290
+      ],
+      "size": [
+        907.0596313476562,
+        802.1358642578125
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 628,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "locked": true
+    }
+  ],
+  "links": [
+    [
+      626,
+      460,
+      0,
+      457,
+      3,
+      "LATENT"
+    ],
+    [
+      627,
+      457,
+      0,
+      461,
+      0,
+      "LATENT"
+    ],
+    [
+      628,
+      461,
+      0,
+      462,
+      0,
+      "IMAGE"
+    ],
+    [
+      630,
+      463,
+      2,
+      461,
+      1,
+      "VAE"
+    ],
+    [
+      633,
+      466,
+      0,
+      465,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      639,
+      468,
+      0,
+      465,
+      3,
+      "IMAGE"
+    ],
+    [
+      642,
+      471,
+      0,
+      473,
+      3,
+      "IMAGE"
+    ],
+    [
+      643,
+      474,
+      0,
+      473,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      652,
+      463,
+      0,
+      477,
+      0,
+      "MODEL"
+    ],
+    [
+      654,
+      477,
+      0,
+      457,
+      0,
+      "MODEL"
+    ],
+    [
+      667,
+      465,
+      0,
+      473,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      668,
+      465,
+      1,
+      473,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      669,
+      473,
+      0,
+      457,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      670,
+      473,
+      1,
+      457,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      675,
+      480,
+      0,
+      490,
+      0,
+      "CLIP"
+    ],
+    [
+      676,
+      489,
+      0,
+      465,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      677,
+      490,
+      0,
+      465,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      679,
+      463,
+      1,
+      480,
+      0,
+      "CLIP"
+    ],
+    [
+      680,
+      480,
+      0,
+      477,
+      1,
+      "CLIP"
+    ],
+    [
+      681,
+      477,
+      1,
+      489,
+      0,
+      "CLIP"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "建筑提示词",
+      "bounding": [
+        -1698,
+        -1626,
+        662,
+        590
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "室内提示词",
+      "bounding": [
+        -1004,
+        -1623,
+        638,
+        601
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "曲线建筑提示词",
+      "bounding": [
+        -345,
+        -1619,
+        631,
+        605
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "通用提示词",
+      "bounding": [
+        -1718,
+        -3461,
+        635,
+        607
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "国风3.0",
+      "bounding": [
+        -1704,
+        -2705,
+        622,
+        650
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Cute MIX",
+      "bounding": [
+        -991,
+        -2702,
+        613,
+        660
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "建筑通用提示词",
+      "bounding": [
+        344,
+        -1620,
+        641,
+        611
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Group",
+      "bounding": [
+        -1739,
+        -3577,
+        5482,
+        800
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Group",
+      "bounding": [
+        -1719,
+        -1754,
+        5485,
+        825
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "果园通用提示词",
+      "bounding": [
+        1078,
+        -1629,
+        636,
+        614
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Park 测试",
+      "bounding": [
+        1785,
+        -1629,
+        619,
+        613
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Architecture",
+      "bounding": [
+        2449,
+        -1625,
+        646,
+        609
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "男性",
+      "bounding": [
+        -966,
+        -3458,
+        666,
+        605
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "动物",
+      "bounding": [
+        -185,
+        -3461,
+        653,
+        611
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "超逼真景观平面",
+      "bounding": [
+        3155,
+        -1630,
+        571,
+        619
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "通用住宅景观平面",
+      "bounding": [
+        1750,
+        -2670,
+        685,
+        668
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "绿化设计",
+      "bounding": [
+        2527,
+        -2650,
+        635,
+        677
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "都市女孩",
+      "bounding": [
+        -284,
+        -2705,
+        648,
+        689
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "人像摄影",
+      "bounding": [
+        458,
+        -2705,
+        731,
+        691
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "景观鸟瞰图",
+      "bounding": [
+        3887,
+        -1635,
+        626,
+        621
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

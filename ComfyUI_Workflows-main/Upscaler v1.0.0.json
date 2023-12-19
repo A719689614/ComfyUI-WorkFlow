@@ -1,0 +1,236 @@
+{
+  "last_node_id": 8,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Note",
+      "pos": [
+        0,
+        -270
+      ],
+      "size": {
+        "0": 600,
+        "1": 270
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "title": "Requirements",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "## Requires ##\n* Probably, 8 GB VRAM"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 2,
+      "type": "Note",
+      "pos": [
+        600,
+        -470
+      ],
+      "size": {
+        "0": 600,
+        "1": 470
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "title": "About",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "# Interfacial Workflow / Made by Project Soulstealer #\n\nInterface: Upscaling\nVersion: v1.0.0\n\nThis is the Basic Model Upscaler. You can't get more basic than that.\n\nColor Coding:\nCyan = Input nodes. You set information about what you want to those.\nYellow = Processing nodes. Don't touch those.\nGreen = Output nodes. This is where you get your result.\nBlack = Debug/Processing nodes. This is where you can see intermediate results."
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 8,
+      "type": "SaveImage",
+      "pos": [
+        400,
+        130
+      ],
+      "size": [
+        400,
+        370
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 2
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        30
+      ],
+      "size": [
+        400,
+        370
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 7,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        400,
+        30
+      ],
+      "size": [
+        400,
+        70
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 3
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        0,
+        430
+      ],
+      "size": [
+        400,
+        70
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            3
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      1,
+      3,
+      0,
+      7,
+      1,
+      "IMAGE"
+    ],
+    [
+      2,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      4,
+      0,
+      7,
+      0,
+      "UPSCALE_MODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
