@@ -1,5 +1,9 @@
 # ComfyUI-WorkFlow
 一些我自己的工作流参数
+# Cc啊程、LCM最新套件
+通用类型参数工作流
+![AC-LCM标准工作流](https://github.com/A719689614/ComfyUI-WorkFlow/assets/142242136/501f728a-79d1-4725-9eee-fe1b7ab3c9d3)
+
 # 建筑设计参数工作流分享
 主要用于通用建筑和非线性建筑设计
 ![Cc啊程、建筑参数工作流](https://github.com/A719689614/ComfyUI-WorkFlow/assets/142242136/f0f28e8a-fc66-421d-9e3d-ea25fdf74d97)
