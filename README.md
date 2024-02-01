@@ -3,6 +3,9 @@
 # Cc啊程、LCM最新套件
 通用类型参数工作流
 ![AC-LCM标准工作流](https://github.com/A719689614/ComfyUI-WorkFlow/assets/142242136/501f728a-79d1-4725-9eee-fe1b7ab3c9d3)
+# 电商换装参数工作流分享
+![QQ截图20240201103224](https://github.com/A719689614/ComfyUI-WorkFlow/assets/142242136/56e93fde-9b89-4b70-a448-42fb1cccff7d)
+
 
 # 建筑设计参数工作流分享
 主要用于通用建筑和非线性建筑设计
