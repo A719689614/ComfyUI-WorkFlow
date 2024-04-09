@@ -1,0 +1,958 @@
+{
+  "last_node_id": 24,
+  "last_link_id": 28,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "🆔AC_Stable Diffusion格式提示词",
+      "pos": [
+        700,
+        389
+      ],
+      "size": {
+        "0": 425.27801513671875,
+        "1": 180.6060791015625
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            18
+          ],
+          "slot_index": 0,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "🆔AC_Stable Diffusion格式提示词"
+      },
+      "widgets_values": [
+        "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+        "none",
+        "Stable diffusion",
+        "把CLIP权重调整为stable diffusion的权重值"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        709,
+        855
+      ],
+      "size": [
+        416.19453674316424,
+        216.72506103515616
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 17,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 18,
+          "label": "negative"
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 20,
+          "label": "control_net",
+          "slot_index": 2
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 21,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "label": "positive",
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            16
+          ],
+          "shape": 3,
+          "label": "negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 19,
+      "type": "InpaintPreprocessor",
+      "pos": [
+        302,
+        1052
+      ],
+      "size": [
+        304.2591857910156,
+        101.6121826171875
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 22,
+          "label": "image"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 25,
+          "label": "mask"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InpaintPreprocessor"
+      }
+    },
+    {
+      "id": 14,
+      "type": "PreviewImage",
+      "pos": [
+        797,
+        1373
+      ],
+      "size": [
+        434.6709406738282,
+        688.540896484375
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 15,
+      "type": "ImageToMask",
+      "pos": [
+        1272,
+        1365
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 13,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            14,
+            23
+          ],
+          "shape": 3,
+          "label": "MASK",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "alpha"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "📰AC_遮罩预览",
+      "pos": [
+        1636,
+        1368
+      ],
+      "size": [
+        436.4529345703122,
+        671.8859355468751
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 14,
+          "label": "mask"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "📰AC_遮罩预览"
+      }
+    },
+    {
+      "id": 10,
+      "type": "🔜AC_Second_Season提示词",
+      "pos": [
+        711,
+        10
+      ],
+      "size": [
+        423.8430788654923,
+        130.15084214643994
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "shape": 3,
+          "label": "STRING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "🔜AC_Second_Season提示词"
+      },
+      "widgets_values": [
+        "动漫系列帅气大叔提示词.txt",
+        "读取你的模板列表Second-Season"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "💶AC_Super_EmptLatent",
+      "pos": [
+        695,
+        615
+      ],
+      "size": {
+        "0": 425.27801513671875,
+        "1": 194
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [],
+          "slot_index": 0,
+          "label": "LATENT"
+        },
+        {
+          "name": "WIDTH",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "WIDTH"
+        },
+        {
+          "name": "HEIGHT",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "HEIGHT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "💶AC_Super_EmptLatent"
+      },
+      "widgets_values": [
+        "512*768",
+        "All_ready",
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "📟AC_Super_CKPT&LCM",
+      "pos": [
+        270,
+        186
+      ],
+      "size": {
+        "0": 390,
+        "1": 615
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ],
+          "slot_index": 0,
+          "label": "MODEL"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            3
+          ],
+          "slot_index": 1,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8,
+            27
+          ],
+          "slot_index": 2,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "📟AC_Super_CKPT&LCM"
+      },
+      "widgets_values": [
+        "quadratic element\\AC_FUN机甲系列.safetensors",
+        "A001LCM\\pytorch_lora_weights.safetensors",
+        1,
+        1,
+        "AC_FUN超级模型&LORA"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "VAEEncode",
+      "pos": [
+        385,
+        1231
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 26,
+          "label": "pixels"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 27,
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            28
+          ],
+          "shape": 3,
+          "label": "LATENT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
+    },
+    {
+      "id": 6,
+      "type": "🆔AC_Stable Diffusion格式提示词",
+      "pos": [
+        700,
+        186
+      ],
+      "size": [
+        422.84503173828125,
+        168
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            17
+          ],
+          "slot_index": 0,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "🆔AC_Stable Diffusion格式提示词"
+      },
+      "widgets_values": [
+        "by sea,cloudy",
+        "none",
+        "Stable diffusion",
+        "把CLIP权重调整为stable diffusion的权重值"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "🎫AC_Super_PreviewImage",
+      "pos": [
+        1506,
+        181
+      ],
+      "size": [
+        320.7248202237215,
+        647.7469565651633
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8,
+          "label": "vae"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "🎫AC_Super_PreviewImage"
+      }
+    },
+    {
+      "id": 3,
+      "type": "📊AC_LCM采样器",
+      "pos": [
+        1160,
+        186
+      ],
+      "size": {
+        "0": 315,
+        "1": 615
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 15,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 16,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 28,
+          "label": "latent_image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "slot_index": 0,
+          "label": "LATENT"
+        },
+        {
+          "name": "HELP",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "HELP"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "📊AC_LCM采样器"
+      },
+      "widgets_values": [
+        425748031722546,
+        "randomize",
+        10,
+        1.4,
+        "lcm",
+        "normal",
+        0.5,
+        "AC_FUN-LCM采样器"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "📰AC_遮罩预览",
+      "pos": [
+        2127,
+        1367
+      ],
+      "size": {
+        "0": 436.45294189453125,
+        "1": 671.8859252929688
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 24,
+          "label": "mask"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "📰AC_遮罩预览"
+      }
+    },
+    {
+      "id": 20,
+      "type": "InvertMask",
+      "pos": [
+        1269,
+        1477
+      ],
+      "size": [
+        319.90124536132726,
+        90.8911049804683
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 23,
+          "label": "mask"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            24,
+            25
+          ],
+          "shape": 3,
+          "label": "MASK",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      }
+    },
+    {
+      "id": 12,
+      "type": "🆖图片移除背景",
+      "pos": [
+        370,
+        1384
+      ],
+      "size": [
+        346.0939406738281,
+        643.2658964843749
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11,
+          "label": "images"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            12,
+            13
+          ],
+          "shape": 3,
+          "label": "images",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "🆖图片移除背景"
+      },
+      "widgets_values": [
+        "true",
+        "u2net",
+        false,
+        false,
+        false,
+        240,
+        10,
+        10,
+        "none",
+        "移除背景"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "pos": [
+        -55,
+        1412
+      ],
+      "size": [
+        401.39056396484284,
+        591.0090831756585
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11,
+            22,
+            26
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_temp_fhphb_00002_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "ControlNetLoader",
+      "pos": [
+        278,
+        880
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "label": "CONTROL_NET"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "control_v11p_sd15_inpaint.pth"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      4,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      5,
+      4,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      11,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      12,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      12,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      15,
+      0,
+      16,
+      0,
+      "MASK"
+    ],
+    [
+      15,
+      17,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      17,
+      1,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      6,
+      0,
+      17,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      7,
+      0,
+      17,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      20,
+      18,
+      0,
+      17,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      21,
+      19,
+      0,
+      17,
+      3,
+      "IMAGE"
+    ],
+    [
+      22,
+      11,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      15,
+      0,
+      20,
+      0,
+      "MASK"
+    ],
+    [
+      24,
+      20,
+      0,
+      21,
+      0,
+      "MASK"
+    ],
+    [
+      25,
+      20,
+      0,
+      19,
+      1,
+      "MASK"
+    ],
+    [
+      26,
+      11,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      4,
+      2,
+      24,
+      1,
+      "VAE"
+    ],
+    [
+      28,
+      24,
+      0,
+      3,
+      3,
+      "LATENT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
