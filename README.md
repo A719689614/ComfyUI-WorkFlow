@@ -1,5 +1,6 @@
 # ComfyUI-WorkFlow
 一些我自己的工作流参数
+最近github刚刚拿回验证,后面继续更新内容给大家!2025.6.1
 # Cc啊程、LCM最新套件
 通用类型参数工作流
 ![AC-LCM标准工作流](https://github.com/A719689614/ComfyUI-WorkFlow/assets/142242136/501f728a-79d1-4725-9eee-fe1b7ab3c9d3)
