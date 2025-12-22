@@ -1,0 +1,809 @@
+{
+  "4": {
+    "inputs": {
+      "steps": 720,
+      "network_trainer": [
+        "107",
+        0
+      ]
+    },
+    "class_type": "FluxTrainLoop",
+    "_meta": {
+      "title": "Flux Train Loop"
+    }
+  },
+  "8": {
+    "inputs": {
+      "network_trainer": [
+        "14",
+        0
+      ],
+      "validation_settings": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "FluxTrainValidate",
+    "_meta": {
+      "title": "Flux Train Validate"
+    }
+  },
+  "9": {
+    "inputs": {
+      "images": [
+        "8",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "save_state": false,
+      "copy_to_comfy_lora_folder": false,
+      "network_trainer": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "FluxTrainSave",
+    "_meta": {
+      "title": "Flux Train Save LoRA"
+    }
+  },
+  "37": {
+    "inputs": {
+      "steps": 20,
+      "width": 768,
+      "height": 768,
+      "guidance_scale": 3,
+      "seed": 5277,
+      "shift": true,
+      "base_shift": 0.5,
+      "max_shift": 1.15
+    },
+    "class_type": "FluxTrainValidationSettings",
+    "_meta": {
+      "title": "Flux Train Validation Settings"
+    }
+  },
+  "44": {
+    "inputs": {
+      "steps": 720,
+      "network_trainer": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "FluxTrainLoop",
+    "_meta": {
+      "title": "Flux Train Loop"
+    }
+  },
+  "45": {
+    "inputs": {
+      "network_trainer": [
+        "47",
+        0
+      ],
+      "validation_settings": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "FluxTrainValidate",
+    "_meta": {
+      "title": "Flux Train Validate"
+    }
+  },
+  "46": {
+    "inputs": {
+      "images": [
+        "45",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "47": {
+    "inputs": {
+      "save_state": false,
+      "copy_to_comfy_lora_folder": false,
+      "network_trainer": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "FluxTrainSave",
+    "_meta": {
+      "title": "Flux Train Save LoRA"
+    }
+  },
+  "59": {
+    "inputs": {
+      "steps": 720,
+      "network_trainer": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "FluxTrainLoop",
+    "_meta": {
+      "title": "Flux Train Loop"
+    }
+  },
+  "60": {
+    "inputs": {
+      "network_trainer": [
+        "62",
+        0
+      ],
+      "validation_settings": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "FluxTrainValidate",
+    "_meta": {
+      "title": "Flux Train Validate"
+    }
+  },
+  "61": {
+    "inputs": {
+      "images": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "62": {
+    "inputs": {
+      "save_state": false,
+      "copy_to_comfy_lora_folder": false,
+      "network_trainer": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "FluxTrainSave",
+    "_meta": {
+      "title": "Flux Train Save LoRA"
+    }
+  },
+  "64": {
+    "inputs": {
+      "steps": 720,
+      "network_trainer": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "FluxTrainLoop",
+    "_meta": {
+      "title": "Flux Train Loop"
+    }
+  },
+  "65": {
+    "inputs": {
+      "network_trainer": [
+        "134",
+        0
+      ],
+      "validation_settings": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "FluxTrainValidate",
+    "_meta": {
+      "title": "Flux Train Validate"
+    }
+  },
+  "66": {
+    "inputs": {
+      "images": [
+        "65",
+        1
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "70": {
+    "inputs": {
+      "plot_style": "ggplot",
+      "window_size": 1000,
+      "normalize_y": true,
+      "width": 768,
+      "height": 512,
+      "log_scale": false,
+      "network_trainer": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "VisualizeLoss",
+    "_meta": {
+      "title": "Visualize Loss"
+    }
+  },
+  "74": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "133",
+        2
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any (rgthree)"
+    }
+  },
+  "78": {
+    "inputs": {
+      "text_x": 10,
+      "text_y": 2,
+      "height": 48,
+      "font_size": 32,
+      "font_color": "white",
+      "label_color": "black",
+      "font": "FreeMono.ttf",
+      "text": [
+        "79",
+        0
+      ],
+      "direction": "up",
+      "image": [
+        "8",
+        1
+      ]
+    },
+    "class_type": "AddLabel",
+    "_meta": {
+      "title": "Add Label"
+    }
+  },
+  "79": {
+    "inputs": {
+      "prefix": "steps ",
+      "suffix": "",
+      "input": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "SomethingToString",
+    "_meta": {
+      "title": "Something To String"
+    }
+  },
+  "80": {
+    "inputs": {
+      "text_x": 10,
+      "text_y": 2,
+      "height": 48,
+      "font_size": 32,
+      "font_color": "white",
+      "label_color": "black",
+      "font": "FreeMono.ttf",
+      "text": [
+        "81",
+        0
+      ],
+      "direction": "up",
+      "image": [
+        "45",
+        1
+      ]
+    },
+    "class_type": "AddLabel",
+    "_meta": {
+      "title": "Add Label"
+    }
+  },
+  "81": {
+    "inputs": {
+      "prefix": "steps ",
+      "suffix": "",
+      "input": [
+        "44",
+        1
+      ]
+    },
+    "class_type": "SomethingToString",
+    "_meta": {
+      "title": "Something To String"
+    }
+  },
+  "82": {
+    "inputs": {
+      "prefix": "steps ",
+      "suffix": "",
+      "input": [
+        "59",
+        1
+      ]
+    },
+    "class_type": "SomethingToString",
+    "_meta": {
+      "title": "Something To String"
+    }
+  },
+  "83": {
+    "inputs": {
+      "text_x": 10,
+      "text_y": 2,
+      "height": 48,
+      "font_size": 32,
+      "font_color": "white",
+      "label_color": "black",
+      "font": "FreeMono.ttf",
+      "text": [
+        "82",
+        0
+      ],
+      "direction": "up",
+      "image": [
+        "60",
+        1
+      ]
+    },
+    "class_type": "AddLabel",
+    "_meta": {
+      "title": "Add Label"
+    }
+  },
+  "84": {
+    "inputs": {
+      "prefix": "steps ",
+      "suffix": "",
+      "input": [
+        "64",
+        1
+      ]
+    },
+    "class_type": "SomethingToString",
+    "_meta": {
+      "title": "Something To String"
+    }
+  },
+  "85": {
+    "inputs": {
+      "text_x": 10,
+      "text_y": 2,
+      "height": 48,
+      "font_size": 32,
+      "font_color": "white",
+      "label_color": "black",
+      "font": "FreeMono.ttf",
+      "text": [
+        "84",
+        0
+      ],
+      "direction": "up",
+      "image": [
+        "65",
+        1
+      ]
+    },
+    "class_type": "AddLabel",
+    "_meta": {
+      "title": "Add Label"
+    }
+  },
+  "88": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "107",
+        1
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Number of epochs"
+    }
+  },
+  "90": {
+    "inputs": {
+      "filename_prefix": "flux_lora_loss_plot",
+      "images": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "95": {
+    "inputs": {
+      "optimizer_type": "CAME",
+      "max_grad_norm": 1,
+      "lr_scheduler": "constant",
+      "lr_warmup_steps": 0,
+      "lr_scheduler_num_cycles": 1,
+      "lr_scheduler_power": 1,
+      "min_snr_gamma": 5,
+      "extra_optimizer_args": "",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "OptimizerConfig",
+    "_meta": {
+      "title": "Optimizer Config"
+    }
+  },
+  "97": {
+    "inputs": {
+      "plot_style": "seaborn-v0_8-dark-palette",
+      "window_size": 100,
+      "normalize_y": true,
+      "width": 768,
+      "height": 768,
+      "log_scale": false,
+      "network_trainer": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "VisualizeLoss",
+    "_meta": {
+      "title": "Visualize Loss"
+    }
+  },
+  "98": {
+    "inputs": {
+      "filename_prefix": "flux_lora_loss_plot",
+      "images": [
+        "97",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "99": {
+    "inputs": {
+      "plot_style": "seaborn-v0_8-dark-palette",
+      "window_size": 100,
+      "normalize_y": true,
+      "width": 768,
+      "height": 512,
+      "log_scale": false,
+      "network_trainer": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "VisualizeLoss",
+    "_meta": {
+      "title": "Visualize Loss"
+    }
+  },
+  "100": {
+    "inputs": {
+      "filename_prefix": "flux_lora_loss_plot",
+      "images": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "101": {
+    "inputs": {
+      "plot_style": "seaborn-v0_8-dark-palette",
+      "window_size": 100,
+      "normalize_y": true,
+      "width": 768,
+      "height": 512,
+      "log_scale": false,
+      "network_trainer": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "VisualizeLoss",
+    "_meta": {
+      "title": "Visualize Loss"
+    }
+  },
+  "102": {
+    "inputs": {
+      "filename_prefix": "flux_lora_loss_plot",
+      "images": [
+        "101",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "105": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "107",
+        2
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any (rgthree)"
+    }
+  },
+  "107": {
+    "inputs": {
+      "output_name": "Azoumei_v2",
+      "output_dir": "E:\\Trained_Models",
+      "network_dim": 16,
+      "network_alpha": 1,
+      "learning_rate": 0.0004,
+      "max_train_steps": 2880,
+      "apply_t5_attn_mask": true,
+      "cache_latents": "disk",
+      "cache_text_encoder_outputs": "disk",
+      "split_mode": true,
+      "weighting_scheme": "logit_normal",
+      "logit_mean": 0,
+      "logit_std": 1,
+      "mode_scale": 1.29,
+      "timestep_sampling": "shift",
+      "sigmoid_scale": 1,
+      "model_prediction_type": "raw",
+      "guidance_scale": 1,
+      "discrete_flow_shift": 3.1582000000000003,
+      "highvram": false,
+      "fp8_base": true,
+      "gradient_dtype": "bf16",
+      "save_dtype": "bf16",
+      "attention_mode": "sdpa",
+      "sample_prompts": [
+        "135",
+        0
+      ],
+      "additional_args": "",
+      "train_text_encoder": "disabled",
+      "text_encoder_lr": 0,
+      "gradient_checkpointing": "enabled",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "flux_models": [
+        "136",
+        0
+      ],
+      "dataset": [
+        "111",
+        0
+      ],
+      "optimizer_settings": [
+        "95",
+        0
+      ]
+    },
+    "class_type": "InitFluxLoRATraining",
+    "_meta": {
+      "title": "Init Flux LoRA Training"
+    }
+  },
+  "111": {
+    "inputs": {
+      "width": 768,
+      "height": 768,
+      "batch_size": 1,
+      "dataset_path": "E:\\StableDiffusion_Train\\lora-scripts\\train\\Flux_512-768_01\\08_oumei02",
+      "class_tokens": "Az,",
+      "enable_bucket": false,
+      "bucket_no_upscale": false,
+      "num_repeats": 1,
+      "min_bucket_reso": 256,
+      "max_bucket_reso": 1024,
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "dataset_config": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "TrainDatasetAdd",
+    "_meta": {
+      "title": "TrainDatasetAdd"
+    }
+  },
+  "117": {
+    "inputs": {
+      "num_columns": [
+        "120",
+        3
+      ],
+      "match_image_size": false,
+      "max_resolution": 4096,
+      "images": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "ImageConcatFromBatch",
+    "_meta": {
+      "title": "Image Concatenate From Batch"
+    }
+  },
+  "119": {
+    "inputs": {
+      "inputcount": 4,
+      "Update inputs": null,
+      "image_1": [
+        "78",
+        0
+      ],
+      "image_2": [
+        "80",
+        0
+      ],
+      "image_3": [
+        "83",
+        0
+      ],
+      "image_4": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "ImageBatchMulti",
+    "_meta": {
+      "title": "Image Batch Multi"
+    }
+  },
+  "120": {
+    "inputs": {
+      "image": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "GetImageSizeAndCount",
+    "_meta": {
+      "title": "Get Image Size & Count"
+    }
+  },
+  "129": {
+    "inputs": {
+      "text_x": 10,
+      "text_y": 2,
+      "height": 48,
+      "font_size": 32,
+      "font_color": "white",
+      "label_color": "black",
+      "font": "FreeMono.ttf",
+      "text": [
+        "133",
+        0
+      ],
+      "direction": "up",
+      "image": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "AddLabel",
+    "_meta": {
+      "title": "Add Label"
+    }
+  },
+  "130": {
+    "inputs": {
+      "filename_prefix": "flux_lora_trainer_sheet",
+      "images": [
+        "129",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "133": {
+    "inputs": {
+      "save_state": false,
+      "network_trainer": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "FluxTrainEnd",
+    "_meta": {
+      "title": "Flux LoRA Train End"
+    }
+  },
+  "134": {
+    "inputs": {
+      "save_state": false,
+      "copy_to_comfy_lora_folder": false,
+      "network_trainer": [
+        "64",
+        0
+      ]
+    },
+    "class_type": "FluxTrainSave",
+    "_meta": {
+      "title": "Flux Train Save LoRA"
+    }
+  },
+  "135": {
+    "inputs": {
+      "string": "Photograph of a young, attractive Caucasian woman with light skin and long, wavy blonde hair. She has a slender build, small breasts, and a gentle smile. She is wearing a low-cut, sleeveless pink dress and a silver bracelet. Her nails are manicured and painted pink. She is seated on a red, satin-like fabric with her left arm resting on it, and her right hand touching her hair. The background is plain white, emphasizing her.",
+      "strip_newlines": true,
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "StringConstantMultiline",
+    "_meta": {
+      "title": "String Constant Multiline"
+    }
+  },
+  "136": {
+    "inputs": {
+      "transformer": "flux1-FP8-dev.safetensors",
+      "vae": "FLUX.1-vae.safetensors",
+      "clip_l": "clip_l.safetensors",
+      "t5": "t5xxl_fp8_e4m3fn.safetensors"
+    },
+    "class_type": "FluxTrainModelSelect",
+    "_meta": {
+      "title": "FluxTrain ModelSelect"
+    }
+  },
+  "137": {
+    "inputs": {
+      "color_aug": false,
+      "flip_aug": false,
+      "shuffle_caption": false,
+      "caption_dropout_rate": 0,
+      "alpha_mask": false,
+      "reset_on_queue": false
+    },
+    "class_type": "TrainDatasetGeneralConfig",
+    "_meta": {
+      "title": "TrainDatasetGeneralConfig"
+    }
+  }
+}
