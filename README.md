@@ -1,5 +1,10 @@
 # ComfyUI-WorkFlow
 一些我自己的工作流参数
+# 2025-12-22更新内容
+建议配置3090-5090
+<img width="2560" height="1440" alt="QQ截图20251222100152" src="https://github.com/user-attachments/assets/fe2e3086-5ce6-42ed-99fa-0bb20ec364c0" />
+<img width="2560" height="1440" alt="QQ截图20251222100136" src="https://github.com/user-attachments/assets/b937afef-6eee-4496-8112-1d2d13d8803e" />
+
 最近github刚刚拿回验证,后面继续更新内容给大家!2025.6.1
 # Cc啊程、LCM最新套件
 通用类型参数工作流
