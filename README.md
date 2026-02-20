@@ -1,5 +1,7 @@
 # ComfyUI-WorkFlow
 一些我自己的工作流参数
+@ 2026-02-21更新
+更新Flux2+klein工作流[转载自王金鱼]
 # 2025-12-22更新内容
 建议配置3090-5090，ComfyUI直接训练Fluxlora模型工作流
 <img width="2560" height="1440" alt="QQ截图20251222100152" src="https://github.com/user-attachments/assets/fe2e3086-5ce6-42ed-99fa-0bb20ec364c0" />
