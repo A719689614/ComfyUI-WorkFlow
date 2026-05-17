@@ -1,5 +1,9 @@
 # ComfyUI-WorkFlow
 一些我自己的工作流参数
+# 2026-05-17更新kLein双图编辑
+<img width="1510" height="903" alt="QQ截图20260429181816" src="https://github.com/user-attachments/assets/1b267c65-2309-453e-b546-836f6afeb52f" />
+<img width="1920" height="1040" alt="QQ截图20260429183932" src="https://github.com/user-attachments/assets/80b74650-f2a7-4c7b-b5e0-037e70aa8555" />
+
 @ 2026-02-21更新
 更新Flux2+klein工作流[转载自王金鱼]
 # 2025-12-22更新内容
