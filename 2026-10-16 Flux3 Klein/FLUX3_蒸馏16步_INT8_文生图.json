@@ -1,0 +1,613 @@
+{
+  "id": "36b2faff-1328-4d40-aee9-ac09d680e55d",
+  "revision": 0,
+  "last_node_id": 17,
+  "last_link_id": 11,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        40,
+        50
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "title": "FLUX.3 蒸馏模型 · INT8",
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "flux3_image_klein_sd_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "flux3_image_klein_sd_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        40,
+        275
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "title": "文本编码器 · INT8",
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_4b_int8_convrot.safetensors",
+        "flux3",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+        "type": "flux3",
+        "device": "default"
+      }
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        40,
+        500
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "title": "VAE",
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "flux3\\flux2-vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "flux3\\flux2-vae.safetensors"
+      }
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        540,
+        50
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "title": "文生图提示词",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Japandi interior design, residential house layout from bird's-eye view, hyper detailed architectural floor plan, fully furnished matching Japandi aesthetic with warm wood, bamboo and muted earthy tones, distinct functional zones, warm golden hour sunset illumination, soft and realistic shadows, realistic material textures (wood, marble, fabric), 3D architectural\nSubject/variable fill:  No people in the image."
+      ],
+      "widgets_values_named": {
+        "text": "Japandi interior design, residential house layout from bird's-eye view, hyper detailed architectural floor plan, fully furnished matching Japandi aesthetic with warm wood, bamboo and muted earthy tones, distinct functional zones, warm golden hour sunset illumination, soft and realistic shadows, realistic material textures (wood, marble, fabric), 3D architectural\nSubject/variable fill:  No people in the image."
+      }
+    },
+    {
+      "id": 9,
+      "type": "EmptyFlux2LatentImage",
+      "pos": [
+        540,
+        700
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "title": "输出尺寸与批量",
+      "properties": {
+        "Node name for S&R": "EmptyFlux2LatentImage"
+      },
+      "widgets_values": [
+        1984,
+        1120,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 1984,
+        "height": 1120,
+        "batch_size": 1
+      }
+    },
+    {
+      "id": 10,
+      "type": "BasicGuider",
+      "pos": [
+        1370,
+        50
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "title": "引导器",
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 11,
+      "type": "KSamplerSelect",
+      "pos": [
+        1370,
+        260
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "采样器 · Euler",
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "euler"
+      }
+    },
+    {
+      "id": 12,
+      "type": "ManualSigmas",
+      "pos": [
+        1370,
+        450
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "title": "16 步固定 Sigma",
+      "properties": {
+        "Node name for S&R": "ManualSigmas"
+      },
+      "widgets_values": [
+        "1.0000000000, 0.9904716532, 0.9798020602, 0.9677731228, 0.9541073887, 0.9384463868, 0.9203187251, 0.8990918264, 0.8738965952, 0.8435054773, 0.8061264056, 0.7590361446, 0.6978851964, 0.6152707902, 0.4974874372, 0.3160054720, 0.0000000000"
+      ],
+      "widgets_values_named": {
+        "sigmas": "1.0000000000, 0.9904716532, 0.9798020602, 0.9677731228, 0.9541073887, 0.9384463868, 0.9203187251, 0.8990918264, 0.8738965952, 0.8435054773, 0.8061264056, 0.7590361446, 0.6978851964, 0.6152707902, 0.4974874372, 0.3160054720, 0.0000000000"
+      }
+    },
+    {
+      "id": 13,
+      "type": "RandomNoise",
+      "pos": [
+        1370,
+        800
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "随机种子",
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        19964458,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 19964458,
+        "control_after_generate": "randomize"
+      }
+    },
+    {
+      "id": 14,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        1870,
+        50
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 4
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 5
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 6
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 7
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            9
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "title": "采样",
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 15,
+      "type": "VAEDecode",
+      "pos": [
+        2310,
+        50
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 9
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "title": "解码",
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 16,
+      "type": "SaveImage",
+      "pos": [
+        2740,
+        50
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "文生图结果",
+      "properties": {},
+      "widgets_values": [
+        "FLUX3_t2i/FLUX3_SD_INT8"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "FLUX3_t2i/FLUX3_SD_INT8"
+      }
+    },
+    {
+      "id": 17,
+      "type": "MarkdownNote",
+      "pos": [
+        40,
+        1110
+      ],
+      "size": [
+        1250,
+        360
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "FLUX.3 文生图用法",
+      "properties": {},
+      "widgets_values": [
+        "# FLUX.3 Klein 蒸馏版 · 原生文生图\n\n1. 修改“文生图提示词”。\n2. 在“输出尺寸与批量”设置宽、高和 batch_size。默认 1984 × 1120。\n3. 修改随机种子后点击运行。只需文字，无需输入图片。\n4. 使用 SD INT8 ConvRot、4B INT8 文本编码器和 Flux2 VAE。\n5. Euler + 固定 16 步 Sigma，沿用本次 100 组测评配方。\n\n默认示例为测评第 004 组日式北欧住宅鸟瞰图，已经实际生成验证。"
+      ],
+      "widgets_values_named": {
+        "text": "# FLUX.3 Klein 蒸馏版 · 原生文生图\n\n1. 修改“文生图提示词”。\n2. 在“输出尺寸与批量”设置宽、高和 batch_size。默认 1984 × 1120。\n3. 修改随机种子后点击运行。只需文字，无需输入图片。\n4. 使用 SD INT8 ConvRot、4B INT8 文本编码器和 Flux2 VAE。\n5. Euler + 固定 16 步 Sigma，沿用本次 100 组测评配方。\n\n默认示例为测评第 004 组日式北欧住宅鸟瞰图，已经实际生成验证。"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      1,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      7,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      4,
+      13,
+      0,
+      14,
+      0,
+      "NOISE"
+    ],
+    [
+      5,
+      10,
+      0,
+      14,
+      1,
+      "GUIDER"
+    ],
+    [
+      6,
+      11,
+      0,
+      14,
+      2,
+      "SAMPLER"
+    ],
+    [
+      7,
+      12,
+      0,
+      14,
+      3,
+      "SIGMAS"
+    ],
+    [
+      8,
+      9,
+      0,
+      14,
+      4,
+      "LATENT"
+    ],
+    [
+      9,
+      14,
+      0,
+      15,
+      0,
+      "LATENT"
+    ],
+    [
+      10,
+      3,
+      0,
+      15,
+      1,
+      "VAE"
+    ],
+    [
+      11,
+      15,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9,
+      "offset": [
+        416,
+        110
+      ]
+    },
+    "frontendVersion": "1.55.17"
+  },
+  "version": 0.4
+}

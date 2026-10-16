@@ -1,0 +1,918 @@
+{
+  "id": "56678201-6f78-4115-82ac-250e6d7e08c5",
+  "revision": 0,
+  "last_node_id": 34,
+  "last_link_id": 17,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "flux3_image_klein_sd_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "flux3_image_klein_sd_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        40,
+        250
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_4b_int8_convrot.safetensors",
+        "flux3",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+        "type": "flux3",
+        "device": "default"
+      }
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        40,
+        460
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            10,
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "flux3\\flux2-vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "flux3\\flux2-vae.safetensors"
+      }
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        560,
+        40
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Combine all four reference images into one coherent luxury travel editorial photograph. Reference image 1 defines the facial identity of the only adult woman: preserve her recognizable face shape, eye spacing, nose and lips. Reference image 2 defines the handbag: preserve its distinctive shape, color, handles and hardware. Reference image 3 defines the perfume bottle: preserve its silhouette, cap and material. Reference image 4 defines the Venice canal architecture and waterfront setting. Show the woman in a cream-colored suit beside the canal at golden hour, medium-full portrait, her face clearly visible. She carries the reference handbag with one hand and displays the reference perfume bottle with the other. Realistic hands, two arms, coherent scale, natural perspective and cinematic photographic light. One woman only. No contact sheet, no collage, no split panels, no extra products, no text."
+      ],
+      "widgets_values_named": {
+        "text": "Combine all four reference images into one coherent luxury travel editorial photograph. Reference image 1 defines the facial identity of the only adult woman: preserve her recognizable face shape, eye spacing, nose and lips. Reference image 2 defines the handbag: preserve its distinctive shape, color, handles and hardware. Reference image 3 defines the perfume bottle: preserve its silhouette, cap and material. Reference image 4 defines the Venice canal architecture and waterfront setting. Show the woman in a cream-colored suit beside the canal at golden hour, medium-full portrait, her face clearly visible. She carries the reference handbag with one hand and displays the reference perfume bottle with the other. Realistic hands, two arms, coherent scale, natural perspective and cinematic photographic light. One woman only. No contact sheet, no collage, no split panels, no extra products, no text."
+      }
+    },
+    {
+      "id": 9,
+      "type": "EmptyFlux2LatentImage",
+      "pos": [
+        1400,
+        730
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyFlux2LatentImage"
+      },
+      "widgets_values": [
+        1536,
+        1024,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 1536,
+        "height": 1024,
+        "batch_size": 1
+      }
+    },
+    {
+      "id": 10,
+      "type": "BasicGuider",
+      "pos": [
+        2000,
+        40
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 11,
+      "type": "KSamplerSelect",
+      "pos": [
+        2000,
+        270
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "euler"
+      }
+    },
+    {
+      "id": 12,
+      "type": "ManualSigmas",
+      "pos": [
+        2000,
+        450
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ManualSigmas"
+      },
+      "widgets_values": [
+        "1.0000000000, 0.9904716532, 0.9798020602, 0.9677731228, 0.9541073887, 0.9384463868, 0.9203187251, 0.8990918264, 0.8738965952, 0.8435054773, 0.8061264056, 0.7590361446, 0.6978851964, 0.6152707902, 0.4974874372, 0.3160054720, 0.0000000000"
+      ],
+      "widgets_values_named": {
+        "sigmas": "1.0000000000, 0.9904716532, 0.9798020602, 0.9677731228, 0.9541073887, 0.9384463868, 0.9203187251, 0.8990918264, 0.8738965952, 0.8435054773, 0.8061264056, 0.7590361446, 0.6978851964, 0.6152707902, 0.4974874372, 0.3160054720, 0.0000000000"
+      }
+    },
+    {
+      "id": 13,
+      "type": "RandomNoise",
+      "pos": [
+        2000,
+        800
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        2026101504,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 2026101504,
+        "control_after_generate": "randomize"
+      }
+    },
+    {
+      "id": 14,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        2490,
+        80
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 4
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 5
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 6
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 7
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            9
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 15,
+      "type": "VAEDecode",
+      "pos": [
+        2890,
+        80
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 9
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 16,
+      "type": "SaveImage",
+      "pos": [
+        3280,
+        80
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "FLUX3_multi/4ref"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "FLUX3_multi/4ref"
+      }
+    },
+    {
+      "id": 20,
+      "type": "ReferenceMultiLatent",
+      "pos": [
+        1400,
+        40
+      ],
+      "size": [
+        400,
+        242
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 12
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 13
+        },
+        {
+          "name": "images.image0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "name": "images.image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 16
+        },
+        {
+          "name": "images.image4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "images.image5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "empty_latent",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReferenceMultiLatent"
+      },
+      "widgets_values": [
+        "resize",
+        0.5
+      ],
+      "widgets_values_named": {
+        "resolution": "resize",
+        "resolution.megapixels": 0.5
+      }
+    },
+    {
+      "id": 30,
+      "type": "LoadImage",
+      "pos": [
+        40,
+        1260
+      ],
+      "size": [
+        430,
+        540
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "参考图 1 · 人物 ID",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "FLUX3_multi/10A.jpg",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "FLUX3_multi/10A.jpg",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 31,
+      "type": "LoadImage",
+      "pos": [
+        540,
+        1260
+      ],
+      "size": [
+        430,
+        540
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "参考图 2 · 手袋",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "FLUX3_multi/handbag.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "FLUX3_multi/handbag.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 32,
+      "type": "LoadImage",
+      "pos": [
+        1040,
+        1260
+      ],
+      "size": [
+        430,
+        540
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "参考图 3 · 香水",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "FLUX3_multi/perfume.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "FLUX3_multi/perfume.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 33,
+      "type": "LoadImage",
+      "pos": [
+        1540,
+        1260
+      ],
+      "size": [
+        430,
+        540
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "参考图 4 · 场景",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "FLUX3_multi/venice.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "FLUX3_multi/venice.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 34,
+      "type": "MarkdownNote",
+      "pos": [
+        40,
+        700
+      ],
+      "size": [
+        1280,
+        450
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "多图编辑用法",
+      "properties": {},
+      "widgets_values": [
+        "# FLUX.3 原生多图编辑\n\n参考图顺序：图 1 = 人物 ID；图 2 = 手袋；图 3 = 香水；图 4 = 场景。\n\n1. 在下方 LoadImage 中上传或替换图片。\n2. 修改提示词，明确每张图的用途，例如保留图 1 的脸、图 2 的物品。\n3. 所有参考图独立编码后共同传入模型；输出是一张图。\n4. 更多参考图：新增 LoadImage，接到多图参考节点空闲的 image 输入，会自动出现下一个插槽。\n5. 参考图默认每张 0.5 MP；提高 megapixels 可保留更多细节并增加显存占用。\n\n原生节点，无需安装自定义插件；模型为 SD INT8 ConvRot，Euler 16 步。"
+      ],
+      "widgets_values_named": {
+        "text": "# FLUX.3 原生多图编辑\n\n参考图顺序：图 1 = 人物 ID；图 2 = 手袋；图 3 = 香水；图 4 = 场景。\n\n1. 在下方 LoadImage 中上传或替换图片。\n2. 修改提示词，明确每张图的用途，例如保留图 1 的脸、图 2 的物品。\n3. 所有参考图独立编码后共同传入模型；输出是一张图。\n4. 更多参考图：新增 LoadImage，接到多图参考节点空闲的 image 输入，会自动出现下一个插槽。\n5. 参考图默认每张 0.5 MP；提高 megapixels 可保留更多细节并增加显存占用。\n\n原生节点，无需安装自定义插件；模型为 SD INT8 ConvRot，Euler 16 步。"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      1,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      20,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      4,
+      13,
+      0,
+      14,
+      0,
+      "NOISE"
+    ],
+    [
+      5,
+      10,
+      0,
+      14,
+      1,
+      "GUIDER"
+    ],
+    [
+      6,
+      11,
+      0,
+      14,
+      2,
+      "SAMPLER"
+    ],
+    [
+      7,
+      12,
+      0,
+      14,
+      3,
+      "SIGMAS"
+    ],
+    [
+      8,
+      9,
+      0,
+      14,
+      4,
+      "LATENT"
+    ],
+    [
+      9,
+      14,
+      0,
+      15,
+      0,
+      "LATENT"
+    ],
+    [
+      10,
+      3,
+      0,
+      15,
+      1,
+      "VAE"
+    ],
+    [
+      11,
+      15,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      7,
+      0,
+      20,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      3,
+      0,
+      20,
+      2,
+      "VAE"
+    ],
+    [
+      14,
+      30,
+      0,
+      20,
+      4,
+      "IMAGE"
+    ],
+    [
+      15,
+      31,
+      0,
+      20,
+      5,
+      "IMAGE"
+    ],
+    [
+      16,
+      32,
+      0,
+      20,
+      6,
+      "IMAGE"
+    ],
+    [
+      17,
+      33,
+      0,
+      20,
+      7,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9,
+      "offset": [
+        416,
+        110
+      ]
+    },
+    "frontendVersion": "1.55.17"
+  },
+  "version": 0.4
+}
