@@ -1,0 +1,260 @@
+{
+  "88": {
+    "inputs": {
+      "image": "ComfyUI_00002_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.36.0"
+    }
+  },
+  "89": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE",
+      "cnr_id": "comfy-core",
+      "ver": "0.36.0"
+    }
+  },
+  "113": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP",
+      "cnr_id": "comfy-core",
+      "ver": "0.36.0"
+    }
+  },
+  "116": {
+    "inputs": {
+      "prompt": [
+        "147",
+        0
+      ],
+      "negative_prompt": "",
+      "resolution": 1024,
+      "clip": [
+        "113",
+        0
+      ],
+      "images.image_1": [
+        "163",
+        0
+      ],
+      "vae": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImage21",
+    "_meta": {
+      "title": "Text Encode Qwen Image 2.1",
+      "cnr_id": "comfy-core",
+      "ver": "0.36.0"
+    }
+  },
+  "121": {
+    "inputs": {
+      "unet_name": "qwen_image_2.1_turbo_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model",
+      "cnr_id": "comfy-core",
+      "ver": "0.36.0"
+    }
+  },
+  "126": {
+    "inputs": {
+      "device": "auto",
+      "dtype": "default",
+      "model": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "QwenImage21Cache",
+    "_meta": {
+      "title": "Qwen Image 2.1 Cache",
+      "cnr_id": "comfy-core",
+      "ver": "0.39.2"
+    }
+  },
+  "134": {
+    "inputs": {
+      "noise_seed": 992141065259315
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise",
+      "cnr_id": "comfy-core",
+      "ver": "0.39.2"
+    }
+  },
+  "135": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect",
+      "cnr_id": "comfy-core",
+      "ver": "0.39.2"
+    }
+  },
+  "137": {
+    "inputs": {
+      "samples": [
+        "140",
+        0
+      ],
+      "vae": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode",
+      "cnr_id": "comfy-core",
+      "ver": "0.36.0"
+    }
+  },
+  "138": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "139": {
+    "inputs": {
+      "model": [
+        "126",
+        0
+      ],
+      "conditioning": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "⑨ 引导（cfg=1 由 guider 承担）",
+      "cnr_id": "comfy-core",
+      "ver": "0.39.2"
+    }
+  },
+  "140": {
+    "inputs": {
+      "noise": [
+        "134",
+        0
+      ],
+      "guider": [
+        "139",
+        0
+      ],
+      "sampler": [
+        "135",
+        0
+      ],
+      "sigmas": [
+        "141",
+        0
+      ],
+      "latent_image": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "⑩ 自定义采样（8步）",
+      "cnr_id": "comfy-core",
+      "ver": "0.39.2"
+    }
+  },
+  "141": {
+    "inputs": {
+      "sigmas": "1.0,0.978453,0.95418,0.926626,0.89508,0.845148,0.704534,0.414568,0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "⑤ ★官方 sigmas（8步，手喂）",
+      "cnr_id": "comfy-core",
+      "ver": "0.39.2"
+    }
+  },
+  "147": {
+    "inputs": {
+      "value": "把图片的服饰变成粉色系"
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "用户提示词",
+      "cnr_id": "comfy-core",
+      "ver": "0.37.0"
+    }
+  },
+  "163": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "letterbox",
+      "method": "lanczos",
+      "round_to_multiple": "8",
+      "scale_to_side": "longest",
+      "scale_to_length": 1024,
+      "background_color": "#000000",
+      "image": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+    "_meta": {
+      "title": "LayerUtility: ImageScaleByAspectRatio V2",
+      "cnr_id": "comfyui_layerstyle",
+      "ver": "a085d8ca3cf3e3e8624ac0bb37a474d9d329e60e"
+    }
+  },
+  "164": {
+    "inputs": {
+      "width": [
+        "163",
+        3
+      ],
+      "height": [
+        "163",
+        4
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image",
+      "cnr_id": "comfy-core",
+      "ver": "0.42.0"
+    }
+  }
+}
