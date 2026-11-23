@@ -1,0 +1,805 @@
+{
+  "id": "8e5d674d-aaee-4d02-bbbd-43bacd381c88",
+  "revision": 0,
+  "last_node_id": 42,
+  "last_link_id": 34,
+  "nodes": [
+    {
+      "id": 33,
+      "type": "DF_Image_scale_to_side",
+      "pos": [
+        -271,
+        573
+      ],
+      "size": [
+        408.57098388671875,
+        148.9399871826172
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 32
+        },
+        {
+          "label": "side_length",
+          "localized_name": "side_length",
+          "name": "side_length",
+          "type": "INT",
+          "widget": {
+            "name": "side_length"
+          },
+          "link": null
+        },
+        {
+          "label": "side",
+          "localized_name": "side",
+          "name": "side",
+          "type": "COMBO",
+          "widget": {
+            "name": "side"
+          },
+          "link": null
+        },
+        {
+          "label": "upscale_method",
+          "localized_name": "upscale_method",
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          },
+          "link": null
+        },
+        {
+          "label": "crop",
+          "localized_name": "crop",
+          "name": "crop",
+          "type": "COMBO",
+          "widget": {
+            "name": "crop"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "derfuu_comfyui_moddednodes",
+        "ver": "1.0.1",
+        "Node name for S&R": "Image scale to side",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1024,
+        "Longest",
+        "nearest-exact",
+        "disabled"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "SUPIR_Upscale",
+      "pos": [
+        145.10587979907814,
+        -163.05223083496094
+      ],
+      "size": [
+        400.0101318359375,
+        886.4896850585938
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 31
+        },
+        {
+          "label": "captions",
+          "localized_name": "captions",
+          "name": "captions",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "label": "SUPIR模型",
+          "localized_name": "supir_model",
+          "name": "supir_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "supir_model"
+          },
+          "link": null
+        },
+        {
+          "label": "SDXL模型",
+          "localized_name": "sdxl_model",
+          "name": "sdxl_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "sdxl_model"
+          },
+          "link": null
+        },
+        {
+          "label": "随机种",
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "label": "缩放方法",
+          "localized_name": "resize_method",
+          "name": "resize_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "resize_method"
+          },
+          "link": null
+        },
+        {
+          "label": "缩放系数",
+          "localized_name": "scale_by",
+          "name": "scale_by",
+          "type": "FLOAT",
+          "widget": {
+            "name": "scale_by"
+          },
+          "link": null
+        },
+        {
+          "label": "步数",
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "label": "恢复缩放",
+          "localized_name": "restoration_scale",
+          "name": "restoration_scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "restoration_scale"
+          },
+          "link": null
+        },
+        {
+          "label": "CFG缩放",
+          "localized_name": "cfg_scale",
+          "name": "cfg_scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_scale"
+          },
+          "link": null
+        },
+        {
+          "label": "正面提示词",
+          "localized_name": "a_prompt",
+          "name": "a_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "a_prompt"
+          },
+          "link": null
+        },
+        {
+          "label": "负面提示词",
+          "localized_name": "n_prompt",
+          "name": "n_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "n_prompt"
+          },
+          "link": null
+        },
+        {
+          "label": "s_churn",
+          "localized_name": "s_churn",
+          "name": "s_churn",
+          "type": "INT",
+          "widget": {
+            "name": "s_churn"
+          },
+          "link": null
+        },
+        {
+          "label": "噪波量",
+          "localized_name": "s_noise",
+          "name": "s_noise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "s_noise"
+          },
+          "link": null
+        },
+        {
+          "label": "控制缩放",
+          "localized_name": "control_scale",
+          "name": "control_scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "control_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_scale_start",
+          "name": "cfg_scale_start",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_scale_start"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "control_scale_start",
+          "name": "control_scale_start",
+          "type": "FLOAT",
+          "widget": {
+            "name": "control_scale_start"
+          },
+          "link": null
+        },
+        {
+          "label": "颜色修复类型",
+          "localized_name": "color_fix_type",
+          "name": "color_fix_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "color_fix_type"
+          },
+          "link": null
+        },
+        {
+          "label": "保持模型加载",
+          "localized_name": "keep_model_loaded",
+          "name": "keep_model_loaded",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "keep_model_loaded"
+          },
+          "link": null
+        },
+        {
+          "label": "分块VAE",
+          "localized_name": "use_tiled_vae",
+          "name": "use_tiled_vae",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_tiled_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "encoder_tile_size_pixels",
+          "name": "encoder_tile_size_pixels",
+          "type": "INT",
+          "widget": {
+            "name": "encoder_tile_size_pixels"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "decoder_tile_size_latent",
+          "name": "decoder_tile_size_latent",
+          "type": "INT",
+          "widget": {
+            "name": "decoder_tile_size_latent"
+          },
+          "link": null
+        },
+        {
+          "label": "剪枝类型",
+          "localized_name": "diffusion_dtype",
+          "name": "diffusion_dtype",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "diffusion_dtype"
+          },
+          "link": null
+        },
+        {
+          "label": "编码剪枝",
+          "localized_name": "encoder_dtype",
+          "name": "encoder_dtype",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "encoder_dtype"
+          },
+          "link": null
+        },
+        {
+          "label": "批次大小",
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_tiled_sampling",
+          "name": "use_tiled_sampling",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_tiled_sampling"
+          },
+          "link": null
+        },
+        {
+          "label": "采样器分块尺寸",
+          "localized_name": "sampler_tile_size",
+          "name": "sampler_tile_size",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "sampler_tile_size"
+          },
+          "link": null
+        },
+        {
+          "label": "采样器分块步长",
+          "localized_name": "sampler_tile_stride",
+          "name": "sampler_tile_stride",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "sampler_tile_stride"
+          },
+          "link": null
+        },
+        {
+          "label": "fp8_unet",
+          "localized_name": "fp8_unet",
+          "name": "fp8_unet",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "fp8_unet"
+          },
+          "link": null
+        },
+        {
+          "label": "fp8_vae",
+          "localized_name": "fp8_vae",
+          "name": "fp8_vae",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "fp8_vae"
+          },
+          "link": null
+        },
+        {
+          "label": "采样器",
+          "localized_name": "sampler",
+          "name": "sampler",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "localized_name": "upscaled_image",
+          "name": "upscaled_image",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-supir",
+        "ver": "1.0.2",
+        "Node name for S&R": "SUPIR_Upscale",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "SUPIR-v0Q_fp16.safetensors",
+        "juggernautXL_v8Rundiffusion_V8.safetensors",
+        152409916009455,
+        "randomize",
+        "lanczos",
+        2,
+        45,
+        -1,
+        5,
+        "high quality, detailed",
+        "bad quality, blurry, messy",
+        5,
+        1.003,
+        1,
+        4,
+        0,
+        "None",
+        true,
+        true,
+        512,
+        "auto",
+        1,
+        false,
+        1024,
+        512,
+        false,
+        false,
+        "RestoreEDMSampler",
+        "RestoreEDMSampler",
+        "RestoreEDMSampler"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -271,
+        -164
+      ],
+      "size": [
+        406.7928161621094,
+        690.1767578125
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "选择文件上传",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            32
+          ]
+        },
+        {
+          "label": "遮罩",
+          "localized_name": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.66",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "m4.png",
+        "image"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "SaveImage",
+      "pos": [
+        556,
+        -163
+      ],
+      "size": [
+        787.6060791015625,
+        882.058837890625
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "图片",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 30
+        },
+        {
+          "label": "文件名前缀",
+          "localized_name": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.66",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "%date:yyyyMMdd%/image_"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "Note",
+      "pos": [
+        -285.10053597924434,
+        -362.8261603443752
+      ],
+      "size": [
+        329.7130012852913,
+        88
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "出现报错请尝试将随机种子设置为固定，范围不要超过8位数"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 40,
+      "order": 5,
+      "mode": 0,
+      "type": "Label (rgthree)",
+      "title": "M01-放大-SUPIR高清放大",
+      "size": [
+        2984.326171875,
+        150
+      ],
+      "color": "#fff0",
+      "bgcolor": "#fff0",
+      "flags": {
+        "allow_interaction": true
+      },
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "pos": [
+        -285.10053597924434,
+        -782.8261603443752
+      ]
+    },
+    {
+      "id": 41,
+      "order": 6,
+      "mode": 0,
+      "type": "Label (rgthree)",
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "size": [
+        1781,
+        80
+      ],
+      "color": "#fff0",
+      "bgcolor": "#fff0",
+      "flags": {
+        "allow_interaction": true
+      },
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "pos": [
+        -285.10053597924434,
+        -591.9748470363234
+      ]
+    },
+    {
+      "id": 42,
+      "order": 7,
+      "mode": 0,
+      "type": "Label (rgthree)",
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "size": [
+        1434,
+        80
+      ],
+      "color": "#fff0",
+      "bgcolor": "#fff0",
+      "flags": {
+        "allow_interaction": true
+      },
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "pos": [
+        -285.10053597924434,
+        -453.9748470363256
+      ]
+    }
+  ],
+  "links": [
+    [
+      30,
+      15,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      31,
+      33,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      2,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "SUPIR-8K放大",
+      "bounding": [
+        -285,
+        -264,
+        1644.3154438031747,
+        993.4385945046158
+      ],
+      "color": "#8A8",
+      "font_size": 35,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9646149645000035,
+      "offset": [
+        1036.6878577787454,
+        802.5554369049847
+      ]
+    },
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "ue_links": [],
+    "frontendVersion": "1.28.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "links_added_by_ue": [],
+    "workflowRendererVersion": "LG"
+  },
+  "version": 0.4
+}
