@@ -1,0 +1,2093 @@
+{
+  "id": "c87aad24-b020-4b93-a61a-6656610754ce",
+  "revision": 0,
+  "last_node_id": 36,
+  "last_link_id": 54,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "MiniMaxH3VDNModelComposerT8Advanced",
+      "pos": [
+        -179.24363812638887,
+        268.97899177097304
+      ],
+      "size": [
+        409.15,
+        162.57894587846204
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 40
+        },
+        {
+          "label": "vdn_root",
+          "localized_name": "vdn_root",
+          "name": "vdn_root",
+          "type": "COMBO",
+          "widget": {
+            "name": "vdn_root"
+          },
+          "link": null
+        },
+        {
+          "label": "stage",
+          "localized_name": "stage",
+          "name": "stage",
+          "type": "COMBO",
+          "widget": {
+            "name": "stage"
+          },
+          "link": null
+        },
+        {
+          "label": "verify_hashes",
+          "localized_name": "verify_hashes",
+          "name": "verify_hashes",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "verify_hashes"
+          },
+          "link": null
+        },
+        {
+          "label": "allow_structural_base",
+          "localized_name": "allow_structural_base",
+          "name": "allow_structural_base",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "allow_structural_base"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model",
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            39
+          ]
+        },
+        {
+          "label": "report_json",
+          "localized_name": "report_json",
+          "name": "report_json",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "2. Compose pinned OpenVDN DMD8 branch + adapters",
+      "properties": {
+        "cnr_id": "minimax-h3-audio-T8",
+        "ver": "a852a584a153e1e28af021186eb3d810262db0b5",
+        "Node name for S&R": "MiniMaxH3VDNModelComposerT8Advanced",
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "OpenVDN/vdn-minimax-h3",
+        "stage_dmd_8nfe",
+        false,
+        true
+      ],
+      "widgets_values_named": {
+        "vdn_root": "OpenVDN/vdn-minimax-h3",
+        "stage": "stage_dmd_8nfe",
+        "verify_hashes": false,
+        "allow_structural_base": true
+      }
+    },
+    {
+      "id": 6,
+      "type": "MiniMaxH3AudioConditioningT8",
+      "pos": [
+        -154.93701337392235,
+        19.57143931192433
+      ],
+      "size": [
+        405.1482173693771,
+        856
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3
+        },
+        {
+          "label": "video_vae",
+          "localized_name": "video_vae",
+          "name": "video_vae",
+          "type": "VAE",
+          "link": 4
+        },
+        {
+          "label": "audio_vae",
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 5
+        },
+        {
+          "label": "drive_audio",
+          "localized_name": "drive_audio",
+          "name": "drive_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "final_audio",
+          "localized_name": "final_audio",
+          "name": "final_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "first_frame",
+          "localized_name": "first_frame",
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "last_frame",
+          "localized_name": "last_frame",
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "ref_images.ref_image_0",
+          "localized_name": "ref_image_0",
+          "name": "ref_images.ref_image_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 43
+        },
+        {
+          "label": "ref_image_1",
+          "localized_name": "ref_image_1",
+          "name": "ref_images.ref_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 44
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "ref_images.ref_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 45
+        },
+        {
+          "label": "ref_videos.ref_video_0",
+          "localized_name": "ref_video_0",
+          "name": "ref_videos.ref_video_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "ref_video_audios.ref_video_audio_0",
+          "localized_name": "ref_video_audio_0",
+          "name": "ref_video_audios.ref_video_audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_audio_1",
+          "name": "ref_video_audios.ref_video_audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_audio_2",
+          "name": "ref_video_audios.ref_video_audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "ref_audios.ref_audio_0",
+          "localized_name": "ref_audio_0",
+          "name": "ref_audios.ref_audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 52
+        },
+        {
+          "localized_name": "ref_audio_1",
+          "name": "ref_audios.ref_audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 53
+        },
+        {
+          "localized_name": "ref_audio_2",
+          "name": "ref_audios.ref_audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 54
+        },
+        {
+          "localized_name": "semantic_bridge",
+          "name": "semantic_bridge",
+          "shape": 7,
+          "type": "T8_SEMANTIC_BRIDGE",
+          "link": null
+        },
+        {
+          "label": "prompt",
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 25
+        },
+        {
+          "label": "width",
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 23
+        },
+        {
+          "label": "height",
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 24
+        },
+        {
+          "label": "length",
+          "localized_name": "length",
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 22
+        },
+        {
+          "label": "task_type",
+          "localized_name": "task_type",
+          "name": "task_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "task_type"
+          },
+          "link": null
+        },
+        {
+          "label": "audio_mode",
+          "localized_name": "audio_mode",
+          "name": "audio_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_mode"
+          },
+          "link": null
+        },
+        {
+          "label": "audio_denoise_strength",
+          "localized_name": "audio_denoise_strength",
+          "name": "audio_denoise_strength",
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_denoise_strength"
+          },
+          "link": null
+        },
+        {
+          "label": "add_source_as_reference",
+          "localized_name": "add_source_as_reference",
+          "name": "add_source_as_reference",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "add_source_as_reference"
+          },
+          "link": null
+        },
+        {
+          "label": "prompt_primary_audio_ordinal",
+          "localized_name": "prompt_primary_audio_ordinal",
+          "name": "prompt_primary_audio_ordinal",
+          "type": "INT",
+          "widget": {
+            "name": "prompt_primary_audio_ordinal"
+          },
+          "link": null
+        },
+        {
+          "label": "strict_prompt_tags",
+          "localized_name": "strict_prompt_tags",
+          "name": "strict_prompt_tags",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "strict_prompt_tags"
+          },
+          "link": null
+        },
+        {
+          "label": "ref_image_size",
+          "localized_name": "ref_image_size",
+          "name": "ref_image_size",
+          "type": "COMBO",
+          "widget": {
+            "name": "ref_image_size"
+          },
+          "link": null
+        },
+        {
+          "label": "reference_video_policy",
+          "localized_name": "reference_video_policy",
+          "name": "reference_video_policy",
+          "type": "COMBO",
+          "widget": {
+            "name": "reference_video_policy"
+          },
+          "link": null
+        },
+        {
+          "label": "allow_above_reference_area",
+          "localized_name": "allow_above_reference_area",
+          "name": "allow_above_reference_area",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "allow_above_reference_area"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "ref_images.ref_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 46
+        },
+        {
+          "localized_name": "ref_image_4",
+          "name": "ref_images.ref_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 47
+        },
+        {
+          "localized_name": "ref_image_5",
+          "name": "ref_images.ref_image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 48
+        },
+        {
+          "localized_name": "ref_image_6",
+          "name": "ref_images.ref_image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 49
+        },
+        {
+          "localized_name": "ref_image_7",
+          "name": "ref_images.ref_image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 50
+        },
+        {
+          "localized_name": "ref_image_8",
+          "name": "ref_images.ref_image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "label": "positive",
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            8
+          ]
+        },
+        {
+          "label": "av_latent",
+          "localized_name": "av_latent",
+          "name": "av_latent",
+          "type": "LATENT",
+          "links": [
+            6,
+            13
+          ]
+        },
+        {
+          "label": "mux_audio",
+          "localized_name": "mux_audio",
+          "name": "mux_audio",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "label": "conditioned_prompt",
+          "localized_name": "conditioned_prompt",
+          "name": "conditioned_prompt",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "media_map_json",
+          "localized_name": "media_map_json",
+          "name": "media_map_json",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "label": "report",
+          "localized_name": "report",
+          "name": "report",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "3. OpenVDN L2VA · 960x544 · 39 frames",
+      "properties": {
+        "cnr_id": "minimax-h3-audio-t8",
+        "ver": "a852a584a153e1e28af021186eb3d810262db0b5",
+        "Node name for S&R": "MiniMaxH3AudioConditioningT8",
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "One continuous cinematic crane shot on the same rain-soaked neon street. Begin with a medium view of one woman in a red coat, then rise and pull back smoothly, ending exactly on the supplied final aerial street frame. Preserve her red coat, wet road, cyan and magenta signs and night lighting. Clean city ambience only; no speech, music, cuts, teleporting, duplicate person, blur, flicker, hiss, static or distortion.",
+        960,
+        544,
+        39,
+        "Ref2VA — 参考生音视频",
+        "native",
+        1,
+        false,
+        0,
+        true,
+        "match",
+        "official_2_to_15s",
+        true
+      ],
+      "widgets_values_named": {
+        "prompt": "One continuous cinematic crane shot on the same rain-soaked neon street. Begin with a medium view of one woman in a red coat, then rise and pull back smoothly, ending exactly on the supplied final aerial street frame. Preserve her red coat, wet road, cyan and magenta signs and night lighting. Clean city ambience only; no speech, music, cuts, teleporting, duplicate person, blur, flicker, hiss, static or distortion.",
+        "width": 960,
+        "height": 544,
+        "length": 39,
+        "task_type": "Ref2VA — 参考生音视频",
+        "audio_mode": "native",
+        "audio_denoise_strength": 1,
+        "add_source_as_reference": false,
+        "prompt_primary_audio_ordinal": 0,
+        "strict_prompt_tags": true,
+        "ref_image_size": "match",
+        "reference_video_policy": "official_2_to_15s",
+        "allow_above_reference_area": true
+      }
+    },
+    {
+      "id": 7,
+      "type": "MiniMaxH3VDNExecutionPlanT8Advanced",
+      "pos": [
+        -200.99055453047833,
+        495.27729722300523
+      ],
+      "size": [
+        435.6939453125,
+        86
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 39
+        },
+        {
+          "label": "av_latent",
+          "localized_name": "av_latent",
+          "name": "av_latent",
+          "type": "LATENT",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model",
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            7
+          ]
+        },
+        {
+          "label": "sampler",
+          "localized_name": "sampler",
+          "name": "sampler",
+          "type": "SAMPLER",
+          "links": [
+            11
+          ]
+        },
+        {
+          "label": "sigmas",
+          "localized_name": "sigmas",
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "links": [
+            12
+          ]
+        },
+        {
+          "label": "report_json",
+          "localized_name": "report_json",
+          "name": "report_json",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "4. OpenVDN exact execution contract · DMD 8 NFE · 12V/3A",
+      "properties": {
+        "cnr_id": "minimax-h3-audio-T8",
+        "ver": "a852a584a153e1e28af021186eb3d810262db0b5",
+        "Node name for S&R": "MiniMaxH3VDNExecutionPlanT8Advanced",
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 8,
+      "type": "BasicGuider",
+      "pos": [
+        -120.10972369690849,
+        79.50812682525566
+      ],
+      "size": [
+        230,
+        70
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 7
+        },
+        {
+          "label": "conditioning",
+          "localized_name": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "label": "GUIDER",
+          "localized_name": "引导器",
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.3",
+        "Node name for S&R": "BasicGuider",
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": "RandomNoise",
+      "pos": [
+        168.91791972609204,
+        4.943458784588605
+      ],
+      "size": [
+        230,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "noise_seed",
+          "localized_name": "噪波随机种",
+          "name": "noise_seed",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "NOISE",
+          "localized_name": "噪波",
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.3",
+        "Node name for S&R": "RandomNoise",
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        2609032101,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 2609032101,
+        "control_after_generate": "fixed"
+      }
+    },
+    {
+      "id": 10,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        -112.2312638483087,
+        122.35593179596022
+      ],
+      "size": [
+        290,
+        170
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "noise",
+          "localized_name": "噪波",
+          "name": "noise",
+          "type": "NOISE",
+          "link": 9
+        },
+        {
+          "label": "guider",
+          "localized_name": "引导器",
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 10
+        },
+        {
+          "label": "sampler",
+          "localized_name": "采样器",
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 11
+        },
+        {
+          "label": "sigmas",
+          "localized_name": "西格玛",
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 12
+        },
+        {
+          "label": "latent_image",
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "label": "output",
+          "localized_name": "Latent",
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            14
+          ]
+        },
+        {
+          "label": "denoised_output",
+          "localized_name": "降噪Latent",
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.3",
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": "MiniMaxH3AVDecodeT8",
+      "pos": [
+        -118.34748008614255,
+        182.52804347443356
+      ],
+      "size": [
+        280,
+        120
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "av_latent",
+          "localized_name": "av_latent",
+          "name": "av_latent",
+          "type": "LATENT",
+          "link": 14
+        },
+        {
+          "label": "video_vae",
+          "localized_name": "video_vae",
+          "name": "video_vae",
+          "type": "VAE",
+          "link": 15
+        },
+        {
+          "label": "audio_vae",
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "label": "frames",
+          "localized_name": "frames",
+          "name": "frames",
+          "type": "IMAGE",
+          "links": [
+            41
+          ]
+        },
+        {
+          "label": "generated_audio",
+          "localized_name": "generated_audio",
+          "name": "generated_audio",
+          "type": "AUDIO",
+          "links": [
+            42
+          ]
+        },
+        {
+          "label": "video_latent",
+          "localized_name": "video_latent",
+          "name": "video_latent",
+          "type": "LATENT",
+          "links": []
+        },
+        {
+          "label": "audio_latent",
+          "localized_name": "audio_latent",
+          "name": "audio_latent",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax-h3-audio-t8",
+        "ver": "a852a584a153e1e28af021186eb3d810262db0b5",
+        "Node name for S&R": "MiniMaxH3AVDecodeT8",
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 26,
+      "type": "ZealmanVideoOutput",
+      "pos": [
+        455.04795730356705,
+        -47.39453817628066
+      ],
+      "size": [
+        1148.5204387891704,
+        756.066910438428
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 41
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 42
+        },
+        {
+          "localized_name": "frame_rate",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save_output",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "saved_path",
+          "name": "saved_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "Save OpenVDN L2VA result",
+      "properties": {
+        "Node name for S&R": "ZealmanVideoOutput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "8.0.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        24,
+        "comfyui",
+        true
+      ],
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "filename_prefix": "comfyui",
+        "save_output": true
+      }
+    },
+    {
+      "id": 29,
+      "type": "Label (rgthree)",
+      "pos": [
+        -720.2612455535947,
+        -486.59831619075044
+      ],
+      "size": [
+        4350.87890625,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "U25-Singularity-Vdn文戏版-单采极速参考生视频V2",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 30,
+      "type": "Label (rgthree)",
+      "pos": [
+        -716.7351873921144,
+        -312.1624367988393
+      ],
+      "size": [
+        1780.9765625,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 31,
+      "type": "Label (rgthree)",
+      "pos": [
+        -703.4393370291683,
+        -196.758967867661
+      ],
+      "size": [
+        1433.701171875,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 32,
+      "type": "ZealmanH3ModelLoader",
+      "pos": [
+        -726.3303280741295,
+        -46.20051757240938
+      ],
+      "size": [
+        460,
+        238
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "unet_name",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "weight_dtype",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "clip_name",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "clip_device",
+          "name": "clip_device",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_device"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "video_vae",
+          "name": "video_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "attention",
+          "name": "attention",
+          "type": "COMBO",
+          "widget": {
+            "name": "attention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_stack",
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "lora_stack"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            40
+          ]
+        },
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            3
+          ]
+        },
+        {
+          "localized_name": "video_vae",
+          "name": "video_vae",
+          "type": "VAE",
+          "links": [
+            4,
+            15
+          ]
+        },
+        {
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "type": "VAE",
+          "links": [
+            5,
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanH3ModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "8.0.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax/Minimax-h3_Singularity_ref2va_v1.3_int8.safetensors",
+        "default",
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "default",
+        "minimax_h3_video_vae_fp16.safetensors",
+        "minimax_h3_audio_vae_fp32.safetensors",
+        "pytorch attention",
+        "[]"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax/Minimax-h3_Singularity_ref2va_v1.3_int8.safetensors",
+        "weight_dtype": "default",
+        "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "clip_device": "default",
+        "video_vae": "minimax_h3_video_vae_fp16.safetensors",
+        "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+        "attention": "pytorch attention",
+        "lora_stack": "[]"
+      }
+    },
+    {
+      "id": 33,
+      "type": "ZealmanH3PickReferenceMedia",
+      "pos": [
+        -712.973620502546,
+        246.287837048177
+      ],
+      "size": [
+        440,
+        1270
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "video_trim_seconds",
+          "name": "video_trim_seconds",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_trim_seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_trim_seconds",
+          "name": "audio_trim_seconds",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_trim_seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "image_max_side",
+          "name": "image_max_side",
+          "type": "COMBO",
+          "widget": {
+            "name": "image_max_side"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "video_max_side",
+          "name": "video_max_side",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_max_side"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seconds",
+          "name": "seconds",
+          "type": "INT",
+          "widget": {
+            "name": "seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "aspect_ratio",
+          "name": "aspect_ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "aspect_ratio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "megapixels",
+          "name": "megapixels",
+          "type": "FLOAT",
+          "widget": {
+            "name": "megapixels"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "multiple",
+          "name": "multiple",
+          "type": "INT",
+          "widget": {
+            "name": "multiple"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_0",
+          "name": "ref_image_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_1",
+          "name": "ref_image_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "ref_image_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "ref_image_3",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_4",
+          "name": "ref_image_4",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_5",
+          "name": "ref_image_5",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_6",
+          "name": "ref_image_6",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_7",
+          "name": "ref_image_7",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_8",
+          "name": "ref_image_8",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_8"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_0",
+          "name": "ref_video_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_1",
+          "name": "ref_video_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_2",
+          "name": "ref_video_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_0",
+          "name": "ref_audio_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_1",
+          "name": "ref_audio_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_2",
+          "name": "ref_audio_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "media_files",
+          "name": "media_files",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "media_files"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "ref_image_0",
+          "name": "ref_image_0",
+          "type": "IMAGE",
+          "links": [
+            43
+          ]
+        },
+        {
+          "localized_name": "ref_image_1",
+          "name": "ref_image_1",
+          "type": "IMAGE",
+          "links": [
+            44
+          ]
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "ref_image_2",
+          "type": "IMAGE",
+          "links": [
+            45
+          ]
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "ref_image_3",
+          "type": "IMAGE",
+          "links": [
+            46
+          ]
+        },
+        {
+          "localized_name": "ref_image_4",
+          "name": "ref_image_4",
+          "type": "IMAGE",
+          "links": [
+            47
+          ]
+        },
+        {
+          "localized_name": "ref_image_5",
+          "name": "ref_image_5",
+          "type": "IMAGE",
+          "links": [
+            48
+          ]
+        },
+        {
+          "localized_name": "ref_image_6",
+          "name": "ref_image_6",
+          "type": "IMAGE",
+          "links": [
+            49
+          ]
+        },
+        {
+          "localized_name": "ref_image_7",
+          "name": "ref_image_7",
+          "type": "IMAGE",
+          "links": [
+            50
+          ]
+        },
+        {
+          "localized_name": "ref_image_8",
+          "name": "ref_image_8",
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        },
+        {
+          "localized_name": "ref_video_0",
+          "name": "ref_video_0",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_1",
+          "name": "ref_video_1",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_2",
+          "name": "ref_video_2",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_audio_0",
+          "name": "ref_video_audio_0",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_audio_1",
+          "name": "ref_video_audio_1",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_audio_2",
+          "name": "ref_video_audio_2",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "ref_audio_0",
+          "name": "ref_audio_0",
+          "type": "AUDIO",
+          "links": [
+            52
+          ]
+        },
+        {
+          "localized_name": "ref_audio_1",
+          "name": "ref_audio_1",
+          "type": "AUDIO",
+          "links": [
+            53
+          ]
+        },
+        {
+          "localized_name": "ref_audio_2",
+          "name": "ref_audio_2",
+          "type": "AUDIO",
+          "links": [
+            54
+          ]
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            25
+          ]
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            23
+          ]
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            24
+          ]
+        },
+        {
+          "localized_name": "length",
+          "name": "length",
+          "type": "INT",
+          "links": [
+            22
+          ]
+        },
+        {
+          "localized_name": "seconds",
+          "name": "seconds",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanH3PickReferenceMedia",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "8.0.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        24,
+        "auto",
+        "auto",
+        "auto",
+        "512",
+        "subject_definitions:\n<Subject 1>：源自<Picture 1>的年轻东亚女性，拥有精致的五官、深邃双眼皮与饱满的双唇，留着及肩暗棕色直发并带有微风抚过的飘逸发丝。身穿奢华的粉色毛绒外套（pink faux fur coat），内搭带有银色链条与粉黑交织纹理饰件的黑色高领针织衫，佩戴多层银色项链、夸张的银色珍珠吊坠耳环与银色手链。皮肤白皙细腻，带有自然微光与红润妆感；在视频中坐在床上，以娇羞暧昧的神态直视镜头并说话。\n<Picture 1>：参考肖像图，提供<Subject 1>的面部特征、发型、粉色毛绒外套、黑色高领针织衫、多层银色链饰与耳环细节；目标视频将背景改为夜晚卧室床铺。\n\nsummary:\n[reference generation, keyframe completion] 15秒浪漫暧昧短视频，以<Picture 1>中女性的外貌、粉色毛绒外套与银色链饰为参考，让她坐在夜晚卧室的床上对镜头低语，保留娇羞微笑与亲昵语气，完整说出指定台词，全程不出现字幕。\n\nretention_analysis:\n<Picture 1>: partially_preserved，保留<Subject 1>的精致五官、暗棕色发型、粉色毛绒外套、黑色高领内搭、多层银色项链与耳环，背景由原高光演播室风格改为夜晚卧室床铺。\n<Subject 1>: fully_preserved，面部特征、发型、装扮与配饰在所有镜头中持续一致。\n\ndetailed_description:\n整体为暖调低照度的电影感近景，浅景深让床头灯与夜色融成柔焦光斑，粉色毛绒外套与深色丝质床品形成鲜明质感对比，气氛浪漫、亲昵又带一点娇羞。全片不出现任何字幕或屏幕文字。\n\n[Shot 1] 画面从<Subject 1>胸前的中近景开始，镜头以缓慢稳定的速度向她面部推近，前景保留一缕失焦的柔化遮挡。她坐在床上，肩膀放松，粉色毛绒外套微微敞开，露出精致的银色链饰与黑色高领。长发垂落肩侧，先是抿唇一笑，随后抬眼直视镜头，(S1)轻声说：<d>[Chinese]夜色这么美……你却只盯着别处看？把视线移过来一点。</d>\n\n[Shot 2] At 00:06.000, 镜头切为更近的面部特写并继续缓慢推近，带有极轻微的环绕弧度。<Subject 1>微微偏头，笑意更深，像在确认对方是否照做，(S1)接着说：<d>[Chinese]对，再近一点……</d> 暖光掠过她的发梢与摇曳的银色珍珠耳环。\n\n[Shot 3] At 00:10.800, 镜头推至近特写，<Subject 1>身体微微前倾，粉色毛绒外套随动作自然起伏，目光柔亮，呼吸放轻，(S1)低声说：<d>[Chinese]今晚的时间还很长，我们，有的是耐心慢慢浪费。</d> 说完后她唇角轻扬，继续凝视镜头，画面在暧昧安静的停顿中结束。\n\noverall_soundscape:\n环境音很轻，以夜晚室内的低频静谧感为主，夹杂细微的毛绒外套与床品摩擦声，以及她靠近时的轻柔呼吸声；细微的金属链条轻触与发丝轻擦带来贴近耳边的真实质感。\n\nnon_diegetic_music:\n底层铺有缓慢、低音量的浪漫氛围音乐，暖色调钢琴与柔和弦乐交织，节奏舒展，在最后一句台词后仍留有微弱延音，不盖过人声。",
+        15,
+        "16:9 (Widescreen)",
+        0.7,
+        32,
+        "47dcc787-d3a4-4898-be4d-4bf0488f053e.png",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "video_trim_seconds": "auto",
+        "audio_trim_seconds": "auto",
+        "image_max_side": "auto",
+        "video_max_side": "512",
+        "prompt": "subject_definitions:\n<Subject 1>：源自<Picture 1>的年轻东亚女性，拥有精致的五官、深邃双眼皮与饱满的双唇，留着及肩暗棕色直发并带有微风抚过的飘逸发丝。身穿奢华的粉色毛绒外套（pink faux fur coat），内搭带有银色链条与粉黑交织纹理饰件的黑色高领针织衫，佩戴多层银色项链、夸张的银色珍珠吊坠耳环与银色手链。皮肤白皙细腻，带有自然微光与红润妆感；在视频中坐在床上，以娇羞暧昧的神态直视镜头并说话。\n<Picture 1>：参考肖像图，提供<Subject 1>的面部特征、发型、粉色毛绒外套、黑色高领针织衫、多层银色链饰与耳环细节；目标视频将背景改为夜晚卧室床铺。\n\nsummary:\n[reference generation, keyframe completion] 15秒浪漫暧昧短视频，以<Picture 1>中女性的外貌、粉色毛绒外套与银色链饰为参考，让她坐在夜晚卧室的床上对镜头低语，保留娇羞微笑与亲昵语气，完整说出指定台词，全程不出现字幕。\n\nretention_analysis:\n<Picture 1>: partially_preserved，保留<Subject 1>的精致五官、暗棕色发型、粉色毛绒外套、黑色高领内搭、多层银色项链与耳环，背景由原高光演播室风格改为夜晚卧室床铺。\n<Subject 1>: fully_preserved，面部特征、发型、装扮与配饰在所有镜头中持续一致。\n\ndetailed_description:\n整体为暖调低照度的电影感近景，浅景深让床头灯与夜色融成柔焦光斑，粉色毛绒外套与深色丝质床品形成鲜明质感对比，气氛浪漫、亲昵又带一点娇羞。全片不出现任何字幕或屏幕文字。\n\n[Shot 1] 画面从<Subject 1>胸前的中近景开始，镜头以缓慢稳定的速度向她面部推近，前景保留一缕失焦的柔化遮挡。她坐在床上，肩膀放松，粉色毛绒外套微微敞开，露出精致的银色链饰与黑色高领。长发垂落肩侧，先是抿唇一笑，随后抬眼直视镜头，(S1)轻声说：<d>[Chinese]夜色这么美……你却只盯着别处看？把视线移过来一点。</d>\n\n[Shot 2] At 00:06.000, 镜头切为更近的面部特写并继续缓慢推近，带有极轻微的环绕弧度。<Subject 1>微微偏头，笑意更深，像在确认对方是否照做，(S1)接着说：<d>[Chinese]对，再近一点……</d> 暖光掠过她的发梢与摇曳的银色珍珠耳环。\n\n[Shot 3] At 00:10.800, 镜头推至近特写，<Subject 1>身体微微前倾，粉色毛绒外套随动作自然起伏，目光柔亮，呼吸放轻，(S1)低声说：<d>[Chinese]今晚的时间还很长，我们，有的是耐心慢慢浪费。</d> 说完后她唇角轻扬，继续凝视镜头，画面在暧昧安静的停顿中结束。\n\noverall_soundscape:\n环境音很轻，以夜晚室内的低频静谧感为主，夹杂细微的毛绒外套与床品摩擦声，以及她靠近时的轻柔呼吸声；细微的金属链条轻触与发丝轻擦带来贴近耳边的真实质感。\n\nnon_diegetic_music:\n底层铺有缓慢、低音量的浪漫氛围音乐，暖色调钢琴与柔和弦乐交织，节奏舒展，在最后一句台词后仍留有微弱延音，不盖过人声。",
+        "seconds": 15,
+        "aspect_ratio": "16:9 (Widescreen)",
+        "megapixels": 0.7,
+        "multiple": 32,
+        "ref_image_0": "47dcc787-d3a4-4898-be4d-4bf0488f053e.png",
+        "ref_image_1": "",
+        "ref_image_2": "",
+        "ref_image_3": "",
+        "ref_image_4": "",
+        "ref_image_5": "",
+        "ref_image_6": "",
+        "ref_image_7": "",
+        "ref_image_8": "",
+        "ref_video_0": "",
+        "ref_video_1": "",
+        "ref_video_2": "",
+        "ref_audio_0": "",
+        "ref_audio_1": "",
+        "ref_audio_2": ""
+      }
+    },
+    {
+      "id": 36,
+      "type": "Label (rgthree)",
+      "pos": [
+        790,
+        -197
+      ],
+      "size": [
+        760.0,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "原作者：T8",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    }
+  ],
+  "links": [
+    [
+      6,
+      6,
+      1,
+      7,
+      1,
+      "LATENT"
+    ],
+    [
+      7,
+      7,
+      0,
+      8,
+      0,
+      "MODEL"
+    ],
+    [
+      8,
+      6,
+      0,
+      8,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      9,
+      9,
+      0,
+      10,
+      0,
+      "NOISE"
+    ],
+    [
+      10,
+      8,
+      0,
+      10,
+      1,
+      "GUIDER"
+    ],
+    [
+      11,
+      7,
+      1,
+      10,
+      2,
+      "SAMPLER"
+    ],
+    [
+      12,
+      7,
+      2,
+      10,
+      3,
+      "SIGMAS"
+    ],
+    [
+      13,
+      6,
+      1,
+      10,
+      4,
+      "LATENT"
+    ],
+    [
+      14,
+      10,
+      0,
+      11,
+      0,
+      "LATENT"
+    ],
+    [
+      15,
+      32,
+      2,
+      11,
+      1,
+      "VAE"
+    ],
+    [
+      16,
+      32,
+      3,
+      11,
+      2,
+      "VAE"
+    ],
+    [
+      39,
+      2,
+      0,
+      7,
+      0,
+      "MODEL"
+    ],
+    [
+      40,
+      32,
+      0,
+      2,
+      0,
+      "MODEL"
+    ],
+    [
+      41,
+      11,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      11,
+      1,
+      26,
+      1,
+      "AUDIO"
+    ],
+    [
+      3,
+      32,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      4,
+      32,
+      2,
+      6,
+      1,
+      "VAE"
+    ],
+    [
+      5,
+      32,
+      3,
+      6,
+      2,
+      "VAE"
+    ],
+    [
+      43,
+      33,
+      0,
+      6,
+      7,
+      "IMAGE"
+    ],
+    [
+      44,
+      33,
+      1,
+      6,
+      8,
+      "IMAGE"
+    ],
+    [
+      45,
+      33,
+      2,
+      6,
+      9,
+      "IMAGE"
+    ],
+    [
+      52,
+      33,
+      15,
+      6,
+      14,
+      "AUDIO"
+    ],
+    [
+      53,
+      33,
+      16,
+      6,
+      15,
+      "AUDIO"
+    ],
+    [
+      54,
+      33,
+      17,
+      6,
+      16,
+      "AUDIO"
+    ],
+    [
+      25,
+      33,
+      18,
+      6,
+      18,
+      "STRING"
+    ],
+    [
+      23,
+      33,
+      19,
+      6,
+      19,
+      "INT"
+    ],
+    [
+      24,
+      33,
+      20,
+      6,
+      20,
+      "INT"
+    ],
+    [
+      22,
+      33,
+      21,
+      6,
+      21,
+      "INT"
+    ],
+    [
+      46,
+      33,
+      3,
+      6,
+      31,
+      "IMAGE"
+    ],
+    [
+      47,
+      33,
+      4,
+      6,
+      32,
+      "IMAGE"
+    ],
+    [
+      48,
+      33,
+      5,
+      6,
+      33,
+      "IMAGE"
+    ],
+    [
+      49,
+      33,
+      6,
+      6,
+      34,
+      "IMAGE"
+    ],
+    [
+      50,
+      33,
+      7,
+      6,
+      35,
+      "IMAGE"
+    ],
+    [
+      51,
+      33,
+      8,
+      6,
+      36,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "H3 loaders + OpenVDN model composition",
+      "bounding": [
+        -238.68102512730607,
+        -80.03506135737535,
+        674.5664278879244,
+        613.0206856489269
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "links_added_by_ue": [],
+    "ue_links": [],
+    "workflow_name": "MiniMax H3 OpenVDN DMD8 l2va (Advanced)",
+    "pixaromaGroups": [],
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "ds": {
+      "scale": 0.5445000000000055,
+      "offset": [
+        2061.001386350423,
+        701.1545595259663
+      ]
+    },
+    "frontendVersion": "1.49.6",
+    "KKvideo_latentpreview": false,
+    "KKvideo_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0
+  },
+  "version": 0.4
+}

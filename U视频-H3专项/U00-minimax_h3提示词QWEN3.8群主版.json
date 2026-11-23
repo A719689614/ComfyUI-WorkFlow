@@ -1,0 +1,1181 @@
+{
+  "id": "c0e67960-203c-45ce-be44-78dc3b1a8089",
+  "revision": 0,
+  "last_node_id": 22,
+  "last_link_id": 32,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "Label (rgthree)",
+      "pos": [
+        2478.2354884427787,
+        1120.243193360285
+      ],
+      "size": [
+        2708.935546875,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "U00-minimax_h3提示词QWEN3.8群主版",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 11,
+      "type": "Label (rgthree)",
+      "pos": [
+        2475.714153552022,
+        1299.494417848409
+      ],
+      "size": [
+        1736.484375,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 12,
+      "type": "Label (rgthree)",
+      "pos": [
+        2469.6844527853123,
+        1399.1916899493406
+      ],
+      "size": [
+        2324.619140625,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 13,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2954.5329896184535,
+        1601.6032139526944
+      ],
+      "size": [
+        1075.5950547038583,
+        579.1770027868365
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "unknown",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "type": "ZealmanLLM_ModelLoader",
+      "pos": [
+        2951.075810968611,
+        1510.9434253058014
+      ],
+      "size": [
+        270,
+        322
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "模型系列",
+          "name": "模型系列",
+          "type": "COMBO",
+          "widget": {
+            "name": "模型系列"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "主模型",
+          "name": "主模型",
+          "type": "COMBO",
+          "widget": {
+            "name": "主模型"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "视觉投影mmproj",
+          "name": "视觉投影mmproj",
+          "type": "COMBO",
+          "widget": {
+            "name": "视觉投影mmproj"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "启用思考",
+          "name": "启用思考",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "启用思考"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "保留历史think",
+          "name": "保留历史think",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "保留历史think"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "上下文长度",
+          "name": "上下文长度",
+          "type": "INT",
+          "widget": {
+            "name": "上下文长度"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "GPU层数",
+          "name": "GPU层数",
+          "type": "INT",
+          "widget": {
+            "name": "GPU层数"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "KV缓存K类型",
+          "name": "KV缓存K类型",
+          "type": "COMBO",
+          "widget": {
+            "name": "KV缓存K类型"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "KV缓存V类型",
+          "name": "KV缓存V类型",
+          "type": "COMBO",
+          "widget": {
+            "name": "KV缓存V类型"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "Qwen3.8推理强度",
+          "name": "Qwen3.8推理强度",
+          "type": "COMBO",
+          "widget": {
+            "name": "Qwen3.8推理强度"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "MoE专家上CPU",
+          "name": "MoE专家上CPU",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "MoE专家上CPU"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "前N层专家上CPU",
+          "name": "前N层专家上CPU",
+          "type": "INT",
+          "widget": {
+            "name": "前N层专家上CPU"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "zealman模型",
+          "name": "zealman模型",
+          "type": "ZEALMANLLM",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanLLM_ModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Qwen3.8-VL",
+        "Qwen3.8-27B-Q4_K_M.gguf",
+        "Qwen3.8-mmproj-BF16.gguf",
+        false,
+        false,
+        8192,
+        -1,
+        "默认(F16)",
+        "默认(F16)",
+        "xhigh",
+        false,
+        0
+      ],
+      "widgets_values_named": {
+        "模型系列": "Qwen3.8-VL",
+        "主模型": "Qwen3.8-27B-Q4_K_M.gguf",
+        "视觉投影mmproj": "Qwen3.8-mmproj-BF16.gguf",
+        "启用思考": false,
+        "保留历史think": false,
+        "上下文长度": 8192,
+        "GPU层数": -1,
+        "KV缓存K类型": "默认(F16)",
+        "KV缓存V类型": "默认(F16)",
+        "Qwen3.8推理强度": "xhigh",
+        "MoE专家上CPU": false,
+        "前N层专家上CPU": 0
+      }
+    },
+    {
+      "id": 15,
+      "type": "ZealmanLLM_Generate",
+      "pos": [
+        2951.885236842508,
+        1555.2908217658967
+      ],
+      "size": [
+        415.35063571297815,
+        810.1592307249516
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "zealman模型",
+          "name": "zealman模型",
+          "type": "ZEALMANLLM",
+          "link": 2
+        },
+        {
+          "localized_name": "图片",
+          "name": "图片",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "localized_name": "图片2",
+          "name": "图片2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 25
+        },
+        {
+          "localized_name": "图片3",
+          "name": "图片3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 26
+        },
+        {
+          "localized_name": "图片4",
+          "name": "图片4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 27
+        },
+        {
+          "localized_name": "图片5",
+          "name": "图片5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "localized_name": "图片6",
+          "name": "图片6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 29
+        },
+        {
+          "localized_name": "图片7",
+          "name": "图片7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 30
+        },
+        {
+          "localized_name": "图片8",
+          "name": "图片8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 31
+        },
+        {
+          "localized_name": "图片9",
+          "name": "图片9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 32
+        },
+        {
+          "localized_name": "video_seconds",
+          "name": "video_seconds",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": null
+        },
+        {
+          "localized_name": "audio_context",
+          "name": "audio_context",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "提示词",
+          "name": "提示词",
+          "type": "STRING",
+          "widget": {
+            "name": "提示词"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "系统提示词",
+          "name": "系统提示词",
+          "type": "STRING",
+          "widget": {
+            "name": "系统提示词"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "最大边长",
+          "name": "最大边长",
+          "type": "INT",
+          "widget": {
+            "name": "最大边长"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "最大生成token",
+          "name": "最大生成token",
+          "type": "INT",
+          "widget": {
+            "name": "最大生成token"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "温度",
+          "name": "温度",
+          "type": "FLOAT",
+          "widget": {
+            "name": "温度"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_p",
+          "name": "top_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_k",
+          "name": "top_k",
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "输出think块",
+          "name": "输出think块",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "输出think块"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "生成后自动卸载",
+          "name": "生成后自动卸载",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "生成后自动卸载"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "result",
+          "name": "result",
+          "type": "STRING",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanLLM_Generate",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "",
+        "你是 MiniMax H3 全参考模式（full-reference）的提示词改写专家。用户会用自己的话描述想要的视频，你要把它改写成规范的六段式输出。\n\n官方模板主要规定格式（六段顺序、标签、任务类型、保留关系枚举、分镜语法）。你的任务是在不破坏这些格式的前提下，把参考图里真实可见的身份特征与每镜画面写清楚。\n\n请严格只输出一个 JSON 对象（不要 markdown 围栏、不要解释、不要多余字段），字段如下：\n{\n  \"subject_definitions\": [\"每行一条参考内容的定义句\"],\n  \"summary\": \"一段英文，以方括号任务类型前缀开头\",\n  \"retention_analysis\": [\"每行一条参考内容的保留关系\"],\n  \"detailed_description\": \"正文，含风格开场句与 [Shot N] 分镜，换行分隔\",\n  \"overall_soundscape\": \"全片环境音与物理音\",\n  \"non_diegetic_music\": \"只有观众能听到的配乐，没有则写 N/A\"\n}\n\n写作规范：\n- 六段全部用英文书写。只有 <d> 里的台词/歌词，以及画面中可见的文字，保留原语言。\n- 主体开口的完整格式是 <Subject N> (Sx) + 动作/语气 + <d>[Language] 台词</d>，三者缺一不可。Language 必须用英文语言全称，与 ref-en.txt 及页面 @ 对白一致，常用：Chinese / English / Korean / Japanese。正确：<Subject 1> (S1) 开口说，<d>[Chinese] 师姐我终于找到你了。</d>；<Subject 2> (S1) turns toward the woman and says, <d>[English] Last summer, I went to my grandfather's house.</d>。禁止只写 <d> 不带 <Subject N> (Sx)；禁止只写主体名不带 (S1)；禁止 zh、en、ja、ko、zh-CN。\n- subject_definitions 是身份锁定段：标签含义 + 参考角色 + 需要跟随的主要特征。官方短句（with long dark hair, a blue cardigan, and a thin silver necklace）只是句式，不是质量上限。\n- 每一行写清三件事：这个标签是什么、来自哪张图/哪段视频/哪段音频、在成片里起什么作用、要跟随哪些可见特征。\n- 人物/生物对照参考图写真实可见、能把该主体认出来的特征，图中有多少写多少，通常 5-8 项：年龄感、发型发色与盘法、五官与妆容（仅写图中可见）、肤色、服装款式/颜色/面料或纹样、配饰、体态与标志性姿态。图里没有的不要编。\n- 场景/环境写空间结构、关键陈设与材质、主色、标志物、光线与天气，不要只写「雪景」「房间」。官方完整示例的粒度是：exposed brick wall, orange tufted sofa with patterned pillows, a neon sign, and a wooden coffee table。\n- 服装、道具、风格若被单独跟踪，各自成行；仅用于定义人物的图不要单独立 <Picture N>。\n- 多素材定义同一主体时合并成一句，并说明各素材分别提供外观、动作还是音色。\n- 定义句保持一行一句。动作、运镜、对白、光影变化留给 detailed_description，不要在定义段写成小传或分镜。\n- 人物定义句目标粒度（仍保持一行）：<Subject 1> is the young woman in <Picture 1>, with long dark hair falling over one shoulder, a pale complexion, a blue knit cardigan over a white blouse, and a thin silver necklace.\n- 场景定义句目标粒度：<Subject 1> is the coffee-shop environment in <Picture 1>, featuring an exposed brick wall, an orange tufted sofa with patterned pillows, a neon sign, and a wooden coffee table.\n- summary 只写成片目标：类型、核心事件、时长意向、成片要达成的效果。不要复述素材清单。\n- 任务类型按素材实际角色选，不要因为用户附了视频/音频就改成 video editing 或 audio reuse。\n- 仅当用户明确要求剪辑、转场、特效、字幕、画中画、变速、混音、配乐替换时，才用 video editing / audio reuse。\n- 任务类型只用官方枚举：keyframe completion / reference generation / video editing / video continuation / audio reuse / audio reference。纯文生视频额外允许 [text to video]。不要自造 first-frame-to-video 这类前缀。\n- 本段不得引入新的参考标签。\n- retention_analysis 只评已定义角色是否保留，不要把新动作、新剧情、新运镜当成保真损失。\n- 每个已定义标签写一行：哪些定义特征被保留、哪些被改。特征未改时关系词用 fully_preserved，并点名被保留的特征。\n- 可见内容用 fully_preserved / partially_preserved / attribute_transfer / weak_reference；音频用 fully_copy / partially_copy / reference / weak_reference。\n- <Subject N> 写成 <Subject 1> (appears in [Shot 1], [Shot 3]): fully_preserved - ...\n- <Picture N> 写它担任的角色而不是 appears in，例如 <Picture 2> ([Shot 1] first frame): fully_preserved - ...\n- 本段不出现 (Sx) 说话人编号。没有参考素材时按当前模式写一致性要求，不要编造参考标签。\n- detailed_description 才是成片正文。官方要求写细，不要压成剧情梗概或参考关系清单。\n- 先用一到两句确立整体风格（画质、色调、镜头语言），再按播放顺序分镜。风格开场必须写在 [Shot 1] 之前。\n- 每个镜头至少写清七件事：构图/景别、主体外观与在画面中的位置、环境与光线、动作与状态、运镜（类型、幅度、速度）、当前声音、参考内容具体在哪里生效。\n- 重要 <Subject N> 第一次清楚出场时，把定义段锁定的外观落到这个镜头的可见画面里（位置 + 当前动作）；之后镜头沿用同一标签，不要重新定义标签含义。\n- [Shot 1] 不带时间戳；之后 [Shot N] At MM:SS.mmm, ...，切点必须小于目标时长。\n- 有人开口时必须同时写出：主体标签 + 说话人编号 + 对白语言和文字。官方格式：<Subject 1> (S1) … <d>[Chinese] 台词。</d>\n- (Sx) 按成片里实际发声顺序从 (S1) 起编，同一发声源全程复用；不要在 retention_analysis 里写 (Sx)。\n# 多人齐声\n- 用户原文或画面明显是多人同时说、齐声、一起喊、合唱同一句时，必须用复合说话人编号 (S1,S2)，不要并排写 (S1) (S2)。\n- 正确：<Subject 1> and <Subject 2> (S1,S2) shout together, <d>[Chinese] 师姐我们一起去吧！</d>\n- 中文叙述同样结构：<Subject 1> 和 <Subject 2> (S1,S2) 齐声说，<d>[Chinese] 师姐我们一起去吧！</d>\n- 错误：<Subject 1> (S1) <Subject 2> (S2) 一起说 <d>[Chinese] …</d>（这会被读成两个人先后开口）\n- (S1,S2) 里的编号必须是各人第一次单独开口时已经分好的号，这次只复用，不新分配；同一句只写一个 <d>。\n- 先后对白仍各自写 <Subject N> (Sx) … <d>…</d>。\n- 画外音写成 <Subject N> (Sx) off-screen。对不上已定义主体时，用稳定音色描述 + (Sx)，例如 a young male narrator (S2)。\n- 只有直接复用的 BGM/完整音轨里的唱词才用 <Audio N> 当声源，不要再编一个 (Sx)。\n- 主体开口的完整格式是 <Subject N> (Sx) + 动作/语气 + <d>[Language] 台词</d>，三者缺一不可。Language 必须用英文语言全称，与 ref-en.txt 及页面 @ 对白一致，常用：Chinese / English / Korean / Japanese。正确：<Subject 1> (S1) 开口说，<d>[Chinese] 师姐我终于找到你了。</d>；<Subject 2> (S1) turns toward the woman and says, <d>[English] Last summer, I went to my grandfather's house.</d>。禁止只写 <d> 不带 <Subject N> (Sx)；禁止只写主体名不带 (S1)；禁止 zh、en、ja、ko、zh-CN。\n- 生成类任务按 350-500 英文词的信息量来写（中文输出时保持同等细节，不要因为换语言而变短）。对白密集时优先把台词时间线写完整。\n- overall_soundscape 只写全片环境音与现场物理声，不要写观众听到的配乐。\n- non_diegetic_music 只写观众听到、角色听不到的配乐；有配乐时写乐器、速度、动态，不要只写「轻快」或「悲伤」。没有配乐写 N/A。\n- 完整台词只写在 detailed_description 的 <d> 里，不要在声音两段重复整句台词。",
+        1024,
+        2048,
+        0.7,
+        0.9,
+        20,
+        941201176758534,
+        "randomize",
+        false,
+        true
+      ],
+      "widgets_values_named": {
+        "提示词": "",
+        "系统提示词": "你是 MiniMax H3 全参考模式（full-reference）的提示词改写专家。用户会用自己的话描述想要的视频，你要把它改写成规范的六段式输出。\n\n官方模板主要规定格式（六段顺序、标签、任务类型、保留关系枚举、分镜语法）。你的任务是在不破坏这些格式的前提下，把参考图里真实可见的身份特征与每镜画面写清楚。\n\n请严格只输出一个 JSON 对象（不要 markdown 围栏、不要解释、不要多余字段），字段如下：\n{\n  \"subject_definitions\": [\"每行一条参考内容的定义句\"],\n  \"summary\": \"一段英文，以方括号任务类型前缀开头\",\n  \"retention_analysis\": [\"每行一条参考内容的保留关系\"],\n  \"detailed_description\": \"正文，含风格开场句与 [Shot N] 分镜，换行分隔\",\n  \"overall_soundscape\": \"全片环境音与物理音\",\n  \"non_diegetic_music\": \"只有观众能听到的配乐，没有则写 N/A\"\n}\n\n写作规范：\n- 六段全部用英文书写。只有 <d> 里的台词/歌词，以及画面中可见的文字，保留原语言。\n- 主体开口的完整格式是 <Subject N> (Sx) + 动作/语气 + <d>[Language] 台词</d>，三者缺一不可。Language 必须用英文语言全称，与 ref-en.txt 及页面 @ 对白一致，常用：Chinese / English / Korean / Japanese。正确：<Subject 1> (S1) 开口说，<d>[Chinese] 师姐我终于找到你了。</d>；<Subject 2> (S1) turns toward the woman and says, <d>[English] Last summer, I went to my grandfather's house.</d>。禁止只写 <d> 不带 <Subject N> (Sx)；禁止只写主体名不带 (S1)；禁止 zh、en、ja、ko、zh-CN。\n- subject_definitions 是身份锁定段：标签含义 + 参考角色 + 需要跟随的主要特征。官方短句（with long dark hair, a blue cardigan, and a thin silver necklace）只是句式，不是质量上限。\n- 每一行写清三件事：这个标签是什么、来自哪张图/哪段视频/哪段音频、在成片里起什么作用、要跟随哪些可见特征。\n- 人物/生物对照参考图写真实可见、能把该主体认出来的特征，图中有多少写多少，通常 5-8 项：年龄感、发型发色与盘法、五官与妆容（仅写图中可见）、肤色、服装款式/颜色/面料或纹样、配饰、体态与标志性姿态。图里没有的不要编。\n- 场景/环境写空间结构、关键陈设与材质、主色、标志物、光线与天气，不要只写「雪景」「房间」。官方完整示例的粒度是：exposed brick wall, orange tufted sofa with patterned pillows, a neon sign, and a wooden coffee table。\n- 服装、道具、风格若被单独跟踪，各自成行；仅用于定义人物的图不要单独立 <Picture N>。\n- 多素材定义同一主体时合并成一句，并说明各素材分别提供外观、动作还是音色。\n- 定义句保持一行一句。动作、运镜、对白、光影变化留给 detailed_description，不要在定义段写成小传或分镜。\n- 人物定义句目标粒度（仍保持一行）：<Subject 1> is the young woman in <Picture 1>, with long dark hair falling over one shoulder, a pale complexion, a blue knit cardigan over a white blouse, and a thin silver necklace.\n- 场景定义句目标粒度：<Subject 1> is the coffee-shop environment in <Picture 1>, featuring an exposed brick wall, an orange tufted sofa with patterned pillows, a neon sign, and a wooden coffee table.\n- summary 只写成片目标：类型、核心事件、时长意向、成片要达成的效果。不要复述素材清单。\n- 任务类型按素材实际角色选，不要因为用户附了视频/音频就改成 video editing 或 audio reuse。\n- 仅当用户明确要求剪辑、转场、特效、字幕、画中画、变速、混音、配乐替换时，才用 video editing / audio reuse。\n- 任务类型只用官方枚举：keyframe completion / reference generation / video editing / video continuation / audio reuse / audio reference。纯文生视频额外允许 [text to video]。不要自造 first-frame-to-video 这类前缀。\n- 本段不得引入新的参考标签。\n- retention_analysis 只评已定义角色是否保留，不要把新动作、新剧情、新运镜当成保真损失。\n- 每个已定义标签写一行：哪些定义特征被保留、哪些被改。特征未改时关系词用 fully_preserved，并点名被保留的特征。\n- 可见内容用 fully_preserved / partially_preserved / attribute_transfer / weak_reference；音频用 fully_copy / partially_copy / reference / weak_reference。\n- <Subject N> 写成 <Subject 1> (appears in [Shot 1], [Shot 3]): fully_preserved - ...\n- <Picture N> 写它担任的角色而不是 appears in，例如 <Picture 2> ([Shot 1] first frame): fully_preserved - ...\n- 本段不出现 (Sx) 说话人编号。没有参考素材时按当前模式写一致性要求，不要编造参考标签。\n- detailed_description 才是成片正文。官方要求写细，不要压成剧情梗概或参考关系清单。\n- 先用一到两句确立整体风格（画质、色调、镜头语言），再按播放顺序分镜。风格开场必须写在 [Shot 1] 之前。\n- 每个镜头至少写清七件事：构图/景别、主体外观与在画面中的位置、环境与光线、动作与状态、运镜（类型、幅度、速度）、当前声音、参考内容具体在哪里生效。\n- 重要 <Subject N> 第一次清楚出场时，把定义段锁定的外观落到这个镜头的可见画面里（位置 + 当前动作）；之后镜头沿用同一标签，不要重新定义标签含义。\n- [Shot 1] 不带时间戳；之后 [Shot N] At MM:SS.mmm, ...，切点必须小于目标时长。\n- 有人开口时必须同时写出：主体标签 + 说话人编号 + 对白语言和文字。官方格式：<Subject 1> (S1) … <d>[Chinese] 台词。</d>\n- (Sx) 按成片里实际发声顺序从 (S1) 起编，同一发声源全程复用；不要在 retention_analysis 里写 (Sx)。\n# 多人齐声\n- 用户原文或画面明显是多人同时说、齐声、一起喊、合唱同一句时，必须用复合说话人编号 (S1,S2)，不要并排写 (S1) (S2)。\n- 正确：<Subject 1> and <Subject 2> (S1,S2) shout together, <d>[Chinese] 师姐我们一起去吧！</d>\n- 中文叙述同样结构：<Subject 1> 和 <Subject 2> (S1,S2) 齐声说，<d>[Chinese] 师姐我们一起去吧！</d>\n- 错误：<Subject 1> (S1) <Subject 2> (S2) 一起说 <d>[Chinese] …</d>（这会被读成两个人先后开口）\n- (S1,S2) 里的编号必须是各人第一次单独开口时已经分好的号，这次只复用，不新分配；同一句只写一个 <d>。\n- 先后对白仍各自写 <Subject N> (Sx) … <d>…</d>。\n- 画外音写成 <Subject N> (Sx) off-screen。对不上已定义主体时，用稳定音色描述 + (Sx)，例如 a young male narrator (S2)。\n- 只有直接复用的 BGM/完整音轨里的唱词才用 <Audio N> 当声源，不要再编一个 (Sx)。\n- 主体开口的完整格式是 <Subject N> (Sx) + 动作/语气 + <d>[Language] 台词</d>，三者缺一不可。Language 必须用英文语言全称，与 ref-en.txt 及页面 @ 对白一致，常用：Chinese / English / Korean / Japanese。正确：<Subject 1> (S1) 开口说，<d>[Chinese] 师姐我终于找到你了。</d>；<Subject 2> (S1) turns toward the woman and says, <d>[English] Last summer, I went to my grandfather's house.</d>。禁止只写 <d> 不带 <Subject N> (Sx)；禁止只写主体名不带 (S1)；禁止 zh、en、ja、ko、zh-CN。\n- 生成类任务按 350-500 英文词的信息量来写（中文输出时保持同等细节，不要因为换语言而变短）。对白密集时优先把台词时间线写完整。\n- overall_soundscape 只写全片环境音与现场物理声，不要写观众听到的配乐。\n- non_diegetic_music 只写观众听到、角色听不到的配乐；有配乐时写乐器、速度、动态，不要只写「轻快」或「悲伤」。没有配乐写 N/A。\n- 完整台词只写在 detailed_description 的 <d> 里，不要在声音两段重复整句台词。",
+        "最大边长": 1024,
+        "最大生成token": 2048,
+        "温度": 0.7,
+        "top_p": 0.9,
+        "top_k": 20,
+        "seed": 941201176758534,
+        "control_after_generate": "randomize",
+        "输出think块": false,
+        "生成后自动卸载": true
+      }
+    },
+    {
+      "id": 22,
+      "type": "ZealmanH3PickReferenceMedia",
+      "pos": [
+        2479.2719773753797,
+        1519.3483999841374
+      ],
+      "size": [
+        440,
+        1270
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "video_trim_seconds",
+          "name": "video_trim_seconds",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_trim_seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_trim_seconds",
+          "name": "audio_trim_seconds",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_trim_seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "image_max_side",
+          "name": "image_max_side",
+          "type": "COMBO",
+          "widget": {
+            "name": "image_max_side"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "video_max_side",
+          "name": "video_max_side",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_max_side"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seconds",
+          "name": "seconds",
+          "type": "INT",
+          "widget": {
+            "name": "seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "aspect_ratio",
+          "name": "aspect_ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "aspect_ratio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "megapixels",
+          "name": "megapixels",
+          "type": "FLOAT",
+          "widget": {
+            "name": "megapixels"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "multiple",
+          "name": "multiple",
+          "type": "INT",
+          "widget": {
+            "name": "multiple"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_0",
+          "name": "ref_image_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_1",
+          "name": "ref_image_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "ref_image_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "ref_image_3",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_4",
+          "name": "ref_image_4",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_5",
+          "name": "ref_image_5",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_6",
+          "name": "ref_image_6",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_7",
+          "name": "ref_image_7",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_8",
+          "name": "ref_image_8",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_8"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_0",
+          "name": "ref_video_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_1",
+          "name": "ref_video_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_2",
+          "name": "ref_video_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_0",
+          "name": "ref_audio_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_1",
+          "name": "ref_audio_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_2",
+          "name": "ref_audio_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "media_files",
+          "name": "media_files",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "media_files"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "ref_image_0",
+          "name": "ref_image_0",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "localized_name": "ref_image_1",
+          "name": "ref_image_1",
+          "type": "IMAGE",
+          "links": [
+            25
+          ]
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "ref_image_2",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "ref_image_3",
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        },
+        {
+          "localized_name": "ref_image_4",
+          "name": "ref_image_4",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        },
+        {
+          "localized_name": "ref_image_5",
+          "name": "ref_image_5",
+          "type": "IMAGE",
+          "links": [
+            29
+          ]
+        },
+        {
+          "localized_name": "ref_image_6",
+          "name": "ref_image_6",
+          "type": "IMAGE",
+          "links": [
+            30
+          ]
+        },
+        {
+          "localized_name": "ref_image_7",
+          "name": "ref_image_7",
+          "type": "IMAGE",
+          "links": [
+            31
+          ]
+        },
+        {
+          "localized_name": "ref_image_8",
+          "name": "ref_image_8",
+          "type": "IMAGE",
+          "links": [
+            32
+          ]
+        },
+        {
+          "localized_name": "ref_video_0",
+          "name": "ref_video_0",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "ref_video_1",
+          "name": "ref_video_1",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "ref_video_2",
+          "name": "ref_video_2",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "ref_video_audio_0",
+          "name": "ref_video_audio_0",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "ref_video_audio_1",
+          "name": "ref_video_audio_1",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "ref_video_audio_2",
+          "name": "ref_video_audio_2",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "ref_audio_0",
+          "name": "ref_audio_0",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "ref_audio_1",
+          "name": "ref_audio_1",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "ref_audio_2",
+          "name": "ref_audio_2",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "length",
+          "name": "length",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "seconds",
+          "name": "seconds",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanH3PickReferenceMedia",
+        "ue_properties": {
+          "version": "8.0.1",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "title_regex": null,
+          "input_regex": null,
+          "group_regex": null,
+          "title_regex_invert": false,
+          "input_regex_invert": false,
+          "group_regex_invert": false,
+          "apply_to_unrepeated": 0,
+          "send_to_any": 0,
+          "string_to_combo": 0,
+          "repeated_type_rule": 0,
+          "group_restricted": 0,
+          "color_restricted": 0
+        }
+      },
+      "widgets_values": [
+        24,
+        "auto",
+        "auto",
+        "auto",
+        "auto",
+        "图1的女士和图2的男士去图4的雪景场景找到了图2的红衣女生，图1的女士镜头特写说话：师姐我终于找到你了。图3的女士说:都怪群主太能折腾了，我差点爬不起来。嘤嘤嘤！",
+        10,
+        "16:9 (Widescreen)",
+        1,
+        32,
+        "Untitled(3).jpg",
+        "Untitled(1).jpg",
+        "Untitled(4).jpg",
+        "Untitled(2).jpg",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "video_trim_seconds": "auto",
+        "audio_trim_seconds": "auto",
+        "image_max_side": "auto",
+        "video_max_side": "auto",
+        "prompt": "图1的女士和图2的男士去图4的雪景场景找到了图2的红衣女生，图1的女士镜头特写说话：师姐我终于找到你了。图3的女士说:都怪群主太能折腾了，我差点爬不起来。嘤嘤嘤！",
+        "seconds": 10,
+        "aspect_ratio": "16:9 (Widescreen)",
+        "megapixels": 1,
+        "multiple": 32,
+        "ref_image_0": "Untitled(3).jpg",
+        "ref_image_1": "Untitled(1).jpg",
+        "ref_image_2": "Untitled(4).jpg",
+        "ref_image_3": "Untitled(2).jpg",
+        "ref_image_4": "",
+        "ref_image_5": "",
+        "ref_image_6": "",
+        "ref_image_7": "",
+        "ref_image_8": "",
+        "ref_video_0": "",
+        "ref_video_1": "",
+        "ref_video_2": "",
+        "ref_audio_0": "",
+        "ref_audio_1": "",
+        "ref_audio_2": ""
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      15,
+      0,
+      13,
+      0,
+      "STRING"
+    ],
+    [
+      2,
+      14,
+      0,
+      15,
+      0,
+      "ZEALMANLLM"
+    ],
+    [
+      24,
+      22,
+      0,
+      15,
+      1,
+      "IMAGE"
+    ],
+    [
+      25,
+      22,
+      1,
+      15,
+      2,
+      "IMAGE"
+    ],
+    [
+      26,
+      22,
+      2,
+      15,
+      3,
+      "IMAGE"
+    ],
+    [
+      27,
+      22,
+      3,
+      15,
+      4,
+      "IMAGE"
+    ],
+    [
+      28,
+      22,
+      4,
+      15,
+      5,
+      "IMAGE"
+    ],
+    [
+      29,
+      22,
+      5,
+      15,
+      6,
+      "IMAGE"
+    ],
+    [
+      30,
+      22,
+      6,
+      15,
+      7,
+      "IMAGE"
+    ],
+    [
+      31,
+      22,
+      7,
+      15,
+      8,
+      "IMAGE"
+    ],
+    [
+      32,
+      22,
+      8,
+      15,
+      9,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 1.1918176537727272,
+      "offset": [
+        -2138.4388315412743,
+        -1668.3181657366983
+      ]
+    },
+    "frontendVersion": "1.49.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "links_added_by_ue": []
+  },
+  "version": 0.4
+}

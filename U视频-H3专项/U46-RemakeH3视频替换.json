@@ -1,0 +1,1578 @@
+{
+  "id": "31e99f12-62ec-4828-94ef-f6a534c029ea",
+  "revision": 0,
+  "last_node_id": 28,
+  "last_link_id": 44,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "RemakeKeyframeUntil",
+      "pos": [
+        852.6999999999992,
+        632.4999999999994
+      ],
+      "size": [
+        297.9,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "model",
+          "nameLocked": null,
+          "removable": null,
+          "type": "MODEL",
+          "pos": null,
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "MODEL",
+          "nameLocked": null,
+          "removable": null,
+          "type": "MODEL",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RemakeKeyframeUntil",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "keyframe_until": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        0.9
+      ],
+      "widgets_values_named": {
+        "keyframe_until": 0.9
+      }
+    },
+    {
+      "id": 11,
+      "type": "RemakeConditioning",
+      "pos": [
+        826.7999999999997,
+        -134.8
+      ],
+      "size": [
+        302.10000000000014,
+        320
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "clip",
+          "nameLocked": null,
+          "removable": null,
+          "type": "CLIP",
+          "pos": null,
+          "link": 43
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "vae",
+          "nameLocked": null,
+          "removable": null,
+          "type": "VAE",
+          "pos": null,
+          "link": 35
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "audio_vae",
+          "nameLocked": null,
+          "removable": null,
+          "type": "VAE",
+          "pos": null,
+          "link": 36
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "source",
+          "nameLocked": null,
+          "removable": null,
+          "type": "IMAGE",
+          "pos": null,
+          "link": 30
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "ref_1",
+          "nameLocked": null,
+          "removable": null,
+          "type": "IMAGE",
+          "pos": null,
+          "link": 26
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "audio",
+          "nameLocked": null,
+          "removable": null,
+          "shape": 7,
+          "type": "AUDIO",
+          "pos": null,
+          "link": 31
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "ref_2",
+          "nameLocked": null,
+          "removable": null,
+          "shape": 7,
+          "type": "IMAGE",
+          "pos": null,
+          "link": 27
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "ref_3",
+          "nameLocked": null,
+          "removable": null,
+          "shape": 7,
+          "type": "IMAGE",
+          "pos": null,
+          "link": 28
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "ref_4",
+          "nameLocked": null,
+          "removable": null,
+          "shape": 7,
+          "type": "IMAGE",
+          "pos": null,
+          "link": 29
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "prompt",
+          "nameLocked": null,
+          "removable": null,
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 32
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "frames",
+          "nameLocked": null,
+          "removable": null,
+          "type": "INT",
+          "widget": {
+            "name": "frames"
+          },
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "positive",
+          "nameLocked": null,
+          "removable": null,
+          "type": "CONDITIONING",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            11,
+            13
+          ]
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "latent",
+          "nameLocked": null,
+          "removable": null,
+          "type": "LATENT",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RemakeConditioning",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true,
+            "pins": true,
+            "frames": true,
+            "short_edge": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        "12, 184",
+        226,
+        480
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "pins": "12, 184",
+        "frames": 226,
+        "short_edge": 480
+      }
+    },
+    {
+      "id": 12,
+      "type": "RemakeNoise",
+      "pos": [
+        842.0000000000003,
+        498.19999999999976
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "positive",
+          "nameLocked": null,
+          "removable": null,
+          "type": "CONDITIONING",
+          "pos": null,
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "NOISE",
+          "nameLocked": null,
+          "removable": null,
+          "type": "NOISE",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RemakeNoise",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "seed": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        685014683893528,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "seed": 685014683893528,
+        "control_after_generate": "randomize"
+      }
+    },
+    {
+      "id": 13,
+      "type": "BasicGuider",
+      "pos": [
+        852.6999999999992,
+        780.1499999999995
+      ],
+      "size": [
+        159,
+        46
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "model",
+          "nameLocked": null,
+          "removable": null,
+          "type": "MODEL",
+          "pos": null,
+          "link": 40
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "conditioning",
+          "nameLocked": null,
+          "removable": null,
+          "type": "CONDITIONING",
+          "pos": null,
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "GUIDER",
+          "nameLocked": null,
+          "removable": null,
+          "type": "GUIDER",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            15
+          ]
+        }
+      ],
+      "title": "BasicGuider",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "BasicGuider",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 14,
+      "type": "KSamplerSelect",
+      "pos": [
+        852.6999999999992,
+        829.3666666666663
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "SAMPLER",
+          "nameLocked": null,
+          "removable": null,
+          "type": "SAMPLER",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "KSamplerSelect",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "sampler_name": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "euler"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "euler"
+      }
+    },
+    {
+      "id": 15,
+      "type": "ManualSigmas",
+      "pos": [
+        852.6999999999992,
+        681.716666666666
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "SIGMAS",
+          "nameLocked": null,
+          "removable": null,
+          "type": "SIGMAS",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            17
+          ]
+        }
+      ],
+      "title": "Sigmas (6 forwards)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "ManualSigmas",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "sigmas": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "1.0, 0.983607, 0.96, 0.923077, 0.857143, 0.705882, 0.0"
+      ],
+      "widgets_values_named": {
+        "sigmas": "1.0, 0.983607, 0.96, 0.923077, 0.857143, 0.705882, 0.0"
+      }
+    },
+    {
+      "id": 16,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        852.6999999999992,
+        730.9333333333327
+      ],
+      "size": [
+        211.9,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "noise",
+          "nameLocked": null,
+          "removable": null,
+          "type": "NOISE",
+          "pos": null,
+          "link": 14
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "guider",
+          "nameLocked": null,
+          "removable": null,
+          "type": "GUIDER",
+          "pos": null,
+          "link": 15
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "sampler",
+          "nameLocked": null,
+          "removable": null,
+          "type": "SAMPLER",
+          "pos": null,
+          "link": 16
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "sigmas",
+          "nameLocked": null,
+          "removable": null,
+          "type": "SIGMAS",
+          "pos": null,
+          "link": 17
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "latent_image",
+          "nameLocked": null,
+          "removable": null,
+          "type": "LATENT",
+          "pos": null,
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "output",
+          "nameLocked": null,
+          "removable": null,
+          "type": "LATENT",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            19,
+            21
+          ]
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "denoised_output",
+          "nameLocked": null,
+          "removable": null,
+          "type": "LATENT",
+          "pos": null,
+          "slot_index": null,
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 17,
+      "type": "VAEDecode",
+      "pos": [
+        852.6999999999991,
+        928.8999999999997
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "samples",
+          "nameLocked": null,
+          "removable": null,
+          "type": "LATENT",
+          "pos": null,
+          "link": 19
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "vae",
+          "nameLocked": null,
+          "removable": null,
+          "type": "VAE",
+          "pos": null,
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "IMAGE",
+          "nameLocked": null,
+          "removable": null,
+          "type": "IMAGE",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            41
+          ]
+        }
+      ],
+      "title": "Decode video",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 18,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        852.6999999999992,
+        878.5833333333329
+      ],
+      "size": [
+        163.9,
+        46
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "samples",
+          "nameLocked": null,
+          "removable": null,
+          "type": "LATENT",
+          "pos": null,
+          "link": 21
+        },
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "vae",
+          "nameLocked": null,
+          "removable": null,
+          "type": "VAE",
+          "pos": null,
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "color_off": null,
+          "color_on": null,
+          "dir": null,
+          "label": null,
+          "locked": null,
+          "name": "AUDIO",
+          "nameLocked": null,
+          "removable": null,
+          "type": "AUDIO",
+          "pos": null,
+          "slot_index": null,
+          "links": [
+            39
+          ]
+        }
+      ],
+      "title": "Decode audio",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.44.0",
+        "Node name for S&R": "VAEDecodeAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 21,
+      "type": "ZealmanH3PickReferenceMedia",
+      "pos": [
+        344.68305333333416,
+        198.47860444444512
+      ],
+      "size": [
+        440,
+        1270
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "ref_image_0",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        },
+        {
+          "name": "ref_image_1",
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        },
+        {
+          "name": "ref_image_2",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "ref_image_3",
+          "type": "IMAGE",
+          "links": [
+            29
+          ]
+        },
+        {
+          "name": "ref_image_4",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "ref_image_5",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "ref_image_6",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "ref_image_7",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "ref_image_8",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "ref_video_0",
+          "type": "IMAGE",
+          "links": [
+            30
+          ]
+        },
+        {
+          "name": "ref_video_1",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "ref_video_2",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "ref_video_audio_0",
+          "type": "AUDIO",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "ref_video_audio_1",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "ref_video_audio_2",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "ref_audio_0",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "ref_audio_1",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "ref_audio_2",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            32
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "links": [
+            42
+          ]
+        },
+        {
+          "name": "seconds",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanH3PickReferenceMedia",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        24,
+        "auto",
+        "auto",
+        "auto",
+        "768",
+        "subject_definitions:\n<Video 1> is the source video for the editing task: one continuous 9.4 s handheld take on a sunny park road in London in which a pizza maker smiles at the camera, tosses a big sheet of white pizza dough high into the air, catches it, stretches it right in front of the lens and talks to the camera.\n<Picture 1> and <Picture 2> are two frames of the target video, both from [Shot 1].\n<Subject 1> is Pete in <Picture 1> and <Picture 2>: a person wholly hidden inside a full-body plush pineapple mascot costume, with a big round golden-yellow pineapple head with a raised diamond-pattern rind and a spiky crown of stiff green pineapple leaves on top, two big round black-and-white cartoon eyes and a wide stitched black smile on the front of the pineapple where the face would be, a padded golden-yellow bodysuit with the same diamond-pattern pineapple rind over the torso, the arms and the legs, bright-green padded five-finger gloves and bright-green padded boots. The costume covers the whole body; no human face and no human hair show. He replaces the pizza maker in the grey camouflage cap, grey hoodie, neck gaiter and jeans in <Video 1>.\n\nsummary:\n[video editing + character replacement] The target video is an edited version of <Video 1> in which the pizza maker becomes <Subject 1>, Pete the pineapple mascot, looking exactly as he does in <Picture 1> and <Picture 2>, tossing and stretching the same sheet of white pizza dough. The few tiny distant people in the park, the road, the lawns, the trees, the benches, the tent and the red fire-point trolley are unchanged. The single continuous shot, the camera, the motion, the timing and the actions of <Video 1> are kept.\n\nretention_analysis:\n<Video 1> (source video editing): fully_preserved - the single continuous shot with no cut, the handheld camera framing and movement including the tilt up to the park and the moment the dough covers the lens, the location, the sunny daylight, the background people, and the motion and timing of every toss, catch and stretch of the dough are copied frame for frame.\n<Picture 1> (appears in [Shot 1]): reference - a frame of the target video. Pete's whole figure from slightly above, his pineapple head, bodysuit, green gloves and green boots, the dough in his gloves, and the asphalt, kerb and grass are taken from <Picture 1>.\n<Picture 2> (appears in [Shot 1]): reference - a frame of the target video. Pete's pineapple head large in frame with the cartoon eyes and smile, his bodysuit and green gloves holding the dough, and the park path, benches, trees, fire-point trolley and tent edge are taken from <Picture 2>. The figure in both pictures is the same Pete.\n<Subject 1> (appears in [Shot 1]): fully_preserved - the round golden-yellow diamond-pattern pineapple head with the green leaf crown, the cartoon eyes and the stitched smile, the matching padded bodysuit over the torso, arms and legs, the bright-green five-finger gloves and the bright-green boots stay identical in every frame, also during the toss and when he is close to the lens.\n\ndetailed_description:\nThe target video is a realistic sunny outdoor handheld scene in a London park with bright daylight and natural colours.\n[Shot 1] At 00:00.000 the camera looks down from slightly above at <Subject 1>, Pete the pineapple mascot, standing on the asphalt road with his whole figure in view, his pineapple face turned up to the camera, a big sheet of white pizza dough hanging from both green gloves in front of his waist, matching <Picture 1>. He swings the dough from side to side, and at about 00:01.400 he raises both arms and tosses it high into the air; the camera tilts up with it, and at about 00:01.900 the dough sheet spins high above the sunny park while he looks up with one arm raised. At about 00:02.600 he catches it in both gloves, now in a medium view with the lawns, trees, benches and the red fire-point trolley behind him and a few tiny distant people on the lawns. From 00:03.000 he stretches and swings the dough sheet in front of him, and at about 00:04.600 he steps close to the camera holding the big sheet up to the left, glancing at the lens. From about 00:05.800 to 00:06.800 the dough sheet swings right in front of the lens and covers most of the view, with no cut. At about 00:07.000 he faces the camera close up and talks to it, and at 00:07.667 he stands in a medium view facing the camera with the long dough sheet hanging from both gloves in front of his belly, matching <Picture 2>. From about 00:08.300 he looks down at the dough and stretches it between his gloves, and at the end he faces the camera again. The camera is handheld throughout.\nIn every frame, from the first to the last, the pizza maker is this same pineapple mascot exactly as in <Picture 1> and <Picture 2>: no human face, no human hair, no grey cap, no neck gaiter, no grey hoodie, no jeans, no sneakers, no printed text and no logo at any moment. Only one sheet of dough exists. Only this one figure changes, and everything else stays as in <Video 1>.\n\noverall_soundscape:\nThe source soundtrack continues throughout, with his voice as he talks to the camera, open park ambience with light wind, and the soft flap of the dough as it is tossed and stretched.\n\nnon_diegetic_music:\nN/A\n",
+        9,
+        "16:9 (Widescreen)",
+        1,
+        32,
+        "ref1 (1).png",
+        "ref2 (1).png",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "source (1).mp4",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "video_trim_seconds": "auto",
+        "audio_trim_seconds": "auto",
+        "image_max_side": "auto",
+        "video_max_side": "768",
+        "prompt": "subject_definitions:\n<Video 1> is the source video for the editing task: one continuous 9.4 s handheld take on a sunny park road in London in which a pizza maker smiles at the camera, tosses a big sheet of white pizza dough high into the air, catches it, stretches it right in front of the lens and talks to the camera.\n<Picture 1> and <Picture 2> are two frames of the target video, both from [Shot 1].\n<Subject 1> is Pete in <Picture 1> and <Picture 2>: a person wholly hidden inside a full-body plush pineapple mascot costume, with a big round golden-yellow pineapple head with a raised diamond-pattern rind and a spiky crown of stiff green pineapple leaves on top, two big round black-and-white cartoon eyes and a wide stitched black smile on the front of the pineapple where the face would be, a padded golden-yellow bodysuit with the same diamond-pattern pineapple rind over the torso, the arms and the legs, bright-green padded five-finger gloves and bright-green padded boots. The costume covers the whole body; no human face and no human hair show. He replaces the pizza maker in the grey camouflage cap, grey hoodie, neck gaiter and jeans in <Video 1>.\n\nsummary:\n[video editing + character replacement] The target video is an edited version of <Video 1> in which the pizza maker becomes <Subject 1>, Pete the pineapple mascot, looking exactly as he does in <Picture 1> and <Picture 2>, tossing and stretching the same sheet of white pizza dough. The few tiny distant people in the park, the road, the lawns, the trees, the benches, the tent and the red fire-point trolley are unchanged. The single continuous shot, the camera, the motion, the timing and the actions of <Video 1> are kept.\n\nretention_analysis:\n<Video 1> (source video editing): fully_preserved - the single continuous shot with no cut, the handheld camera framing and movement including the tilt up to the park and the moment the dough covers the lens, the location, the sunny daylight, the background people, and the motion and timing of every toss, catch and stretch of the dough are copied frame for frame.\n<Picture 1> (appears in [Shot 1]): reference - a frame of the target video. Pete's whole figure from slightly above, his pineapple head, bodysuit, green gloves and green boots, the dough in his gloves, and the asphalt, kerb and grass are taken from <Picture 1>.\n<Picture 2> (appears in [Shot 1]): reference - a frame of the target video. Pete's pineapple head large in frame with the cartoon eyes and smile, his bodysuit and green gloves holding the dough, and the park path, benches, trees, fire-point trolley and tent edge are taken from <Picture 2>. The figure in both pictures is the same Pete.\n<Subject 1> (appears in [Shot 1]): fully_preserved - the round golden-yellow diamond-pattern pineapple head with the green leaf crown, the cartoon eyes and the stitched smile, the matching padded bodysuit over the torso, arms and legs, the bright-green five-finger gloves and the bright-green boots stay identical in every frame, also during the toss and when he is close to the lens.\n\ndetailed_description:\nThe target video is a realistic sunny outdoor handheld scene in a London park with bright daylight and natural colours.\n[Shot 1] At 00:00.000 the camera looks down from slightly above at <Subject 1>, Pete the pineapple mascot, standing on the asphalt road with his whole figure in view, his pineapple face turned up to the camera, a big sheet of white pizza dough hanging from both green gloves in front of his waist, matching <Picture 1>. He swings the dough from side to side, and at about 00:01.400 he raises both arms and tosses it high into the air; the camera tilts up with it, and at about 00:01.900 the dough sheet spins high above the sunny park while he looks up with one arm raised. At about 00:02.600 he catches it in both gloves, now in a medium view with the lawns, trees, benches and the red fire-point trolley behind him and a few tiny distant people on the lawns. From 00:03.000 he stretches and swings the dough sheet in front of him, and at about 00:04.600 he steps close to the camera holding the big sheet up to the left, glancing at the lens. From about 00:05.800 to 00:06.800 the dough sheet swings right in front of the lens and covers most of the view, with no cut. At about 00:07.000 he faces the camera close up and talks to it, and at 00:07.667 he stands in a medium view facing the camera with the long dough sheet hanging from both gloves in front of his belly, matching <Picture 2>. From about 00:08.300 he looks down at the dough and stretches it between his gloves, and at the end he faces the camera again. The camera is handheld throughout.\nIn every frame, from the first to the last, the pizza maker is this same pineapple mascot exactly as in <Picture 1> and <Picture 2>: no human face, no human hair, no grey cap, no neck gaiter, no grey hoodie, no jeans, no sneakers, no printed text and no logo at any moment. Only one sheet of dough exists. Only this one figure changes, and everything else stays as in <Video 1>.\n\noverall_soundscape:\nThe source soundtrack continues throughout, with his voice as he talks to the camera, open park ambience with light wind, and the soft flap of the dough as it is tossed and stretched.\n\nnon_diegetic_music:\nN/A\n",
+        "seconds": 9,
+        "aspect_ratio": "16:9 (Widescreen)",
+        "megapixels": 1,
+        "multiple": 32,
+        "ref_image_0": "ref1 (1).png",
+        "ref_image_1": "ref2 (1).png",
+        "ref_image_2": "",
+        "ref_image_3": "",
+        "ref_image_4": "",
+        "ref_image_5": "",
+        "ref_image_6": "",
+        "ref_image_7": "",
+        "ref_image_8": "",
+        "ref_video_0": "source (1).mp4",
+        "ref_video_1": "",
+        "ref_video_2": "",
+        "ref_audio_0": "",
+        "ref_audio_1": "",
+        "ref_audio_2": ""
+      },
+      "color": "#38b21f",
+      "bgcolor": "#273923"
+    },
+    {
+      "id": 22,
+      "type": "ZealmanVideoOutput",
+      "pos": [
+        1150.9581866666672,
+        -132.40845111110997
+      ],
+      "size": [
+        633,
+        570.2999999999998
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 41
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "saved_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanVideoOutput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        24,
+        "ZealmanVideo",
+        true
+      ],
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "filename_prefix": "ZealmanVideo",
+        "save_output": true
+      }
+    },
+    {
+      "id": 23,
+      "type": "ZealmanH3ModelLoader",
+      "pos": [
+        342.26828666666705,
+        -140.70465111111042
+      ],
+      "size": [
+        460,
+        286
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            34
+          ]
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            43
+          ]
+        },
+        {
+          "name": "video_vae",
+          "type": "VAE",
+          "links": [
+            35,
+            37
+          ]
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "links": [
+            36,
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanH3ModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "minimax/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "default",
+        "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "default",
+        "minimax_h3_video_vae_fp16.safetensors",
+        "minimax_h3_audio_vae_fp32.safetensors",
+        "comfy kitchen attention",
+        "[{\"on\":false,\"lora\":\"minimax/viggle_remake_edit_comfyui.safetensors\",\"strength\":1},{\"on\":true,\"lora\":\"minimax/viggle_remake_swap_comfyui.safetensors\",\"strength\":1}]"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "weight_dtype": "default",
+        "clip_name": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "clip_device": "default",
+        "video_vae": "minimax_h3_video_vae_fp16.safetensors",
+        "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+        "attention": "comfy kitchen attention",
+        "lora_stack": "[{\"on\":false,\"lora\":\"minimax/viggle_remake_edit_comfyui.safetensors\",\"strength\":1},{\"on\":true,\"lora\":\"minimax/viggle_remake_swap_comfyui.safetensors\",\"strength\":1}]"
+      }
+    },
+    {
+      "id": 24,
+      "type": "Label (rgthree)",
+      "pos": [
+        348.2213536666689,
+        -581.6388911111098
+      ],
+      "size": [
+        1675.4150390625,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "U46-RemakeH3视频替换",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 25,
+      "type": "Label (rgthree)",
+      "pos": [
+        355.8614699843195,
+        -412.67934986045566
+      ],
+      "size": [
+        1736.484375,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 26,
+      "type": "Label (rgthree)",
+      "pos": [
+        355.27363249185174,
+        -291.2815569006761
+      ],
+      "size": [
+        1256.71875,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 27,
+      "type": "Note",
+      "pos": [
+        836.6075400381599,
+        241.12694140255522
+      ],
+      "size": [
+        293.786890123527,
+        149.60781367392934
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "version": "7.8",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "pins:对应你的参考图帧数，抽2个关键帧做修改参考\n\nshort_edge视频输出短边的尺寸，最好32的倍数\n480（832X480）\n736（1280X736）"
+      ],
+      "widgets_values_named": {
+        "text": "pins:对应你的参考图帧数，抽2个关键帧做修改参考\n\nshort_edge视频输出短边的尺寸，最好32的倍数\n480（832X480）\n736（1280X736）"
+      },
+      "color": "#b22e2e",
+      "bgcolor": "#9e1a1a"
+    },
+    {
+      "id": 28,
+      "type": "Note",
+      "pos": [
+        818.3319277165971,
+        982.9064154821943
+      ],
+      "size": [
+        1277.4906085649884,
+        464.20736288504895
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "这段英文 H3 提示词总结如下，严格保留了所有标签（如 `<Video 1>`、`<Subject 1>`、`[Shot 1]` 等）及英文关键词：\n\n---\n\n### 主体定义 (subject_definitions)\n\n* **`<Video 1>`**：编辑任务的源视频：一段时长 9 秒的手持连续镜头。场景在伦敦阳光明媚的公园道路上，一名披萨师向镜头微笑，将一大块白色披萨面团高高抛向空中，接住后在镜头前拉伸面团并对着镜头说话。\n* **`<Picture 1>`** 与 **`<Picture 2>`**：目标视频的两帧画面，均来自 **`[Shot 1]`**。\n* **`<Subject 1>`**：在 `<Picture 1>` 和 `<Picture 2>` 中出现的皮特（Pete）：一个全身包裹在毛绒菠萝吉祥物人偶服里的人。头上戴着巨大的圆形金黄色菠萝头套，上面有凸起的菱形菠萝皮纹理和顶端一圈硬挺的绿色菠萝叶冠；菠萝脸部位置有两个大大的黑白卡通眼睛和缝制的大黑笑脸；身穿同款金黄色菱形纹理的加厚全身人偶服（覆盖躯干、双臂和双腿），配有亮绿色加厚五指手套和亮绿色加厚靴子。人偶服覆盖全身，完全不露人脸和头发。他替换了 `<Video 1>` 中戴灰色迷彩帽子、穿灰色帽衫、围脖和牛仔裤的披萨师。\n\n### 概要 (summary)\n\n* **`[video editing + character replacement]`**：目标视频是 `<Video 1>` 的剪辑修改与角色替换版本。原视频中的披萨师被替换为 **`<Subject 1>`**（菠萝吉祥物皮特），外观与 `<Picture 1>` 和 `<Picture 2>` 完全一致，并抛掷和拉伸同一块白色披萨面团。公园背景里极少数远处的人们、道路、草坪、树木、长椅、帐篷和红色消防车均保持不变。完全保留了 `<Video 1>` 的单镜头连续拍摄、运镜、镜头运动、节奏和动作。\n\n### 保留与修改分析 (retention_analysis)\n\n* **`<Video 1>` (source video editing)**：`fully_preserved`（完全保留）—— 逐帧复刻了无剪辑的单镜头连续拍摄、手持相机构图与运镜（包括向上仰拍公园以及面团遮挡镜头的瞬间）、拍摄地点、晴朗日光、背景人物，以及每次抛接和拉伸面团的动作与节奏。\n* **`<Picture 1>` (appears in `[Shot 1]`)**：`reference`（参考关键帧）—— 目标视频的一帧。皮特从稍高视角拍摄的全貌、菠萝头套、全身人偶服、绿手套和绿靴子、手套里的面团，以及柏油路、路沿和草地均取自 `<Picture 1>`。\n* **`<Picture 2>` (appears in `[Shot 1]`)**：`reference`（参考关键帧）—— 目标视频的一帧。画面中皮特的菠萝头套巨大，带有卡通眼睛和笑脸，人偶服和拿着面团的绿手套，以及公园小路、长椅、树木、消防车和帐篷边缘均取自 `<Picture 2>`。两张图片中的角色为同一个皮特。\n* **`<Subject 1>` (appears in `[Shot 1]`)**：`fully_preserved`（完全保留）—— 带绿色叶冠的金黄菱形菠萝头套、卡通眼睛与缝制笑脸、匹配的加厚全身服、亮绿色五指手套和亮绿色靴子在每一帧中保持完全一致（包括抛掷面团和贴近镜头时）。\n\n### 详细描述 (detailed_description)\n\n目标视频是一个写实的伦敦公园阳光户外手持镜头，带有明亮日光和自然色彩。\n\n* **`[Shot 1]`**：在 `00:00.000` 时，镜头从稍高处俯拍站在柏油路上的 **`<Subject 1>`**（菠萝吉祥物皮特），全身可见，菠萝脸朝上面向镜头，腰前两只绿手套悬挂着一大块白色披萨面团，画面匹配 `<Picture 1>`。他将面团左右摆动，在约 `00:01.400` 时高举双臂将面团高高抛入空中；镜头跟随向上仰拍，在约 `00:01.900` 时面团在阳光明媚的公园上方旋转，皮特举起一只手臂抬头观看。在约 `00:02.600` 时，他用双手套接住面团，此时处于中景，身后有草坪、树木、长椅和红色消防车，草坪上有极少数远处的人。从 `00:03.000` 开始，他在身前拉伸并摆动面团；在约 `00:04.600` 时，他走到镜头前，在左侧举起大面团瞥向镜头。从约 `00:05.800` 到 `00:06.800`，面团直接在镜头前摆动并遮挡了大部分视线（无剪辑）。在约 `00:07.000` 时，他特写面向镜头并对着镜头说话；在 `00:07.667` 时，他处于中景面向镜头，肚皮前两手套挂着长面团，画面匹配 `<Picture 2>`。从约 `00:08.300` 开始，他低头看着面团并在手套间拉伸它，最后再次面向镜头。全程采用手持摄影。\n在从第一帧到最后一帧的每一帧中，披萨师都是这个完全与 `<Picture 1>` 和 `<Picture 2>` 一致的菠萝吉祥物：全程没有任何人脸、人发、灰色帽子、围脖、灰色帽衫、牛仔裤、运动鞋、印花文字或 Logo。全程只有这一块面团。仅有这一个角色被替换，其他所有元素均与 `<Video 1>` 保持一致。\n\n### 整体音景 (overall_soundscape)\n\n* 沿用源视频原声带并贯穿全程，包括他对着镜头说话的声音、带有微风的开阔公园环境音，以及面团被抛掷和拉伸时的轻柔扑腾声。\n\n### 非非剧情音乐 (non_diegetic_music)\n\n* `N/A`（无）"
+      ],
+      "widgets_values_named": {
+        "text": "这段英文 H3 提示词总结如下，严格保留了所有标签（如 `<Video 1>`、`<Subject 1>`、`[Shot 1]` 等）及英文关键词：\n\n---\n\n### 主体定义 (subject_definitions)\n\n* **`<Video 1>`**：编辑任务的源视频：一段时长 9 秒的手持连续镜头。场景在伦敦阳光明媚的公园道路上，一名披萨师向镜头微笑，将一大块白色披萨面团高高抛向空中，接住后在镜头前拉伸面团并对着镜头说话。\n* **`<Picture 1>`** 与 **`<Picture 2>`**：目标视频的两帧画面，均来自 **`[Shot 1]`**。\n* **`<Subject 1>`**：在 `<Picture 1>` 和 `<Picture 2>` 中出现的皮特（Pete）：一个全身包裹在毛绒菠萝吉祥物人偶服里的人。头上戴着巨大的圆形金黄色菠萝头套，上面有凸起的菱形菠萝皮纹理和顶端一圈硬挺的绿色菠萝叶冠；菠萝脸部位置有两个大大的黑白卡通眼睛和缝制的大黑笑脸；身穿同款金黄色菱形纹理的加厚全身人偶服（覆盖躯干、双臂和双腿），配有亮绿色加厚五指手套和亮绿色加厚靴子。人偶服覆盖全身，完全不露人脸和头发。他替换了 `<Video 1>` 中戴灰色迷彩帽子、穿灰色帽衫、围脖和牛仔裤的披萨师。\n\n### 概要 (summary)\n\n* **`[video editing + character replacement]`**：目标视频是 `<Video 1>` 的剪辑修改与角色替换版本。原视频中的披萨师被替换为 **`<Subject 1>`**（菠萝吉祥物皮特），外观与 `<Picture 1>` 和 `<Picture 2>` 完全一致，并抛掷和拉伸同一块白色披萨面团。公园背景里极少数远处的人们、道路、草坪、树木、长椅、帐篷和红色消防车均保持不变。完全保留了 `<Video 1>` 的单镜头连续拍摄、运镜、镜头运动、节奏和动作。\n\n### 保留与修改分析 (retention_analysis)\n\n* **`<Video 1>` (source video editing)**：`fully_preserved`（完全保留）—— 逐帧复刻了无剪辑的单镜头连续拍摄、手持相机构图与运镜（包括向上仰拍公园以及面团遮挡镜头的瞬间）、拍摄地点、晴朗日光、背景人物，以及每次抛接和拉伸面团的动作与节奏。\n* **`<Picture 1>` (appears in `[Shot 1]`)**：`reference`（参考关键帧）—— 目标视频的一帧。皮特从稍高视角拍摄的全貌、菠萝头套、全身人偶服、绿手套和绿靴子、手套里的面团，以及柏油路、路沿和草地均取自 `<Picture 1>`。\n* **`<Picture 2>` (appears in `[Shot 1]`)**：`reference`（参考关键帧）—— 目标视频的一帧。画面中皮特的菠萝头套巨大，带有卡通眼睛和笑脸，人偶服和拿着面团的绿手套，以及公园小路、长椅、树木、消防车和帐篷边缘均取自 `<Picture 2>`。两张图片中的角色为同一个皮特。\n* **`<Subject 1>` (appears in `[Shot 1]`)**：`fully_preserved`（完全保留）—— 带绿色叶冠的金黄菱形菠萝头套、卡通眼睛与缝制笑脸、匹配的加厚全身服、亮绿色五指手套和亮绿色靴子在每一帧中保持完全一致（包括抛掷面团和贴近镜头时）。\n\n### 详细描述 (detailed_description)\n\n目标视频是一个写实的伦敦公园阳光户外手持镜头，带有明亮日光和自然色彩。\n\n* **`[Shot 1]`**：在 `00:00.000` 时，镜头从稍高处俯拍站在柏油路上的 **`<Subject 1>`**（菠萝吉祥物皮特），全身可见，菠萝脸朝上面向镜头，腰前两只绿手套悬挂着一大块白色披萨面团，画面匹配 `<Picture 1>`。他将面团左右摆动，在约 `00:01.400` 时高举双臂将面团高高抛入空中；镜头跟随向上仰拍，在约 `00:01.900` 时面团在阳光明媚的公园上方旋转，皮特举起一只手臂抬头观看。在约 `00:02.600` 时，他用双手套接住面团，此时处于中景，身后有草坪、树木、长椅和红色消防车，草坪上有极少数远处的人。从 `00:03.000` 开始，他在身前拉伸并摆动面团；在约 `00:04.600` 时，他走到镜头前，在左侧举起大面团瞥向镜头。从约 `00:05.800` 到 `00:06.800`，面团直接在镜头前摆动并遮挡了大部分视线（无剪辑）。在约 `00:07.000` 时，他特写面向镜头并对着镜头说话；在 `00:07.667` 时，他处于中景面向镜头，肚皮前两手套挂着长面团，画面匹配 `<Picture 2>`。从约 `00:08.300` 开始，他低头看着面团并在手套间拉伸它，最后再次面向镜头。全程采用手持摄影。\n在从第一帧到最后一帧的每一帧中，披萨师都是这个完全与 `<Picture 1>` 和 `<Picture 2>` 一致的菠萝吉祥物：全程没有任何人脸、人发、灰色帽子、围脖、灰色帽衫、牛仔裤、运动鞋、印花文字或 Logo。全程只有这一块面团。仅有这一个角色被替换，其他所有元素均与 `<Video 1>` 保持一致。\n\n### 整体音景 (overall_soundscape)\n\n* 沿用源视频原声带并贯穿全程，包括他对着镜头说话的声音、带有微风的开阔公园环境音，以及面团被抛掷和拉伸时的轻柔扑腾声。\n\n### 非非剧情音乐 (non_diegetic_music)\n\n* `N/A`（无）"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      11,
+      11,
+      0,
+      12,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      11,
+      0,
+      13,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      12,
+      0,
+      16,
+      0,
+      "NOISE"
+    ],
+    [
+      15,
+      13,
+      0,
+      16,
+      1,
+      "GUIDER"
+    ],
+    [
+      16,
+      14,
+      0,
+      16,
+      2,
+      "SAMPLER"
+    ],
+    [
+      17,
+      15,
+      0,
+      16,
+      3,
+      "SIGMAS"
+    ],
+    [
+      18,
+      11,
+      1,
+      16,
+      4,
+      "LATENT"
+    ],
+    [
+      19,
+      16,
+      0,
+      17,
+      0,
+      "LATENT"
+    ],
+    [
+      21,
+      16,
+      0,
+      18,
+      0,
+      "LATENT"
+    ],
+    [
+      26,
+      21,
+      0,
+      11,
+      4,
+      "IMAGE"
+    ],
+    [
+      27,
+      21,
+      1,
+      11,
+      6,
+      "IMAGE"
+    ],
+    [
+      28,
+      21,
+      2,
+      11,
+      7,
+      "IMAGE"
+    ],
+    [
+      29,
+      21,
+      3,
+      11,
+      8,
+      "IMAGE"
+    ],
+    [
+      30,
+      21,
+      9,
+      11,
+      3,
+      "IMAGE"
+    ],
+    [
+      31,
+      21,
+      12,
+      11,
+      5,
+      "AUDIO"
+    ],
+    [
+      32,
+      21,
+      18,
+      11,
+      9,
+      "STRING"
+    ],
+    [
+      34,
+      23,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      35,
+      23,
+      2,
+      11,
+      1,
+      "VAE"
+    ],
+    [
+      36,
+      23,
+      3,
+      11,
+      2,
+      "VAE"
+    ],
+    [
+      37,
+      23,
+      2,
+      17,
+      1,
+      "VAE"
+    ],
+    [
+      38,
+      23,
+      3,
+      18,
+      1,
+      "VAE"
+    ],
+    [
+      39,
+      18,
+      0,
+      22,
+      1,
+      "AUDIO"
+    ],
+    [
+      40,
+      3,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      41,
+      17,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      21,
+      21,
+      11,
+      10,
+      "INT"
+    ],
+    [
+      43,
+      23,
+      1,
+      11,
+      0,
+      "CLIP"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6830134553650705,
+      "offset": [
+        15.813051706438886,
+        788.2253889569889
+      ]
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.57.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "12": 0
+  }
+}

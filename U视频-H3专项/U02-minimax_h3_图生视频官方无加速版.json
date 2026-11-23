@@ -1,0 +1,1977 @@
+{
+  "id": "ca3016fc-1afe-4173-aeb6-92cc7d7998ee",
+  "revision": 0,
+  "last_node_id": 157,
+  "last_link_id": 290,
+  "nodes": [
+    {
+      "id": 92,
+      "type": "ZealmanVideoOutput",
+      "pos": [
+        554.6972498700383,
+        4167.479309596539
+      ],
+      "size": [
+        917.5221059226883,
+        815.3158109605811
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 285
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 286
+        },
+        {
+          "localized_name": "frame_rate",
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "save_output",
+          "name": "save_output",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_output"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "saved_path",
+          "name": "saved_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanVideoOutput",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "8.0.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        24,
+        "comfyui",
+        true
+      ],
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "filename_prefix": "comfyui",
+        "save_output": true
+      }
+    },
+    {
+      "id": 123,
+      "type": "VRAMCleanup",
+      "pos": [
+        187.0278250953932,
+        5027.0923003060225
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "anything",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 263
+        },
+        {
+          "localized_name": "offload_model",
+          "name": "offload_model",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "offload_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "offload_cache",
+          "name": "offload_cache",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "offload_cache"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "output",
+          "name": "output",
+          "type": "*",
+          "links": [
+            256,
+            261
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_memory_cleanup",
+        "ver": "1.1.3",
+        "Node name for S&R": "VRAMCleanup",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "offload_model": true,
+        "offload_cache": true
+      },
+      "color": "#2a55cf",
+      "bgcolor": "#252b3e"
+    },
+    {
+      "id": 125,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1008.0643966532086,
+        3371.368310681957
+      ],
+      "size": [
+        2267.2119140625,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "U02-minimax_h3_图生视频官方无加速版",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 126,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1008.0643966532086,
+        3551.368310681957
+      ],
+      "size": [
+        1736.484375,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 127,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1008.0643966532086,
+        3661.368310681957
+      ],
+      "size": [
+        2324.619140625,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 130,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        209.4108055411154,
+        5309.820620241876
+      ],
+      "size": [
+        230,
+        60
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 256
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 290
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "音频",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            286
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAEDecodeAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 132,
+      "type": "KSamplerSelect",
+      "pos": [
+        141.09329114638038,
+        4201.358193354765
+      ],
+      "size": [
+        370,
+        70
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "采样器名称",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "采样器",
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            241
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "KSamplerSelect",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "res_multistep"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "res_multistep"
+      }
+    },
+    {
+      "id": 133,
+      "type": "BasicScheduler",
+      "pos": [
+        141.09329114638038,
+        4477.358193354765
+      ],
+      "size": [
+        370,
+        130
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 272
+        },
+        {
+          "localized_name": "调度器",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "步数",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "降噪",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Sigmas",
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            283
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "BasicScheduler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "simple",
+        25,
+        1
+      ],
+      "widgets_values_named": {
+        "scheduler": "simple",
+        "steps": 25,
+        "denoise": 1
+      },
+      "color": "#9e3fc0",
+      "bgcolor": "#36283b"
+    },
+    {
+      "id": 134,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        193.47627159210265,
+        4801.731357940285
+      ],
+      "size": [
+        230,
+        140
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "噪波",
+          "name": "noise",
+          "type": "NOISE",
+          "link": 239
+        },
+        {
+          "localized_name": "引导器",
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 240
+        },
+        {
+          "localized_name": "采样器",
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 241
+        },
+        {
+          "localized_name": "西格玛",
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 283
+        },
+        {
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 243
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "Latent",
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            263
+          ]
+        },
+        {
+          "localized_name": "降噪Latent",
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 135,
+      "type": "BasicGuider",
+      "pos": [
+        146.09329114638038,
+        4665.358193354765
+      ],
+      "size": [
+        360,
+        60
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 271
+        },
+        {
+          "localized_name": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 244
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "引导器",
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            240
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "BasicGuider",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 137,
+      "type": "RandomNoise",
+      "pos": [
+        146.09329114638038,
+        4329.358193354765
+      ],
+      "size": [
+        360,
+        90
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "噪波随机种",
+          "name": "noise_seed",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "噪波",
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            239
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "RandomNoise",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 1,
+        "control_after_generate": "randomize"
+      }
+    },
+    {
+      "id": 139,
+      "type": "MiniMaxH3ImageToVideo",
+      "pos": [
+        -452.6717312491674,
+        4082.1722434761436
+      ],
+      "size": [
+        615.6562829950813,
+        661.1227387269837
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 247
+        },
+        {
+          "localized_name": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 248
+        },
+        {
+          "localized_name": "首帧",
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 287
+        },
+        {
+          "localized_name": "尾帧",
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 288
+        },
+        {
+          "localized_name": "提示词",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 289
+        },
+        {
+          "localized_name": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 252
+        },
+        {
+          "localized_name": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 253
+        },
+        {
+          "localized_name": "视频帧数",
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 251
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "正向条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            244
+          ]
+        },
+        {
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            243
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "MiniMaxH3ImageToVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "subject_definitions:\n<Picture 1> is the first frame of the target video, showing a realistic 3D-rendered young woman in a three-quarter over-shoulder pose, wearing a dark blue sleeveless dress with thin straps, standing in a meadow of small white daisies under cool soft daylight with shallow depth-of-field blur behind her.\n<Picture 2> is the last frame of the target video, showing the same young woman facing more toward the camera with a gentle smile, wearing a blue zip-front dress with a deeper neckline and a prominent gold zipper, bathed in warm golden-hour sunlight with soft warm light leaks across the flower field.\n<Subject 1> is the young woman in <Picture 1> and <Picture 2>, with very long straight dark hair, amber-brown eyes, fair skin, and a slender build.\n\nsummary:\n[keyframe completion] The target video interpolates from <Picture 1> to <Picture 2>, following <Subject 1> as she slowly turns from an over-shoulder glance toward the camera while ambient light in the meadow shifts from cool soft daylight to warm golden hour.\n\nretention_analysis:\n<Picture 1> ([Shot 1] first frame): fully_preserved - the over-shoulder composition, cool lighting, dark blue sleeveless dress, and white daisy meadow are retained as the opening anchor.\n<Picture 2> (final frame): fully_preserved - the front-facing pose, gentle smile, blue zip dress with gold zipper, and warm golden-hour lighting are retained as the closing anchor.\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): partially_preserved - identity, hairstyle, and meadow setting stay consistent while expression, garment detail, and lighting warmth evolve toward <Picture 2>.\n\ndetailed_description:\nThe target video is rendered in cinematic real-time 3D with soft portrait framing, shallow depth of field, and a subtly desaturated-to-warm color transition across the clip.\n[Shot 1] The shot begins from <Picture 1>. In a vertical medium close-up, <Subject 1> stands in a field of white daisies, her long dark hair falling over one shoulder as she glances back over it with a calm, neutral expression. Cool daylight washes the scene with soft blue-grey tones; the background meadow and bokeh flowers remain gently out of focus. A faint breeze stirs a few strands of her hair and ripples the nearest daisy heads. The camera holds with a very slow, almost imperceptible push-in, keeping her face and shoulders centered while preserving the over-shoulder framing of the first frame. Light wind rustle and quiet meadow ambience are audible.\n[Shot 2] At 00:02.500, the camera begins a slow arc to the right while continuing its gentle push-in. <Subject 1> gradually rotates her torso and head toward the lens; her expression softens, and warm amber light begins to bleed into the highlights on her hair and shoulders as if the sun is dipping toward golden hour. The dark blue fabric at her neckline subtly transitions toward the zip-front blue dress with a deeper neckline; gold zipper highlights catch the strengthening warm rim light. White daisies in the mid-ground sway lightly. Footstep-soft grass texture and continued breeze fill the soundscape.\n[Shot 3] At 00:04.500, the movement settles into the composition of <Picture 2>. <Subject 1> now faces the camera more directly with a gentle smile, the blue zip-front dress and gold zipper clearly visible, warm sunset tones enveloping her and the flower field with soft glowing haze and light leaks at the frame edges. Her eyes blink once naturally; a few hair strands drift across her cheek in the warm breeze. The camera eases to a near-static hold, ending on <Picture 2>. <Subject 1> (S1) murmurs in a soft, intimate tone, <d>[Chinese] 风刚好停在这里了。</d> as the ambient wind briefly stills around her.\n\noverall_soundscape:\nSoft meadow wind, distant insect chirps, and light grass rustle continue throughout the clip, with ambience warming slightly in the later shots.\n\nnon_diegetic_music:\nN/A",
+        1344,
+        768,
+        73
+      ],
+      "widgets_values_named": {
+        "prompt": "subject_definitions:\n<Picture 1> is the first frame of the target video, showing a realistic 3D-rendered young woman in a three-quarter over-shoulder pose, wearing a dark blue sleeveless dress with thin straps, standing in a meadow of small white daisies under cool soft daylight with shallow depth-of-field blur behind her.\n<Picture 2> is the last frame of the target video, showing the same young woman facing more toward the camera with a gentle smile, wearing a blue zip-front dress with a deeper neckline and a prominent gold zipper, bathed in warm golden-hour sunlight with soft warm light leaks across the flower field.\n<Subject 1> is the young woman in <Picture 1> and <Picture 2>, with very long straight dark hair, amber-brown eyes, fair skin, and a slender build.\n\nsummary:\n[keyframe completion] The target video interpolates from <Picture 1> to <Picture 2>, following <Subject 1> as she slowly turns from an over-shoulder glance toward the camera while ambient light in the meadow shifts from cool soft daylight to warm golden hour.\n\nretention_analysis:\n<Picture 1> ([Shot 1] first frame): fully_preserved - the over-shoulder composition, cool lighting, dark blue sleeveless dress, and white daisy meadow are retained as the opening anchor.\n<Picture 2> (final frame): fully_preserved - the front-facing pose, gentle smile, blue zip dress with gold zipper, and warm golden-hour lighting are retained as the closing anchor.\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): partially_preserved - identity, hairstyle, and meadow setting stay consistent while expression, garment detail, and lighting warmth evolve toward <Picture 2>.\n\ndetailed_description:\nThe target video is rendered in cinematic real-time 3D with soft portrait framing, shallow depth of field, and a subtly desaturated-to-warm color transition across the clip.\n[Shot 1] The shot begins from <Picture 1>. In a vertical medium close-up, <Subject 1> stands in a field of white daisies, her long dark hair falling over one shoulder as she glances back over it with a calm, neutral expression. Cool daylight washes the scene with soft blue-grey tones; the background meadow and bokeh flowers remain gently out of focus. A faint breeze stirs a few strands of her hair and ripples the nearest daisy heads. The camera holds with a very slow, almost imperceptible push-in, keeping her face and shoulders centered while preserving the over-shoulder framing of the first frame. Light wind rustle and quiet meadow ambience are audible.\n[Shot 2] At 00:02.500, the camera begins a slow arc to the right while continuing its gentle push-in. <Subject 1> gradually rotates her torso and head toward the lens; her expression softens, and warm amber light begins to bleed into the highlights on her hair and shoulders as if the sun is dipping toward golden hour. The dark blue fabric at her neckline subtly transitions toward the zip-front blue dress with a deeper neckline; gold zipper highlights catch the strengthening warm rim light. White daisies in the mid-ground sway lightly. Footstep-soft grass texture and continued breeze fill the soundscape.\n[Shot 3] At 00:04.500, the movement settles into the composition of <Picture 2>. <Subject 1> now faces the camera more directly with a gentle smile, the blue zip-front dress and gold zipper clearly visible, warm sunset tones enveloping her and the flower field with soft glowing haze and light leaks at the frame edges. Her eyes blink once naturally; a few hair strands drift across her cheek in the warm breeze. The camera eases to a near-static hold, ending on <Picture 2>. <Subject 1> (S1) murmurs in a soft, intimate tone, <d>[Chinese] 风刚好停在这里了。</d> as the ambient wind briefly stills around her.\n\noverall_soundscape:\nSoft meadow wind, distant insect chirps, and light grass rustle continue throughout the clip, with ambience warming slightly in the later shots.\n\nnon_diegetic_music:\nN/A",
+        "width": 1344,
+        "height": 768,
+        "length": 73
+      }
+    },
+    {
+      "id": 145,
+      "type": "VAEDecode",
+      "pos": [
+        214.90005701489423,
+        5194.764449202266
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 261
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 262
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            285
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.1",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      }
+    },
+    {
+      "id": 148,
+      "type": "ModelPreviewOverrideKJ",
+      "pos": [
+        -510.91009178787544,
+        4152.806140407461
+      ],
+      "size": [
+        583.8954084720465,
+        907.5768962450984
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 281
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "localized_name": "max_resolution",
+          "name": "max_resolution",
+          "type": "INT",
+          "widget": {
+            "name": "max_resolution"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "jpeg_quality",
+          "name": "jpeg_quality",
+          "type": "INT",
+          "widget": {
+            "name": "jpeg_quality"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "suppress_default_preview",
+          "name": "suppress_default_preview",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "suppress_default_preview"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "preview_frames",
+          "name": "preview_frames",
+          "type": "INT",
+          "widget": {
+            "name": "preview_frames"
+          },
+          "link": 274
+        },
+        {
+          "localized_name": "preview_fps",
+          "name": "preview_fps",
+          "type": "INT",
+          "widget": {
+            "name": "preview_fps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "tiny_vae",
+          "name": "tiny_vae",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "tiny_vae"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            271,
+            272
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "unknown",
+        "Node name for S&R": "ModelPreviewOverrideKJ",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        1024,
+        80,
+        true,
+        50,
+        12,
+        "taeh3.safetensors",
+        ""
+      ],
+      "widgets_values_named": {
+        "max_resolution": 1024,
+        "jpeg_quality": 80,
+        "suppress_default_preview": true,
+        "preview_frames": 50,
+        "preview_fps": 12,
+        "tiny_vae": "taeh3.safetensors",
+        "preview": ""
+      }
+    },
+    {
+      "id": 152,
+      "type": "MiniMaxLowVRAMAttention",
+      "pos": [
+        -491.7453394911165,
+        3826.585246143715
+      ],
+      "size": [
+        318.5201171875,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 279
+        },
+        {
+          "localized_name": "head_chunks",
+          "name": "head_chunks",
+          "type": "INT",
+          "widget": {
+            "name": "head_chunks"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            280
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "unknown",
+        "Node name for S&R": "MiniMaxLowVRAMAttention",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        4
+      ],
+      "widgets_values_named": {
+        "head_chunks": 4
+      }
+    },
+    {
+      "id": 153,
+      "type": "MiniMaxChunkFeedForward",
+      "pos": [
+        -490.4852170336053,
+        3947.3295878580357
+      ],
+      "size": [
+        316.38046875,
+        82
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 280
+        },
+        {
+          "localized_name": "chunks",
+          "name": "chunks",
+          "type": "INT",
+          "widget": {
+            "name": "chunks"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seq_threshold",
+          "name": "seq_threshold",
+          "type": "INT",
+          "widget": {
+            "name": "seq_threshold"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            281
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "unknown",
+        "Node name for S&R": "MiniMaxChunkFeedForward",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        4,
+        4096
+      ],
+      "widgets_values_named": {
+        "chunks": 4,
+        "seq_threshold": 4096
+      }
+    },
+    {
+      "id": 155,
+      "type": "ZealmanH3ModelLoader",
+      "pos": [
+        -1017.3639326797435,
+        3815.9499592247967
+      ],
+      "size": [
+        460,
+        238
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "unet_name",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "weight_dtype",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "clip_name",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "clip_device",
+          "name": "clip_device",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_device"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "video_vae",
+          "name": "video_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "attention",
+          "name": "attention",
+          "type": "COMBO",
+          "widget": {
+            "name": "attention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lora_stack",
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "lora_stack"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            279
+          ]
+        },
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            247
+          ]
+        },
+        {
+          "localized_name": "video_vae",
+          "name": "video_vae",
+          "type": "VAE",
+          "links": [
+            248,
+            262
+          ]
+        },
+        {
+          "localized_name": "audio_vae",
+          "name": "audio_vae",
+          "type": "VAE",
+          "links": [
+            290
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanH3ModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "8.0.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "default",
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "default",
+        "minimax_h3_video_vae_fp16.safetensors",
+        "minimax_h3_audio_vae_fp32.safetensors",
+        "comfy kitchen attention",
+        "[]"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "weight_dtype": "default",
+        "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "clip_device": "default",
+        "video_vae": "minimax_h3_video_vae_fp16.safetensors",
+        "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+        "attention": "comfy kitchen attention",
+        "lora_stack": "[]"
+      }
+    },
+    {
+      "id": 156,
+      "type": "ZealmanH3PickReferenceMedia",
+      "pos": [
+        -1013.2030702289244,
+        4143.114796589059
+      ],
+      "size": [
+        440,
+        1270
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "video_trim_seconds",
+          "name": "video_trim_seconds",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_trim_seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_trim_seconds",
+          "name": "audio_trim_seconds",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_trim_seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "image_max_side",
+          "name": "image_max_side",
+          "type": "COMBO",
+          "widget": {
+            "name": "image_max_side"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "video_max_side",
+          "name": "video_max_side",
+          "type": "COMBO",
+          "widget": {
+            "name": "video_max_side"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seconds",
+          "name": "seconds",
+          "type": "INT",
+          "widget": {
+            "name": "seconds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "aspect_ratio",
+          "name": "aspect_ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "aspect_ratio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "megapixels",
+          "name": "megapixels",
+          "type": "FLOAT",
+          "widget": {
+            "name": "megapixels"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "multiple",
+          "name": "multiple",
+          "type": "INT",
+          "widget": {
+            "name": "multiple"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_0",
+          "name": "ref_image_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_1",
+          "name": "ref_image_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "ref_image_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "ref_image_3",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_3"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_4",
+          "name": "ref_image_4",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_4"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_5",
+          "name": "ref_image_5",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_5"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_6",
+          "name": "ref_image_6",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_6"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_7",
+          "name": "ref_image_7",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_7"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_image_8",
+          "name": "ref_image_8",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_image_8"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_0",
+          "name": "ref_video_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_1",
+          "name": "ref_video_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_video_2",
+          "name": "ref_video_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_video_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_0",
+          "name": "ref_audio_0",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_0"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_1",
+          "name": "ref_audio_1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "ref_audio_2",
+          "name": "ref_audio_2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "ref_audio_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "media_files",
+          "name": "media_files",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "media_files"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "ref_image_0",
+          "name": "ref_image_0",
+          "type": "IMAGE",
+          "links": [
+            287
+          ]
+        },
+        {
+          "localized_name": "ref_image_1",
+          "name": "ref_image_1",
+          "type": "IMAGE",
+          "links": [
+            288
+          ]
+        },
+        {
+          "localized_name": "ref_image_2",
+          "name": "ref_image_2",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_image_3",
+          "name": "ref_image_3",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_image_4",
+          "name": "ref_image_4",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_image_5",
+          "name": "ref_image_5",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_image_6",
+          "name": "ref_image_6",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_image_7",
+          "name": "ref_image_7",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_image_8",
+          "name": "ref_image_8",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_0",
+          "name": "ref_video_0",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_1",
+          "name": "ref_video_1",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_2",
+          "name": "ref_video_2",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_audio_0",
+          "name": "ref_video_audio_0",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_audio_1",
+          "name": "ref_video_audio_1",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "ref_video_audio_2",
+          "name": "ref_video_audio_2",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "ref_audio_0",
+          "name": "ref_audio_0",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "ref_audio_1",
+          "name": "ref_audio_1",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "ref_audio_2",
+          "name": "ref_audio_2",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            289
+          ]
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            252
+          ]
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            253
+          ]
+        },
+        {
+          "localized_name": "length",
+          "name": "length",
+          "type": "INT",
+          "links": [
+            251,
+            274
+          ]
+        },
+        {
+          "localized_name": "seconds",
+          "name": "seconds",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanH3PickReferenceMedia",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "8.0.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        24,
+        "auto",
+        "auto",
+        "auto",
+        "512",
+        "subject_definitions:\n<Picture 1> is the first frame of the target video, showing a realistic 3D-rendered young woman in a three-quarter over-shoulder pose, wearing a dark blue sleeveless dress with thin straps, standing in a meadow of small white daisies under cool soft daylight with shallow depth-of-field blur behind her.\n<Picture 2> is the last frame of the target video, showing the same young woman facing more toward the camera with a gentle smile, wearing a blue zip-front dress with a deeper neckline and a prominent gold zipper, bathed in warm golden-hour sunlight with soft warm light leaks across the flower field.\n<Subject 1> is the young woman in <Picture 1> and <Picture 2>, with very long straight dark hair, amber-brown eyes, fair skin, and a slender build.\n\nsummary:\n[keyframe completion] The target video interpolates from <Picture 1> to <Picture 2>, following <Subject 1> as she slowly turns from an over-shoulder glance toward the camera while ambient light in the meadow shifts from cool soft daylight to warm golden hour.\n\nretention_analysis:\n<Picture 1> ([Shot 1] first frame): fully_preserved - the over-shoulder composition, cool lighting, dark blue sleeveless dress, and white daisy meadow are retained as the opening anchor.\n<Picture 2> (final frame): fully_preserved - the front-facing pose, gentle smile, blue zip dress with gold zipper, and warm golden-hour lighting are retained as the closing anchor.\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): partially_preserved - identity, hairstyle, and meadow setting stay consistent while expression, garment detail, and lighting warmth evolve toward <Picture 2>.\n\ndetailed_description:\nThe target video is rendered in cinematic real-time 3D with soft portrait framing, shallow depth of field, and a subtly desaturated-to-warm color transition across the clip.\n[Shot 1] The shot begins from <Picture 1>. In a vertical medium close-up, <Subject 1> stands in a field of white daisies, her long dark hair falling over one shoulder as she glances back over it with a calm, neutral expression. Cool daylight washes the scene with soft blue-grey tones; the background meadow and bokeh flowers remain gently out of focus. A faint breeze stirs a few strands of her hair and ripples the nearest daisy heads. The camera holds with a very slow, almost imperceptible push-in, keeping her face and shoulders centered while preserving the over-shoulder framing of the first frame. Light wind rustle and quiet meadow ambience are audible.\n[Shot 2] At 00:02.500, the camera begins a slow arc to the right while continuing its gentle push-in. <Subject 1> gradually rotates her torso and head toward the lens; her expression softens, and warm amber light begins to bleed into the highlights on her hair and shoulders as if the sun is dipping toward golden hour. The dark blue fabric at her neckline subtly transitions toward the zip-front blue dress with a deeper neckline; gold zipper highlights catch the strengthening warm rim light. White daisies in the mid-ground sway lightly. Footstep-soft grass texture and continued breeze fill the soundscape.\n[Shot 3] At 00:04.500, the movement settles into the composition of <Picture 2>. <Subject 1> now faces the camera more directly with a gentle smile, the blue zip-front dress and gold zipper clearly visible, warm sunset tones enveloping her and the flower field with soft glowing haze and light leaks at the frame edges. Her eyes blink once naturally; a few hair strands drift across her cheek in the warm breeze. The camera eases to a near-static hold, ending on <Picture 2>. <Subject 1> (S1) murmurs in a soft, intimate tone, <d>[Chinese] 风刚好停在这里了。</d> as the ambient wind briefly stills around her.\n\noverall_soundscape:\nSoft meadow wind, distant insect chirps, and light grass rustle continue throughout the clip, with ambience warming slightly in the later shots.\n\nnon_diegetic_music:\nN/A",
+        8,
+        "16:9 (Widescreen)",
+        0.4,
+        32,
+        "zhcnsuggestion_Real_3D_anime_character_Rinoa_Heartilly_from_Fin_74b2e9ee-d32f-4304-aa82-765dbdb6506d.png",
+        "zhcnsuggestion_Real_3D_anime_character_Rinoa_Heartilly_from_Fin_74b2e9ee-d32f-4304-aa82-765dbdb6506d.png",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "video_trim_seconds": "auto",
+        "audio_trim_seconds": "auto",
+        "image_max_side": "auto",
+        "video_max_side": "512",
+        "prompt": "subject_definitions:\n<Picture 1> is the first frame of the target video, showing a realistic 3D-rendered young woman in a three-quarter over-shoulder pose, wearing a dark blue sleeveless dress with thin straps, standing in a meadow of small white daisies under cool soft daylight with shallow depth-of-field blur behind her.\n<Picture 2> is the last frame of the target video, showing the same young woman facing more toward the camera with a gentle smile, wearing a blue zip-front dress with a deeper neckline and a prominent gold zipper, bathed in warm golden-hour sunlight with soft warm light leaks across the flower field.\n<Subject 1> is the young woman in <Picture 1> and <Picture 2>, with very long straight dark hair, amber-brown eyes, fair skin, and a slender build.\n\nsummary:\n[keyframe completion] The target video interpolates from <Picture 1> to <Picture 2>, following <Subject 1> as she slowly turns from an over-shoulder glance toward the camera while ambient light in the meadow shifts from cool soft daylight to warm golden hour.\n\nretention_analysis:\n<Picture 1> ([Shot 1] first frame): fully_preserved - the over-shoulder composition, cool lighting, dark blue sleeveless dress, and white daisy meadow are retained as the opening anchor.\n<Picture 2> (final frame): fully_preserved - the front-facing pose, gentle smile, blue zip dress with gold zipper, and warm golden-hour lighting are retained as the closing anchor.\n<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): partially_preserved - identity, hairstyle, and meadow setting stay consistent while expression, garment detail, and lighting warmth evolve toward <Picture 2>.\n\ndetailed_description:\nThe target video is rendered in cinematic real-time 3D with soft portrait framing, shallow depth of field, and a subtly desaturated-to-warm color transition across the clip.\n[Shot 1] The shot begins from <Picture 1>. In a vertical medium close-up, <Subject 1> stands in a field of white daisies, her long dark hair falling over one shoulder as she glances back over it with a calm, neutral expression. Cool daylight washes the scene with soft blue-grey tones; the background meadow and bokeh flowers remain gently out of focus. A faint breeze stirs a few strands of her hair and ripples the nearest daisy heads. The camera holds with a very slow, almost imperceptible push-in, keeping her face and shoulders centered while preserving the over-shoulder framing of the first frame. Light wind rustle and quiet meadow ambience are audible.\n[Shot 2] At 00:02.500, the camera begins a slow arc to the right while continuing its gentle push-in. <Subject 1> gradually rotates her torso and head toward the lens; her expression softens, and warm amber light begins to bleed into the highlights on her hair and shoulders as if the sun is dipping toward golden hour. The dark blue fabric at her neckline subtly transitions toward the zip-front blue dress with a deeper neckline; gold zipper highlights catch the strengthening warm rim light. White daisies in the mid-ground sway lightly. Footstep-soft grass texture and continued breeze fill the soundscape.\n[Shot 3] At 00:04.500, the movement settles into the composition of <Picture 2>. <Subject 1> now faces the camera more directly with a gentle smile, the blue zip-front dress and gold zipper clearly visible, warm sunset tones enveloping her and the flower field with soft glowing haze and light leaks at the frame edges. Her eyes blink once naturally; a few hair strands drift across her cheek in the warm breeze. The camera eases to a near-static hold, ending on <Picture 2>. <Subject 1> (S1) murmurs in a soft, intimate tone, <d>[Chinese] 风刚好停在这里了。</d> as the ambient wind briefly stills around her.\n\noverall_soundscape:\nSoft meadow wind, distant insect chirps, and light grass rustle continue throughout the clip, with ambience warming slightly in the later shots.\n\nnon_diegetic_music:\nN/A",
+        "seconds": 8,
+        "aspect_ratio": "16:9 (Widescreen)",
+        "megapixels": 0.4,
+        "multiple": 32,
+        "ref_image_0": "zhcnsuggestion_Real_3D_anime_character_Rinoa_Heartilly_from_Fin_74b2e9ee-d32f-4304-aa82-765dbdb6506d.png",
+        "ref_image_1": "zhcnsuggestion_Real_3D_anime_character_Rinoa_Heartilly_from_Fin_74b2e9ee-d32f-4304-aa82-765dbdb6506d.png",
+        "ref_image_2": "",
+        "ref_image_3": "",
+        "ref_image_4": "",
+        "ref_image_5": "",
+        "ref_image_6": "",
+        "ref_image_7": "",
+        "ref_image_8": "",
+        "ref_video_0": "",
+        "ref_video_1": "",
+        "ref_video_2": "",
+        "ref_audio_0": "",
+        "ref_audio_1": "",
+        "ref_audio_2": ""
+      }
+    },
+    {
+      "id": 157,
+      "type": "Note",
+      "pos": [
+        -506.9592856403108,
+        5119.833438415783
+      ],
+      "size": [
+        327.82453155560756,
+        165.83763286069916
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "注意当前是首尾帧模式工作流，图1图2分别对应。添加更多图像会不参与生成"
+      ],
+      "widgets_values_named": {
+        "text": "注意当前是首尾帧模式工作流，图1图2分别对应。添加更多图像会不参与生成"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      239,
+      137,
+      0,
+      134,
+      0,
+      "NOISE"
+    ],
+    [
+      240,
+      135,
+      0,
+      134,
+      1,
+      "GUIDER"
+    ],
+    [
+      241,
+      132,
+      0,
+      134,
+      2,
+      "SAMPLER"
+    ],
+    [
+      243,
+      139,
+      1,
+      134,
+      4,
+      "LATENT"
+    ],
+    [
+      244,
+      139,
+      0,
+      135,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      247,
+      155,
+      1,
+      139,
+      0,
+      "CLIP"
+    ],
+    [
+      248,
+      155,
+      2,
+      139,
+      1,
+      "VAE"
+    ],
+    [
+      256,
+      123,
+      0,
+      130,
+      0,
+      "LATENT"
+    ],
+    [
+      261,
+      123,
+      0,
+      145,
+      0,
+      "LATENT"
+    ],
+    [
+      262,
+      155,
+      2,
+      145,
+      1,
+      "VAE"
+    ],
+    [
+      263,
+      134,
+      0,
+      123,
+      0,
+      "LATENT"
+    ],
+    [
+      271,
+      148,
+      0,
+      135,
+      0,
+      "MODEL"
+    ],
+    [
+      272,
+      148,
+      0,
+      133,
+      0,
+      "MODEL"
+    ],
+    [
+      279,
+      155,
+      0,
+      152,
+      0,
+      "MODEL"
+    ],
+    [
+      280,
+      152,
+      0,
+      153,
+      0,
+      "MODEL"
+    ],
+    [
+      281,
+      153,
+      0,
+      148,
+      0,
+      "MODEL"
+    ],
+    [
+      283,
+      133,
+      0,
+      134,
+      3,
+      "SIGMAS"
+    ],
+    [
+      285,
+      145,
+      0,
+      92,
+      0,
+      "IMAGE"
+    ],
+    [
+      286,
+      130,
+      0,
+      92,
+      1,
+      "AUDIO"
+    ],
+    [
+      287,
+      156,
+      0,
+      139,
+      2,
+      "IMAGE"
+    ],
+    [
+      288,
+      156,
+      1,
+      139,
+      3,
+      "IMAGE"
+    ],
+    [
+      252,
+      156,
+      19,
+      139,
+      5,
+      "INT"
+    ],
+    [
+      253,
+      156,
+      20,
+      139,
+      6,
+      "INT"
+    ],
+    [
+      251,
+      156,
+      21,
+      139,
+      7,
+      "INT"
+    ],
+    [
+      289,
+      156,
+      18,
+      139,
+      4,
+      "STRING"
+    ],
+    [
+      274,
+      156,
+      21,
+      148,
+      6,
+      "INT"
+    ],
+    [
+      290,
+      155,
+      3,
+      130,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 10,
+      "title": "采样器",
+      "bounding": [
+        117.09329114638038,
+        4125.358193354765,
+        409.64696572039315,
+        1316.1871318498697
+      ],
+      "color": "#a13030",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.49.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "ds": {
+      "scale": 1.307275213553804,
+      "offset": [
+        1004.5875347698573,
+        -4535.769881928782
+      ]
+    }
+  },
+  "version": 0.4
+}
