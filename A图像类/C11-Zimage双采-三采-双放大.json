@@ -1,0 +1,4879 @@
+{
+  "id": "52cadf70-bea0-45d8-a96a-69ca940c94af",
+  "revision": 0,
+  "last_node_id": 224,
+  "last_link_id": 349,
+  "nodes": [
+    {
+      "id": 151,
+      "type": "LayerUtility: ImageReelComposit",
+      "pos": [
+        5590,
+        1150
+      ],
+      "size": [
+        270,
+        190
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "reel_1",
+          "localized_name": "卷轴1",
+          "name": "reel_1",
+          "type": "Reel",
+          "link": 190
+        },
+        {
+          "label": "reel_2",
+          "localized_name": "卷轴2",
+          "name": "reel_2",
+          "shape": 7,
+          "type": "Reel"
+        },
+        {
+          "label": "reel_3",
+          "localized_name": "卷轴3",
+          "name": "reel_3",
+          "shape": 7,
+          "type": "Reel"
+        },
+        {
+          "label": "reel_4",
+          "localized_name": "卷轴4",
+          "name": "reel_4",
+          "shape": 7,
+          "type": "Reel"
+        },
+        {
+          "label": "font_file",
+          "localized_name": "字体文件",
+          "name": "font_file",
+          "type": "COMBO",
+          "widget": {
+            "name": "font_file"
+          }
+        },
+        {
+          "label": "font_size",
+          "localized_name": "字体大小",
+          "name": "font_size",
+          "type": "INT",
+          "widget": {
+            "name": "font_size"
+          }
+        },
+        {
+          "label": "border",
+          "localized_name": "边框",
+          "name": "border",
+          "type": "INT",
+          "widget": {
+            "name": "border"
+          }
+        },
+        {
+          "label": "color_theme",
+          "localized_name": "颜色主题",
+          "name": "color_theme",
+          "type": "COMBO",
+          "widget": {
+            "name": "color_theme"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image1",
+          "localized_name": "image1",
+          "name": "image1",
+          "type": "IMAGE",
+          "links": [
+            191
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "d94bef1ee5ed3656f5ff1bb2830a4ffd94f40935",
+        "Node name for S&R": "LayerUtility: ImageReelComposit",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Alibaba-PuHuiTi-Heavy.ttf",
+        16,
+        16,
+        "light"
+      ],
+      "widgets_values_named": {
+        "font_file": "Alibaba-PuHuiTi-Heavy.ttf",
+        "font_size": 16,
+        "border": 16,
+        "color_theme": "light"
+      },
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 86,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        6660,
+        190
+      ],
+      "size": [
+        460,
+        390
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 110
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE"
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "image_urls",
+          "name": "image_urls",
+          "shape": 3,
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "2b9eb36d3e1741e88dbfccade0e08137f7fa2bfb",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4.1"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/view?filename=rgthree.compare._temp_hsmuf_00001_umxmh_1771339288.jpg&type=temp&subfolder=&rand=0.2960155496467072&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzYjNmMjQxOTU2N2Y3Y2JhYWUxODhhOGZjNTliMmVlMyIsInNpZ25FeHBpcmUiOjE3NzE5NDM4MzkxOTMsInRzIjoxNzcxMzM5MDM5MTkzLCJzaWduIjoiNmI3OWIwYTUxNmE1Zjc0ZDhhNmU3ZDI3MTY0YjQ5NTcifQ==&Rh-Identify=3b3f2419567f7cbaae188a8fc59b2ee3"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/view?filename=rgthree.compare._temp_hsmuf_00002_lrsmx_1771339292.jpg&type=temp&subfolder=&rand=0.6522501305119577&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzYjNmMjQxOTU2N2Y3Y2JhYWUxODhhOGZjNTliMmVlMyIsInNpZ25FeHBpcmUiOjE3NzE5NDM4MzkxOTMsInRzIjoxNzcxMzM5MDM5MTkzLCJzaWduIjoiNmI3OWIwYTUxNmE1Zjc0ZDhhNmU3ZDI3MTY0YjQ5NTcifQ==&Rh-Identify=3b3f2419567f7cbaae188a8fc59b2ee3"
+          }
+        ]
+      ],
+      "widgets_values_named": {
+        "rgthree_comparer": {
+          "images": [
+            {
+              "name": "A",
+              "selected": true,
+              "url": "/view?filename=rgthree.compare._temp_hsmuf_00001_umxmh_1771339288.jpg&type=temp&subfolder=&rand=0.2960155496467072&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzYjNmMjQxOTU2N2Y3Y2JhYWUxODhhOGZjNTliMmVlMyIsInNpZ25FeHBpcmUiOjE3NzE5NDM4MzkxOTMsInRzIjoxNzcxMzM5MDM5MTkzLCJzaWduIjoiNmI3OWIwYTUxNmE1Zjc0ZDhhNmU3ZDI3MTY0YjQ5NTcifQ==&Rh-Identify=3b3f2419567f7cbaae188a8fc59b2ee3",
+              "img": {}
+            },
+            {
+              "name": "B",
+              "selected": true,
+              "url": "/view?filename=rgthree.compare._temp_hsmuf_00002_lrsmx_1771339292.jpg&type=temp&subfolder=&rand=0.6522501305119577&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzYjNmMjQxOTU2N2Y3Y2JhYWUxODhhOGZjNTliMmVlMyIsInNpZ25FeHBpcmUiOjE3NzE5NDM4MzkxOTMsInRzIjoxNzcxMzM5MDM5MTkzLCJzaWduIjoiNmI3OWIwYTUxNmE1Zjc0ZDhhNmU3ZDI3MTY0YjQ5NTcifQ==&Rh-Identify=3b3f2419567f7cbaae188a8fc59b2ee3",
+              "img": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 87,
+      "type": "SeedVR2LoadDiTModel",
+      "pos": [
+        5990,
+        200
+      ],
+      "size": [
+        260,
+        210
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "torch编译参数",
+          "localized_name": "torch_compile_args",
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS"
+        },
+        {
+          "label": "模型",
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMBO",
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "label": "设备",
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          }
+        },
+        {
+          "label": "要交换的块",
+          "localized_name": "blocks_to_swap",
+          "name": "blocks_to_swap",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "blocks_to_swap"
+          }
+        },
+        {
+          "label": "交换输入输出组件",
+          "localized_name": "swap_io_components",
+          "name": "swap_io_components",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "swap_io_components"
+          }
+        },
+        {
+          "label": "卸载设备",
+          "localized_name": "offload_device",
+          "name": "offload_device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "offload_device"
+          }
+        },
+        {
+          "label": "缓存模型",
+          "localized_name": "cache_model",
+          "name": "cache_model",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "cache_model"
+          }
+        },
+        {
+          "label": "注意力模式",
+          "localized_name": "attention_mode",
+          "name": "attention_mode",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "attention_mode"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "dit",
+          "localized_name": "SEEDVR2_DIT",
+          "name": "SEEDVR2_DIT",
+          "type": "SEEDVR2_DIT",
+          "links": [
+            105
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "912ab4a5da8bb3590c4659f8f19160a7bd88a656",
+        "Node name for S&R": "SeedVR2LoadDiTModel",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        },
+        "widget_ue_connectable": {
+          "attention_mode": true,
+          "swap_io_components": true,
+          "cache_model": true,
+          "offload_device": true,
+          "model": true,
+          "device": true,
+          "blocks_to_swap": true
+        },
+        "ttNbgOverride": {
+          "bgcolor": "#535",
+          "groupcolor": "#a1309b",
+          "color": "#323"
+        }
+      },
+      "widgets_values": [
+        "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+        "cuda:0",
+        32,
+        true,
+        "cpu",
+        "sdpa",
+        "sdpa"
+      ],
+      "widgets_values_named": {
+        "model": "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+        "device": "cuda:0",
+        "blocks_to_swap": 32,
+        "swap_io_components": true,
+        "offload_device": "cpu",
+        "cache_model": "sdpa",
+        "attention_mode": "sdpa"
+      }
+    },
+    {
+      "id": 83,
+      "type": "SaveImage",
+      "pos": [
+        6360,
+        650
+      ],
+      "size": [
+        530,
+        380
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "图片",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 109
+        },
+        {
+          "localized_name": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image_urls",
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.2.2"
+        },
+        "widget_ue_connectable": {
+          "filename_prefix": true
+        }
+      },
+      "widgets_values": [
+        "三采+seedvr2-%date:yyyyMMddhhmmss%"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "三采+seedvr2-%date:yyyyMMddhhmmss%"
+      }
+    },
+    {
+      "id": 79,
+      "type": "SeedVR2LoadVAEModel",
+      "pos": [
+        5990,
+        480
+      ],
+      "size": [
+        270,
+        300
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "torch编译参数",
+          "localized_name": "torch_compile_args",
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS"
+        },
+        {
+          "label": "模型",
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMBO",
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "label": "设备",
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          }
+        },
+        {
+          "label": "分块编码",
+          "localized_name": "encode_tiled",
+          "name": "encode_tiled",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "encode_tiled"
+          }
+        },
+        {
+          "label": "编码块大小",
+          "localized_name": "encode_tile_size",
+          "name": "encode_tile_size",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "encode_tile_size"
+          }
+        },
+        {
+          "label": "编码块重叠",
+          "localized_name": "encode_tile_overlap",
+          "name": "encode_tile_overlap",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "encode_tile_overlap"
+          }
+        },
+        {
+          "label": "分块解码",
+          "localized_name": "decode_tiled",
+          "name": "decode_tiled",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "decode_tiled"
+          }
+        },
+        {
+          "label": "解码块大小",
+          "localized_name": "decode_tile_size",
+          "name": "decode_tile_size",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "decode_tile_size"
+          }
+        },
+        {
+          "label": "解码块重叠",
+          "localized_name": "decode_tile_overlap",
+          "name": "decode_tile_overlap",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "decode_tile_overlap"
+          }
+        },
+        {
+          "label": "区块调试",
+          "localized_name": "tile_debug",
+          "name": "tile_debug",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "tile_debug"
+          }
+        },
+        {
+          "label": "卸载设备",
+          "localized_name": "offload_device",
+          "name": "offload_device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "offload_device"
+          }
+        },
+        {
+          "label": "缓存模型",
+          "localized_name": "cache_model",
+          "name": "cache_model",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "cache_model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "vae",
+          "localized_name": "SEEDVR2_VAE",
+          "name": "SEEDVR2_VAE",
+          "type": "SEEDVR2_VAE",
+          "links": [
+            106
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "912ab4a5da8bb3590c4659f8f19160a7bd88a656",
+        "Node name for S&R": "SeedVR2LoadVAEModel",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        },
+        "widget_ue_connectable": {
+          "encode_tiled": true,
+          "encode_tile_overlap": true,
+          "cache_model": true,
+          "encode_tile_size": true,
+          "decode_tiled": true,
+          "decode_tile_size": true,
+          "tile_debug": true,
+          "offload_device": true,
+          "model": true,
+          "decode_tile_overlap": true,
+          "device": true
+        },
+        "ttNbgOverride": {
+          "bgcolor": "#535",
+          "groupcolor": "#a1309b",
+          "color": "#323"
+        }
+      },
+      "widgets_values": [
+        "ema_vae_fp16.safetensors",
+        "cuda:0",
+        true,
+        1024,
+        128,
+        true,
+        1024,
+        128,
+        "false",
+        "cpu",
+        false
+      ],
+      "widgets_values_named": {
+        "model": "ema_vae_fp16.safetensors",
+        "device": "cuda:0",
+        "encode_tiled": true,
+        "encode_tile_size": 1024,
+        "encode_tile_overlap": 128,
+        "decode_tiled": true,
+        "decode_tile_size": 1024,
+        "decode_tile_overlap": 128,
+        "tile_debug": "false",
+        "offload_device": "cpu",
+        "cache_model": false
+      }
+    },
+    {
+      "id": 152,
+      "type": "PreviewImage",
+      "pos": [
+        5940,
+        1150
+      ],
+      "size": [
+        1610,
+        920
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 191
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 49,
+      "type": "VAEDecode",
+      "pos": [
+        4520,
+        160
+      ],
+      "size": [
+        220,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 246
+        },
+        {
+          "label": "VAE",
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            225,
+            280,
+            310,
+            320,
+            339,
+            340
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "Node name for S&R": "VAEDecode",
+        "hasSecondTab": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {},
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10
+      }
+    },
+    {
+      "id": 209,
+      "type": "PreviewImage",
+      "pos": [
+        4520,
+        240
+      ],
+      "size": [
+        460,
+        480
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 339
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.5",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      }
+    },
+    {
+      "id": 210,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        5040,
+        240
+      ],
+      "size": [
+        480,
+        480
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 340
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 341
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "images",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "8ff50e4521881eca1fe26aec9615fc9362474931",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_fbtsd_00001_.png&type=temp&subfolder=&rand=0.012942707440159462"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_fbtsd_00002_.png&type=temp&subfolder=&rand=0.9427497667966688"
+          }
+        ]
+      ],
+      "widgets_values_named": {
+        "rgthree_comparer": {
+          "images": [
+            {
+              "name": "A",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_fbtsd_00001_.png&type=temp&subfolder=&rand=0.012942707440159462",
+              "img": {}
+            },
+            {
+              "name": "B",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_fbtsd_00002_.png&type=temp&subfolder=&rand=0.9427497667966688",
+              "img": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 81,
+      "type": "SeedVR2VideoUpscaler",
+      "pos": [
+        6270,
+        190
+      ],
+      "size": [
+        350,
+        390
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 104
+        },
+        {
+          "label": "dit",
+          "localized_name": "dit",
+          "name": "dit",
+          "type": "SEEDVR2_DIT",
+          "link": 105
+        },
+        {
+          "label": "vae",
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "SEEDVR2_VAE",
+          "link": 106
+        },
+        {
+          "label": "种子",
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "label": "分辨率",
+          "localized_name": "resolution",
+          "name": "resolution",
+          "type": "INT",
+          "widget": {
+            "name": "resolution"
+          }
+        },
+        {
+          "label": "最大分辨率",
+          "localized_name": "max_resolution",
+          "name": "max_resolution",
+          "type": "INT",
+          "widget": {
+            "name": "max_resolution"
+          }
+        },
+        {
+          "label": "批次大小",
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          }
+        },
+        {
+          "label": "统一批次大小",
+          "localized_name": "uniform_batch_size",
+          "name": "uniform_batch_size",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "uniform_batch_size"
+          }
+        },
+        {
+          "label": "色彩校正",
+          "localized_name": "color_correction",
+          "name": "color_correction",
+          "type": "COMBO",
+          "widget": {
+            "name": "color_correction"
+          }
+        },
+        {
+          "label": "时间重叠",
+          "localized_name": "temporal_overlap",
+          "name": "temporal_overlap",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "temporal_overlap"
+          }
+        },
+        {
+          "label": "前置帧数",
+          "localized_name": "prepend_frames",
+          "name": "prepend_frames",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "prepend_frames"
+          }
+        },
+        {
+          "label": "输入噪声比例",
+          "localized_name": "input_noise_scale",
+          "name": "input_noise_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "input_noise_scale"
+          }
+        },
+        {
+          "label": "潜空间噪声比例",
+          "localized_name": "latent_noise_scale",
+          "name": "latent_noise_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_noise_scale"
+          }
+        },
+        {
+          "label": "卸载设备",
+          "localized_name": "offload_device",
+          "name": "offload_device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "offload_device"
+          }
+        },
+        {
+          "label": "启用调试",
+          "localized_name": "enable_debug",
+          "name": "enable_debug",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "enable_debug"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            109,
+            110,
+            319
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "seedvr2_videoupscaler",
+        "ver": "912ab4a5da8bb3590c4659f8f19160a7bd88a656",
+        "Node name for S&R": "SeedVR2VideoUpscaler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        },
+        "widget_ue_connectable": {
+          "color_correction": true,
+          "batch_size": true,
+          "seed": true,
+          "uniform_batch_size": true,
+          "enable_debug": true,
+          "latent_noise_scale": true,
+          "prepend_frames": true,
+          "offload_device": true,
+          "temporal_overlap": true,
+          "input_noise_scale": true,
+          "resolution": true,
+          "max_resolution": true
+        },
+        "ttNbgOverride": {
+          "bgcolor": "#535",
+          "groupcolor": "#a1309b",
+          "color": "#323"
+        }
+      },
+      "widgets_values": [
+        383230166,
+        "randomize",
+        2560,
+        4500,
+        1,
+        false,
+        "none",
+        0,
+        0,
+        0,
+        0,
+        "cpu",
+        false
+      ],
+      "widgets_values_named": {
+        "seed": 383230166,
+        "control_after_generate": "randomize",
+        "resolution": 2560,
+        "max_resolution": 4500,
+        "batch_size": 1,
+        "uniform_batch_size": false,
+        "color_correction": "none",
+        "temporal_overlap": 0,
+        "prepend_frames": 0,
+        "input_noise_scale": 0,
+        "latent_noise_scale": 0,
+        "offload_device": "cpu",
+        "enable_debug": false
+      }
+    },
+    {
+      "id": 187,
+      "type": "SaveImage",
+      "pos": [
+        4700,
+        160
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "图片",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 280
+        },
+        {
+          "localized_name": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "三采-%date:yyyyMMddhhmmss%"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "三采-%date:yyyyMMddhhmmss%"
+      }
+    },
+    {
+      "id": 4,
+      "type": "VAEDecode",
+      "pos": [
+        2310,
+        150
+      ],
+      "size": [
+        210,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "localized_name": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 316
+        },
+        {
+          "label": "VAE",
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            258,
+            308,
+            309,
+            318,
+            341
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "VAEDecode",
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 193,
+      "type": "SaveImage",
+      "pos": [
+        2490,
+        150
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "图片",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 308
+        },
+        {
+          "localized_name": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "双采-%date:yyyyMMddhhmmss%"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "双采-%date:yyyyMMddhhmmss%"
+      }
+    },
+    {
+      "id": 195,
+      "type": "PreviewImage",
+      "pos": [
+        2310,
+        200
+      ],
+      "size": [
+        720,
+        960
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 318
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      }
+    },
+    {
+      "id": 186,
+      "type": "Note",
+      "pos": [
+        1760,
+        -70
+      ],
+      "size": [
+        320,
+        90
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "cfg值决定画面的构图以及色彩亮度，对比度，cfg值越大，越遵循提示词。范围可调整值：2-5"
+      ],
+      "widgets_values_named": {
+        "text": "cfg值决定画面的构图以及色彩亮度，对比度，cfg值越大，越遵循提示词。范围可调整值：2-5"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 5,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1080,
+        170
+      ],
+      "size": [
+        530,
+        410
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5
+        },
+        {
+          "label": "text",
+          "localized_name": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            12,
+            312
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.73",
+        "Node name for S&R": "CLIPTextEncode",
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "主体与场景：画面核心是樱月之下的仙侠古风美人，人物梳着高盘发，发髻点缀粉色玫瑰、银质发冠，身着淡紫色露腰仙侠古风裙，裙身绣满蝴蝶、花卉，外搭飘逸披帛，手持发辫，姿态仙气；背景是巨大的银白色满月，樱花树环绕，花瓣纷飞，蝴蝶环绕，远处是山峦、中式古建、点亮的宫灯，营造出仙侠唯美的意境。光影与质感：月光下的梦幻光影，满月发出柔和银辉，打亮人物轮廓，极致还原纱裙的通透光泽、发饰的金属质感、樱花的鲜活、蝴蝶的灵动、宫灯的暖光，画面自带柔光滤镜，仙侠氛围感拉满。氛围与风格：仙侠古风 CGI 人像，8K 超高清，电影级质感，整体氛围唯美、空灵、仙气，完美定格仙侠美人的樱月仙尊瞬间，兼具东方仙侠美学与视觉冲击力。"
+      ],
+      "widgets_values_named": {
+        "text": "主体与场景：画面核心是樱月之下的仙侠古风美人，人物梳着高盘发，发髻点缀粉色玫瑰、银质发冠，身着淡紫色露腰仙侠古风裙，裙身绣满蝴蝶、花卉，外搭飘逸披帛，手持发辫，姿态仙气；背景是巨大的银白色满月，樱花树环绕，花瓣纷飞，蝴蝶环绕，远处是山峦、中式古建、点亮的宫灯，营造出仙侠唯美的意境。光影与质感：月光下的梦幻光影，满月发出柔和银辉，打亮人物轮廓，极致还原纱裙的通透光泽、发饰的金属质感、樱花的鲜活、蝴蝶的灵动、宫灯的暖光，画面自带柔光滤镜，仙侠氛围感拉满。氛围与风格：仙侠古风 CGI 人像，8K 超高清，电影级质感，整体氛围唯美、空灵、仙气，完美定格仙侠美人的樱月仙尊瞬间，兼具东方仙侠美学与视觉冲击力。"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 12,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1660,
+        180
+      ],
+      "size": [
+        280,
+        800
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 288
+        },
+        {
+          "label": "正面条件",
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 12
+        },
+        {
+          "label": "负面条件",
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 13
+        },
+        {
+          "label": "Latent",
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 278
+        },
+        {
+          "label": "add_noise",
+          "localized_name": "添加噪波",
+          "name": "add_noise",
+          "type": "COMBO",
+          "widget": {
+            "name": "add_noise"
+          }
+        },
+        {
+          "label": "noise_seed",
+          "localized_name": "随机种",
+          "name": "noise_seed",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "link": 283
+        },
+        {
+          "label": "steps",
+          "localized_name": "步数",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "label": "cfg",
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          }
+        },
+        {
+          "label": "sampler_name",
+          "localized_name": "采样器名称",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          }
+        },
+        {
+          "label": "scheduler",
+          "localized_name": "调度器",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          }
+        },
+        {
+          "label": "start_at_step",
+          "localized_name": "开始步数",
+          "name": "start_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "start_at_step"
+          }
+        },
+        {
+          "label": "end_at_step",
+          "localized_name": "结束步数",
+          "name": "end_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "end_at_step"
+          },
+          "link": null
+        },
+        {
+          "label": "return_with_leftover_noise",
+          "localized_name": "返回剩余噪波",
+          "name": "return_with_leftover_noise",
+          "type": "COMBO",
+          "widget": {
+            "name": "return_with_leftover_noise"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            314
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "KSamplerAdvanced",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "enable",
+        259680224763933,
+        "randomize",
+        12,
+        4,
+        "res_multistep",
+        "simple",
+        0,
+        3,
+        "enable"
+      ],
+      "widgets_values_named": {
+        "add_noise": "enable",
+        "noise_seed": 259680224763933,
+        "control_after_generate": "randomize",
+        "steps": 12,
+        "cfg": 4,
+        "sampler_name": "res_multistep",
+        "scheduler": "simple",
+        "start_at_step": 0,
+        "end_at_step": 3,
+        "return_with_leftover_noise": "enable"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 194,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1980,
+        180
+      ],
+      "size": [
+        280,
+        800
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 346
+        },
+        {
+          "label": "正面条件",
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 312
+        },
+        {
+          "label": "负面条件",
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 313
+        },
+        {
+          "label": "Latent",
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 314
+        },
+        {
+          "label": "add_noise",
+          "localized_name": "添加噪波",
+          "name": "add_noise",
+          "type": "COMBO",
+          "widget": {
+            "name": "add_noise"
+          },
+          "link": null
+        },
+        {
+          "label": "noise_seed",
+          "localized_name": "随机种",
+          "name": "noise_seed",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "link": 315
+        },
+        {
+          "label": "steps",
+          "localized_name": "步数",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "label": "cfg",
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "label": "sampler_name",
+          "localized_name": "采样器名称",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "label": "scheduler",
+          "localized_name": "调度器",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "label": "start_at_step",
+          "localized_name": "开始步数",
+          "name": "start_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "start_at_step"
+          },
+          "link": null
+        },
+        {
+          "label": "end_at_step",
+          "localized_name": "结束步数",
+          "name": "end_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "end_at_step"
+          },
+          "link": null
+        },
+        {
+          "label": "return_with_leftover_noise",
+          "localized_name": "返回剩余噪波",
+          "name": "return_with_leftover_noise",
+          "type": "COMBO",
+          "widget": {
+            "name": "return_with_leftover_noise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            316,
+            317
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2",
+        "Node name for S&R": "KSamplerAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "disable",
+        210,
+        "fixed",
+        12,
+        1,
+        "euler",
+        "simple",
+        3,
+        10000,
+        "disable"
+      ],
+      "widgets_values_named": {
+        "add_noise": "disable",
+        "noise_seed": 210,
+        "control_after_generate": "fixed",
+        "steps": 12,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "start_at_step": 3,
+        "end_at_step": 10000,
+        "return_with_leftover_noise": "disable"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 63,
+      "type": "UNETLoader",
+      "pos": [
+        3190,
+        200
+      ],
+      "size": [
+        310,
+        90
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "unet_name",
+          "localized_name": "UNet名称",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          }
+        },
+        {
+          "label": "weight_dtype",
+          "localized_name": "数据类型",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            277
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "Node name for S&R": "UNETLoader",
+        "hasSecondTab": false,
+        "models": [
+          {
+            "name": "flux/flux-2-klein-4b.safetensors",
+            "directory": "diffusion_models",
+            "url": "https://huggingface.co/Comfy-Org/flux2-klein-4B/resolve/main/split_files/diffusion_models/flux-2-klein-4b.safetensors"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {},
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "tabXOffset": 10
+      },
+      "widgets_values": [
+        "flux/Flux2-Klein-9B-True-v2-fp8mixed.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "flux/Flux2-Klein-9B-True-v2-fp8mixed.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 51,
+      "type": "VAELoader",
+      "pos": [
+        3190,
+        530
+      ],
+      "size": [
+        300,
+        60
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "vae_name",
+          "localized_name": "vae名称",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "VAE",
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            66,
+            240
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "Node name for S&R": "VAELoader",
+        "hasSecondTab": false,
+        "models": [
+          {
+            "directory_invalid": true,
+            "name": "flux2-vae.safetensors",
+            "directory": "vae",
+            "url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {},
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "tabXOffset": 10
+      },
+      "widgets_values": [
+        "flux2-vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "flux2-vae.safetensors"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 62,
+      "type": "CLIPLoader",
+      "pos": [
+        3190,
+        350
+      ],
+      "size": [
+        310,
+        110
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip_name",
+          "localized_name": "CLIP名称",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          }
+        },
+        {
+          "label": "type",
+          "localized_name": "类型",
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          }
+        },
+        {
+          "label": "device",
+          "localized_name": "设备",
+          "name": "device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CLIP",
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            72,
+            252
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "Node name for S&R": "CLIPLoader",
+        "hasSecondTab": false,
+        "models": [
+          {
+            "name": "qwen_3_4b.safetensors",
+            "directory": "text_encoders",
+            "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {},
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "tabXOffset": 10
+      },
+      "widgets_values": [
+        "qwen_3_8b_fp8mixed.safetensors",
+        "flux2",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+        "type": "flux2",
+        "device": "default"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 54,
+      "type": "CLIPTextEncode",
+      "pos": [
+        3550,
+        300
+      ],
+      "size": [
+        390,
+        250
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 72
+        },
+        {
+          "label": "text",
+          "localized_name": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            271
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "Node name for S&R": "CLIPTextEncode",
+        "hasSecondTab": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {},
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10
+      },
+      "widgets_values": [
+        "高清"
+      ],
+      "widgets_values_named": {
+        "text": "高清"
+      },
+      "color": "#225822FF",
+      "bgcolor": "#2E772EFF"
+    },
+    {
+      "id": 167,
+      "type": "VAEEncode",
+      "pos": [
+        3620,
+        660
+      ],
+      "size": [
+        140,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "像素",
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 259
+        },
+        {
+          "label": "VAE",
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 240
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            260,
+            263,
+            266
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "VAEEncode",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 172,
+      "type": "ImageScaleBy",
+      "pos": [
+        3200,
+        660
+      ],
+      "size": [
+        270,
+        90
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 258
+        },
+        {
+          "localized_name": "缩放算法",
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          }
+        },
+        {
+          "localized_name": "缩放系数",
+          "name": "scale_by",
+          "type": "FLOAT",
+          "widget": {
+            "name": "scale_by"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            259
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "ImageScaleBy",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        1.5
+      ],
+      "widgets_values_named": {
+        "upscale_method": "lanczos",
+        "scale_by": 1.5
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 170,
+      "type": "CLIPTextEncode",
+      "pos": [
+        3610,
+        610
+      ],
+      "size": [
+        430,
+        90
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 252
+        },
+        {
+          "label": "text",
+          "localized_name": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            261
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "Node name for S&R": "CLIPTextEncode",
+        "hasSecondTab": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {},
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      ],
+      "widgets_values_named": {
+        "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 174,
+      "type": "ReferenceLatent",
+      "pos": [
+        3980,
+        300
+      ],
+      "size": [
+        210,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "conditioning",
+          "localized_name": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 271
+        },
+        {
+          "label": "latent",
+          "localized_name": "Latent",
+          "name": "latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 266
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            265
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "ReferenceLatent",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 173,
+      "type": "ReferenceLatent",
+      "pos": [
+        3980,
+        350
+      ],
+      "size": [
+        210,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "conditioning",
+          "localized_name": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 261
+        },
+        {
+          "label": "latent",
+          "localized_name": "Latent",
+          "name": "latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 263
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            262
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "ReferenceLatent",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 169,
+      "type": "KSampler",
+      "pos": [
+        4130,
+        180
+      ],
+      "size": [
+        330,
+        610
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 247
+        },
+        {
+          "label": "正面条件",
+          "localized_name": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 265
+        },
+        {
+          "label": "负面条件",
+          "localized_name": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 262
+        },
+        {
+          "label": "Latent",
+          "localized_name": "Latent图像",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 260
+        },
+        {
+          "localized_name": "种子",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "localized_name": "步数",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          }
+        },
+        {
+          "localized_name": "采样器名称",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          }
+        },
+        {
+          "localized_name": "调度器",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          }
+        },
+        {
+          "localized_name": "降噪",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            246
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        95016614840093,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 95016614840093,
+        "control_after_generate": "randomize",
+        "steps": 4,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      }
+    },
+    {
+      "id": 213,
+      "type": "Note",
+      "pos": [
+        3590,
+        760
+      ],
+      "size": [
+        350,
+        220
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "提示词：\n1、保持原图色调，保持原图光影，保持原图画面质感。高清放大细节，8K画质，电影级CG画面。\n2、高清放大成细节丰富的摄影作品，去除图片瑕疵，保持整个图片内容不变，\n3、4k，高清"
+      ],
+      "widgets_values_named": {
+        "text": "提示词：\n1、保持原图色调，保持原图光影，保持原图画面质感。高清放大细节，8K画质，电影级CG画面。\n2、高清放大成细节丰富的摄影作品，去除图片瑕疵，保持整个图片内容不变，\n3、4k，高清"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 80,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        5720,
+        200
+      ],
+      "size": [
+        230,
+        110
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 320
+        },
+        {
+          "localized_name": "缩放算法",
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          }
+        },
+        {
+          "localized_name": "像素数量",
+          "name": "megapixels",
+          "type": "FLOAT",
+          "widget": {
+            "name": "megapixels"
+          }
+        },
+        {
+          "localized_name": "分辨率步数",
+          "name": "resolution_steps",
+          "type": "INT",
+          "widget": {
+            "name": "resolution_steps"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "localized_name": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            104
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.3"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "lanczos",
+        1,
+        1
+      ],
+      "widgets_values_named": {
+        "upscale_method": "lanczos",
+        "megapixels": 1,
+        "resolution_steps": 1
+      }
+    },
+    {
+      "id": 182,
+      "type": "Note",
+      "pos": [
+        5310,
+        1490
+      ],
+      "size": [
+        350,
+        290
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "1.提示词的遵循程度\n2.光影氛围\n3.构图\n4.美感\n5.质感"
+      ],
+      "widgets_values_named": {
+        "text": "1.提示词的遵循程度\n2.光影氛围\n3.构图\n4.美感\n5.质感"
+      },
+      "color": "#732222FF",
+      "bgcolor": "#922B2BFF"
+    },
+    {
+      "id": 92,
+      "type": "LayerUtility: PurgeVRAM",
+      "pos": [
+        2680,
+        150
+      ],
+      "size": [
+        210,
+        90
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 34,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "anything",
+          "localized_name": "任意内容",
+          "name": "anything",
+          "type": "*",
+          "link": 317
+        },
+        {
+          "label": "purge_cache",
+          "localized_name": "清除缓存",
+          "name": "purge_cache",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "purge_cache"
+          }
+        },
+        {
+          "label": "purge_models",
+          "localized_name": "清除模型",
+          "name": "purge_models",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "purge_models"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "d94bef1ee5ed3656f5ff1bb2830a4ffd94f40935",
+        "Node name for S&R": "LayerUtility: PurgeVRAM",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "purge_cache": true,
+        "purge_models": true
+      },
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 196,
+      "type": "Note",
+      "pos": [
+        140,
+        1350
+      ],
+      "size": [
+        560,
+        1150
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "超写实、超高分辨率、大画幅的欧洲咖啡馆杂志风写实生活肖像，主体是一位身材苗条的亚洲女性，神态平静、时尚又自信，身体略微朝向镜头，坐在巴黎CARETTE咖啡馆的户外露台桌边，双手自然地捧着一只白色咖啡杯。发型与参考图完全一致，为自然造型；头顶戴着一副白色猫眼太阳镜，左手腕佩戴一块金色手表。身穿优雅经典的巴黎风白色粗花呢西装外套，衣身正面与袖口都配有精致的金色纽扣，面料质感细腻高级。桌面上摆放着：白色咖啡杯、银色茶壶、一杯清水、羊角面包，以及一杯顶部堆满大量鲜奶油的甜点杯。场景为巴黎经典建筑旁的CARETTE 户外咖啡馆露台，背景是热闹而优雅的露台环境，能看到其他顾客就座，整体氛围活泼又精致。光线采用柔和自然的日光，真实通透，完美呈现皮肤纹理与服装面料细节，没有生硬刺眼的阴影。拍摄为平视角度的中景肖像，主体清晰锐利，背景带有适度景深，呈现柔和虚化效果，整体画面精致、逼真、富有高级杂志感。\n\n亚洲女性，展现出浓郁的东方美学。人物身着精致的古风服饰，优雅的姿态与细腻的面容在金箔光辉的点缀下熠熠生辉。金箔与岩彩的交织，创造出一种独特的墨韵与金色光辉相融合的效果，赋予作品深厚的历史文化感。背景中山水意境层次分明，仿佛传递着古典的自然力量，而细腻的传统纹理则为人物增添了更多的文化韵味。整个作品动静结合，既有静谧的古风典雅，又充满了东方神话的神秘气息，让人仿佛穿越到一个充满传统与历史传承的艺术世界\n\n一位女士在卢浮宫前自拍，她身穿米色西装外套、白色上衣、灰色百褶裙和及膝袜，一头乌黑的长发披散在肩上。她坐在石台上，旁边放着一个棕色皮包。背景中，喷泉喷涌而出，人们在周围闲坐或漫步。卢浮宫标志性的玻璃金字塔在画面左侧隐约可见。这幅画面捕捉到了这位女士在巴黎著名地标建筑中优雅时尚的瞬间。\n\n4K 写实生活自拍镜像，3:4 竖版，年轻白人女性，铂白色高丸子头带碎卷发，身穿白色衬衫叠穿藏青色杂点针织背心，搭配浅蓝色大破洞牛仔裤与黑白 Nike Dunk 运动鞋，佩戴银色耳钉、多枚银戒、多层银镯与金色腕表，深蹲姿态手持棕色皮革手机壳 iPhone 自拍，场景为明亮美式卧室，实木地板、窗边书架、绿植、白色床品与衣柜，柔和自然光，温馨慵懒居家氛围，服装与环境材质细节极致清晰\n\n电影写实风格特写肖像，画面主体是一位符合韩式美学的成年女性，面容灵动有活力。她拥有极长的 2C 型焦糖色卷发，蓝灰色美瞳双眼直视镜头，眼神清澈抓人；身材纤细曲线优美，胸部线条柔和突出，嘴角带着微妙温柔的微笑，优雅斜倚在日光浴躺椅上。妆容为精致全套韩式妆容，呈现水润清透肌肤质感与柔和渐变妆效；身穿红色深 V 领迷你短袖 T 恤，搭配蓝色短款牛仔裤，造型清爽亮眼。场景位于加勒比海上的豪华游艇甲板，黄金时段日落光线，天空布满鲜艳的紫色、深红色与金橙色渐变霞光，海平线左对齐构图，背景带有游艇甲板细节与柔和散景。画面聚焦眼部，眼神锐利清晰，背景虚化过渡自然，整体氛围浪漫又极具电影质感。\n\n垂直肖像构图，画面主体为 23 岁女性，拥有金色自然发质头发，身材曲线玲珑，皮肤呈现自然暖粉色底调，可见真实肌肤纹理，眼神柔和失焦，直视镜头；妆容为极简风格，唇部带有微光泽，肌肤呈现自然光泽感。她身穿象牙色棉质宽松垂坠睡裙，深 V 领设计，带有精致蕾丝边饰与超细肩带，身体斜向对角线横跨画面。人物躺卧在带有图案的棉质床单上，背景为曝光不足的昏暗房间，边缘区域暗沉。采用高角度俯视视点拍摄，特写抓拍构图。光线为直射机载闪光灯，形成硬朗阴影、轻微高光溢出与暗角效果。模拟 2000 年代末期数码傻瓜相机拍摄效果，画面带有明显 CCD 颗粒感与亮度噪点，存在轻微运动模糊与固定镜头畸变，整体呈现私密、原始、略带不完美的日常快照风格，角落带有琥珀色数字日期戳印记。\n\n一位身材苗条的年轻东亚女性，侧身对着镜头，在复古唱片店的唱片架中翻找黑胶唱片，双手拿着一张黑胶唱片低头仔细端详专辑封面，神情专注、平静又带着一丝若有所思。她留着乌黑的长波浪卷发，中分或略微偏分，发丝自然垂落在背部。妆容柔和显年轻，脸颊与鼻子带有明显的粉色腮红，唇妆是柔和的玫瑰色，睫毛根根分明。上身穿着白色露肩印花 T 恤，印有黑色涂鸦与漫画风格图案，肩带处系着粉色丝带；下身搭配浅色水洗宽松牛仔工装裤，带有大工装口袋；脚上穿着白色复古运动鞋，带有蓝色条纹与生胶鞋底。配饰方面，背着黑色皮革单肩包，配有银色铆钉、五金件并装饰浅粉色丝带蝴蝶结，佩戴简约银色项链与小耳环。场景设定在拥挤的复古唱片店内部，四周是一排排摆满黑胶唱片的木制唱片架，墙壁上密密麻麻挂满装裱的音乐海报、专辑封面与霓虹灯牌，包含蓝色 OPEN 标志与粉色长方形灯牌，背景中模糊可见其他正在浏览的顾客，整体氛围繁忙、复古且充满都市感。光线为室内混合人工照明，头顶荧光灯提供整体照明，背景粉色与蓝色霓虹灯渲染出多彩环境光，霓虹冷色调与人物身上的中性照明形成鲜明对比。采用中全景拍摄，呈现膝盖以上画面，人物主体对焦清晰，适度景深让背景的海报与人群虚化，平视侧面视角。整体风格融合 Y2K、娇媚街头时尚与复古垃圾摇滚，为抓拍式生活摄影，氛围酷炫时尚，沉浸在音乐文化中，带有 Instagram 与 Pinterest 风格的美感。\n"
+      ],
+      "widgets_values_named": {
+        "text": "超写实、超高分辨率、大画幅的欧洲咖啡馆杂志风写实生活肖像，主体是一位身材苗条的亚洲女性，神态平静、时尚又自信，身体略微朝向镜头，坐在巴黎CARETTE咖啡馆的户外露台桌边，双手自然地捧着一只白色咖啡杯。发型与参考图完全一致，为自然造型；头顶戴着一副白色猫眼太阳镜，左手腕佩戴一块金色手表。身穿优雅经典的巴黎风白色粗花呢西装外套，衣身正面与袖口都配有精致的金色纽扣，面料质感细腻高级。桌面上摆放着：白色咖啡杯、银色茶壶、一杯清水、羊角面包，以及一杯顶部堆满大量鲜奶油的甜点杯。场景为巴黎经典建筑旁的CARETTE 户外咖啡馆露台，背景是热闹而优雅的露台环境，能看到其他顾客就座，整体氛围活泼又精致。光线采用柔和自然的日光，真实通透，完美呈现皮肤纹理与服装面料细节，没有生硬刺眼的阴影。拍摄为平视角度的中景肖像，主体清晰锐利，背景带有适度景深，呈现柔和虚化效果，整体画面精致、逼真、富有高级杂志感。\n\n亚洲女性，展现出浓郁的东方美学。人物身着精致的古风服饰，优雅的姿态与细腻的面容在金箔光辉的点缀下熠熠生辉。金箔与岩彩的交织，创造出一种独特的墨韵与金色光辉相融合的效果，赋予作品深厚的历史文化感。背景中山水意境层次分明，仿佛传递着古典的自然力量，而细腻的传统纹理则为人物增添了更多的文化韵味。整个作品动静结合，既有静谧的古风典雅，又充满了东方神话的神秘气息，让人仿佛穿越到一个充满传统与历史传承的艺术世界\n\n一位女士在卢浮宫前自拍，她身穿米色西装外套、白色上衣、灰色百褶裙和及膝袜，一头乌黑的长发披散在肩上。她坐在石台上，旁边放着一个棕色皮包。背景中，喷泉喷涌而出，人们在周围闲坐或漫步。卢浮宫标志性的玻璃金字塔在画面左侧隐约可见。这幅画面捕捉到了这位女士在巴黎著名地标建筑中优雅时尚的瞬间。\n\n4K 写实生活自拍镜像，3:4 竖版，年轻白人女性，铂白色高丸子头带碎卷发，身穿白色衬衫叠穿藏青色杂点针织背心，搭配浅蓝色大破洞牛仔裤与黑白 Nike Dunk 运动鞋，佩戴银色耳钉、多枚银戒、多层银镯与金色腕表，深蹲姿态手持棕色皮革手机壳 iPhone 自拍，场景为明亮美式卧室，实木地板、窗边书架、绿植、白色床品与衣柜，柔和自然光，温馨慵懒居家氛围，服装与环境材质细节极致清晰\n\n电影写实风格特写肖像，画面主体是一位符合韩式美学的成年女性，面容灵动有活力。她拥有极长的 2C 型焦糖色卷发，蓝灰色美瞳双眼直视镜头，眼神清澈抓人；身材纤细曲线优美，胸部线条柔和突出，嘴角带着微妙温柔的微笑，优雅斜倚在日光浴躺椅上。妆容为精致全套韩式妆容，呈现水润清透肌肤质感与柔和渐变妆效；身穿红色深 V 领迷你短袖 T 恤，搭配蓝色短款牛仔裤，造型清爽亮眼。场景位于加勒比海上的豪华游艇甲板，黄金时段日落光线，天空布满鲜艳的紫色、深红色与金橙色渐变霞光，海平线左对齐构图，背景带有游艇甲板细节与柔和散景。画面聚焦眼部，眼神锐利清晰，背景虚化过渡自然，整体氛围浪漫又极具电影质感。\n\n垂直肖像构图，画面主体为 23 岁女性，拥有金色自然发质头发，身材曲线玲珑，皮肤呈现自然暖粉色底调，可见真实肌肤纹理，眼神柔和失焦，直视镜头；妆容为极简风格，唇部带有微光泽，肌肤呈现自然光泽感。她身穿象牙色棉质宽松垂坠睡裙，深 V 领设计，带有精致蕾丝边饰与超细肩带，身体斜向对角线横跨画面。人物躺卧在带有图案的棉质床单上，背景为曝光不足的昏暗房间，边缘区域暗沉。采用高角度俯视视点拍摄，特写抓拍构图。光线为直射机载闪光灯，形成硬朗阴影、轻微高光溢出与暗角效果。模拟 2000 年代末期数码傻瓜相机拍摄效果，画面带有明显 CCD 颗粒感与亮度噪点，存在轻微运动模糊与固定镜头畸变，整体呈现私密、原始、略带不完美的日常快照风格，角落带有琥珀色数字日期戳印记。\n\n一位身材苗条的年轻东亚女性，侧身对着镜头，在复古唱片店的唱片架中翻找黑胶唱片，双手拿着一张黑胶唱片低头仔细端详专辑封面，神情专注、平静又带着一丝若有所思。她留着乌黑的长波浪卷发，中分或略微偏分，发丝自然垂落在背部。妆容柔和显年轻，脸颊与鼻子带有明显的粉色腮红，唇妆是柔和的玫瑰色，睫毛根根分明。上身穿着白色露肩印花 T 恤，印有黑色涂鸦与漫画风格图案，肩带处系着粉色丝带；下身搭配浅色水洗宽松牛仔工装裤，带有大工装口袋；脚上穿着白色复古运动鞋，带有蓝色条纹与生胶鞋底。配饰方面，背着黑色皮革单肩包，配有银色铆钉、五金件并装饰浅粉色丝带蝴蝶结，佩戴简约银色项链与小耳环。场景设定在拥挤的复古唱片店内部，四周是一排排摆满黑胶唱片的木制唱片架，墙壁上密密麻麻挂满装裱的音乐海报、专辑封面与霓虹灯牌，包含蓝色 OPEN 标志与粉色长方形灯牌，背景中模糊可见其他正在浏览的顾客，整体氛围繁忙、复古且充满都市感。光线为室内混合人工照明，头顶荧光灯提供整体照明，背景粉色与蓝色霓虹灯渲染出多彩环境光，霓虹冷色调与人物身上的中性照明形成鲜明对比。采用中全景拍摄，呈现膝盖以上画面，人物主体对焦清晰，适度景深让背景的海报与人群虚化，平视侧面视角。整体风格融合 Y2K、娇媚街头时尚与复古垃圾摇滚，为抓拍式生活摄影，氛围酷炫时尚，沉浸在音乐文化中，带有 Instagram 与 Pinterest 风格的美感。\n"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 217,
+      "type": "easy promptLine",
+      "pos": [
+        770,
+        1360
+      ],
+      "size": [
+        670,
+        770
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "提示词",
+          "localized_name": "提示词",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "label": "起始索引",
+          "localized_name": "起始索引",
+          "name": "start_index",
+          "type": "INT",
+          "widget": {
+            "name": "start_index"
+          },
+          "link": null
+        },
+        {
+          "label": "最大行数",
+          "localized_name": "最大行数",
+          "name": "max_rows",
+          "type": "INT",
+          "widget": {
+            "name": "max_rows"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "去除空行",
+          "name": "remove_empty_lines",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "remove_empty_lines"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "localized_name": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "组合",
+          "name": "COMBO",
+          "shape": 6,
+          "type": "COMBO",
+          "links": [
+            344
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "8ba21d0b442002e66389d6e87faf828bfe05b2ad",
+        "Node name for S&R": "easy promptLine",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Next Scene: 月移花影，暗香盈袖间晕开一缕温婉，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，月色下肌肤泛着柔光，面部阴影柔和过渡，眼神轻敛欲语还休，表情隐忍克制带一丝娇柔，婀娜多姿呈凭窗凝睇姿，乌黑发丝梳成垂云髻，繁复蓬松且根根真实，鬓边缀玉簪与银蝶步摇，步摇垂落鬓角轻颤生姿，眼角点朱红小梅花形花钿妆，身着纱质对襟衫配织金襦裙，月白浅蓝主调，纱衣轻透肌理细腻，披帛轻搭肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩颈与下颌主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由花枝形成朦胧层次，占比 25%，制造静谧氛围。背景为低饱和月色光晕，强烈虚化不抢主体。光线为侧面漫反射柔光，4200K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调清冷月白。\nNext Scene: 露湿阑干，清夜微凉间藏着几分缱绻，镜头选择 100mm f/2.8 微距焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，明暗层次细腻柔和，眼神微斜眸光含怯，表情隐忍中透一丝柔媚，婀娜多姿呈整衣敛容姿，乌黑发丝梳成双环望仙髻，繁复蓬松且根根真实，鬓边缀珍珠串与鎏金步摇，步摇垂落鬓角轻晃生姿，眼角点朱红小梅花形花钿妆，身着真丝暗花罗裙，杏色淡粉主调，丝质垂坠光泽清晰，披帛轻绕肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位锁骨与肩线主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由夜露薄雾形成朦胧层次，占比 30%，制造迷离氛围。背景为低饱和朦胧夜景，强烈虚化不抢主体。光线为 45° 冷暖交织光，4500K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调柔杏浅粉。\nNext Scene: 风穿曲榭，流水潺潺间透出清雅绝尘，镜头选择 70mm f/2 焦距，微俯视角，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，面部光影均匀无硬影，眼神低垂眸光温润，表情柔婉沉静带一丝怅惘，婀娜多姿呈临水观鱼姿，乌黑发丝梳成抛家髻，繁复蓬松且根根真实，鬓边缀玉兰花簪与银链步摇，步摇垂落鬓角轻响，眼角点朱红小梅花形花钿妆，身着交领襦裙配轻纱大袖，青碧月白主调，锦缎肌理光泽分明，披帛轻垂肩侧，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位下颌与脖颈主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由水面波光与落花形成朦胧层次，占比 35%，制造空灵意境。背景为低饱和园林水景，强烈虚化不抢主体。光线为逆光漫射 + 面部补光，5000K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒下颌及脖颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调清碧浅白。\nNext Scene: 烛摇绣户，暖意融融间尽显闺阁柔媚，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，烛影下肌肤微微泛红，眼神半掩眼波含情，表情克制慵懒藏一丝魅惑，婀娜多姿呈倚枕凝思姿，乌黑发丝梳成圆鬟髻，繁复蓬松且根根真实，鬓边缀珊瑚珠饰与金凤步摇，步摇垂落鬓角摇曳生姿，眼角点朱红小梅花形花钿妆，身着软缎中衣配纱质外衫，玫红淡紫主调，缎面光泽柔润透肤，披帛轻覆肩头，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头与锁骨主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛火与帘影形成朦胧层次，占比 20%，制造慵懒暧昧氛围。背景为低饱和闺房暗调，强烈虚化不抢主体。光线为暖侧柔光，4800K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调柔玫淡紫。\nNext Scene: 雪映梅窗，寒香清冽间藏着温婉心事，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，寒天光线下肌肤莹白发亮，面部阴影干净柔和，眼神轻垂略带怯意，表情隐忍清冷带一丝柔媚，婀娜多姿呈拈梅嗅香姿，乌黑发丝梳成十字髻，繁复蓬松且根根真实，鬓边缀梅枝玉簪与银步摇，步摇垂落鬓角轻颤，眼角点朱红小梅花形花钿妆，身着棉缎夹袄配罗裙，霜白浅红主调，衣物质感厚实细腻，披帛轻搭肩臂，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩颈与侧脸主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由梅枝与落雪形成朦胧层次，占比 25%，制造清寒温婉氛围。背景为低饱和雪景光晕，强烈虚化不抢主体。光线为正面冷柔光，4100K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调霜白浅红。\nNext Scene: 云绕画梁，香雾袅袅间尽显端庄妖冶，镜头选择 100mm f/2.8 微距焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影对比柔和层次丰富，眼神微抬眼尾含情，表情沉静中透一丝魅惑，婀娜多姿呈对镜理妆姿，乌黑发丝梳成凌云髻，繁复蓬松且根根真实，鬓边缀点翠头饰与金步摇，步摇垂落鬓角华贵灵动，眼角点朱红小梅花形花钿妆，身着织金纱衣配马面裙，石青绯红主调，纱衣透肤织金闪亮，披帛轻绕肩头，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位锁骨与肩线主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由香雾与镜影形成朦胧层次，占比 30%，制造华贵神秘氛围。背景为低饱和室内暗纹，强烈虚化不抢主体。光线为暖侧顶光，4900K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调石青绯红。\nNext Scene: 风拂蕉叶，绿意清幽间漾出温婉清丽，镜头选择 70mm f/2 焦距，微俯视角，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，自然光下肌肤通透无硬影，眼神轻敛眸光清澈，表情柔婉淡然带一丝怅然，婀娜多姿呈执卷静读姿，乌黑发丝梳成垂鬟分肖髻，繁复蓬松且根根真实，鬓边缀碧玉簪与素银步摇，步摇垂落鬓角清雅别致，眼角点朱红小梅花形花钿妆，身着素色纱衫配素绉裙，豆绿牙白主调，衣料轻薄透气肌理清晰，披帛轻垂肩侧，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位下颌与脖颈主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由蕉叶与书页形成朦胧层次，占比 35%，制造书卷空灵氛围。背景为低饱和庭院绿意，强烈虚化不抢主体。光线为逆光柔光 + 面部补光，5300K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒下颌及脖颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调豆绿牙白。\nNext Scene: 星垂平野，清辉万里间藏着悠远情思，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，星光下肌肤泛着冷白光泽，眼神远眺略带怅惘，表情隐忍沉静带一丝柔媚，婀娜多姿呈登楼望远姿，乌黑发丝梳成飞天髻，繁复蓬松且根根真实，鬓边缀琉璃饰与银鎏金步摇，步摇垂落鬓角随风轻动，眼角点朱红小梅花形花钿妆，身着大袖衫配长裙，藏青淡蓝主调，衣料垂坠大气质感高级，披帛轻扬肩侧，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩颈与肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由星影与帘角形成朦胧层次，占比 20%，制造悠远沉静氛围。背景为低饱和星空淡彩，强烈虚化不抢主体。光线为冷色侧柔光，4400K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调藏青淡蓝。\nNext Scene: 风绕庭芳，竹影斑驳间凝住一瞬空灵，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，阳光下脸蛋微微发亮，面部阴影自然过渡，眼神低垂似怯非怯，表情隐忍克制带一丝柔媚，婀娜多姿呈侧坐抬眸姿，乌黑发丝梳成斜刘海垂髻，繁复蓬松且根根真实，鬓边缀娟花与蝶形步摇，步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣配苏绣衬裙，淡青淡粉主调，苏绣肌理清晰薄纱透肤，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩颈主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由竹叶形成朦胧层次，占比 25%，制造温婉氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为正面散射柔光，4300K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调清冷柔粉。\nNext Scene: 光落疏窗，浮光漫染间漾出几分妖冶，镜头选择 100mm f/2.8 微距焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，明暗对比强烈光影斑驳，眼神微抬眼波流转，表情隐忍中透一丝魅惑，婀娜多姿呈扶鬓凝思姿，乌黑发丝梳成珠帘花月髻，繁复蓬松且根根真实，鬓边缀细小宝石链与金步摇，步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着香云纱衣，淡紫淡青主调，香云纱垂坠感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位锁骨主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由轻纱形成朦胧层次，占比 30%，制造神秘氛围。背景为低饱和朦胧雾霭，强烈虚化不抢主体。光线为 45° 暖侧光，4600K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及锁骨边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调柔紫清青。\nNext Scene: 雾笼汀兰，清辉漫洒间透着一抹清丽，镜头选择 70mm f/2 焦距，微俯视角，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，面部浮光点缀无硬影，眼神轻垂眸光潋滟，表情柔婉带一丝怅然，婀娜多姿呈凭栏轻倚姿，乌黑发丝梳成侧分回鹘髻，繁复蓬松且根根真实，鬓边缀簪花与垂帘饰，金步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着传统古装配披帛，嫩绿淡黄主调，锦缎光泽感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位下颌线主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由花瓣形成朦胧层次，占比 35%，制造空灵氛围。背景为低饱和暗纹意境，强烈虚化不抢主体。光线为逆光 + 局部补光，5200K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及下颌线边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩黄柔绿。\nNext Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        0,
+        1000,
+        true,
+        ""
+      ],
+      "widgets_values_named": {
+        "prompt": "Next Scene: 月移花影，暗香盈袖间晕开一缕温婉，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，月色下肌肤泛着柔光，面部阴影柔和过渡，眼神轻敛欲语还休，表情隐忍克制带一丝娇柔，婀娜多姿呈凭窗凝睇姿，乌黑发丝梳成垂云髻，繁复蓬松且根根真实，鬓边缀玉簪与银蝶步摇，步摇垂落鬓角轻颤生姿，眼角点朱红小梅花形花钿妆，身着纱质对襟衫配织金襦裙，月白浅蓝主调，纱衣轻透肌理细腻，披帛轻搭肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩颈与下颌主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由花枝形成朦胧层次，占比 25%，制造静谧氛围。背景为低饱和月色光晕，强烈虚化不抢主体。光线为侧面漫反射柔光，4200K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调清冷月白。\nNext Scene: 露湿阑干，清夜微凉间藏着几分缱绻，镜头选择 100mm f/2.8 微距焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，明暗层次细腻柔和，眼神微斜眸光含怯，表情隐忍中透一丝柔媚，婀娜多姿呈整衣敛容姿，乌黑发丝梳成双环望仙髻，繁复蓬松且根根真实，鬓边缀珍珠串与鎏金步摇，步摇垂落鬓角轻晃生姿，眼角点朱红小梅花形花钿妆，身着真丝暗花罗裙，杏色淡粉主调，丝质垂坠光泽清晰，披帛轻绕肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位锁骨与肩线主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由夜露薄雾形成朦胧层次，占比 30%，制造迷离氛围。背景为低饱和朦胧夜景，强烈虚化不抢主体。光线为 45° 冷暖交织光，4500K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调柔杏浅粉。\nNext Scene: 风穿曲榭，流水潺潺间透出清雅绝尘，镜头选择 70mm f/2 焦距，微俯视角，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，面部光影均匀无硬影，眼神低垂眸光温润，表情柔婉沉静带一丝怅惘，婀娜多姿呈临水观鱼姿，乌黑发丝梳成抛家髻，繁复蓬松且根根真实，鬓边缀玉兰花簪与银链步摇，步摇垂落鬓角轻响，眼角点朱红小梅花形花钿妆，身着交领襦裙配轻纱大袖，青碧月白主调，锦缎肌理光泽分明，披帛轻垂肩侧，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位下颌与脖颈主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由水面波光与落花形成朦胧层次，占比 35%，制造空灵意境。背景为低饱和园林水景，强烈虚化不抢主体。光线为逆光漫射 + 面部补光，5000K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒下颌及脖颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调清碧浅白。\nNext Scene: 烛摇绣户，暖意融融间尽显闺阁柔媚，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，烛影下肌肤微微泛红，眼神半掩眼波含情，表情克制慵懒藏一丝魅惑，婀娜多姿呈倚枕凝思姿，乌黑发丝梳成圆鬟髻，繁复蓬松且根根真实，鬓边缀珊瑚珠饰与金凤步摇，步摇垂落鬓角摇曳生姿，眼角点朱红小梅花形花钿妆，身着软缎中衣配纱质外衫，玫红淡紫主调，缎面光泽柔润透肤，披帛轻覆肩头，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头与锁骨主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛火与帘影形成朦胧层次，占比 20%，制造慵懒暧昧氛围。背景为低饱和闺房暗调，强烈虚化不抢主体。光线为暖侧柔光，4800K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调柔玫淡紫。\nNext Scene: 雪映梅窗，寒香清冽间藏着温婉心事，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，寒天光线下肌肤莹白发亮，面部阴影干净柔和，眼神轻垂略带怯意，表情隐忍清冷带一丝柔媚，婀娜多姿呈拈梅嗅香姿，乌黑发丝梳成十字髻，繁复蓬松且根根真实，鬓边缀梅枝玉簪与银步摇，步摇垂落鬓角轻颤，眼角点朱红小梅花形花钿妆，身着棉缎夹袄配罗裙，霜白浅红主调，衣物质感厚实细腻，披帛轻搭肩臂，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩颈与侧脸主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由梅枝与落雪形成朦胧层次，占比 25%，制造清寒温婉氛围。背景为低饱和雪景光晕，强烈虚化不抢主体。光线为正面冷柔光，4100K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调霜白浅红。\nNext Scene: 云绕画梁，香雾袅袅间尽显端庄妖冶，镜头选择 100mm f/2.8 微距焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影对比柔和层次丰富，眼神微抬眼尾含情，表情沉静中透一丝魅惑，婀娜多姿呈对镜理妆姿，乌黑发丝梳成凌云髻，繁复蓬松且根根真实，鬓边缀点翠头饰与金步摇，步摇垂落鬓角华贵灵动，眼角点朱红小梅花形花钿妆，身着织金纱衣配马面裙，石青绯红主调，纱衣透肤织金闪亮，披帛轻绕肩头，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位锁骨与肩线主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由香雾与镜影形成朦胧层次，占比 30%，制造华贵神秘氛围。背景为低饱和室内暗纹，强烈虚化不抢主体。光线为暖侧顶光，4900K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调石青绯红。\nNext Scene: 风拂蕉叶，绿意清幽间漾出温婉清丽，镜头选择 70mm f/2 焦距，微俯视角，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，自然光下肌肤通透无硬影，眼神轻敛眸光清澈，表情柔婉淡然带一丝怅然，婀娜多姿呈执卷静读姿，乌黑发丝梳成垂鬟分肖髻，繁复蓬松且根根真实，鬓边缀碧玉簪与素银步摇，步摇垂落鬓角清雅别致，眼角点朱红小梅花形花钿妆，身着素色纱衫配素绉裙，豆绿牙白主调，衣料轻薄透气肌理清晰，披帛轻垂肩侧，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位下颌与脖颈主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由蕉叶与书页形成朦胧层次，占比 35%，制造书卷空灵氛围。背景为低饱和庭院绿意，强烈虚化不抢主体。光线为逆光柔光 + 面部补光，5300K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒下颌及脖颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调豆绿牙白。\nNext Scene: 星垂平野，清辉万里间藏着悠远情思，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，星光下肌肤泛着冷白光泽，眼神远眺略带怅惘，表情隐忍沉静带一丝柔媚，婀娜多姿呈登楼望远姿，乌黑发丝梳成飞天髻，繁复蓬松且根根真实，鬓边缀琉璃饰与银鎏金步摇，步摇垂落鬓角随风轻动，眼角点朱红小梅花形花钿妆，身着大袖衫配长裙，藏青淡蓝主调，衣料垂坠大气质感高级，披帛轻扬肩侧，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩颈与肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由星影与帘角形成朦胧层次，占比 20%，制造悠远沉静氛围。背景为低饱和星空淡彩，强烈虚化不抢主体。光线为冷色侧柔光，4400K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调藏青淡蓝。\nNext Scene: 风绕庭芳，竹影斑驳间凝住一瞬空灵，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，阳光下脸蛋微微发亮，面部阴影自然过渡，眼神低垂似怯非怯，表情隐忍克制带一丝柔媚，婀娜多姿呈侧坐抬眸姿，乌黑发丝梳成斜刘海垂髻，繁复蓬松且根根真实，鬓边缀娟花与蝶形步摇，步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣配苏绣衬裙，淡青淡粉主调，苏绣肌理清晰薄纱透肤，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩颈主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由竹叶形成朦胧层次，占比 25%，制造温婉氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为正面散射柔光，4300K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩颈边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调清冷柔粉。\nNext Scene: 光落疏窗，浮光漫染间漾出几分妖冶，镜头选择 100mm f/2.8 微距焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，明暗对比强烈光影斑驳，眼神微抬眼波流转，表情隐忍中透一丝魅惑，婀娜多姿呈扶鬓凝思姿，乌黑发丝梳成珠帘花月髻，繁复蓬松且根根真实，鬓边缀细小宝石链与金步摇，步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着香云纱衣，淡紫淡青主调，香云纱垂坠感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位锁骨主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由轻纱形成朦胧层次，占比 30%，制造神秘氛围。背景为低饱和朦胧雾霭，强烈虚化不抢主体。光线为 45° 暖侧光，4600K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及锁骨边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调柔紫清青。\nNext Scene: 雾笼汀兰，清辉漫洒间透着一抹清丽，镜头选择 70mm f/2 焦距，微俯视角，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，面部浮光点缀无硬影，眼神轻垂眸光潋滟，表情柔婉带一丝怅然，婀娜多姿呈凭栏轻倚姿，乌黑发丝梳成侧分回鹘髻，繁复蓬松且根根真实，鬓边缀簪花与垂帘饰，金步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着传统古装配披帛，嫩绿淡黄主调，锦缎光泽感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位下颌线主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由花瓣形成朦胧层次，占比 35%，制造空灵氛围。背景为低饱和暗纹意境，强烈虚化不抢主体。光线为逆光 + 局部补光，5200K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及下颌线边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩黄柔绿。\nNext Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "start_index": 0,
+        "max_rows": 1000,
+        "remove_empty_lines": true,
+        "get values from COMBO link": ""
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 219,
+      "type": "easy showAnything",
+      "pos": [
+        1470,
+        1370
+      ],
+      "size": [
+        530,
+        760
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "localized_name": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 344
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "输出",
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "8ba21d0b442002e66389d6e87faf828bfe05b2ad",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。",
+        "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。"
+      ],
+      "widgets_values_named": {
+        "text": "Next Scene: 花拂玉颜，暗香浮动间漾出华贵艳丽，镜头选择 85mm f/1.4 黄金焦距，中国 19 岁古代大家闺秀，性压抑内敛，眉眼含愁却藏隐秘渴望，面敷烟粉底妆、黛色远山眉、胭脂晕染腮红、绛红哑光唇釉，冷白皮瓷肌清透细腻，光影斑驳面部微微发亮，眼神半阖眼尾微挑，表情克制中藏一丝慵懒，婀娜多姿呈斜卧支颐姿，乌黑发丝梳成低花髻，繁复蓬松且根根真实，鬓边缀额饰与细小宝石链吊饰，蝶形步摇垂落鬓角一步一响，眼角点朱红小梅花形花钿妆，身着披肩纱衣，浅绿嫩红主调，薄纱透肤感清晰，披帛轻漾于肩颈，衣料褶皱自然贴合肌肤，光影勾勒布料纹理反射与阴影渐变。面部额头至下巴完整清晰，居于画面中央偏上，核心暴露部位肩头主导中景，清晰呈现肌肤细腻肌理、曲线与光影明暗过渡。前景由烛影形成朦胧层次，占比 20%，制造慵懒氛围。背景为低饱和淡彩光晕，强烈虚化不抢主体。光线为 45° 暖侧光，4700K，光影斑驳有浮光，勾勒面部轮廓、眼睛高光、唇部光泽，柔和轮廓光勾勒锁骨及肩头边缘曲线，衣物保持自然垂坠的静止状态。32K 超高清，最高画质细腻渲染，写实逼真有质感，清晰呈现皮肤毛孔、细小绒毛、唇纹，整体色调嫩红浅绿。"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 184,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1410,
+        940
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 306
+        },
+        {
+          "localized_name": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 307
+        },
+        {
+          "localized_name": "批量大小",
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "localized_name": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            278
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2",
+        "Node name for S&R": "EmptyLatentImage",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        928,
+        1664,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 928,
+        "height": 1664,
+        "batch_size": 1
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 188,
+      "type": "Seed (rgthree)",
+      "pos": [
+        1280,
+        640
+      ],
+      "size": [
+        320,
+        130
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "随机种",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            283,
+            315
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "8ff50e4521881eca1fe26aec9615fc9362474931",
+        "randomMax": 1125899906842624,
+        "randomMin": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        -1,
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "seed": -1,
+        "🎲 Randomize Each Time": "",
+        "🎲 New Fixed Random": "",
+        "USE_LAST_SEED": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1090,
+        630
+      ],
+      "size": [
+        540,
+        160
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 6
+        },
+        {
+          "label": "text",
+          "localized_name": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "localized_name": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            13,
+            313
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.73",
+        "Node name for S&R": "CLIPTextEncode",
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      ],
+      "widgets_values_named": {
+        "text": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 6,
+      "type": "CLIPLoader",
+      "pos": [
+        190,
+        520
+      ],
+      "size": [
+        390,
+        110
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip_name",
+          "localized_name": "CLIP名称",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          }
+        },
+        {
+          "label": "type",
+          "localized_name": "类型",
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          }
+        },
+        {
+          "label": "device",
+          "localized_name": "设备",
+          "name": "device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CLIP",
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            5,
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.73",
+        "Node name for S&R": "CLIPLoader",
+        "hasSecondTab": false,
+        "models": [
+          {
+            "directory_invalid": true,
+            "name": "qwen_3_4b.safetensors",
+            "directory": "text_encoders",
+            "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"
+          }
+        ],
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "qwen_3_4b.safetensors",
+        "lumina2",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen_3_4b.safetensors",
+        "type": "lumina2",
+        "device": "default"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 15,
+      "type": "UNETLoader",
+      "pos": [
+        190,
+        360
+      ],
+      "size": [
+        390,
+        100
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "unet_name",
+          "localized_name": "UNet名称",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          }
+        },
+        {
+          "label": "weight_dtype",
+          "localized_name": "数据类型",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            345
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.73",
+        "Node name for S&R": "UNETLoader",
+        "hasSecondTab": false,
+        "models": [
+          {
+            "directory_invalid": true,
+            "name": "Zimage/z_image_turbo_bf16.safetensors",
+            "directory": "diffusion_models",
+            "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors"
+          }
+        ],
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Zimage/z_image_turbo_bf16.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "Zimage/z_image_turbo_bf16.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 14,
+      "type": "UNETLoader",
+      "pos": [
+        190,
+        170
+      ],
+      "size": [
+        390,
+        90
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "unet_name",
+          "localized_name": "UNet名称",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          }
+        },
+        {
+          "label": "weight_dtype",
+          "localized_name": "数据类型",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            287
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.73",
+        "Node name for S&R": "UNETLoader",
+        "hasSecondTab": false,
+        "models": [
+          {
+            "directory_invalid": true,
+            "name": "Zimage/z_image_bf16.safetensors",
+            "directory": "diffusion_models",
+            "url": "https://huggingface.co/Comfy-Org/z_image/resolve/main/split_files/diffusion_models/z_image_bf16.safetensors"
+          }
+        ],
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {
+          "weight_dtype": true,
+          "unet_name": true
+        },
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "tabXOffset": 10
+      },
+      "widgets_values": [
+        "Zimage/z_image_bf16.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "Zimage/z_image_bf16.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 1,
+      "type": "VAELoader",
+      "pos": [
+        220,
+        700
+      ],
+      "size": [
+        220,
+        60
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "vae_name",
+          "localized_name": "vae名称",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "VAE",
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.73",
+        "Node name for S&R": "VAELoader",
+        "hasSecondTab": false,
+        "models": [
+          {
+            "directory_invalid": true,
+            "name": "ae.safetensors",
+            "directory": "vae",
+            "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors"
+          }
+        ],
+        "secondTabText": "Send Back",
+        "enableTabs": false,
+        "secondTabOffset": 80,
+        "tabWidth": 65,
+        "secondTabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "ae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "ae.safetensors"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 189,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": [
+        600,
+        170
+      ],
+      "size": [
+        450,
+        190
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 287
+        },
+        {
+          "dir": 3,
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "模型",
+          "shape": 3,
+          "type": "MODEL",
+          "links": [
+            288
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "8ff50e4521881eca1fe26aec9615fc9362474931",
+        "Show Strengths": "Single Strength",
+        "Match": "",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        {},
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": true,
+          "lora": "Zimage/Kook_Zimage_瑶光.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {
+          "on": true,
+          "lora": "Zimage/Z-Image-8步蒸馏加速Fun-Lora-Distill-8-Steps-2603.safetensors",
+          "strength": 0.45,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\ZIB_Aesthetic_Base 美学提升(权重0.6-1.0)v1.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        {},
+        ""
+      ],
+      "widgets_values_named": {
+        "divider": {},
+        "PowerLoraLoaderHeaderWidget": {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        "lora_1": {
+          "on": true,
+          "lora": "Zimage/Kook_Zimage_瑶光.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        "lora_2": {
+          "on": true,
+          "lora": "Zimage/Z-Image-8步蒸馏加速Fun-Lora-Distill-8-Steps-2603.safetensors",
+          "strength": 0.45,
+          "strengthTwo": null
+        },
+        "lora_3": {
+          "on": false,
+          "lora": "z-image\\ZIB_Aesthetic_Base 美学提升(权重0.6-1.0)v1.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        "➕ Add Lora": ""
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 212,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        210,
+        920
+      ],
+      "size": [
+        310,
+        154
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "可选连接",
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 192,
+      "type": "TTResolutionSelector",
+      "pos": [
+        1090,
+        920
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "use_custom_resolution",
+          "name": "use_custom_resolution",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_custom_resolution"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "resolution",
+          "name": "resolution",
+          "type": "COMBO",
+          "widget": {
+            "name": "resolution"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_width",
+          "name": "custom_width",
+          "type": "INT",
+          "widget": {
+            "name": "custom_width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_height",
+          "name": "custom_height",
+          "type": "INT",
+          "widget": {
+            "name": "custom_height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            306
+          ]
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            307
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "AICoderTudou/ComfyUI-TT-Resolution_selector-Node",
+        "ver": "668f5a222c4f544b7c8b3139d910a60bf155279f",
+        "Node name for S&R": "TTResolutionSelector",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        false,
+        "1080x1920 (9:16) (竖屏)",
+        1024,
+        1024
+      ],
+      "widgets_values_named": {
+        "use_custom_resolution": false,
+        "resolution": "1080x1920 (9:16) (竖屏)",
+        "custom_width": 1024,
+        "custom_height": 1024
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 221,
+      "type": "Note",
+      "pos": [
+        -1120,
+        80
+      ],
+      "size": [
+        580,
+        1140
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "一、Z-imgae-FP8采样器推荐：\n1、euler_ancestral+ddim_uniform\n2、dpmpp_2m_sde+ddim_uniform 8步，CFG：1\n3、人像推荐：euler A+EulerDiscreteScheduler（官方）\n4、zimage动漫anime   采样器：euler+simple\\beta57   8步，CFG：1\n5、转绘     res2m+beta57     8步，CFG：1\n二、BEYOND REALITY SUPER Z IMAGE 3.0 浓妆淡抹总相宜_FP8\n推荐参数：euler+simple，10~15步，CFG：1\n三、Z-image-ZiT-moodyPornMix_zitV7（Porn-Turb版）\n采样器：euler（res_multistep会出现皮肤色斑）\n调度器：simple   步数：8，CFG：1\n**、z-image-godpussy   (推荐权重): 0.7\nlora使用\n1、人脸一致性1 F2P：0.2-0.45的强度使用\n2、场景一致性2 Consistence V2\n单幅图像时：0-0.5的强度使用\n多张图像时：0.5-1.0的强度使用。\n3、2511一致性  consis_alpha    0.75\n4、志佬anything2real_2601  推荐    0.75\n5、派佬ssmlie-anime2real2511   0.65   \n参数拉高，就偏真人，但是会丢失部分参考人物的细节，具体参数需要自己把控\n6、细节魔控lora：DetailDeamonZ-SliderLoRA For ZImageTurbo & RedZ1.5\n①负向权重（-0.4~-1.5）：越推细节越多，皮肤纹理、布料纤维、金属反光、发丝飞散统统拉满，适合追求顶级精度的场景（特别适用于底模叠加LoRA后出现的细节丢失问题）\n②正向权重（0.4~1.2）：越推越干净，油腻感、塑料感、过锐化一键抹平，出极致清爽赛博风/韩系人像必备\n③推荐采样步骤：8~12步（Turbo该有的速度一点没丢） \n推荐权重区间：-1.5 ~ +1.5（建议以0.2为单位微调） \n触发词：无（纯风格滑杆，不吃tag）\n7、zit吉卜力画风（0.8）lora，触发词：吉卜力画风，权重：0.8\n8、Mystic-XXX-ZIT(Strength-1.0)V5   Strength: 1\n9、z-image-pussy，触发词：real_anatomy\n辅助词: pussy, realistic   (推荐权重): 0.6 ~ 1.0\n10、Kook_Zimage真实幻想lora，幻想感多一些调0.8 真实感多一些调0.5\n    原版tubro模型，搭配res 2m+sgm_uniform采样器\n11、瑶光lora权重1，采样器：res2s+bong_tangent\n12、ZIT_Midjourney_Luneva_Cinematic_v1：一般权重0.4-0.6，如果你用的是很长的提示，可能需要把Lora的强度提高（0.6到1.0），否则它会很强地锁定你的长提示。\n13、ZIT_Vivid_Midjourney_场景（0.3-0.8）mimic_v1.0\n14、Z-Detail增强细节-Sliderlora：超过 2 可能会开始让画面变暗，低于 -2 则会大幅提亮。在 -2 到 2 之间效果非常好\n15、ZIT_Impasto 2.5D 厚涂动画风格-原神同人（0.8-1.0），推荐1.0\n16、ZIT_真实感光影(权重0.6-1.0)-flow-dpo_V1\n17、ZIT_Aesthetic_turbo美学提升(权重0.8-1.2) v1\n18、ZIB_Aesthetic_Base 美学提升(权重0.6-1.0)v1\n19、ZIT_厚涂风格Impasto_Style_(权重1.0)r4_Ir5e-4\n20、ZIT_厚涂风格_触发词:vagv (权重1.0)\n21、ZIT_数字摄影-万物质感增强-人像-时尚-纪实-风光_V1，\n    触发词：Digital-Photography ；推荐权重：0.5\n提示词参考\n肖像提示词：黑白艺术肖像、复古胶片肖像、杂志感潮流肖像、韩系清新肖像、高反差冷峻肖像、\n时尚商业提示词：都市街头时尚、复古宫廷时尚、先锋暗黑时尚、简约高级商务时尚\n风景摄影提示词：冷调清新风景、暖调复古风景、纪实自然风景、海边礁石、雪山远景、晨曦湖泊、山间雾气、城市天际线、日出柔光、晨雾漫射光、黄昏暖光、逆光勾勒山峦轮廓\n纪实摄影提示词：纪实抓拍、复古街头、都市人文、市井生活\n-----------------------------\n若想获得21世纪初便携卡片相机质感生成效果，可在提示词中加入以下关键词。\n核心风格： 数字摄影、21 世纪初便携卡片相机质感、业余抓拍\n质感特征： 颗粒质感、明显图像噪点、高感光度噪点、CCD 传感器成像质感\n光影效果： 直射闪光灯、硬朗闪光灯阴影、镜面高光、高光过曝\n\n\n分辨率：\n    \"1:1\": (1328, 1328),\n    \"16:9\": (1664, 928),\n    \"9:16\": (928, 1664),\n    \"4:3\": (1472, 1140),\n    \"3:4\": (1140, 1472),\n    \"3:2\": (1584, 1056),\n    \"2:3\": (1056, 1584),\n\nK采样器设置：FP8模型 CFG=2.5 STEP=20 AURAFLOW偏移=3\n            \n        FP8 turbo模型 CFG=15 STEP=8 AURAFLOW偏移=0-3\n\n## 低显存推荐使用fp8版本\n\n[点击下载 fp8版本下载链接](https://www.liblib.art/modelinfo/a3e9eea49dce4045a6424135e819c161?from=personal_page&versionUuid=e4aac9e1ebf943d99374a76ed7052c46)\n\n## 低显存建议减小图片尺寸\n\n比如：960 x 1280、768 x1536，768 x1152\n\n## 低显存建议禁用 LatentUpscaleWithVae 节点。\n\n该节点是为了图片放大，可以不用。\n\n## 12G及以上显存，推荐使用fp16版本\n\n效果好一些\n\n\n提示词可以本地部署反推，也可以使用豆包和千问\nhttps://www.doubao.com/chat\n\nhttps://www.qianwen.com/chat\n\n你是一位专业的AI图像生成提示词工程师。请详细描述这张图像主体、前景、中景、背景、构图、视觉引导、光影氛围等细节并创作出具有深度、氛围和艺术感或日常业余设备拍摄的图像提示词。\n\n要求：中文提示词，不用出现对图像水印的描述，不要出现无关的文字和符号，不需要总结，限制在800字以内"
+      ],
+      "widgets_values_named": {
+        "text": "一、Z-imgae-FP8采样器推荐：\n1、euler_ancestral+ddim_uniform\n2、dpmpp_2m_sde+ddim_uniform 8步，CFG：1\n3、人像推荐：euler A+EulerDiscreteScheduler（官方）\n4、zimage动漫anime   采样器：euler+simple\\beta57   8步，CFG：1\n5、转绘     res2m+beta57     8步，CFG：1\n二、BEYOND REALITY SUPER Z IMAGE 3.0 浓妆淡抹总相宜_FP8\n推荐参数：euler+simple，10~15步，CFG：1\n三、Z-image-ZiT-moodyPornMix_zitV7（Porn-Turb版）\n采样器：euler（res_multistep会出现皮肤色斑）\n调度器：simple   步数：8，CFG：1\n**、z-image-godpussy   (推荐权重): 0.7\nlora使用\n1、人脸一致性1 F2P：0.2-0.45的强度使用\n2、场景一致性2 Consistence V2\n单幅图像时：0-0.5的强度使用\n多张图像时：0.5-1.0的强度使用。\n3、2511一致性  consis_alpha    0.75\n4、志佬anything2real_2601  推荐    0.75\n5、派佬ssmlie-anime2real2511   0.65   \n参数拉高，就偏真人，但是会丢失部分参考人物的细节，具体参数需要自己把控\n6、细节魔控lora：DetailDeamonZ-SliderLoRA For ZImageTurbo & RedZ1.5\n①负向权重（-0.4~-1.5）：越推细节越多，皮肤纹理、布料纤维、金属反光、发丝飞散统统拉满，适合追求顶级精度的场景（特别适用于底模叠加LoRA后出现的细节丢失问题）\n②正向权重（0.4~1.2）：越推越干净，油腻感、塑料感、过锐化一键抹平，出极致清爽赛博风/韩系人像必备\n③推荐采样步骤：8~12步（Turbo该有的速度一点没丢） \n推荐权重区间：-1.5 ~ +1.5（建议以0.2为单位微调） \n触发词：无（纯风格滑杆，不吃tag）\n7、zit吉卜力画风（0.8）lora，触发词：吉卜力画风，权重：0.8\n8、Mystic-XXX-ZIT(Strength-1.0)V5   Strength: 1\n9、z-image-pussy，触发词：real_anatomy\n辅助词: pussy, realistic   (推荐权重): 0.6 ~ 1.0\n10、Kook_Zimage真实幻想lora，幻想感多一些调0.8 真实感多一些调0.5\n    原版tubro模型，搭配res 2m+sgm_uniform采样器\n11、瑶光lora权重1，采样器：res2s+bong_tangent\n12、ZIT_Midjourney_Luneva_Cinematic_v1：一般权重0.4-0.6，如果你用的是很长的提示，可能需要把Lora的强度提高（0.6到1.0），否则它会很强地锁定你的长提示。\n13、ZIT_Vivid_Midjourney_场景（0.3-0.8）mimic_v1.0\n14、Z-Detail增强细节-Sliderlora：超过 2 可能会开始让画面变暗，低于 -2 则会大幅提亮。在 -2 到 2 之间效果非常好\n15、ZIT_Impasto 2.5D 厚涂动画风格-原神同人（0.8-1.0），推荐1.0\n16、ZIT_真实感光影(权重0.6-1.0)-flow-dpo_V1\n17、ZIT_Aesthetic_turbo美学提升(权重0.8-1.2) v1\n18、ZIB_Aesthetic_Base 美学提升(权重0.6-1.0)v1\n19、ZIT_厚涂风格Impasto_Style_(权重1.0)r4_Ir5e-4\n20、ZIT_厚涂风格_触发词:vagv (权重1.0)\n21、ZIT_数字摄影-万物质感增强-人像-时尚-纪实-风光_V1，\n    触发词：Digital-Photography ；推荐权重：0.5\n提示词参考\n肖像提示词：黑白艺术肖像、复古胶片肖像、杂志感潮流肖像、韩系清新肖像、高反差冷峻肖像、\n时尚商业提示词：都市街头时尚、复古宫廷时尚、先锋暗黑时尚、简约高级商务时尚\n风景摄影提示词：冷调清新风景、暖调复古风景、纪实自然风景、海边礁石、雪山远景、晨曦湖泊、山间雾气、城市天际线、日出柔光、晨雾漫射光、黄昏暖光、逆光勾勒山峦轮廓\n纪实摄影提示词：纪实抓拍、复古街头、都市人文、市井生活\n-----------------------------\n若想获得21世纪初便携卡片相机质感生成效果，可在提示词中加入以下关键词。\n核心风格： 数字摄影、21 世纪初便携卡片相机质感、业余抓拍\n质感特征： 颗粒质感、明显图像噪点、高感光度噪点、CCD 传感器成像质感\n光影效果： 直射闪光灯、硬朗闪光灯阴影、镜面高光、高光过曝\n\n\n分辨率：\n    \"1:1\": (1328, 1328),\n    \"16:9\": (1664, 928),\n    \"9:16\": (928, 1664),\n    \"4:3\": (1472, 1140),\n    \"3:4\": (1140, 1472),\n    \"3:2\": (1584, 1056),\n    \"2:3\": (1056, 1584),\n\nK采样器设置：FP8模型 CFG=2.5 STEP=20 AURAFLOW偏移=3\n            \n        FP8 turbo模型 CFG=15 STEP=8 AURAFLOW偏移=0-3\n\n## 低显存推荐使用fp8版本\n\n[点击下载 fp8版本下载链接](https://www.liblib.art/modelinfo/a3e9eea49dce4045a6424135e819c161?from=personal_page&versionUuid=e4aac9e1ebf943d99374a76ed7052c46)\n\n## 低显存建议减小图片尺寸\n\n比如：960 x 1280、768 x1536，768 x1152\n\n## 低显存建议禁用 LatentUpscaleWithVae 节点。\n\n该节点是为了图片放大，可以不用。\n\n## 12G及以上显存，推荐使用fp16版本\n\n效果好一些\n\n\n提示词可以本地部署反推，也可以使用豆包和千问\nhttps://www.doubao.com/chat\n\nhttps://www.qianwen.com/chat\n\n你是一位专业的AI图像生成提示词工程师。请详细描述这张图像主体、前景、中景、背景、构图、视觉引导、光影氛围等细节并创作出具有深度、氛围和艺术感或日常业余设备拍摄的图像提示词。\n\n要求：中文提示词，不用出现对图像水印的描述，不要出现无关的文字和符号，不需要总结，限制在800字以内"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 220,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": [
+        610,
+        450
+      ],
+      "size": [
+        440,
+        410
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 345
+        },
+        {
+          "dir": 3,
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "模型",
+          "shape": 3,
+          "type": "MODEL",
+          "links": [
+            346
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "8ff50e4521881eca1fe26aec9615fc9362474931",
+        "Show Strengths": "Single Strength",
+        "Match": "",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        {},
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": true,
+          "lora": "z-image\\Kook_Zimage_V1真实幻想-幻想感0.8 真实感0.5_Turbo.safetensors",
+          "strength": 0.5,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\ZIT_Aesthetic_turbo美学提升(权重0.8-1.2) v1.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\Zimage细节魔控_v1.1(-1.5~+1.2)REDZ15_DetailDaemonZ_lora_v1.1.safetensors",
+          "strength": -1,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\Z-Detail增强细节-Slider（-2~+2）.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\ZIT_Midjourney_Luneva_Cinematic_v1_r128权重（0.4），很长的提示词，可能需要把Lora的强度提高（0.6到1.0）.safetensors",
+          "strength": 0.5,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\ZIT_Vivid_Midjourney_场景（0.3-0.8）mimic_v1.0.safetensors",
+          "strength": 0.4,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\ZIT_Impasto 2.5D 厚涂动画风格-原神同人（0.8-1.0）.safetensors",
+          "strength": 0.85,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\ZIT_真实感光影(权重0.6-1.0)-flow-dpo_V1.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\ZIT_数字摄影触发词：Digital-Photography_推荐0.5-万物质感增强-人像-时尚-纪实-风光_V1.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\zit吉卜力画风（0.8）lora.safetensors",
+          "strength": 0.55,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\MIDJOURNEY人像_V1_ZiT（0.7-1.0）.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "z-image\\ZIT_厚涂风格Impasto_Style_r4_lr5e-4.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {},
+        ""
+      ],
+      "widgets_values_named": {
+        "divider": {},
+        "PowerLoraLoaderHeaderWidget": {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        "lora_1": {
+          "on": true,
+          "lora": "z-image\\Kook_Zimage_V1真实幻想-幻想感0.8 真实感0.5_Turbo.safetensors",
+          "strength": 0.5,
+          "strengthTwo": null
+        },
+        "lora_2": {
+          "on": false,
+          "lora": "z-image\\ZIT_Aesthetic_turbo美学提升(权重0.8-1.2) v1.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        "lora_3": {
+          "on": false,
+          "lora": "z-image\\Zimage细节魔控_v1.1(-1.5~+1.2)REDZ15_DetailDaemonZ_lora_v1.1.safetensors",
+          "strength": -1,
+          "strengthTwo": null
+        },
+        "lora_4": {
+          "on": false,
+          "lora": "z-image\\Z-Detail增强细节-Slider（-2~+2）.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        "lora_5": {
+          "on": false,
+          "lora": "z-image\\ZIT_Midjourney_Luneva_Cinematic_v1_r128权重（0.4），很长的提示词，可能需要把Lora的强度提高（0.6到1.0）.safetensors",
+          "strength": 0.5,
+          "strengthTwo": null
+        },
+        "lora_6": {
+          "on": false,
+          "lora": "z-image\\ZIT_Vivid_Midjourney_场景（0.3-0.8）mimic_v1.0.safetensors",
+          "strength": 0.4,
+          "strengthTwo": null
+        },
+        "lora_7": {
+          "on": false,
+          "lora": "z-image\\ZIT_Impasto 2.5D 厚涂动画风格-原神同人（0.8-1.0）.safetensors",
+          "strength": 0.85,
+          "strengthTwo": null
+        },
+        "lora_8": {
+          "on": false,
+          "lora": "z-image\\ZIT_真实感光影(权重0.6-1.0)-flow-dpo_V1.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        "lora_9": {
+          "on": false,
+          "lora": "z-image\\ZIT_数字摄影触发词：Digital-Photography_推荐0.5-万物质感增强-人像-时尚-纪实-风光_V1.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        "lora_10": {
+          "on": false,
+          "lora": "z-image\\zit吉卜力画风（0.8）lora.safetensors",
+          "strength": 0.55,
+          "strengthTwo": null
+        },
+        "lora_11": {
+          "on": false,
+          "lora": "z-image\\MIDJOURNEY人像_V1_ZiT（0.7-1.0）.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        "lora_12": {
+          "on": false,
+          "lora": "z-image\\ZIT_厚涂风格Impasto_Style_r4_lr5e-4.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        "➕ Add Lora": ""
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 211,
+      "type": "Note Plus (mtb)",
+      "pos": [
+        -500,
+        80
+      ],
+      "size": [
+        610,
+        1220
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "需要的模型都在这里",
+      "properties": {
+        "css": "/** here you can write css**/\nh1 {\n    color: whitesmoke;\n}",
+        "theme": "one_dark",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 24px; color: #FFAB3B;\">点击下方链接下载\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #ff9de6;\">瑶光\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉1、z_image_bf16（ZIB主模型）](https://pan.quark.cn/s/0c9454be5fac)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉2、z_image_base-moodyWildMix_v2.0_45steps（ZIB主模型）](https://pan.quark.cn/s/dc9df897d211)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉3、Kook_Zimage_瑶光lora（ZIB）](https://pan.quark.cn/s/25ed526389ea)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉4、Z-Image-Fun-Lora-Distill-8-Steps-2603_(ZIB)](https://pan.quark.cn/s/cd42b258881a)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉5、TT分辨率选择器节点](https://github.com/AICoderTudou/ComfyUI-TT-Resolution_selector-Node.git)\n\n[👉6、Z-image调度器   FlowMatch Euler Discrete Scheduler](https://github.com/erosDiffusion/ComfyUI-EulerDiscreteScheduler.git)\n\n[👉7、Z-image调度器  beta57](https://github.com/ClownsharkBatwing/RES4LYF.git)\n\n装好以上两个调度器之后，调度器种类完善很多\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #e06c46;\">Z_image tubro主模型:\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉1、Z_image_turbo_bf16（原版ZIT主模型）](https://pan.quark.cn/s/d07ea86b544e)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉2、Z_image_moody_PornMix_zitV10DPO（ZIT主模型）(湿度SS)](https://pan.quark.cn/s/248a7ef87e3f)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉3、Z_image_moody_RealMix_zitV4DPO（ZIT主模型）(湿度S)](https://pan.quark.cn/s/f60c258c1fb3)\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #4693e0;\">Z-Image-Anime动漫-AIO模型：（AIO=all in one）\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉1、Z-Image-Anime动漫-AIO-FP8_V1（用checkpoint加载器加载）](https://pan.quark.cn/s/e8a719923bad)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉2、Z-Image-Anime动漫-AIO-BF16_V1（用checkpoint加载器加载）](https://pan.quark.cn/s/f3fecb22fdb4)\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #3de042;\">特色lora：\n\n[👉1、ZIT_真实感光影(权重0.6-1.0)-flow-dpo_V1）](https://pan.quark.cn/s/70dcd3a638c3)\n\n[👉2、ZIT_Aesthetic_turbo美学提升(权重0.8-1.2) v1）](https://pan.quark.cn/s/e5ea18cafecb)\n\n[👉3、ZIT_Kook_Zimage_V1真实幻想-幻想感0.8 真实感0.5_Turbo](https://pan.quark.cn/s/a377c7af8d29)\n\n[👉4、ZIB_Aesthetic_Base美学提升(权重0.6-1.0)v1）](https://pan.quark.cn/s/4e35e51399de)\n\n[👉5、ZIT吉卜力画风（0.8）lora）](https://pan.quark.cn/s/2483de0ee75d)\n\n[👉6、ZIT_Impasto 2.5D 厚涂动画风格-原神同人（0.8-1.0）lora](https://pan.quark.cn/s/ccbcb549ff9a)\n\n[👉7、ZIT_厚涂风格Impasto_Style_（权重1.0）r4_lr5e-4](https://pan.quark.cn/s/97b0c1ab9b0a)\n\n[👉8、ZIT_厚涂风格_触发词：vagv（权重1.0）.safetensors](https://pan.quark.cn/s/bec2d9e24d15)\n\n\n[👉9、ZIB_lora-55个人物lora-V1.0（2.2G）夸克打包下载](https://pan.quark.cn/s/94b802ba69bf)、[度盘打包下载](https://pan.baidu.com/s/1UDrJKNM0wtoV0Ds_cFNq5A?pwd=8888 )\n\n[👉10、ZIT_lora-14个人物lora-V1.0（470MB）夸克打包下载](https://pan.quark.cn/s/e9384c615bf7)、[度盘打包下载](https://pan.baidu.com/s/1_v_0uv-S9dMVlsYREhESjQ?pwd=8888)\n\n[👉11、人物lora-V2.0（10.5G）夸克打包下载](https://pan.quark.cn/s/3c3453b57cb1)、[度盘打包下载](https://pan.baidu.com/s/1i9H3I4AI_LAtAD77hI_mtg?pwd=8888)\n\n\n\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #9370db;\">Midjourney风格lora：\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉1、ZIT_Midjourney Luneva Cinematic-v1，推荐权重0.4](https://pan.quark.cn/s/5bf1a1a86f9a)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉2、ZIT_Vivid Midjourney mimic_v1.0，权重0.3-0.8，推荐0.5](https://pan.quark.cn/s/493e54bacdd7)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉3、ZIT_MIDJOURNEY人像_V1_ZiT（0.7-1.0）](https://pan.quark.cn/s/183618eabf51)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉4、ZIT_Detail Slider增强细节，权重在-2到2之间，推荐权重1.0](https://pan.quark.cn/s/0754e3ac5839)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉5、ZIT_细节魔控_v1.0(-1.5~+1.5)REDZ15_DetailDaemonZ_lora](https://pan.quark.cn/s/1e66b632c375)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉6、ZIT_细节魔控_v1.1(-1.5~+1.5)REDZ15_DetailDaemonZ_lora](https://pan.quark.cn/s/8609512fe9a3)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n\n\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 24px; color: #F370db;\">[飞书链接](https://my.feishu.cn/wiki/JGBow5GfviRbfQkrWUBcs0cin8c)👈\n\n\n\n\n </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>"
+      ],
+      "widgets_values_named": {
+        "HTML": "# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 24px; color: #FFAB3B;\">点击下方链接下载\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #ff9de6;\">瑶光\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉1、z_image_bf16（ZIB主模型）](https://pan.quark.cn/s/0c9454be5fac)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉2、z_image_base-moodyWildMix_v2.0_45steps（ZIB主模型）](https://pan.quark.cn/s/dc9df897d211)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉3、Kook_Zimage_瑶光lora（ZIB）](https://pan.quark.cn/s/25ed526389ea)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉4、Z-Image-Fun-Lora-Distill-8-Steps-2603_(ZIB)](https://pan.quark.cn/s/cd42b258881a)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉5、TT分辨率选择器节点](https://github.com/AICoderTudou/ComfyUI-TT-Resolution_selector-Node.git)\n\n[👉6、Z-image调度器   FlowMatch Euler Discrete Scheduler](https://github.com/erosDiffusion/ComfyUI-EulerDiscreteScheduler.git)\n\n[👉7、Z-image调度器  beta57](https://github.com/ClownsharkBatwing/RES4LYF.git)\n\n装好以上两个调度器之后，调度器种类完善很多\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #e06c46;\">Z_image tubro主模型:\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉1、Z_image_turbo_bf16（原版ZIT主模型）](https://pan.quark.cn/s/d07ea86b544e)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉2、Z_image_moody_PornMix_zitV10DPO（ZIT主模型）(湿度SS)](https://pan.quark.cn/s/248a7ef87e3f)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉3、Z_image_moody_RealMix_zitV4DPO（ZIT主模型）(湿度S)](https://pan.quark.cn/s/f60c258c1fb3)\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #4693e0;\">Z-Image-Anime动漫-AIO模型：（AIO=all in one）\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉1、Z-Image-Anime动漫-AIO-FP8_V1（用checkpoint加载器加载）](https://pan.quark.cn/s/e8a719923bad)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉2、Z-Image-Anime动漫-AIO-BF16_V1（用checkpoint加载器加载）](https://pan.quark.cn/s/f3fecb22fdb4)\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #3de042;\">特色lora：\n\n[👉1、ZIT_真实感光影(权重0.6-1.0)-flow-dpo_V1）](https://pan.quark.cn/s/70dcd3a638c3)\n\n[👉2、ZIT_Aesthetic_turbo美学提升(权重0.8-1.2) v1）](https://pan.quark.cn/s/e5ea18cafecb)\n\n[👉3、ZIT_Kook_Zimage_V1真实幻想-幻想感0.8 真实感0.5_Turbo](https://pan.quark.cn/s/a377c7af8d29)\n\n[👉4、ZIB_Aesthetic_Base美学提升(权重0.6-1.0)v1）](https://pan.quark.cn/s/4e35e51399de)\n\n[👉5、ZIT吉卜力画风（0.8）lora）](https://pan.quark.cn/s/2483de0ee75d)\n\n[👉6、ZIT_Impasto 2.5D 厚涂动画风格-原神同人（0.8-1.0）lora](https://pan.quark.cn/s/ccbcb549ff9a)\n\n[👉7、ZIT_厚涂风格Impasto_Style_（权重1.0）r4_lr5e-4](https://pan.quark.cn/s/97b0c1ab9b0a)\n\n[👉8、ZIT_厚涂风格_触发词：vagv（权重1.0）.safetensors](https://pan.quark.cn/s/bec2d9e24d15)\n\n\n[👉9、ZIB_lora-55个人物lora-V1.0（2.2G）夸克打包下载](https://pan.quark.cn/s/94b802ba69bf)、[度盘打包下载](https://pan.baidu.com/s/1UDrJKNM0wtoV0Ds_cFNq5A?pwd=8888 )\n\n[👉10、ZIT_lora-14个人物lora-V1.0（470MB）夸克打包下载](https://pan.quark.cn/s/e9384c615bf7)、[度盘打包下载](https://pan.baidu.com/s/1_v_0uv-S9dMVlsYREhESjQ?pwd=8888)\n\n[👉11、人物lora-V2.0（10.5G）夸克打包下载](https://pan.quark.cn/s/3c3453b57cb1)、[度盘打包下载](https://pan.baidu.com/s/1i9H3I4AI_LAtAD77hI_mtg?pwd=8888)\n\n\n\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 20px; color: #9370db;\">Midjourney风格lora：\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉1、ZIT_Midjourney Luneva Cinematic-v1，推荐权重0.4](https://pan.quark.cn/s/5bf1a1a86f9a)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉2、ZIT_Vivid Midjourney mimic_v1.0，权重0.3-0.8，推荐0.5](https://pan.quark.cn/s/493e54bacdd7)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉3、ZIT_MIDJOURNEY人像_V1_ZiT（0.7-1.0）](https://pan.quark.cn/s/183618eabf51)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉4、ZIT_Detail Slider增强细节，权重在-2到2之间，推荐权重1.0](https://pan.quark.cn/s/0754e3ac5839)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉5、ZIT_细节魔控_v1.0(-1.5~+1.5)REDZ15_DetailDaemonZ_lora](https://pan.quark.cn/s/1e66b632c375)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n[👉6、ZIT_细节魔控_v1.1(-1.5~+1.5)REDZ15_DetailDaemonZ_lora](https://pan.quark.cn/s/8609512fe9a3)\n\n## <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 36px; color: FFFFFF;\">\n\n\n\n# <span style=\"font-family: 'Microsoft YaHei'; font-weight: bold; font-size: 24px; color: #F370db;\">[飞书链接](https://my.feishu.cn/wiki/JGBow5GfviRbfQkrWUBcs0cin8c)👈\n\n\n\n\n </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>"
+      },
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 160,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        3570,
+        160
+      ],
+      "size": [
+        310,
+        90
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 277
+        },
+        {
+          "localized_name": "LoRA名称",
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          }
+        },
+        {
+          "localized_name": "模型强度",
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "localized_name": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            247
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.0",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Flux/Klein-yizhixing-lora.safetensors",
+        0.8
+      ],
+      "widgets_values_named": {
+        "lora_name": "Flux/Klein-yizhixing-lora.safetensors",
+        "strength_model": 0.8
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 150,
+      "type": "LayerUtility: ImageReel",
+      "pos": [
+        5290,
+        1150
+      ],
+      "size": [
+        270,
+        240
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image1",
+          "localized_name": "图像1",
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 309
+        },
+        {
+          "label": "image2",
+          "localized_name": "图像2",
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 310
+        },
+        {
+          "label": "image3",
+          "localized_name": "图像3",
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 319
+        },
+        {
+          "label": "image4",
+          "localized_name": "图像4",
+          "name": "image4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image1_text",
+          "localized_name": "图像1文本",
+          "name": "image1_text",
+          "type": "STRING",
+          "widget": {
+            "name": "image1_text"
+          }
+        },
+        {
+          "label": "image2_text",
+          "localized_name": "图像2文本",
+          "name": "image2_text",
+          "type": "STRING",
+          "widget": {
+            "name": "image2_text"
+          }
+        },
+        {
+          "label": "image3_text",
+          "localized_name": "图像3文本",
+          "name": "image3_text",
+          "type": "STRING",
+          "widget": {
+            "name": "image3_text"
+          }
+        },
+        {
+          "label": "image4_text",
+          "localized_name": "图像4文本",
+          "name": "image4_text",
+          "type": "STRING",
+          "widget": {
+            "name": "image4_text"
+          }
+        },
+        {
+          "label": "reel_height",
+          "localized_name": "卷轴高度",
+          "name": "reel_height",
+          "type": "INT",
+          "widget": {
+            "name": "reel_height"
+          }
+        },
+        {
+          "label": "border",
+          "localized_name": "边框",
+          "name": "border",
+          "type": "INT",
+          "widget": {
+            "name": "border"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "reel",
+          "localized_name": "reel",
+          "name": "reel",
+          "type": "Reel",
+          "links": [
+            190
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "d94bef1ee5ed3656f5ff1bb2830a4ffd94f40935",
+        "Node name for S&R": "LayerUtility: ImageReel",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "（turbo+base）双采",
+        "（base+turbo+klein）三采",
+        "三采+seedvr2放大",
+        "",
+        1280,
+        16
+      ],
+      "widgets_values_named": {
+        "image1_text": "（turbo+base）双采",
+        "image2_text": "（base+turbo+klein）三采",
+        "image3_text": "三采+seedvr2放大",
+        "image4_text": "",
+        "reel_height": 1280,
+        "border": 16
+      },
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 163,
+      "type": "LayerUtility: PurgeVRAM",
+      "pos": [
+        4860,
+        170
+      ],
+      "size": [
+        210,
+        90
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "anything",
+          "localized_name": "任意内容",
+          "name": "anything",
+          "type": "*",
+          "link": 225
+        },
+        {
+          "label": "purge_cache",
+          "localized_name": "清除缓存",
+          "name": "purge_cache",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "purge_cache"
+          }
+        },
+        {
+          "label": "purge_models",
+          "localized_name": "清除模型",
+          "name": "purge_models",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "purge_models"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "d94bef1ee5ed3656f5ff1bb2830a4ffd94f40935",
+        "Node name for S&R": "LayerUtility: PurgeVRAM",
+        "ue_properties": {
+          "version": "7.5.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "purge_cache": true,
+        "purge_models": true
+      },
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 222,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1120,
+        -490
+      ],
+      "size": [
+        1964.0625,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "C11-Zimage双采-三采-双放大",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 223,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1120,
+        -299.1486866919481
+      ],
+      "size": [
+        1781,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 224,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1120,
+        -161.1486866919504
+      ],
+      "size": [
+        1434,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    }
+  ],
+  "links": [
+    [
+      4,
+      1,
+      0,
+      4,
+      1,
+      "VAE"
+    ],
+    [
+      5,
+      6,
+      0,
+      5,
+      0,
+      "CLIP"
+    ],
+    [
+      6,
+      6,
+      0,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      12,
+      5,
+      0,
+      12,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      7,
+      0,
+      12,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      66,
+      51,
+      0,
+      49,
+      1,
+      "VAE"
+    ],
+    [
+      72,
+      62,
+      0,
+      54,
+      0,
+      "CLIP"
+    ],
+    [
+      104,
+      80,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      105,
+      87,
+      0,
+      81,
+      1,
+      "SEEDVR2_DIT"
+    ],
+    [
+      106,
+      79,
+      0,
+      81,
+      2,
+      "SEEDVR2_VAE"
+    ],
+    [
+      109,
+      81,
+      0,
+      83,
+      0,
+      "IMAGE"
+    ],
+    [
+      110,
+      81,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      190,
+      150,
+      0,
+      151,
+      0,
+      "Reel"
+    ],
+    [
+      191,
+      151,
+      0,
+      152,
+      0,
+      "IMAGE"
+    ],
+    [
+      225,
+      49,
+      0,
+      163,
+      0,
+      "IMAGE"
+    ],
+    [
+      240,
+      51,
+      0,
+      167,
+      1,
+      "VAE"
+    ],
+    [
+      246,
+      169,
+      0,
+      49,
+      0,
+      "LATENT"
+    ],
+    [
+      247,
+      160,
+      0,
+      169,
+      0,
+      "MODEL"
+    ],
+    [
+      252,
+      62,
+      0,
+      170,
+      0,
+      "CLIP"
+    ],
+    [
+      258,
+      4,
+      0,
+      172,
+      0,
+      "IMAGE"
+    ],
+    [
+      259,
+      172,
+      0,
+      167,
+      0,
+      "IMAGE"
+    ],
+    [
+      260,
+      167,
+      0,
+      169,
+      3,
+      "LATENT"
+    ],
+    [
+      261,
+      170,
+      0,
+      173,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      262,
+      173,
+      0,
+      169,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      263,
+      167,
+      0,
+      173,
+      1,
+      "LATENT"
+    ],
+    [
+      265,
+      174,
+      0,
+      169,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      266,
+      167,
+      0,
+      174,
+      1,
+      "LATENT"
+    ],
+    [
+      271,
+      54,
+      0,
+      174,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      277,
+      63,
+      0,
+      160,
+      0,
+      "MODEL"
+    ],
+    [
+      278,
+      184,
+      0,
+      12,
+      3,
+      "LATENT"
+    ],
+    [
+      280,
+      49,
+      0,
+      187,
+      0,
+      "IMAGE"
+    ],
+    [
+      283,
+      188,
+      0,
+      12,
+      5,
+      "INT"
+    ],
+    [
+      287,
+      14,
+      0,
+      189,
+      0,
+      "MODEL"
+    ],
+    [
+      288,
+      189,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      306,
+      192,
+      0,
+      184,
+      0,
+      "INT"
+    ],
+    [
+      307,
+      192,
+      1,
+      184,
+      1,
+      "INT"
+    ],
+    [
+      308,
+      4,
+      0,
+      193,
+      0,
+      "IMAGE"
+    ],
+    [
+      309,
+      4,
+      0,
+      150,
+      0,
+      "IMAGE"
+    ],
+    [
+      310,
+      49,
+      0,
+      150,
+      1,
+      "IMAGE"
+    ],
+    [
+      312,
+      5,
+      0,
+      194,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      313,
+      7,
+      0,
+      194,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      314,
+      12,
+      0,
+      194,
+      3,
+      "LATENT"
+    ],
+    [
+      315,
+      188,
+      0,
+      194,
+      5,
+      "INT"
+    ],
+    [
+      316,
+      194,
+      0,
+      4,
+      0,
+      "LATENT"
+    ],
+    [
+      317,
+      194,
+      0,
+      92,
+      0,
+      "LATENT"
+    ],
+    [
+      318,
+      4,
+      0,
+      195,
+      0,
+      "IMAGE"
+    ],
+    [
+      319,
+      81,
+      0,
+      150,
+      2,
+      "IMAGE"
+    ],
+    [
+      320,
+      49,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      339,
+      49,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      340,
+      49,
+      0,
+      210,
+      0,
+      "IMAGE"
+    ],
+    [
+      341,
+      4,
+      0,
+      210,
+      1,
+      "IMAGE"
+    ],
+    [
+      344,
+      217,
+      1,
+      219,
+      0,
+      "COMBO"
+    ],
+    [
+      345,
+      15,
+      0,
+      220,
+      0,
+      "MODEL"
+    ],
+    [
+      346,
+      220,
+      0,
+      194,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 4,
+      "title": "克莱因高清重绘",
+      "bounding": [
+        3130,
+        40,
+        2440,
+        1030
+      ],
+      "color": "#b58b2a",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "ZIB+ZIT双采",
+      "bounding": [
+        150,
+        40,
+        2930,
+        1220
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "seedvr放大",
+      "bounding": [
+        5660,
+        50,
+        1560,
+        970
+      ],
+      "color": "#8A8",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "links_added_by_ue": [],
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "VHS_MetadataImage": true,
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "VHS_latentpreviewrate": 0,
+    "frontendVersion": "1.42.8",
+    "VHS_latentpreview": false,
+    "ds": {
+      "scale": 0.6209213230591554,
+      "offset": [
+        423.97398565137564,
+        1019.6422700305628
+      ]
+    },
+    "workflowRendererVersion": "LG"
+  },
+  "version": 0.4
+}

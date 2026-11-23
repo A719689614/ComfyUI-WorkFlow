@@ -1,0 +1,1595 @@
+{
+  "id": "54bb395d-3e60-4c94-b525-85523901575b",
+  "revision": 0,
+  "last_node_id": 477,
+  "last_link_id": 687,
+  "nodes": [
+    {
+      "id": 13,
+      "type": "ResolutionSelector",
+      "pos": [
+        560,
+        2830
+      ],
+      "size": [
+        300,
+        190
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            670
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            671
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "ResolutionSelector",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "16:9 (Widescreen)",
+        2,
+        8
+      ],
+      "widgets_values_named": {
+        "aspect_ratio": "16:9 (Widescreen)",
+        "megapixels": 2,
+        "multiple": 8
+      }
+    },
+    {
+      "id": 459,
+      "type": "c291ceec-b98f-4751-9d0b-7bc288f27b30",
+      "pos": [
+        920,
+        2470
+      ],
+      "size": [
+        410,
+        617
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "positive_prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "label": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 670
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 671
+        },
+        {
+          "label": "sampler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "label": "scheduler",
+          "name": "scheduler_1",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler_1"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            672
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "previewExposures": [],
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true,
+            "steps": true,
+            "width": true,
+            "height": true,
+            "scheduler": true,
+            "scheduler_1": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "生成一张 **16:9 横向电影分镜板（Storyboard Sheet）**，画面严格排列为 **2列 × 3行，共6个独立分镜格**，六格按照 **①②③④⑤⑥** 的剧情顺序自然衔接。\n\n主题：**青春爱情表白，一段完整、自然、循序渐进的表白剧情**。\n\n【人物统一】\n男主：年轻亚洲男性，黑色短发，干净自然的五官，穿浅灰色休闲外套、白色T恤、深色长裤。\n女主：年轻亚洲女性，长发，穿浅蓝色连衣裙，气质自然清秀。\n六个镜头中两人的 **脸部、发型、服装、身材比例完全一致**，不能出现人物身份变化。\n\n【场景统一】\n傍晚的城市公园，树木、长椅、步道和远处城市灯光保持一致。\n时间从傍晚逐渐过渡到蓝调时刻，光线变化自然。\n整体采用 **真实摄影、电影级自然光、真实人物皮肤质感、生活化表演**，避免过度唯美、油腻或人工CG感。\n\n【六格剧情】\n\n① 建立镜头——偶遇与准备\n远景，男女主在公园小路上并肩慢慢走着。\n男主偷偷看向女主，神情明显有些紧张，手轻轻握紧又放松。\n女主没有察觉，仍然自然地向前走。\n画面角落加入简洁中文分镜描述：\n「① 傍晚散步，他终于决定说出口」\n\n② 情绪铺垫——男主停下\n中远景，两人走到一棵大树旁，男主逐渐放慢脚步，最终停下来。\n女主向前走了半步后发现男主没有跟上，疑惑地回头看他。\n男主深吸一口气，认真看向女主。\n中文描述：\n「② 他停下脚步，终于鼓起勇气」\n\n③ 对视——准备表白\n中景，男女主面对面站立。\n男主略显紧张，却认真而坚定地看着女主。\n女主从疑惑逐渐变成认真倾听的表情。\n男主轻轻向前一步。\n两人的距离自然缩短，但保持真实生活中的合理距离。\n中文描述：\n「③ 有些话，我想亲口告诉你」\n\n④ 表白——说出心意\n近景，男主看着女主，终于说出心里话。\n男主表情真诚、温柔、略带紧张。\n女主明显愣了一下，眼神中出现惊讶和感动。\n不要夸张动作，不要突然拥抱。\n中文描述：\n「④ 我喜欢你，已经很久了」\n\n⑤ 回应——女主接受心意\n双人近中景，短暂沉默后，女主露出温柔自然的笑容。\n她眼眶微微湿润，轻轻点头。\n男主从紧张逐渐变成惊喜。\n两人的身体姿态自然放松。\n中文描述：\n「⑤ 她笑着点了点头」\n\n⑥ 结尾——牵手离开\n稍远的背影镜头，男女主自然牵起手，一起沿着公园小路向远处走去。\n天空进入蓝调时刻，城市灯光逐渐亮起。\n两人的步伐同步，关系从陌生的暧昧自然过渡到确认恋爱关系。\n画面具有完整故事结束感。\n中文描述：\n「⑥ 于是，他们牵着手走向灯火」\n\n【分镜设计要求】\n严格保持 **2×3六宫格布局**；\n每一格都是独立但连续的电影镜头；\n六格之间必须具有明确的动作连续性：\n散步 → 停下 → 转身对视 → 表白 → 回应 → 牵手离开。\n\n镜头景别依次产生变化：\n远景 → 中远景 → 中景 → 近景 → 双人近中景 → 远景背影。\n\n人物位置、服装、发型、场景结构保持高度连续；\n不要让人物突然改变位置；\n不要跳跃式剧情；\n不要出现重复动作；\n不要出现多余人物抢占主体；\n不要出现不同时间线；\n不要出现镜头之间无法衔接的动作。\n\n每个分镜格边界清晰，画面构图整齐，具有专业电影分镜板的感觉。\n中文文字必须清晰、简洁、排版规整。\n整体画面真实、自然、细腻，具有真实电影摄影质感。\n\n**画幅：16:9**\n**布局：2列 × 3行，六宫格**\n**风格：写实电影摄影 / 真实人物 / 自然表演 / 连续叙事 / 专业电影Storyboard**\n**重点：人物一致性、动作连续性、镜头语言、剧情递进。**\n",
+        "",
+        1,
+        25,
+        1024,
+        1024,
+        "euler",
+        "simple",
+        593103825222985,
+        "qwen/qwen_image_2.1_int8_convrot.safetensors",
+        "qwen3vl_8b_fp8_scaled.safetensors",
+        "qwen_image_2.1_vae_bf16.safetensors"
+      ],
+      "widgets_values_named": {
+        "prompt": "生成一张 **16:9 横向电影分镜板（Storyboard Sheet）**，画面严格排列为 **2列 × 3行，共6个独立分镜格**，六格按照 **①②③④⑤⑥** 的剧情顺序自然衔接。\n\n主题：**青春爱情表白，一段完整、自然、循序渐进的表白剧情**。\n\n【人物统一】\n男主：年轻亚洲男性，黑色短发，干净自然的五官，穿浅灰色休闲外套、白色T恤、深色长裤。\n女主：年轻亚洲女性，长发，穿浅蓝色连衣裙，气质自然清秀。\n六个镜头中两人的 **脸部、发型、服装、身材比例完全一致**，不能出现人物身份变化。\n\n【场景统一】\n傍晚的城市公园，树木、长椅、步道和远处城市灯光保持一致。\n时间从傍晚逐渐过渡到蓝调时刻，光线变化自然。\n整体采用 **真实摄影、电影级自然光、真实人物皮肤质感、生活化表演**，避免过度唯美、油腻或人工CG感。\n\n【六格剧情】\n\n① 建立镜头——偶遇与准备\n远景，男女主在公园小路上并肩慢慢走着。\n男主偷偷看向女主，神情明显有些紧张，手轻轻握紧又放松。\n女主没有察觉，仍然自然地向前走。\n画面角落加入简洁中文分镜描述：\n「① 傍晚散步，他终于决定说出口」\n\n② 情绪铺垫——男主停下\n中远景，两人走到一棵大树旁，男主逐渐放慢脚步，最终停下来。\n女主向前走了半步后发现男主没有跟上，疑惑地回头看他。\n男主深吸一口气，认真看向女主。\n中文描述：\n「② 他停下脚步，终于鼓起勇气」\n\n③ 对视——准备表白\n中景，男女主面对面站立。\n男主略显紧张，却认真而坚定地看着女主。\n女主从疑惑逐渐变成认真倾听的表情。\n男主轻轻向前一步。\n两人的距离自然缩短，但保持真实生活中的合理距离。\n中文描述：\n「③ 有些话，我想亲口告诉你」\n\n④ 表白——说出心意\n近景，男主看着女主，终于说出心里话。\n男主表情真诚、温柔、略带紧张。\n女主明显愣了一下，眼神中出现惊讶和感动。\n不要夸张动作，不要突然拥抱。\n中文描述：\n「④ 我喜欢你，已经很久了」\n\n⑤ 回应——女主接受心意\n双人近中景，短暂沉默后，女主露出温柔自然的笑容。\n她眼眶微微湿润，轻轻点头。\n男主从紧张逐渐变成惊喜。\n两人的身体姿态自然放松。\n中文描述：\n「⑤ 她笑着点了点头」\n\n⑥ 结尾——牵手离开\n稍远的背影镜头，男女主自然牵起手，一起沿着公园小路向远处走去。\n天空进入蓝调时刻，城市灯光逐渐亮起。\n两人的步伐同步，关系从陌生的暧昧自然过渡到确认恋爱关系。\n画面具有完整故事结束感。\n中文描述：\n「⑥ 于是，他们牵着手走向灯火」\n\n【分镜设计要求】\n严格保持 **2×3六宫格布局**；\n每一格都是独立但连续的电影镜头；\n六格之间必须具有明确的动作连续性：\n散步 → 停下 → 转身对视 → 表白 → 回应 → 牵手离开。\n\n镜头景别依次产生变化：\n远景 → 中远景 → 中景 → 近景 → 双人近中景 → 远景背影。\n\n人物位置、服装、发型、场景结构保持高度连续；\n不要让人物突然改变位置；\n不要跳跃式剧情；\n不要出现重复动作；\n不要出现多余人物抢占主体；\n不要出现不同时间线；\n不要出现镜头之间无法衔接的动作。\n\n每个分镜格边界清晰，画面构图整齐，具有专业电影分镜板的感觉。\n中文文字必须清晰、简洁、排版规整。\n整体画面真实、自然、细腻，具有真实电影摄影质感。\n\n**画幅：16:9**\n**布局：2列 × 3行，六宫格**\n**风格：写实电影摄影 / 真实人物 / 自然表演 / 连续叙事 / 专业电影Storyboard**\n**重点：人物一致性、动作连续性、镜头语言、剧情递进。**\n",
+        "negative_prompt": "",
+        "cfg": 1,
+        "steps": 25,
+        "width": 1024,
+        "height": 1024,
+        "scheduler": "euler",
+        "scheduler_1": "simple",
+        "seed": 593103825222985,
+        "unet_name": "qwen/qwen_image_2.1_int8_convrot.safetensors",
+        "clip_name": "qwen3vl_8b_fp8_scaled.safetensors",
+        "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+      }
+    },
+    {
+      "id": 461,
+      "type": "SaveImageAdvanced",
+      "pos": [
+        1363.090494926402,
+        2449.0286975717436
+      ],
+      "size": [
+        962.4061298159841,
+        660.7637969094917
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 672
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "SaveImageAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Qwen_image_2.1",
+        "png",
+        "8-bit",
+        "sRGB"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Qwen_image_2.1",
+        "format": "png",
+        "format.bit_depth": "8-bit",
+        "format.input_color_space": "sRGB"
+      }
+    },
+    {
+      "id": 464,
+      "type": "Note",
+      "pos": [
+        565.033099782914,
+        2662.251630029404
+      ],
+      "size": [
+        290,
+        90
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: size",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Qwen Image 2.1 has native 2K (2048*2048) support for direct output\n"
+      ],
+      "widgets_values_named": {
+        "text": "Qwen Image 2.1 has native 2K (2048*2048) support for direct output\n"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 475,
+      "type": "Label (rgthree)",
+      "pos": [
+        467.7510051338027,
+        1988.1691879746575
+      ],
+      "size": [
+        2559.08203125,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "B19-Qwen-Image-2.1提示词优化clip版",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 476,
+      "type": "Label (rgthree)",
+      "pos": [
+        475.3911214514538,
+        2157.128729225313
+      ],
+      "size": [
+        1781,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 477,
+      "type": "Label (rgthree)",
+      "pos": [
+        474.80328395898556,
+        2278.5265221850923
+      ],
+      "size": [
+        1434,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    }
+  ],
+  "links": [
+    [
+      672,
+      459,
+      0,
+      461,
+      0,
+      "IMAGE"
+    ],
+    [
+      670,
+      13,
+      0,
+      459,
+      2,
+      "INT"
+    ],
+    [
+      671,
+      13,
+      1,
+      459,
+      3,
+      "INT"
+    ]
+  ],
+  "groups": [],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "c291ceec-b98f-4751-9d0b-7bc288f27b30",
+        "version": 1,
+        "state": {
+          "lastGroupId": 37,
+          "lastNodeId": 477,
+          "lastLinkId": 687,
+          "lastRerouteId": 9
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Text to Image (Qwen Image 2.1)",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -660,
+            610,
+            143.044921875,
+            288
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            1960,
+            640,
+            128,
+            68
+          ]
+        },
+        "inputs": [
+          {
+            "id": "6a73de3b-f4cd-43a4-9076-76648c6902f0",
+            "name": "prompt",
+            "type": "STRING",
+            "linkIds": [
+              684
+            ],
+            "localized_name": "prompt",
+            "label": "positive_prompt",
+            "pos": [
+              -540.955078125,
+              634
+            ]
+          },
+          {
+            "id": "d4c1377f-7fbc-4519-b83c-9a3b9c2de104",
+            "name": "negative_prompt",
+            "type": "STRING",
+            "linkIds": [
+              657
+            ],
+            "pos": [
+              -540.955078125,
+              654
+            ]
+          },
+          {
+            "id": "420ee896-17c3-4e07-95fc-0ff309a6b836",
+            "name": "cfg",
+            "type": "FLOAT",
+            "linkIds": [
+              658
+            ],
+            "pos": [
+              -540.955078125,
+              674
+            ]
+          },
+          {
+            "id": "349c3f72-ba7a-4277-84ff-8029faa16019",
+            "name": "steps",
+            "type": "INT",
+            "linkIds": [
+              659
+            ],
+            "label": "steps",
+            "pos": [
+              -540.955078125,
+              694
+            ]
+          },
+          {
+            "id": "91c96cf8-057b-4da2-b71e-305541a3527e",
+            "name": "width",
+            "type": "INT",
+            "linkIds": [
+              660
+            ],
+            "localized_name": "width",
+            "pos": [
+              -540.955078125,
+              714
+            ]
+          },
+          {
+            "id": "661cc520-6bd0-4925-90ec-cecaa188b57d",
+            "name": "height",
+            "type": "INT",
+            "linkIds": [
+              661
+            ],
+            "localized_name": "height",
+            "pos": [
+              -540.955078125,
+              734
+            ]
+          },
+          {
+            "id": "9f0e91b8-5a4a-4f5a-a2a4-4ddc180df0fd",
+            "name": "scheduler",
+            "type": "COMBO",
+            "linkIds": [
+              662
+            ],
+            "label": "sampler",
+            "pos": [
+              -540.955078125,
+              754
+            ]
+          },
+          {
+            "id": "4710583f-3cb0-4091-87ab-dadd8a2e657c",
+            "name": "scheduler_1",
+            "type": "COMBO",
+            "linkIds": [
+              668
+            ],
+            "label": "scheduler",
+            "pos": [
+              -540.955078125,
+              774
+            ]
+          },
+          {
+            "id": "977ce57d-3764-491c-8d2d-543754cfbaf1",
+            "name": "seed",
+            "type": "INT",
+            "linkIds": [
+              667
+            ],
+            "pos": [
+              -540.955078125,
+              794
+            ]
+          },
+          {
+            "id": "143494fb-a40e-423f-be3b-ecc808b408b0",
+            "name": "unet_name",
+            "type": "COMBO",
+            "linkIds": [
+              687
+            ],
+            "pos": [
+              -540.955078125,
+              814
+            ]
+          },
+          {
+            "id": "d8528289-e121-45ed-9c31-e6370ce4ba5e",
+            "name": "clip_name",
+            "type": "COMBO",
+            "linkIds": [
+              664
+            ],
+            "pos": [
+              -540.955078125,
+              834
+            ]
+          },
+          {
+            "id": "f03d1fb0-d592-4997-b55e-e7a2549c36e5",
+            "name": "vae_name",
+            "type": "COMBO",
+            "linkIds": [
+              665
+            ],
+            "pos": [
+              -540.955078125,
+              854
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "f6f3effc-0961-4c17-b52c-a77c16ca6aa4",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              650
+            ],
+            "localized_name": "IMAGE",
+            "pos": [
+              1984,
+              664
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 451,
+            "type": "UNETLoader",
+            "pos": [
+              -190,
+              410
+            ],
+            "size": [
+              510,
+              90
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "UNet名称",
+                "name": "unet_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "unet_name"
+                },
+                "link": 687
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "模型",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  675
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.36.0",
+              "Node name for S&R": "UNETLoader",
+              "models": [
+                {
+                  "name": "qwen_image_2.1_int8_convrot.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+                  "directory": "diffusion_models"
+                }
+              ],
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "qwen/qwen_image_2.1_int8_convrot.safetensors",
+              "default"
+            ],
+            "widgets_values_named": {
+              "unet_name": "qwen/qwen_image_2.1_int8_convrot.safetensors",
+              "weight_dtype": "default"
+            }
+          },
+          {
+            "id": 452,
+            "type": "TextEncodeQwenImage21",
+            "pos": [
+              440,
+              410
+            ],
+            "size": [
+              530,
+              680
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 647
+              },
+              {
+                "localized_name": "image_1",
+                "name": "images.image_1",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "shape": 7,
+                "type": "VAE",
+                "link": null
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 685
+              },
+              {
+                "localized_name": "negative_prompt",
+                "name": "negative_prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "negative_prompt"
+                },
+                "link": 657
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "links": [
+                  653
+                ]
+              },
+              {
+                "localized_name": "negative",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "links": [
+                  655
+                ]
+              },
+              {
+                "localized_name": "latent",
+                "name": "latent",
+                "type": "LATENT",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.36.0",
+              "Node name for S&R": "TextEncodeQwenImage21",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "",
+              "",
+              1024
+            ],
+            "widgets_values_named": {
+              "prompt": "",
+              "negative_prompt": "",
+              "resolution": 1024
+            }
+          },
+          {
+            "id": 453,
+            "type": "CLIPLoader",
+            "pos": [
+              -190,
+              570
+            ],
+            "size": [
+              510,
+              120
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "CLIP名称",
+                "name": "clip_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "clip_name"
+                },
+                "link": 664
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CLIP",
+                "name": "CLIP",
+                "type": "CLIP",
+                "links": [
+                  647
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.36.0",
+              "Node name for S&R": "CLIPLoader",
+              "models": [
+                {
+                  "name": "qwen3vl_8b_bf16.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_bf16.safetensors",
+                  "directory": "text_encoders"
+                }
+              ],
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "qwen3vl_8b_bf16.safetensors",
+              "qwen_image",
+              "default"
+            ],
+            "widgets_values_named": {
+              "clip_name": "qwen3vl_8b_bf16.safetensors",
+              "type": "qwen_image",
+              "device": "default"
+            }
+          },
+          {
+            "id": 454,
+            "type": "VAELoader",
+            "pos": [
+              -190,
+              770
+            ],
+            "size": [
+              510,
+              70
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "vae名称",
+                "name": "vae_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "vae_name"
+                },
+                "link": 665
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "VAE",
+                "name": "VAE",
+                "type": "VAE",
+                "links": [
+                  649
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.36.0",
+              "Node name for S&R": "VAELoader",
+              "models": [
+                {
+                  "name": "qwen_image_2.1_vae_bf16.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors",
+                  "directory": "vae"
+                }
+              ],
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "qwen_image_2.1_vae_bf16.safetensors"
+            ],
+            "widgets_values_named": {
+              "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+            }
+          },
+          {
+            "id": 456,
+            "type": "EmptyLatentImage",
+            "pos": [
+              -70,
+              1010
+            ],
+            "size": [
+              300,
+              120
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "宽度",
+                "name": "width",
+                "type": "INT",
+                "widget": {
+                  "name": "width"
+                },
+                "link": 660
+              },
+              {
+                "localized_name": "高度",
+                "name": "height",
+                "type": "INT",
+                "widget": {
+                  "name": "height"
+                },
+                "link": 661
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "Latent",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  654
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.36.0",
+              "Node name for S&R": "EmptyLatentImage",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              1024,
+              1024,
+              1
+            ],
+            "widgets_values_named": {
+              "width": 1024,
+              "height": 1024,
+              "batch_size": 1
+            }
+          },
+          {
+            "id": 457,
+            "type": "VAEDecode",
+            "pos": [
+              1620,
+              660
+            ],
+            "size": [
+              230,
+              60
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "Latent",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 651
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 649
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  650
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.36.0",
+              "Node name for S&R": "VAEDecode",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            }
+          },
+          {
+            "id": 458,
+            "type": "KSampler",
+            "pos": [
+              1180,
+              640
+            ],
+            "size": [
+              270,
+              417.66666666666663
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "模型",
+                "name": "model",
+                "type": "MODEL",
+                "link": 675
+              },
+              {
+                "localized_name": "正面条件",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 653
+              },
+              {
+                "localized_name": "负面条件",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "link": 655
+              },
+              {
+                "localized_name": "Latent图像",
+                "name": "latent_image",
+                "type": "LATENT",
+                "link": 654
+              },
+              {
+                "localized_name": "种子",
+                "name": "seed",
+                "type": "INT",
+                "widget": {
+                  "name": "seed"
+                },
+                "link": 667
+              },
+              {
+                "localized_name": "步数",
+                "name": "steps",
+                "type": "INT",
+                "widget": {
+                  "name": "steps"
+                },
+                "link": 659
+              },
+              {
+                "localized_name": "cfg",
+                "name": "cfg",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "cfg"
+                },
+                "link": 658
+              },
+              {
+                "localized_name": "采样器名称",
+                "name": "sampler_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "sampler_name"
+                },
+                "link": 662
+              },
+              {
+                "localized_name": "调度器",
+                "name": "scheduler",
+                "type": "COMBO",
+                "widget": {
+                  "name": "scheduler"
+                },
+                "link": 668
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "Latent",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  651
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.36.0",
+              "Node name for S&R": "KSampler",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              0,
+              "fixed",
+              25,
+              1,
+              "euler",
+              "simple",
+              1
+            ],
+            "widgets_values_named": {
+              "seed": 0,
+              "control_after_generate": "fixed",
+              "steps": 25,
+              "cfg": 1,
+              "sampler_name": "euler",
+              "scheduler": "simple",
+              "denoise": 1
+            }
+          },
+          {
+            "id": 470,
+            "type": "CLIPLoader",
+            "pos": [
+              -630.3111611689643,
+              -169.12900423128798
+            ],
+            "size": [
+              520.58184447792,
+              106
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "CLIP",
+                "name": "CLIP",
+                "type": "CLIP",
+                "links": [
+                  682
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.37.0",
+              "Node name for S&R": "CLIPLoader",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "qwen3.5_9b_qwen_image_2.1_pe_t2i.int8_convrot.safetensors",
+              "qwen_image",
+              "default"
+            ],
+            "widgets_values_named": {
+              "clip_name": "qwen3.5_9b_qwen_image_2.1_pe_t2i.int8_convrot.safetensors",
+              "type": "qwen_image",
+              "device": "default"
+            }
+          },
+          {
+            "id": 471,
+            "type": "TextGenerateLTX2Prompt",
+            "pos": [
+              -20.063010626552785,
+              -189.75653671183693
+            ],
+            "size": [
+              400,
+              436
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 682
+              },
+              {
+                "localized_name": "图像",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "视频",
+                "name": "video",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "音频",
+                "name": "audio",
+                "shape": 7,
+                "type": "AUDIO",
+                "link": null
+              },
+              {
+                "localized_name": "提示词",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 684
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "生成文本",
+                "name": "generated_text",
+                "type": "STRING",
+                "links": [
+                  681
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.37.0",
+              "Node name for S&R": "TextGenerateLTX2Prompt",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "",
+              16256,
+              "on",
+              1,
+              20,
+              0.95,
+              0,
+              1.05,
+              0,
+              1.5,
+              true,
+              false,
+              "auto"
+            ],
+            "widgets_values_named": {
+              "prompt": "",
+              "max_length": 16256,
+              "sampling_mode": "on",
+              "sampling_mode.temperature": 1,
+              "sampling_mode.top_k": 20,
+              "sampling_mode.top_p": 0.95,
+              "sampling_mode.min_p": 0,
+              "sampling_mode.repetition_penalty": 1.05,
+              "sampling_mode.seed": 0,
+              "sampling_mode.presence_penalty": 1.5,
+              "thinking": true,
+              "use_default_template": false,
+              "mtp": "auto"
+            }
+          },
+          {
+            "id": 472,
+            "type": "easy showAnything",
+            "pos": [
+              467.3577969093469,
+              -154.06021040777017
+            ],
+            "size": [
+              503.69319251392494,
+              390.30838646751783
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "输入任何",
+                "name": "anything",
+                "shape": 7,
+                "type": "*",
+                "link": 681
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "输出",
+                "name": "output",
+                "type": "*",
+                "links": [
+                  685
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-easy-use",
+              "ver": "1.3.6",
+              "Node name for S&R": "easy showAnything",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.8",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "Style: A single 2-by-3 storyboard contact sheet presents six cinematic frames of a romantic scene in a real city park at sunset fading into blue hour. The overall layout uses thick dark navy-black dividers between the rectangular panels, with each frame bordered by clean straight lines against a nearly black margin-like gutter. Across all panels, the environment remains consistent: leafy green-brown trees, paved walking paths, benches, lampposts, distant high-rise buildings, glowing windows, cool twilight sky tones, and warm streetlight accents. Small yellow handwritten-style Chinese captions sit consistently in the lower-left corner of each frame, using thin rounded strokes and slightly uneven spacing to suggest storyboard annotation. Ambient sounds include soft footsteps on pavement, wind rustling leaves, distant traffic hum, faint urban ambience, and subtle birdsong, transitioning gently from panel to panel.\n\n**Panel 1 (top left): Establishing Moment – The Walk**\nA wide, eye-level panoramic frame shows the young East Asian couple walking side by side along a broad curved park path during golden-hour dusk. On the left, the young man appears slim, late teens to early twenties, with tousled short black hair, fair skin, and a tense profile; he wears a light gray casual jacket over a plain white T-shirt and dark pants. One hand gathers lightly near his chest while he glances sideways toward the woman, showing nervous anticipation. On the right, the young East Asian woman appears slender and late teens to early twenties, with long loose dark brown-black hair, fair skin, delicate facial features, and a calm expression; she wears a light blue sleeveless maxi dress with thin straps and walks naturally ahead of him. Behind them, the sidewalk stretches into the distance with benches, trees casting shadows, parked or passing cars softly blurred, tall apartment towers lit by scattered windows, and the sun low behind branches creating warm flare. The upper-left corner carries simple storyboard description text reading: \"① 傍晚散步，他终于决定说出口\".\n\n**Panel 2 (top right): Emotional Setup – He Stops Under the Tree**\nA medium-wide side-angle frame places the pair beside a massive old tree trunk whose bark fills much of the foreground, adding rough vertical texture and sheltering intimacy. The man stands nearer the center-left beneath the tree, now stopped and facing partly toward the woman, his eyes serious and focused after holding his breath. The woman stands farther right, mid-step, her long hair falling over her shoulders and dress; she notices his halted movement and turns her head back toward him with mild confusion and concern. Warm streetlamps glow near the far right edge, and blurred pedestrians or vehicles remain secondary in the background. Soft amber highlights touch the tree bark and leaves, while cooler dusk shadows shape their faces. Upper-left overlay text reads: \"② 他停下脚步，终于鼓起勇气\".\n\n**Panel 3 (middle left): Eye Contact – Preparing to Confess**\nA tighter medium shot centers the confrontation emotionally. The man occupies the left half in profile, leaning forward slightly with clasped hands held near his abdomen; his brow tightens subtly, conveying anxiety mixed with determination. The woman stands opposite on the right, facing him closely, her lips parted and gaze shifted from puzzled attention into genuine listening. Their physical distance feels reduced but still respectful, framed by bokeh streetlights and indistinct walkers behind them. Tree foliage forms a canopy above, with gold rim light catching strands of her hair and the edges of his jacket. The visible label placed in the upper-left area states: \"③ 有些话，我想亲口告诉你\".\n\n**Panel 4 (middle right): Confession – Speaking His Feelings**\nA close-up intimate portrait spans most of the panel width. The man sits or leans very close on the left, looking directly at the woman with earnest vulnerability, moist-looking eyes, defined brows, smooth youthful skin, and a composed mouth as if speaking quietly. The woman occupies the right side in partial profile, surprised yet touched, her lashes emphasized by natural makeup, cheek softly highlighted, and lips relaxed rather than startled. The background dissolves into strong circular bokeh from park lamps and city lights, shifting from cream-gold highlights to dusky teal-gray shadow. At the upper-left, the caption reads: \"④ 我喜欢你，已经很久了\".\n\n**Panel 5 (bottom left): Response – She Accepts**\nAnother close double portrait emphasizes the emotional turn. The man is cropped at the left edge, watching her with relief beginning to replace fear. The woman smiles gently with slight wetness or shine in her eyes, nods subtly, and softens into warmth; her hand rests quietly near her lap or torso, suggesting restraint rather than dramatic motion. Her pale blue dress straps, necklace detail, earrings, layered hair strands, and natural complexion are clearly visible. The lamp bokeh behind them warms into golden circles against the deepening evening. Near the upper-left portion, the narration-like caption says: \"⑤ 她笑着点了点头\".\n\n**Panel 6 (bottom right): Ending – Hand in Hand Walking Away**\nA wider rear-view frame returns to the full-body perspective. The couple has turned away from the viewer and walks down the illuminated park path hand in hand toward the distant skyline. His figure is seen from behind in gray outerwear and dark trousers, hers in the flowing light blue dress, their silhouettes linked at the center-bottom of the panel. Tall trees arch overhead, bench shapes sit to the sides, lampposts punctuate the path, and city skyscrapers glow across the horizon under a darker blue-gray dusk sky. The sense of closure comes from synchronized movement, shared direction, and warm lights leading into the distance. The upper-left corner displays the concluding caption: \"⑥ 于是，他们牵着手走向灯火\".\n\nOverall, the image functions as a professionally designed cinematic storyboard about a natural confession progressing step by step: walking together, pausing, meeting eye contact, confessing, receiving acceptance, and leaving hand in hand. The people remain recognizably consistent throughout—same male lead, same female lead, same clothing palette, same hairstyle, same age range, and same park-city setting. The aesthetic is realistic photography with life-like skin texture, shallow depth of field, natural acting, restrained emotions, warm candlelike practical lights, cool-blue dusk color grading, and refined romantic cinema atmosphere. There is no dialogue except the six required written captions, which appear as concise handwritten storyboard notes integrated into the images."
+            ],
+            "widgets_values_named": {
+              "text": "Style: A single 2-by-3 storyboard contact sheet presents six cinematic frames of a romantic scene in a real city park at sunset fading into blue hour. The overall layout uses thick dark navy-black dividers between the rectangular panels, with each frame bordered by clean straight lines against a nearly black margin-like gutter. Across all panels, the environment remains consistent: leafy green-brown trees, paved walking paths, benches, lampposts, distant high-rise buildings, glowing windows, cool twilight sky tones, and warm streetlight accents. Small yellow handwritten-style Chinese captions sit consistently in the lower-left corner of each frame, using thin rounded strokes and slightly uneven spacing to suggest storyboard annotation. Ambient sounds include soft footsteps on pavement, wind rustling leaves, distant traffic hum, faint urban ambience, and subtle birdsong, transitioning gently from panel to panel.\n\n**Panel 1 (top left): Establishing Moment – The Walk**\nA wide, eye-level panoramic frame shows the young East Asian couple walking side by side along a broad curved park path during golden-hour dusk. On the left, the young man appears slim, late teens to early twenties, with tousled short black hair, fair skin, and a tense profile; he wears a light gray casual jacket over a plain white T-shirt and dark pants. One hand gathers lightly near his chest while he glances sideways toward the woman, showing nervous anticipation. On the right, the young East Asian woman appears slender and late teens to early twenties, with long loose dark brown-black hair, fair skin, delicate facial features, and a calm expression; she wears a light blue sleeveless maxi dress with thin straps and walks naturally ahead of him. Behind them, the sidewalk stretches into the distance with benches, trees casting shadows, parked or passing cars softly blurred, tall apartment towers lit by scattered windows, and the sun low behind branches creating warm flare. The upper-left corner carries simple storyboard description text reading: \"① 傍晚散步，他终于决定说出口\".\n\n**Panel 2 (top right): Emotional Setup – He Stops Under the Tree**\nA medium-wide side-angle frame places the pair beside a massive old tree trunk whose bark fills much of the foreground, adding rough vertical texture and sheltering intimacy. The man stands nearer the center-left beneath the tree, now stopped and facing partly toward the woman, his eyes serious and focused after holding his breath. The woman stands farther right, mid-step, her long hair falling over her shoulders and dress; she notices his halted movement and turns her head back toward him with mild confusion and concern. Warm streetlamps glow near the far right edge, and blurred pedestrians or vehicles remain secondary in the background. Soft amber highlights touch the tree bark and leaves, while cooler dusk shadows shape their faces. Upper-left overlay text reads: \"② 他停下脚步，终于鼓起勇气\".\n\n**Panel 3 (middle left): Eye Contact – Preparing to Confess**\nA tighter medium shot centers the confrontation emotionally. The man occupies the left half in profile, leaning forward slightly with clasped hands held near his abdomen; his brow tightens subtly, conveying anxiety mixed with determination. The woman stands opposite on the right, facing him closely, her lips parted and gaze shifted from puzzled attention into genuine listening. Their physical distance feels reduced but still respectful, framed by bokeh streetlights and indistinct walkers behind them. Tree foliage forms a canopy above, with gold rim light catching strands of her hair and the edges of his jacket. The visible label placed in the upper-left area states: \"③ 有些话，我想亲口告诉你\".\n\n**Panel 4 (middle right): Confession – Speaking His Feelings**\nA close-up intimate portrait spans most of the panel width. The man sits or leans very close on the left, looking directly at the woman with earnest vulnerability, moist-looking eyes, defined brows, smooth youthful skin, and a composed mouth as if speaking quietly. The woman occupies the right side in partial profile, surprised yet touched, her lashes emphasized by natural makeup, cheek softly highlighted, and lips relaxed rather than startled. The background dissolves into strong circular bokeh from park lamps and city lights, shifting from cream-gold highlights to dusky teal-gray shadow. At the upper-left, the caption reads: \"④ 我喜欢你，已经很久了\".\n\n**Panel 5 (bottom left): Response – She Accepts**\nAnother close double portrait emphasizes the emotional turn. The man is cropped at the left edge, watching her with relief beginning to replace fear. The woman smiles gently with slight wetness or shine in her eyes, nods subtly, and softens into warmth; her hand rests quietly near her lap or torso, suggesting restraint rather than dramatic motion. Her pale blue dress straps, necklace detail, earrings, layered hair strands, and natural complexion are clearly visible. The lamp bokeh behind them warms into golden circles against the deepening evening. Near the upper-left portion, the narration-like caption says: \"⑤ 她笑着点了点头\".\n\n**Panel 6 (bottom right): Ending – Hand in Hand Walking Away**\nA wider rear-view frame returns to the full-body perspective. The couple has turned away from the viewer and walks down the illuminated park path hand in hand toward the distant skyline. His figure is seen from behind in gray outerwear and dark trousers, hers in the flowing light blue dress, their silhouettes linked at the center-bottom of the panel. Tall trees arch overhead, bench shapes sit to the sides, lampposts punctuate the path, and city skyscrapers glow across the horizon under a darker blue-gray dusk sky. The sense of closure comes from synchronized movement, shared direction, and warm lights leading into the distance. The upper-left corner displays the concluding caption: \"⑥ 于是，他们牵着手走向灯火\".\n\nOverall, the image functions as a professionally designed cinematic storyboard about a natural confession progressing step by step: walking together, pausing, meeting eye contact, confessing, receiving acceptance, and leaving hand in hand. The people remain recognizably consistent throughout—same male lead, same female lead, same clothing palette, same hairstyle, same age range, and same park-city setting. The aesthetic is realistic photography with life-like skin texture, shallow depth of field, natural acting, restrained emotions, warm candlelike practical lights, cool-blue dusk color grading, and refined romantic cinema atmosphere. There is no dialogue except the six required written captions, which appear as concise handwritten storyboard notes integrated into the images."
+            }
+          }
+        ],
+        "groups": [
+          {
+            "id": 34,
+            "title": "Models",
+            "bounding": [
+              -200,
+              300,
+              530,
+              590
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 35,
+            "title": "Image Size",
+            "bounding": [
+              -200,
+              920,
+              530,
+              250
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 36,
+            "title": "Conditioning",
+            "bounding": [
+              360,
+              300,
+              700,
+              860
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 37,
+            "title": "Sampling",
+            "bounding": [
+              1090,
+              300,
+              470,
+              860
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          }
+        ],
+        "links": [
+          {
+            "id": 647,
+            "origin_id": 453,
+            "origin_slot": 0,
+            "target_id": 452,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 649,
+            "origin_id": 454,
+            "origin_slot": 0,
+            "target_id": 457,
+            "target_slot": 1,
+            "type": "VAE"
+          },
+          {
+            "id": 650,
+            "origin_id": 457,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 651,
+            "origin_id": 458,
+            "origin_slot": 0,
+            "target_id": 457,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 653,
+            "origin_id": 452,
+            "origin_slot": 0,
+            "target_id": 458,
+            "target_slot": 1,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 654,
+            "origin_id": 456,
+            "origin_slot": 0,
+            "target_id": 458,
+            "target_slot": 3,
+            "type": "LATENT"
+          },
+          {
+            "id": 655,
+            "origin_id": 452,
+            "origin_slot": 1,
+            "target_id": 458,
+            "target_slot": 2,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 657,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 452,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 658,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 458,
+            "target_slot": 6,
+            "type": "FLOAT"
+          },
+          {
+            "id": 659,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 458,
+            "target_slot": 5,
+            "type": "INT"
+          },
+          {
+            "id": 660,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 456,
+            "target_slot": 0,
+            "type": "INT"
+          },
+          {
+            "id": 661,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 456,
+            "target_slot": 1,
+            "type": "INT"
+          },
+          {
+            "id": 662,
+            "origin_id": -10,
+            "origin_slot": 6,
+            "target_id": 458,
+            "target_slot": 7,
+            "type": "COMBO"
+          },
+          {
+            "id": 668,
+            "origin_id": -10,
+            "origin_slot": 7,
+            "target_id": 458,
+            "target_slot": 8,
+            "type": "COMBO"
+          },
+          {
+            "id": 667,
+            "origin_id": -10,
+            "origin_slot": 8,
+            "target_id": 458,
+            "target_slot": 4,
+            "type": "INT"
+          },
+          {
+            "id": 664,
+            "origin_id": -10,
+            "origin_slot": 10,
+            "target_id": 453,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 665,
+            "origin_id": -10,
+            "origin_slot": 11,
+            "target_id": 454,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 675,
+            "origin_id": 451,
+            "origin_slot": 0,
+            "target_id": 458,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 681,
+            "origin_id": 471,
+            "origin_slot": 0,
+            "target_id": 472,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 685,
+            "origin_id": 472,
+            "origin_slot": 0,
+            "target_id": 452,
+            "target_slot": 3,
+            "type": "STRING"
+          },
+          {
+            "id": 682,
+            "origin_id": 470,
+            "origin_slot": 0,
+            "target_id": 471,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 684,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 471,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 687,
+            "origin_id": -10,
+            "origin_slot": 9,
+            "target_id": 451,
+            "target_slot": 0,
+            "type": "COMBO"
+          }
+        ],
+        "extra": {
+          "ue_links": [],
+          "links_added_by_ue": []
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.52.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.5921628617806269,
+      "offset": [
+        -207.46359710074591,
+        -1569.1534350729287
+      ]
+    }
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "459": 8
+  }
+}

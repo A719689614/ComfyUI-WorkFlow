@@ -1,0 +1,1065 @@
+{
+  "id": "75660065-26b2-45dc-b15f-76190badbbd8",
+  "revision": 0,
+  "last_node_id": 43,
+  "last_link_id": 33,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Label (rgthree)",
+      "pos": [
+        -2115.1949949853074,
+        -2190.8443468376754
+      ],
+      "size": [
+        1884.0087890625,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "B18-Qwen-Image-2.1基础版",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 2,
+      "type": "Label (rgthree)",
+      "pos": [
+        -2108.1427161601246,
+        -1900.4870126272417
+      ],
+      "size": [
+        1434,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 3,
+      "type": "Label (rgthree)",
+      "pos": [
+        -2107.5548786676563,
+        -2021.8848055870214
+      ],
+      "size": [
+        1781,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 4,
+      "type": "CLIPLoader",
+      "pos": [
+        -2069.9540366060346,
+        -1548.9946631345224
+      ],
+      "size": [
+        568.4773537189865,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "CLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "qwen3vl_8b_int8_convrot.safetensors",
+        "qwen_image",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+        "type": "qwen_image",
+        "device": "default"
+      },
+      "color": "#c4994f",
+      "bgcolor": "#b0853b"
+    },
+    {
+      "id": 5,
+      "type": "UNETLoader",
+      "pos": [
+        -2068.6888667074754,
+        -1678.6301176889447
+      ],
+      "size": [
+        566.6527358396136,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "qwen/qwen_image_2.1_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "qwen/qwen_image_2.1_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#c4994f",
+      "bgcolor": "#b0853b"
+    },
+    {
+      "id": 13,
+      "type": "VAELoader",
+      "pos": [
+        -2069.8622065512254,
+        -1391.731497083476
+      ],
+      "size": [
+        572.1143304419691,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            12,
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "qwen_image_2.1_vae_bf16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+      },
+      "color": "#c4994f",
+      "bgcolor": "#b0853b"
+    },
+    {
+      "id": 23,
+      "type": "KSampler",
+      "pos": [
+        -879.0158531011707,
+        -1254.706034330829
+      ],
+      "size": [
+        270,
+        274
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 32
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 21
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 22
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        472590986359833,
+        "randomize",
+        20,
+        1,
+        "euler",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 472590986359833,
+        "control_after_generate": "randomize",
+        "steps": 20,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 25,
+      "type": "VAEDecode",
+      "pos": [
+        -568.7923537749825,
+        -1267.6839887908834
+      ],
+      "size": [
+        150,
+        46
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 17
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 36,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -1110.0770071503125,
+        -1216.7204125938856
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 26
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "label": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "EmptyLatentImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        2560,
+        1440,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 2560,
+        "height": 1440,
+        "batch_size": 1
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 37,
+      "type": "TextEncodeQwenImage21",
+      "pos": [
+        -1085.9186888489492,
+        -1680.7881461791549
+      ],
+      "size": [
+        685.6768718680969,
+        360
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 19
+        },
+        {
+          "name": "images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "name": "images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 20
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "label": "negative_prompt",
+          "name": "negative_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "negative_prompt"
+          },
+          "link": null
+        },
+        {
+          "label": "resolution",
+          "name": "resolution",
+          "type": "INT",
+          "widget": {
+            "name": "resolution"
+          },
+          "link": null
+        },
+        {
+          "name": "images.image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            21
+          ]
+        },
+        {
+          "label": "negative",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            22
+          ]
+        },
+        {
+          "label": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "TextEncodeQwenImage21",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "超写实真人商业摄影风格，生成一张年轻亚洲女性高级时装人物 4 视图设定图，画幅 16:9，浅灰色无缝影棚背景，画面干净高级，无文字，无水印。\n\n画面左侧为同一位女性的大幅面部与上半身特写，占画面约 42%。人物正脸端正面对镜头，完整展示头部、面部五官、妆容、发型、耳饰、肩颈、锁骨与上胸部。\n\n画面右侧横向并列展示同一位女性的三张全身视图，依次为：正面全身、标准 90 度侧面全身、180 度背面全身。\n\n四个视图必须为同一位女性，脸型、五官、肤色、妆容、发型、发色、头饰、服装、首饰、手套和鞋子完全一致。\n\n18 岁年轻亚洲女性，身高 180cm，标准 9 头身高级时装模特比例，身形纤细修长，肩颈优雅，腰线纤细，四肢修长，腿部笔直自然，人体结构真实协调。\n\n精致偏窄的鹅蛋脸，柔和流畅的下颌线，略带清冷感的杏仁形眼睛，灰棕色瞳孔，纤长浓密睫毛，细长自然眉形。\n\n鼻梁纤细立体，鼻头小巧，嘴唇柔润饱满，低饱和裸豆沙色唇妆。\n\n皮肤自然冷白、细腻无暇，保留真实皮肤纹理与轻微毛孔，无油腻感，无塑料感，无过度磨皮。\n\n表情清冷、优雅、略带疏离感，嘴唇自然闭合，眼神正视镜头。\n\n浓密黑色长卷发，长度至腰部，柔软丰盈的大波浪。\n\n顶部为蓬松高颅顶半盘发，前额保留自然碎发和两侧弧形龙须刘海，少量发丝轻柔贴近脸颊。\n\n后脑一侧佩戴大型黑白缎面复古蝴蝶结发饰，蝴蝶结中央镶嵌银色水晶、珍珠与宝石装饰，带少量银色叶片造型。\n\n侧面和背面视图必须准确展示半盘发结构、长卷发层次和大型蝴蝶结的位置。\n\n冷调高级哥特少女妆容，灰棕色眼影、细长黑色眼线、根根分明的浓密睫毛，轻微下眼影和柔和卧蚕。\n\n面部轮廓精致但自然，低饱和冷粉腮红，颧骨、鼻梁和锁骨处有细腻自然高光。\n\n唇妆为低饱和灰粉豆沙色，轻微水润质感，不使用夸张艳丽色彩。\n\n黑白复古哥特风、暗黑 Coquette、维多利亚少女风与高级定制服装结合。\n\n整体配色以哑光黑、象牙白、珍珠白和少量银色水晶为主，华丽但不杂乱，强调非对称层次、束腰结构、蕾丝、蝴蝶结、玫瑰和珍珠流苏。\n\n上半身为黑色无肩带束腰胸衣，胸衣采用哑光黑色缎面与细腻黑色蕾丝拼接，结构清晰，具有纵向束骨收腰线条。\n\n胸口边缘使用象牙白蕾丝荷叶边包边。\n\n胸前中央装饰一个大型象牙白缎面蝴蝶结，蝴蝶结中央固定一朵立体黑色玫瑰，周围点缀珍珠、水晶和银色胸针。\n\n从胸前装饰垂下数条细长珍珠链与水晶流苏，形成精致垂坠效果。\n\n胸衣下方自然收紧腰部，强调纤细腰线，但保持人体比例自然。\n\n【袖子与手套】\n双臂佩戴黑色半透明蕾丝长手套，长度从手腕延伸至上臂。\n\n手套带精致花卉蕾丝纹理和细小水晶装饰。\n\n上臂位置增加象牙白蕾丝荷叶边和小型黑白蝴蝶结，使袖口具有复古宫廷层次。\n\n正面、侧面、背面视图中手套结构必须一致。\n\n下装为黑白非对称高低裙。\n\n腰部采用黑色束腰结构，正面和侧面装饰黑色立体玫瑰、象牙白缎面褶皱和珍珠链。\n\n前裙较短，露出修长腿部，裙摆由黑色蕾丝短裙、象牙白褶皱缎面和多层荷叶边组成。\n\n两侧和后方延伸出较长的不规则拖尾，采用象牙白缎面与黑色缎面交错拼接，呈现层叠瀑布状结构。\n\n裙摆边缘带细腻白色蕾丝、黑色滚边和小型珍珠装饰。\n\n后腰位置带黑色与象牙白结合的大型蝴蝶结或立体玫瑰装饰，背部拖尾比正面更长。\n\n背面视图必须完整展示黑色束腰交叉绑带、后腰花饰、分层裙摆和拖尾结构。\n\n佩戴象牙白蕾丝颈圈，颈圈上镶嵌多层珍珠、水晶和银色宝石胸针。\n\n颈圈中央垂下一颗水滴形珍珠吊坠。\n\n双耳佩戴大型复古银色水晶耳环，椭圆宝石外圈围绕水晶与珍珠，底部带细长水滴形吊坠。\n\n所有视图中的项链、颈圈和耳饰必须保持完全一致。\n\n黑色漆皮厚底细高跟鞋，前掌带厚底结构，鞋面系带和水晶装饰。\n\n鞋跟修长、结构真实，正面、侧面和背面鞋型完全统一。\n\n脚踝处佩戴黑色细带或小型银色扣饰。\n\n正面全身视图：人物正对镜头，双腿自然并拢，双手自然垂落身体两侧，肩膀水平，站姿端正。\n\n标准侧面视图：人物身体与头部均为严格 90 度侧面，不回头，不出现三分之二角度，双手自然下垂。\n\n背面视图：人物严格 180 度背对镜头，头部同样朝向后方，不回头，不露正脸，完整展示发型背面、束腰绑带、后腰装饰、裙摆拖尾与鞋跟。\n\n电影级商业影棚布光，柔和主光，轻微侧逆光，暖白轮廓光，面部柔光均匀。\n\n人物右侧三视图禁止强光、禁止过曝、禁止刺眼高光，保持低反差、均匀柔和照明，清晰展示黑白服装结构和蕾丝细节。\n\n发丝边缘有细腻发丝光，肩颈和锁骨轮廓自然，皮肤高光克制真实。\n\n浅灰色背景带轻微灰色渐变，脚下保留柔和自然阴影。\n\n85mm 人像镜头质感，f/2.0，左侧特写浅景深，右侧三个全身视图保持整体清晰。\n\n8K 高清，超写实真人摄影质感，高级时装杂志大片，真实缎面、蕾丝、珍珠、水晶、金属和皮肤材质，干净细腻，构图统一。",
+        "",
+        1024
+      ],
+      "widgets_values_named": {
+        "prompt": "超写实真人商业摄影风格，生成一张年轻亚洲女性高级时装人物 4 视图设定图，画幅 16:9，浅灰色无缝影棚背景，画面干净高级，无文字，无水印。\n\n画面左侧为同一位女性的大幅面部与上半身特写，占画面约 42%。人物正脸端正面对镜头，完整展示头部、面部五官、妆容、发型、耳饰、肩颈、锁骨与上胸部。\n\n画面右侧横向并列展示同一位女性的三张全身视图，依次为：正面全身、标准 90 度侧面全身、180 度背面全身。\n\n四个视图必须为同一位女性，脸型、五官、肤色、妆容、发型、发色、头饰、服装、首饰、手套和鞋子完全一致。\n\n18 岁年轻亚洲女性，身高 180cm，标准 9 头身高级时装模特比例，身形纤细修长，肩颈优雅，腰线纤细，四肢修长，腿部笔直自然，人体结构真实协调。\n\n精致偏窄的鹅蛋脸，柔和流畅的下颌线，略带清冷感的杏仁形眼睛，灰棕色瞳孔，纤长浓密睫毛，细长自然眉形。\n\n鼻梁纤细立体，鼻头小巧，嘴唇柔润饱满，低饱和裸豆沙色唇妆。\n\n皮肤自然冷白、细腻无暇，保留真实皮肤纹理与轻微毛孔，无油腻感，无塑料感，无过度磨皮。\n\n表情清冷、优雅、略带疏离感，嘴唇自然闭合，眼神正视镜头。\n\n浓密黑色长卷发，长度至腰部，柔软丰盈的大波浪。\n\n顶部为蓬松高颅顶半盘发，前额保留自然碎发和两侧弧形龙须刘海，少量发丝轻柔贴近脸颊。\n\n后脑一侧佩戴大型黑白缎面复古蝴蝶结发饰，蝴蝶结中央镶嵌银色水晶、珍珠与宝石装饰，带少量银色叶片造型。\n\n侧面和背面视图必须准确展示半盘发结构、长卷发层次和大型蝴蝶结的位置。\n\n冷调高级哥特少女妆容，灰棕色眼影、细长黑色眼线、根根分明的浓密睫毛，轻微下眼影和柔和卧蚕。\n\n面部轮廓精致但自然，低饱和冷粉腮红，颧骨、鼻梁和锁骨处有细腻自然高光。\n\n唇妆为低饱和灰粉豆沙色，轻微水润质感，不使用夸张艳丽色彩。\n\n黑白复古哥特风、暗黑 Coquette、维多利亚少女风与高级定制服装结合。\n\n整体配色以哑光黑、象牙白、珍珠白和少量银色水晶为主，华丽但不杂乱，强调非对称层次、束腰结构、蕾丝、蝴蝶结、玫瑰和珍珠流苏。\n\n上半身为黑色无肩带束腰胸衣，胸衣采用哑光黑色缎面与细腻黑色蕾丝拼接，结构清晰，具有纵向束骨收腰线条。\n\n胸口边缘使用象牙白蕾丝荷叶边包边。\n\n胸前中央装饰一个大型象牙白缎面蝴蝶结，蝴蝶结中央固定一朵立体黑色玫瑰，周围点缀珍珠、水晶和银色胸针。\n\n从胸前装饰垂下数条细长珍珠链与水晶流苏，形成精致垂坠效果。\n\n胸衣下方自然收紧腰部，强调纤细腰线，但保持人体比例自然。\n\n【袖子与手套】\n双臂佩戴黑色半透明蕾丝长手套，长度从手腕延伸至上臂。\n\n手套带精致花卉蕾丝纹理和细小水晶装饰。\n\n上臂位置增加象牙白蕾丝荷叶边和小型黑白蝴蝶结，使袖口具有复古宫廷层次。\n\n正面、侧面、背面视图中手套结构必须一致。\n\n下装为黑白非对称高低裙。\n\n腰部采用黑色束腰结构，正面和侧面装饰黑色立体玫瑰、象牙白缎面褶皱和珍珠链。\n\n前裙较短，露出修长腿部，裙摆由黑色蕾丝短裙、象牙白褶皱缎面和多层荷叶边组成。\n\n两侧和后方延伸出较长的不规则拖尾，采用象牙白缎面与黑色缎面交错拼接，呈现层叠瀑布状结构。\n\n裙摆边缘带细腻白色蕾丝、黑色滚边和小型珍珠装饰。\n\n后腰位置带黑色与象牙白结合的大型蝴蝶结或立体玫瑰装饰，背部拖尾比正面更长。\n\n背面视图必须完整展示黑色束腰交叉绑带、后腰花饰、分层裙摆和拖尾结构。\n\n佩戴象牙白蕾丝颈圈，颈圈上镶嵌多层珍珠、水晶和银色宝石胸针。\n\n颈圈中央垂下一颗水滴形珍珠吊坠。\n\n双耳佩戴大型复古银色水晶耳环，椭圆宝石外圈围绕水晶与珍珠，底部带细长水滴形吊坠。\n\n所有视图中的项链、颈圈和耳饰必须保持完全一致。\n\n黑色漆皮厚底细高跟鞋，前掌带厚底结构，鞋面系带和水晶装饰。\n\n鞋跟修长、结构真实，正面、侧面和背面鞋型完全统一。\n\n脚踝处佩戴黑色细带或小型银色扣饰。\n\n正面全身视图：人物正对镜头，双腿自然并拢，双手自然垂落身体两侧，肩膀水平，站姿端正。\n\n标准侧面视图：人物身体与头部均为严格 90 度侧面，不回头，不出现三分之二角度，双手自然下垂。\n\n背面视图：人物严格 180 度背对镜头，头部同样朝向后方，不回头，不露正脸，完整展示发型背面、束腰绑带、后腰装饰、裙摆拖尾与鞋跟。\n\n电影级商业影棚布光，柔和主光，轻微侧逆光，暖白轮廓光，面部柔光均匀。\n\n人物右侧三视图禁止强光、禁止过曝、禁止刺眼高光，保持低反差、均匀柔和照明，清晰展示黑白服装结构和蕾丝细节。\n\n发丝边缘有细腻发丝光，肩颈和锁骨轮廓自然，皮肤高光克制真实。\n\n浅灰色背景带轻微灰色渐变，脚下保留柔和自然阴影。\n\n85mm 人像镜头质感，f/2.0，左侧特写浅景深，右侧三个全身视图保持整体清晰。\n\n8K 高清，超写实真人摄影质感，高级时装杂志大片，真实缎面、蕾丝、珍珠、水晶、金属和皮肤材质，干净细腻，构图统一。",
+        "negative_prompt": "",
+        "resolution": 1024
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 38,
+      "type": "LoadImage",
+      "pos": [
+        -2069.9103499780335,
+        -1279.3122652706725
+      ],
+      "size": [
+        571.052762695339,
+        326
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "guhaiImageValue": "123.png"
+      },
+      "widgets_values": [
+        "123.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "123.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 39,
+      "type": "ModelAttentionBackend",
+      "pos": [
+        -1451.5531307194785,
+        -1675.5751212863843
+      ],
+      "size": [
+        303.99120012790263,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.32.0",
+        "Node name for S&R": "ModelAttentionBackend",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "comfy kitchen attention"
+      ],
+      "widgets_values_named": {
+        "attention": "comfy kitchen attention"
+      },
+      "color": "#cf2a9e",
+      "bgcolor": "#3e2536"
+    },
+    {
+      "id": 40,
+      "type": "QwenImage21Cache",
+      "pos": [
+        -1452.925812166837,
+        -1556.0152438428636
+      ],
+      "size": [
+        303.0701898415332,
+        82
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.0",
+        "Node name for S&R": "QwenImage21Cache",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "auto",
+        "default"
+      ],
+      "widgets_values_named": {
+        "device": "auto",
+        "dtype": "default"
+      }
+    },
+    {
+      "id": 41,
+      "type": "ModelSamplingFlux",
+      "pos": [
+        -1444.5315837491737,
+        -1411.582691186894
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 31
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 28
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.0",
+        "Node name for S&R": "ModelSamplingFlux",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        0.69,
+        0.5,
+        1024,
+        1024
+      ],
+      "widgets_values_named": {
+        "max_shift": 0.69,
+        "base_shift": 0.5,
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    {
+      "id": 42,
+      "type": "ResolutionSelector",
+      "pos": [
+        -1448.654451358382,
+        -1202.6352274084672
+      ],
+      "size": [
+        304.5614054953837,
+        150
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            26,
+            28
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            27,
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "ResolutionSelector",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "16:9 (Widescreen)",
+        4,
+        8
+      ],
+      "widgets_values_named": {
+        "aspect_ratio": "16:9 (Widescreen)",
+        "megapixels": 4,
+        "multiple": 8
+      }
+    },
+    {
+      "id": 43,
+      "type": "SaveImageAdvanced",
+      "pos": [
+        -367.0183600579541,
+        -1678.8806143459315
+      ],
+      "size": [
+        1422.0160280490338,
+        718.909379292523
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "cnr_id": "comfy-core",
+        "ver": "0.37.0",
+        "Node name for S&R": "SaveImageAdvanced"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        "png",
+        "8-bit",
+        "sRGB"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "ComfyUI",
+        "format": "png",
+        "format.bit_depth": "8-bit",
+        "format.input_color_space": "sRGB"
+      }
+    }
+  ],
+  "links": [
+    [
+      12,
+      13,
+      0,
+      25,
+      1,
+      "VAE"
+    ],
+    [
+      16,
+      36,
+      0,
+      23,
+      3,
+      "LATENT"
+    ],
+    [
+      17,
+      23,
+      0,
+      25,
+      0,
+      "LATENT"
+    ],
+    [
+      21,
+      37,
+      0,
+      23,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      22,
+      37,
+      1,
+      23,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      19,
+      4,
+      0,
+      37,
+      0,
+      "CLIP"
+    ],
+    [
+      23,
+      38,
+      0,
+      37,
+      1,
+      "IMAGE"
+    ],
+    [
+      20,
+      13,
+      0,
+      37,
+      3,
+      "VAE"
+    ],
+    [
+      24,
+      5,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      26,
+      42,
+      0,
+      36,
+      0,
+      "INT"
+    ],
+    [
+      27,
+      42,
+      1,
+      36,
+      1,
+      "INT"
+    ],
+    [
+      28,
+      42,
+      0,
+      41,
+      1,
+      "INT"
+    ],
+    [
+      29,
+      42,
+      1,
+      41,
+      2,
+      "INT"
+    ],
+    [
+      30,
+      39,
+      0,
+      40,
+      0,
+      "MODEL"
+    ],
+    [
+      31,
+      40,
+      0,
+      41,
+      0,
+      "MODEL"
+    ],
+    [
+      32,
+      41,
+      0,
+      23,
+      0,
+      "MODEL"
+    ],
+    [
+      33,
+      25,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.6588450000000299,
+      "offset": [
+        2502.658647227061,
+        2449.3022613190133
+      ]
+    },
+    "frontendVersion": "1.52.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "23": 0
+  }
+}

@@ -1,0 +1,1019 @@
+{
+  "id": "7e83316e-7a62-4e78-9241-3d1a507179d8",
+  "revision": 0,
+  "last_node_id": 37,
+  "last_link_id": 45,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -267.8137806220107,
+        1553.142859874561
+      ],
+      "size": [
+        210,
+        170
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 8
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            2,
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.32.0",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 3,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        -267.8137806220107,
+        1763.1428598745604
+      ],
+      "size": [
+        210,
+        30
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.32.0",
+        "Node name for S&R": "ConditioningZeroOut",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4,
+      "type": "KSampler",
+      "pos": [
+        -47.813780622010626,
+        1433.1428598745608
+      ],
+      "size": [
+        300,
+        270
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 7
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 5
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.32.0",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        238013279320311,
+        "randomize",
+        12,
+        1,
+        "er_sde",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 238013279320311,
+        "control_after_generate": "randomize",
+        "steps": 12,
+        "cfg": 1,
+        "sampler_name": "er_sde",
+        "scheduler": "simple",
+        "denoise": 1
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 5,
+      "type": "AnimaBoosterCheckpointLoader",
+      "pos": [
+        -1000,
+        1430
+      ],
+      "size": [
+        252.3677734375,
+        160
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "BlackSnowSkill/ANIMA_BOOSTER",
+        "ver": "0cb1f45f4c6b8a726150faf9c08988bc10baf36c",
+        "Node name for S&R": "AnimaBoosterCheckpointLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Amina-12steps-liuli-AIO-0_1.safetensors",
+        "auto",
+        false
+      ],
+      "widgets_values_named": {
+        "ckpt_name": "Amina-12steps-liuli-AIO-0_1.safetensors",
+        "sage_attention": "auto",
+        "torch_compile": false
+      },
+      "color": "#0f0f0eff",
+      "bgcolor": "#0f0f0eff",
+      "boxcolor": "rgba(212, 175, 55, 0.6)"
+    },
+    {
+      "id": 6,
+      "type": "AnimaTeaCache",
+      "pos": [
+        -730,
+        1430
+      ],
+      "size": [
+        210,
+        240
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "BlackSnowSkill/ANIMA_BOOSTER",
+        "ver": "dcad27c80559ebf5fdb1bca13ff0fd52f307a159",
+        "Node name for S&R": "AnimaTeaCache",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        0.15,
+        "v1 (Legacy Fast)",
+        true,
+        0.4,
+        1.8,
+        0,
+        1,
+        "cuda"
+      ],
+      "widgets_values_named": {
+        "threshold": 0.15,
+        "teacache_version": "v1 (Legacy Fast)",
+        "adaptive_mode": true,
+        "early_steps_factor": 0.4,
+        "late_steps_factor": 1.8,
+        "start_percent": 0,
+        "end_percent": 1,
+        "cache_device": "cuda"
+      },
+      "color": "#0f0f0eff",
+      "bgcolor": "#0f0f0eff",
+      "boxcolor": "rgba(212, 175, 55, 0.6)"
+    },
+    {
+      "id": 7,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        -730,
+        1760
+      ],
+      "size": [
+        210,
+        130
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.32.0",
+        "Node name for S&R": "EmptySD3LatentImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        1024,
+        1888,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 1024,
+        "height": 1888,
+        "batch_size": 1
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        -47.813780622010626,
+        1743.1428598745606
+      ],
+      "size": [
+        300,
+        50
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 10
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.32.0",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 10,
+      "type": "SaveImage",
+      "pos": [
+        283.7621525589201,
+        1437.8706894763513
+      ],
+      "size": [
+        374.34429730275315,
+        453.5703589949103
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        },
+        {
+          "label": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.32.0",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "ComfyUI"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 15,
+      "type": "easy positive",
+      "pos": [
+        -1000,
+        1760
+      ],
+      "size": [
+        260,
+        130
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "正面提示词",
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "450b1ce4ce43b2280521c87f5fa388a898fb2ad2",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "High quality anime illustration of a beautiful young Chinese woman in a dim traditional bedroom at night, standing behind a wooden table in a three-quarter front pose with her torso softly twisted toward the viewer. She has pale luminous skin, delicate features, dark almond eyes looking directly at the viewer, slightly parted red lips, and a shy alluring expression; long black hair is swept into an elegant low bun decorated with a gold floral hairpin and red-white tassel earrings. She wears a deep crimson halter bodice embroidered with white and pink chrysanthemums, knot closures at the neck and side, an off-white translucent robe slipping from both shoulders into loose billowing sleeves, and ivory wide-leg trousers tied at the waist with red cords and hanging tassels. Her left hand lifts the heavy wine-red curtain beside her face while her right hand touches an open calligraphy book; on the table are a candle in a glass holder, ink brush, small red bowl, and aged pages. Background has carved lattice windows, dark wooden beams, a canopied bed with crimson patterned silk, warm candlelight and soft lantern glow creating rim light, gentle volumetric illumination, deep shadows, cozy intimate atmosphere; eye-level medium shot, centered vertical composition, shallow depth of field, intricate fabric texture, elegant historical Chinese aesthetic."
+      ],
+      "widgets_values_named": {
+        "positive": "High quality anime illustration of a beautiful young Chinese woman in a dim traditional bedroom at night, standing behind a wooden table in a three-quarter front pose with her torso softly twisted toward the viewer. She has pale luminous skin, delicate features, dark almond eyes looking directly at the viewer, slightly parted red lips, and a shy alluring expression; long black hair is swept into an elegant low bun decorated with a gold floral hairpin and red-white tassel earrings. She wears a deep crimson halter bodice embroidered with white and pink chrysanthemums, knot closures at the neck and side, an off-white translucent robe slipping from both shoulders into loose billowing sleeves, and ivory wide-leg trousers tied at the waist with red cords and hanging tassels. Her left hand lifts the heavy wine-red curtain beside her face while her right hand touches an open calligraphy book; on the table are a candle in a glass holder, ink brush, small red bowl, and aged pages. Background has carved lattice windows, dark wooden beams, a canopied bed with crimson patterned silk, warm candlelight and soft lantern glow creating rim light, gentle volumetric illumination, deep shadows, cozy intimate atmosphere; eye-level medium shot, centered vertical composition, shallow depth of field, intricate fabric texture, elegant historical Chinese aesthetic."
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 18,
+      "type": "easy showAnything",
+      "pos": [
+        -487.8137806220105,
+        1553.142859874561
+      ],
+      "size": [
+        212.36395988939285,
+        329.82951390896733
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "label": "输出",
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "450b1ce4ce43b2280521c87f5fa388a898fb2ad2",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "best quality, score_9, score_8，highres, absurdres, anime screenshot, official art.High quality anime illustration of a beautiful young Chinese woman in a dim traditional bedroom at night, standing behind a wooden table in a three-quarter front pose with her torso softly twisted toward the viewer. She has pale luminous skin, delicate features, dark almond eyes looking directly at the viewer, slightly parted red lips, and a shy alluring expression; long black hair is swept into an elegant low bun decorated with a gold floral hairpin and red-white tassel earrings. She wears a deep crimson halter bodice embroidered with white and pink chrysanthemums, knot closures at the neck and side, an off-white translucent robe slipping from both shoulders into loose billowing sleeves, and ivory wide-leg trousers tied at the waist with red cords and hanging tassels. Her left hand lifts the heavy wine-red curtain beside her face while her right hand touches an open calligraphy book; on the table are a candle in a glass holder, ink brush, small red bowl, and aged pages. Background has carved lattice windows, dark wooden beams, a canopied bed with crimson patterned silk, warm candlelight and soft lantern glow creating rim light, gentle volumetric illumination, deep shadows, cozy intimate atmosphere; eye-level medium shot, centered vertical composition, shallow depth of field, intricate fabric texture, elegant historical Chinese aesthetic."
+      ],
+      "widgets_values_named": {
+        "text": "best quality, score_9, score_8，highres, absurdres, anime screenshot, official art.High quality anime illustration of a beautiful young Chinese woman in a dim traditional bedroom at night, standing behind a wooden table in a three-quarter front pose with her torso softly twisted toward the viewer. She has pale luminous skin, delicate features, dark almond eyes looking directly at the viewer, slightly parted red lips, and a shy alluring expression; long black hair is swept into an elegant low bun decorated with a gold floral hairpin and red-white tassel earrings. She wears a deep crimson halter bodice embroidered with white and pink chrysanthemums, knot closures at the neck and side, an off-white translucent robe slipping from both shoulders into loose billowing sleeves, and ivory wide-leg trousers tied at the waist with red cords and hanging tassels. Her left hand lifts the heavy wine-red curtain beside her face while her right hand touches an open calligraphy book; on the table are a candle in a glass holder, ink brush, small red bowl, and aged pages. Background has carved lattice windows, dark wooden beams, a canopied bed with crimson patterned silk, warm candlelight and soft lantern glow creating rim light, gentle volumetric illumination, deep shadows, cozy intimate atmosphere; eye-level medium shot, centered vertical composition, shallow depth of field, intricate fabric texture, elegant historical Chinese aesthetic."
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 19,
+      "type": "PrimitiveString",
+      "pos": [
+        -487.8137806220105,
+        1433.1428598745608
+      ],
+      "size": [
+        210,
+        80
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.32.0",
+        "Node name for S&R": "PrimitiveString",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "best quality, score_9, score_8，highres, absurdres, anime screenshot, official art"
+      ],
+      "widgets_values_named": {
+        "value": "best quality, score_9, score_8，highres, absurdres, anime screenshot, official art"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 20,
+      "type": "JoinStrings",
+      "pos": [
+        -265.4459174440456,
+        1433.1428598745601
+      ],
+      "size": [
+        210,
+        80
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "字符串1",
+          "name": "string1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 22
+        },
+        {
+          "label": "字符串2",
+          "name": "string2",
+          "shape": 7,
+          "type": "STRING",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            24,
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "57105374f47d0fbb49c9c3926fb981702e0a4b5c",
+        "Node name for S&R": "JoinStrings",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "."
+      ],
+      "widgets_values_named": {
+        "delimiter": "."
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 33,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1013.038651453113,
+        923.6251575006169
+      ],
+      "size": [
+        2000.3173828125,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "E04-Anima-琉璃AIO动漫生图",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 34,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1002.2898079401823,
+        1089.9076772681865
+      ],
+      "size": [
+        1781,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 35,
+      "type": "Label (rgthree)",
+      "pos": [
+        -997.6831774564932,
+        1189.5191680060884
+      ],
+      "size": [
+        1434,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 37,
+      "type": "Label (rgthree)",
+      "pos": [
+        496,
+        1190
+      ],
+      "size": [
+        880.0,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "原作者：豹豹喵呜",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    }
+  ],
+  "links": [
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      4,
+      3,
+      0,
+      4,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      2,
+      0,
+      4,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      6,
+      5,
+      0,
+      6,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      6,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      8,
+      5,
+      1,
+      2,
+      0,
+      "CLIP"
+    ],
+    [
+      9,
+      7,
+      0,
+      4,
+      3,
+      "LATENT"
+    ],
+    [
+      10,
+      4,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      11,
+      5,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      13,
+      8,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      19,
+      0,
+      20,
+      0,
+      "STRING"
+    ],
+    [
+      24,
+      20,
+      0,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      25,
+      20,
+      0,
+      2,
+      1,
+      "STRING"
+    ],
+    [
+      45,
+      15,
+      0,
+      20,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "模型",
+      "bounding": [
+        -1010,
+        1360,
+        500,
+        320
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "参数",
+      "bounding": [
+        -1010,
+        1690,
+        500,
+        210
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "运算",
+      "bounding": [
+        -497.8137806220105,
+        1363.1428598745608,
+        758.4239465830751,
+        535.3452800422235
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "输出",
+      "bounding": [
+        273.7621525589201,
+        1367.8706894763513,
+        390.78802670846244,
+        525.8896208386443
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.5209868481924388,
+      "offset": [
+        1572.041472050934,
+        -466.3960589691102
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.51.10",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "4": 0
+  }
+}

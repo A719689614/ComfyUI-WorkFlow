@@ -1,0 +1,1364 @@
+{
+  "id": "1e0c98d6-738f-5e6a-abf4-ae9b1ed4817f",
+  "revision": 0,
+  "last_node_id": 30,
+  "last_link_id": 34,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        20,
+        80
+      ],
+      "size": [
+        550.2631623646141,
+        518.5856084497846
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            3,
+            4
+          ]
+        }
+      ],
+      "title": "角色描述（任何角色：真人/职业装/怪物/机器人…）",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.1",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.6",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "主体：18 岁年轻东亚女性，身高 180cm，标准 9 头身高定时装模特比例，身形纤细修长，肩颈线条优雅舒展，腰线纤细，四肢修长，双腿笔直匀称，人体解剖结构真实自然协调，无畸形扭曲\n\n面部特征：精致窄鹅蛋脸，下颌线条柔和流畅，清冷感杏仁眼，灰棕色瞳孔，纤长浓密睫毛，浅淡自然细眉；纤细立体鼻梁，小巧鼻头，柔润饱满双唇，低饱和灰粉豆沙色唇妆，淡淡的水润光泽，色彩低调不艳丽\n\n皮肤质感：冷调自然白皮，肤质细腻通透，保留原生细微皮肤纹理、浅淡毛孔，拒绝过度磨皮、假滑油腻、塑料硅胶感\n\n发型：浓密乌黑长卷发，大波浪质感，发长及腰，发量丰盈蓬松；高颅顶半盘发造型，前额散落柔和碎发，两侧弧形龙须刘海，几缕发丝轻贴脸颊；后脑单侧佩戴大号黑白缎面复古蝴蝶结发饰，蝴蝶结中心镶嵌银色水晶、珍珠、彩宝，搭配银色叶片雕花配饰\n\n风格定位：黑白复古哥特风 + 暗黑 Coquette + 维多利亚少女 + 高级时装高定礼服，氛围感精致幽暗优雅\n\n服装详情：\n上衣：黑色无肩带束腰胸衣，哑光黑缎面拼接细腻黑色蕾丝，内置纵向束骨线条，塑形收腰；胸衣上沿包边为象牙白蕾丝荷叶边；胸口正中装饰巨型象牙白缎面蝴蝶结，蝴蝶结中心固定立体黑玫瑰，周围点缀珍珠、碎水晶、复古银色胸针；多条细珍珠链 + 水晶流苏自胸前装饰垂落，灵动垂坠；自然收紧腰线，比例舒适不夸张\n手臂配饰：黑色半透蕾丝长手套，从手腕延伸至上臂，蕾丝带有花卉纹样，点缀细碎水晶；上臂位置叠加象牙白蕾丝荷叶边 + 迷你黑白蝴蝶结，复古宫廷层次感强，正 / 侧 / 背视图手套样式统一\n下装：黑白不对称高低礼裙，腰段延续黑色束腰结构；腰前、腰侧装饰立体黑玫瑰、象牙白缎面褶裥、珍珠链；前短裙摆，露出修长双腿，由黑色蕾丝短裙、象牙白褶皱缎面、多层荷叶边叠加组成；侧后方延伸不规则长拖尾，象牙白缎面与黑缎交错拼接，瀑布式层叠结构；裙摆边缘饰细白蕾丝、黑色滚边、细碎珍珠；后腰配有黑白拼色大蝴蝶结 + 立体玫瑰，背部拖尾长于前摆\n\n首饰配饰（正侧背面款式完全统一）：\n象牙白蕾丝 choker 颈圈，镶嵌多层珍珠、水晶、银色宝石胸针，颈圈正中垂坠一颗水滴珍珠吊坠；\n双耳佩戴大号复古银色水晶耳环，椭圆主石外圈环绕珍珠与碎水晶，底部悬挂细长水滴吊坠；\n\n鞋履：黑色漆皮厚底细高跟，前掌厚底，鞋面系带 + 水晶镶嵌装饰，鞋跟修长扎实，正 / 侧 / 背面鞋型一致；脚踝配有黑色细绑带 + 银色小搭扣\n\n画面附加约束：真实人体结构，服饰褶皱自然，面料质感区分（缎面柔光、蕾丝通透、漆皮反光），光影高级时装棚拍质感，无畸变、无多余杂物"
+      ],
+      "widgets_values_named": {
+        "value": "主体：18 岁年轻东亚女性，身高 180cm，标准 9 头身高定时装模特比例，身形纤细修长，肩颈线条优雅舒展，腰线纤细，四肢修长，双腿笔直匀称，人体解剖结构真实自然协调，无畸形扭曲\n\n面部特征：精致窄鹅蛋脸，下颌线条柔和流畅，清冷感杏仁眼，灰棕色瞳孔，纤长浓密睫毛，浅淡自然细眉；纤细立体鼻梁，小巧鼻头，柔润饱满双唇，低饱和灰粉豆沙色唇妆，淡淡的水润光泽，色彩低调不艳丽\n\n皮肤质感：冷调自然白皮，肤质细腻通透，保留原生细微皮肤纹理、浅淡毛孔，拒绝过度磨皮、假滑油腻、塑料硅胶感\n\n发型：浓密乌黑长卷发，大波浪质感，发长及腰，发量丰盈蓬松；高颅顶半盘发造型，前额散落柔和碎发，两侧弧形龙须刘海，几缕发丝轻贴脸颊；后脑单侧佩戴大号黑白缎面复古蝴蝶结发饰，蝴蝶结中心镶嵌银色水晶、珍珠、彩宝，搭配银色叶片雕花配饰\n\n风格定位：黑白复古哥特风 + 暗黑 Coquette + 维多利亚少女 + 高级时装高定礼服，氛围感精致幽暗优雅\n\n服装详情：\n上衣：黑色无肩带束腰胸衣，哑光黑缎面拼接细腻黑色蕾丝，内置纵向束骨线条，塑形收腰；胸衣上沿包边为象牙白蕾丝荷叶边；胸口正中装饰巨型象牙白缎面蝴蝶结，蝴蝶结中心固定立体黑玫瑰，周围点缀珍珠、碎水晶、复古银色胸针；多条细珍珠链 + 水晶流苏自胸前装饰垂落，灵动垂坠；自然收紧腰线，比例舒适不夸张\n手臂配饰：黑色半透蕾丝长手套，从手腕延伸至上臂，蕾丝带有花卉纹样，点缀细碎水晶；上臂位置叠加象牙白蕾丝荷叶边 + 迷你黑白蝴蝶结，复古宫廷层次感强，正 / 侧 / 背视图手套样式统一\n下装：黑白不对称高低礼裙，腰段延续黑色束腰结构；腰前、腰侧装饰立体黑玫瑰、象牙白缎面褶裥、珍珠链；前短裙摆，露出修长双腿，由黑色蕾丝短裙、象牙白褶皱缎面、多层荷叶边叠加组成；侧后方延伸不规则长拖尾，象牙白缎面与黑缎交错拼接，瀑布式层叠结构；裙摆边缘饰细白蕾丝、黑色滚边、细碎珍珠；后腰配有黑白拼色大蝴蝶结 + 立体玫瑰，背部拖尾长于前摆\n\n首饰配饰（正侧背面款式完全统一）：\n象牙白蕾丝 choker 颈圈，镶嵌多层珍珠、水晶、银色宝石胸针，颈圈正中垂坠一颗水滴珍珠吊坠；\n双耳佩戴大号复古银色水晶耳环，椭圆主石外圈环绕珍珠与碎水晶，底部悬挂细长水滴吊坠；\n\n鞋履：黑色漆皮厚底细高跟，前掌厚底，鞋面系带 + 水晶镶嵌装饰，鞋跟修长扎实，正 / 侧 / 背面鞋型一致；脚踝配有黑色细绑带 + 银色小搭扣\n\n画面附加约束：真实人体结构，服饰褶皱自然，面料质感区分（缎面柔光、蕾丝通透、漆皮反光），光影高级时装棚拍质感，无畸变、无多余杂物"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 2,
+      "type": "ComfySwitchNode",
+      "pos": [
+        27.69737177346059,
+        670.6579908392039
+      ],
+      "size": [
+        540,
+        80
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "shape": 7,
+          "type": "STRING",
+          "link": 7
+        },
+        {
+          "name": "on_true",
+          "shape": 7,
+          "type": "STRING",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "STRING",
+          "links": [
+            8,
+            9
+          ]
+        }
+      ],
+      "title": "优化开关：true 用 Qwen 改写（推荐），false 直接用版式模板",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.2",
+        "Node name for S&R": "ComfySwitchNode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "switch": false
+      },
+      "color": "#cf2a9e",
+      "bgcolor": "#3e2536"
+    },
+    {
+      "id": 3,
+      "type": "ResolutionSelector",
+      "pos": [
+        27.69737177346059,
+        790.6579908392039
+      ],
+      "size": [
+        540,
+        160
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            12
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "title": "画幅：竖版 9:16 · 16MP（草稿 8 / 4）",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.1",
+        "Node name for S&R": "ResolutionSelector",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.6",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "9:16 (Portrait Widescreen)",
+        16,
+        32
+      ],
+      "widgets_values_named": {
+        "aspect_ratio": "9:16 (Portrait Widescreen)",
+        "megapixels": 16,
+        "multiple": 32
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4,
+      "type": "RandomNoise",
+      "pos": [
+        27.69737177346059,
+        990.6579908392039
+      ],
+      "size": [
+        540,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": []
+        }
+      ],
+      "title": "随机种子",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.1",
+        "Node name for S&R": "RandomNoise",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.6",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        777784782796195,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 777784782796195,
+        "control_after_generate": "randomize"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 5,
+      "type": "CLIPLoader",
+      "pos": [
+        640,
+        80
+      ],
+      "size": [
+        540,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "title": "优化模型 Qwen3.5 9B",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.2",
+        "Node name for S&R": "CLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "models": [
+          {
+            "name": "qwen3.5_9b_w4a8_gptq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Qwen3.5/resolve/main/text_encoders/qwen3.5_9b_w4a8_gptq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3.5_9b_w4a8_gptq.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3.5_9b_w4a8_gptq.safetensors",
+        "type": "minimax",
+        "device": "default"
+      }
+    },
+    {
+      "id": 6,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        640,
+        220
+      ],
+      "size": [
+        540,
+        620
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "title": "系统提示词：四视图版式 + 改写规则",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.2",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "You are the prompt writer for a character turnaround reference sheet generated by the MiniMax H3-Image text-to-image model. The user message is a character description in any language. Turn it into ONE detailed English caption for a single image that shows that character as a four-panel turnaround sheet.\n\nTHE SUBJECT CAN BE ANYTHING\nThe character may be a man, woman, child or elder; any profession, uniform, costume or era (doctor, chef, firefighter, soldier, knight, idol, office worker, priest, astronaut, etc.); or a non-human: monster, creature, beast, demon, alien, robot, mech, mascot, animal, undead, spirit. Never assume a gender, a human body or a human face. Read the anatomy from the description and describe only features that this subject really has.\n\nWHAT TO KEEP FROM THE INPUT\n- Keep every stated fact about the character exactly: species or kind, gender, age, body type and height, skin/fur/scale/metal colors, face or head features, hair, horns, ears, eyes, outfit layers, footwear, accessories, weapons, tools, props, markings, and any requested art style.\n- If no style is requested, use photorealistic live-action photography with real materials. If the input asks for anime, 3D render, clay, toy, painting or another style, keep that style in all four panels.\n- Fill missing details with concrete visible ones that fit the role and anatomy (fabric type, seams, buttons, belt, boots or bare feet, claws, hooves, wear and scratches on armor, fur direction, scale pattern), so the full body is fully designed from head to ground. Do not invent lore that cannot be seen, and do not give the character a name. Never add body parts or gear the input does not imply (no extra horns, wings, tails, hats or weapons); the examples in this prompt are not features to add.\n\nWHAT TO OVERRIDE FROM THE INPUT\nThe sheet layout below always wins. Drop any scene, environment, background, night or dark mood, dramatic or colored lighting, camera angle, crop, other people, and momentary action from the input. Turn actions into a calm neutral standing pose (or the subject's natural resting stance, such as on four legs or hovering). A prop that defines the character may stay, held or worn the same way in every panel; small handheld light sources stay unlit unless the glow is part of the design.\n\nFIXED LAYOUT (state it explicitly in the caption)\n- Vertical canvas split into two rows and four panels, separated by thin clean white gutters. The same single character appears in all four panels with identical design, colors, outfit, props and proportions. No extra characters.\n- Top row, about 30 percent of the height, two close-ups of the head at the same scale:\n  - Top-left: front view close-up, head facing the camera straight on, framed from the top of the head (including hat, crown, horns, crest or ears) down to the shoulders or the equivalent upper body, showing the complete face or head shape.\n  - Top-right: right-facing 90-degree profile close-up of the same head at the same scale, showing the side silhouette of the head (for example nose, snout, beak, jaw, horn curve, ear shape, helmet profile, hair volume), looking toward screen-right.\n- Bottom row, about 70 percent of the height, two full-body views at the same scale, top and bottom aligned:\n  - Bottom-left: full-body front view, facing the camera, standing upright in a relaxed neutral pose, arms or forelimbs hanging naturally, feet or base flat on the ground.\n  - Bottom-right: full-body right-facing 90-degree side view, same pose and height, facing screen-right.\n  - In both full-body panels the entire silhouette fits inside the panel with a small margin above and below: from the topmost point (hair, hat, horns, antennae, raised weapon) to the soles, paws, hooves or base, including wings, tails, capes, long weapons and any other protrusion. Nothing is cropped.\n- Background: the same plain seamless light gray studio backdrop in all four panels, no gradient, texture, floor props or scenery.\n- Lighting: the same soft even studio lighting in all four panels, soft shadows, every material clearly readable.\n- Quality: sharp focus, high detail, true-to-life textures suited to the subject (skin pores, fur, feathers, scales, fabric weave, leather grain, metal scratches).\n- No text, labels, numbers, captions, watermarks or logos anywhere in the image.\n\nHOW TO WRITE THE CAPTION\nWrite fluent English sentences in this order: (1) one sentence naming the image as a vertical four-panel character turnaround sheet with the layout; (2) one complete description of the character's design from head to feet, written once; (3) one sentence per panel stating its position, framing and orientation in camera terms (front-facing, right-facing profile) and what is visible from that angle; (4) background, lighting, style and quality; (5) the no-text rule. About 250 to 450 words. Do not use markdown or line breaks inside the caption.\n\nOUTPUT\nThink privately first. The visible final answer is the caption text itself and nothing else: start directly with the first word of the caption, as one plain paragraph. No JSON, no surrounding quotation marks, no heading, no label such as \"Caption:\", no markdown, no notes before or after."
+      ],
+      "widgets_values_named": {
+        "value": "You are the prompt writer for a character turnaround reference sheet generated by the MiniMax H3-Image text-to-image model. The user message is a character description in any language. Turn it into ONE detailed English caption for a single image that shows that character as a four-panel turnaround sheet.\n\nTHE SUBJECT CAN BE ANYTHING\nThe character may be a man, woman, child or elder; any profession, uniform, costume or era (doctor, chef, firefighter, soldier, knight, idol, office worker, priest, astronaut, etc.); or a non-human: monster, creature, beast, demon, alien, robot, mech, mascot, animal, undead, spirit. Never assume a gender, a human body or a human face. Read the anatomy from the description and describe only features that this subject really has.\n\nWHAT TO KEEP FROM THE INPUT\n- Keep every stated fact about the character exactly: species or kind, gender, age, body type and height, skin/fur/scale/metal colors, face or head features, hair, horns, ears, eyes, outfit layers, footwear, accessories, weapons, tools, props, markings, and any requested art style.\n- If no style is requested, use photorealistic live-action photography with real materials. If the input asks for anime, 3D render, clay, toy, painting or another style, keep that style in all four panels.\n- Fill missing details with concrete visible ones that fit the role and anatomy (fabric type, seams, buttons, belt, boots or bare feet, claws, hooves, wear and scratches on armor, fur direction, scale pattern), so the full body is fully designed from head to ground. Do not invent lore that cannot be seen, and do not give the character a name. Never add body parts or gear the input does not imply (no extra horns, wings, tails, hats or weapons); the examples in this prompt are not features to add.\n\nWHAT TO OVERRIDE FROM THE INPUT\nThe sheet layout below always wins. Drop any scene, environment, background, night or dark mood, dramatic or colored lighting, camera angle, crop, other people, and momentary action from the input. Turn actions into a calm neutral standing pose (or the subject's natural resting stance, such as on four legs or hovering). A prop that defines the character may stay, held or worn the same way in every panel; small handheld light sources stay unlit unless the glow is part of the design.\n\nFIXED LAYOUT (state it explicitly in the caption)\n- Vertical canvas split into two rows and four panels, separated by thin clean white gutters. The same single character appears in all four panels with identical design, colors, outfit, props and proportions. No extra characters.\n- Top row, about 30 percent of the height, two close-ups of the head at the same scale:\n  - Top-left: front view close-up, head facing the camera straight on, framed from the top of the head (including hat, crown, horns, crest or ears) down to the shoulders or the equivalent upper body, showing the complete face or head shape.\n  - Top-right: right-facing 90-degree profile close-up of the same head at the same scale, showing the side silhouette of the head (for example nose, snout, beak, jaw, horn curve, ear shape, helmet profile, hair volume), looking toward screen-right.\n- Bottom row, about 70 percent of the height, two full-body views at the same scale, top and bottom aligned:\n  - Bottom-left: full-body front view, facing the camera, standing upright in a relaxed neutral pose, arms or forelimbs hanging naturally, feet or base flat on the ground.\n  - Bottom-right: full-body right-facing 90-degree side view, same pose and height, facing screen-right.\n  - In both full-body panels the entire silhouette fits inside the panel with a small margin above and below: from the topmost point (hair, hat, horns, antennae, raised weapon) to the soles, paws, hooves or base, including wings, tails, capes, long weapons and any other protrusion. Nothing is cropped.\n- Background: the same plain seamless light gray studio backdrop in all four panels, no gradient, texture, floor props or scenery.\n- Lighting: the same soft even studio lighting in all four panels, soft shadows, every material clearly readable.\n- Quality: sharp focus, high detail, true-to-life textures suited to the subject (skin pores, fur, feathers, scales, fabric weave, leather grain, metal scratches).\n- No text, labels, numbers, captions, watermarks or logos anywhere in the image.\n\nHOW TO WRITE THE CAPTION\nWrite fluent English sentences in this order: (1) one sentence naming the image as a vertical four-panel character turnaround sheet with the layout; (2) one complete description of the character's design from head to feet, written once; (3) one sentence per panel stating its position, framing and orientation in camera terms (front-facing, right-facing profile) and what is visible from that angle; (4) background, lighting, style and quality; (5) the no-text rule. About 250 to 450 words. Do not use markdown or line breaks inside the caption.\n\nOUTPUT\nThink privately first. The visible final answer is the caption text itself and nothing else: start directly with the first word of the caption, as one plain paragraph. No JSON, no surrounding quotation marks, no heading, no label such as \"Caption:\", no markdown, no notes before or after."
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 7,
+      "type": "TextGenerateV2",
+      "pos": [
+        640,
+        880
+      ],
+      "size": [
+        540,
+        335
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        },
+        {
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "videos.video1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "audios.audio1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "system_prompt",
+          "shape": 7,
+          "type": "STRING",
+          "link": 2
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_text",
+          "type": "STRING",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "thinking",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "改写成三视图提示词",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.2",
+        "Node name for S&R": "TextGenerateV2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        8192,
+        "on",
+        1,
+        20,
+        0.95,
+        0,
+        1,
+        0,
+        0,
+        true,
+        true,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "max_length": 8192,
+        "sampling_mode": "on",
+        "sampling_mode.temperature": 1,
+        "sampling_mode.top_k": 20,
+        "sampling_mode.top_p": 0.95,
+        "sampling_mode.min_p": 0,
+        "sampling_mode.repetition_penalty": 1,
+        "sampling_mode.presence_penalty": 0,
+        "sampling_mode.seed": 0,
+        "thinking": true,
+        "use_default_template": true,
+        "mtp": "auto"
+      }
+    },
+    {
+      "id": 8,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        639.6742159204322,
+        937.2453268287384
+      ],
+      "size": [
+        541.9277164471475,
+        288.9152815939592
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "title": "不优化时的版式模板（开关 false 才用）",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.1",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.6",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "角色四视图定妆照，竖版画面，分成上下两行共四个分区，分区之间用细窄的白色间隔线隔开。四个分区里是同一个角色，外形、配色、服装、道具和比例完全一致，不出现其他角色。\n\n上排约占画面高度的30%，左右并排两张头部特写，头部大小一致：\n左上：正面头部特写，角色正对镜头，从头部最高点到肩部，完整呈现正面的头部造型。\n右上：侧面头部特写，头部向右转90度，呈标准侧面轮廓，完整呈现侧面的头部造型，朝向画面右侧。\n\n下排约占画面高度的70%，左右并排两张全身照，比例一致，头顶和脚底对齐：\n左下：正面全身，角色正对镜头，以放松的中性姿势站立，四肢自然下垂。\n右下：侧面全身，整个身体向右转90度，同样的姿势和高度，朝向画面右侧。\n全身照要完整入画，从身体最高点到最低点，角色身上所有部位和携带的物品都在画面内，上下留少量空白，不裁切任何部位。只画角色描述里写到的外形特征，不额外添加。\n\n背景：四个分区都是同一种干净的浅灰色纯色摄影棚背景，没有渐变、纹理、道具或场景。\n光线：四个分区统一的柔和摄影棚布光，阴影柔和，材质细节清晰。\n画质：对焦锐利，细节丰富，材质真实。\n画面里不出现任何文字、标签、编号、水印或LOGO。"
+      ],
+      "widgets_values_named": {
+        "value": "角色四视图定妆照，竖版画面，分成上下两行共四个分区，分区之间用细窄的白色间隔线隔开。四个分区里是同一个角色，外形、配色、服装、道具和比例完全一致，不出现其他角色。\n\n上排约占画面高度的30%，左右并排两张头部特写，头部大小一致：\n左上：正面头部特写，角色正对镜头，从头部最高点到肩部，完整呈现正面的头部造型。\n右上：侧面头部特写，头部向右转90度，呈标准侧面轮廓，完整呈现侧面的头部造型，朝向画面右侧。\n\n下排约占画面高度的70%，左右并排两张全身照，比例一致，头顶和脚底对齐：\n左下：正面全身，角色正对镜头，以放松的中性姿势站立，四肢自然下垂。\n右下：侧面全身，整个身体向右转90度，同样的姿势和高度，朝向画面右侧。\n全身照要完整入画，从身体最高点到最低点，角色身上所有部位和携带的物品都在画面内，上下留少量空白，不裁切任何部位。只画角色描述里写到的外形特征，不额外添加。\n\n背景：四个分区都是同一种干净的浅灰色纯色摄影棚背景，没有渐变、纹理、道具或场景。\n光线：四个分区统一的柔和摄影棚布光，阴影柔和，材质细节清晰。\n画质：对焦锐利，细节丰富，材质真实。\n画面里不出现任何文字、标签、编号、水印或LOGO。"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 9,
+      "type": "StringConcatenate",
+      "pos": [
+        831.151399040938,
+        880.9864766927958
+      ],
+      "size": [
+        540,
+        166
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 4
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "title": "角色描述 + 版式模板",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.2",
+        "Node name for S&R": "StringConcatenate",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "string_a": true,
+            "string_b": true,
+            "delimiter": true
+          },
+          "version": "8.0.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        "",
+        "\n\n"
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": "\n\n"
+      }
+    },
+    {
+      "id": 14,
+      "type": "PreviewAny",
+      "pos": [
+        1257.4342094088465,
+        608.3881092848216
+      ],
+      "size": [
+        520,
+        712.8947860107555
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "最终提示词预览",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.2",
+        "Node name for S&R": "PreviewAny",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 15,
+      "type": "MiniMaxH3ImageConditioning",
+      "pos": [
+        1840,
+        80
+      ],
+      "size": [
+        360,
+        200
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 32
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 33
+        },
+        {
+          "name": "images.image_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 9
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 12
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 13
+        },
+        {
+          "name": "images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            26,
+            27
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "title": "三视图条件",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.1",
+        "Node name for S&R": "MiniMaxH3ImageConditioning",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true,
+            "width": true,
+            "height": true
+          },
+          "version": "7.6",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        0,
+        0
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "width": 0,
+        "height": 0
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 20,
+      "type": "VAEDecode",
+      "pos": [
+        2055.91127824557,
+        341.2432256072475
+      ],
+      "size": [
+        196.30256028440476,
+        46
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 30
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "title": "VAE 解码",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.1",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.6",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 21,
+      "type": "SaveImage",
+      "pos": [
+        2260,
+        80
+      ],
+      "size": [
+        900,
+        1500
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "输出",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.1",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.6",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "H3三视图/角色三视图"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "H3三视图/角色三视图"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 24,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1.3636363636491455,
+        -396.36363636363944
+      ],
+      "size": [
+        1725.439453125,
+        150
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "A02-H3-Image真人三视图",
+      "properties": {
+        "fontSize": 150,
+        "fontFamily": "Arial",
+        "fontColor": "#ffff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 25,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1.3636363636491455,
+        -226.36363636363959
+      ],
+      "size": [
+        1780.9765625,
+        80
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "云端镜像https://autodl.art/app/market/252?v=1079",
+      "properties": {
+        "fontSize": 80,
+        "fontFamily": "Arial",
+        "fontColor": "#00ff00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 26,
+      "type": "Label (rgthree)",
+      "pos": [
+        -1.3636363636491455,
+        -116.36363636363969
+      ],
+      "size": [
+        1433.701171875,
+        60
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "AUTODL🐧5群🟢1109673144 🐧6群🟢1121264797",
+      "properties": {
+        "fontSize": 60,
+        "fontFamily": "Arial",
+        "fontColor": "#ff5500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0,
+        "angle": 0,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "widget_ue_connectable": {}
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 27,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        1865.437848235888,
+        339.15944022342717
+      ],
+      "size": [
+        300,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.2",
+        "Node name for S&R": "ConditioningZeroOut",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 28,
+      "type": "KSampler",
+      "pos": [
+        1863.854192413389,
+        416.3661179402741
+      ],
+      "size": [
+        290.84328873689174,
+        286.3994372129607
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 31
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 27
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 25
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.45.2",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        473363975352752,
+        "randomize",
+        6,
+        1,
+        "euler",
+        "beta57",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 473363975352752,
+        "control_after_generate": "randomize",
+        "steps": 6,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "beta57",
+        "denoise": 1
+      }
+    },
+    {
+      "id": 29,
+      "type": "ZealmanH3ModelLoader",
+      "pos": [
+        1288.2366252363317,
+        145.58925515598906
+      ],
+      "size": [
+        471.1520786198623,
+        262
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            32
+          ]
+        },
+        {
+          "name": "video_vae",
+          "type": "VAE",
+          "links": [
+            33,
+            34
+          ]
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZealmanH3ModelLoader",
+        "ue_properties": {
+          "version": "8.0.1",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "title_regex": null,
+          "input_regex": null,
+          "group_regex": null,
+          "title_regex_invert": false,
+          "input_regex_invert": false,
+          "group_regex_invert": false,
+          "apply_to_unrepeated": 0,
+          "send_to_any": 0,
+          "string_to_combo": 0,
+          "repeated_type_rule": 0,
+          "group_restricted": 0,
+          "color_restricted": 0
+        }
+      },
+      "widgets_values": [
+        "minimax/minimax_h3_image_pruned_bf16.safetensors",
+        "default",
+        "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "default",
+        "minimax_h3_image_vae_fp16.safetensors",
+        "minimax_h3_audio_vae_fp32.safetensors",
+        "pytorch attention",
+        "[{\"on\":true,\"lora\":\"minimax/KOOK-Minimax-H3-image-尘星.safetensors\",\"strength\":1}]"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax/minimax_h3_image_pruned_bf16.safetensors",
+        "weight_dtype": "default",
+        "clip_name": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "clip_device": "default",
+        "video_vae": "minimax_h3_image_vae_fp16.safetensors",
+        "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+        "attention": "pytorch attention",
+        "lora_stack": "[{\"on\":true,\"lora\":\"minimax/KOOK-Minimax-H3-image-尘星.safetensors\",\"strength\":1}]"
+      }
+    }
+  ],
+  "links": [
+    [
+      4,
+      1,
+      0,
+      9,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      8,
+      0,
+      9,
+      1,
+      "STRING"
+    ],
+    [
+      6,
+      7,
+      0,
+      2,
+      1,
+      "STRING"
+    ],
+    [
+      7,
+      9,
+      0,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      8,
+      2,
+      0,
+      14,
+      0,
+      "STRING"
+    ],
+    [
+      9,
+      2,
+      0,
+      15,
+      3,
+      "STRING"
+    ],
+    [
+      12,
+      3,
+      0,
+      15,
+      4,
+      "INT"
+    ],
+    [
+      13,
+      3,
+      1,
+      15,
+      5,
+      "INT"
+    ],
+    [
+      24,
+      20,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      27,
+      0,
+      28,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      26,
+      15,
+      0,
+      27,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      27,
+      15,
+      0,
+      28,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      29,
+      15,
+      1,
+      28,
+      3,
+      "LATENT"
+    ],
+    [
+      30,
+      28,
+      0,
+      20,
+      0,
+      "LATENT"
+    ],
+    [
+      31,
+      29,
+      0,
+      28,
+      0,
+      "MODEL"
+    ],
+    [
+      32,
+      29,
+      1,
+      15,
+      0,
+      "CLIP"
+    ],
+    [
+      33,
+      29,
+      2,
+      15,
+      1,
+      "VAE"
+    ],
+    [
+      34,
+      29,
+      2,
+      20,
+      1,
+      "VAE"
+    ],
+    [
+      1,
+      5,
+      0,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      6,
+      0,
+      7,
+      4,
+      "STRING"
+    ],
+    [
+      3,
+      1,
+      0,
+      7,
+      5,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "⓪ 常用输入",
+      "bounding": [
+        0,
+        0,
+        594.1118482513443,
+        1099.3750955436267
+      ],
+      "color": "#3f8f3f",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "① 提示词优化（版式写在系统提示词里）",
+      "bounding": [
+        620,
+        0,
+        601.8092200248052,
+        1340.3286557089282
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "② 模型加载",
+      "bounding": [
+        1240,
+        0,
+        560,
+        530
+      ],
+      "color": "#c47b30",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "③ 最终提示词",
+      "bounding": [
+        1240,
+        540,
+        560,
+        800
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "④ 采样（6 步 · CFG 1）",
+      "bounding": [
+        1820,
+        0,
+        400,
+        772.6282470657236
+      ],
+      "color": "#a13030",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "⑤ 输出",
+      "bounding": [
+        2240,
+        0,
+        940,
+        1610
+      ],
+      "color": "#444",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5856400000000124,
+      "offset": [
+        303.4928986633047,
+        536.1311090612397
+      ]
+    },
+    "frontendVersion": "1.58.5",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "4": 0,
+    "28": 0
+  }
+}
